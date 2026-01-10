@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+
+:root {
+    --v-navy: #1B365D;
+    --v-gold: #D4AF37;
+    --v-green: #4A773C;
+}
+body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+
+.text-v-navy { color: var(--v-navy); }
+.text-v-gold { color: var(--v-gold); }
+.text-v-green { color: var(--v-green); }
+.bg-v-navy { background-color: var(--v-navy); }
+.bg-v-gold { background-color: var(--v-gold); }
+.bg-v-green { background-color: var(--v-green); }
+
+
+/* Updated Hero Gradient */
+.hero-gradient {
+    background: linear-gradient(135deg, var(--v-navy) 0%, #152a4a 40%, var(--v-green) 100%);
+}
+
+.btn-gold {
+    background-color: var(--v-gold);
+    color: white;
+    transition: all 0.3s ease;
+}
+.btn-gold:hover {
+    background-color: #b8962f;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(212, 175, 55, 0.4);
+}
+
+/* Logo Convergence Animation Styles */
+.logo-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    position: absolute;
+    width: 160px; /* Slightly larger for better overlap */
+    height: 160px;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    transition: all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    opacity: 0.85;
+}
+
+/* Positioning Logic:
+    Navy: Top-Left | Gold: Top-Right
+    Gold: Bottom-Left | Green: Bottom-Right
+*/
+
+/* Initial Separated Positions */
+.c-navy  { background: var(--v-navy); transform: translate(-100px, -100px); }
+.c-gold-tr { background: var(--v-gold); transform: translate(100px, -100px); }
+.c-gold-bl { background: var(--v-gold); transform: translate(-100px, 100px); }
+.c-green { background: var(--v-green); transform: translate(100px, 100px); }
+
+/* Converged State (Perfectly matching the logo grid) */
+.converged .c-navy    { transform: translate(-40px, -40px); }
+.converged .c-gold-tr { transform: translate(40px, -40px); }
+.converged .c-gold-bl { transform: translate(-40px, 40px); }
+.converged .c-green   { transform: translate(40px, 40px); }
