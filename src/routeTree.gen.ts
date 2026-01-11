@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as R404RouteImport } from './routes/$404'
 import { Route as IndexRouteImport } from './routes/index'
@@ -17,6 +18,11 @@ import { Route as ServicesCustomResourcesRouteImport } from './routes/services/c
 import { Route as ServicesActionableDataRouteImport } from './routes/services/actionable-data'
 import { Route as Services404RouteImport } from './routes/services/$404'
 
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$404': typeof R404Route
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/services/$404': typeof Services404Route
   '/services/actionable-data': typeof ServicesActionableDataRoute
   '/services/custom-resources': typeof ServicesCustomResourcesRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$404': typeof R404Route
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/services/$404': typeof Services404Route
   '/services/actionable-data': typeof ServicesActionableDataRoute
   '/services/custom-resources': typeof ServicesCustomResourcesRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/$404': typeof R404Route
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/services/$404': typeof Services404Route
   '/services/actionable-data': typeof ServicesActionableDataRoute
   '/services/custom-resources': typeof ServicesCustomResourcesRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$404'
     | '/about'
+    | '/contact'
     | '/services/$404'
     | '/services/actionable-data'
     | '/services/custom-resources'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$404'
     | '/about'
+    | '/contact'
     | '/services/$404'
     | '/services/actionable-data'
     | '/services/custom-resources'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$404'
     | '/about'
+    | '/contact'
     | '/services/$404'
     | '/services/actionable-data'
     | '/services/custom-resources'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   R404Route: typeof R404Route
   AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
   Services404Route: typeof Services404Route
   ServicesActionableDataRoute: typeof ServicesActionableDataRoute
   ServicesCustomResourcesRoute: typeof ServicesCustomResourcesRoute
@@ -124,6 +137,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   R404Route: R404Route,
   AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
   Services404Route: Services404Route,
   ServicesActionableDataRoute: ServicesActionableDataRoute,
   ServicesCustomResourcesRoute: ServicesCustomResourcesRoute,

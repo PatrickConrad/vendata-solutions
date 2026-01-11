@@ -42,7 +42,7 @@ export const Convergence = () => {
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
             <div className="lg:w-1/2 flex justify-center">
                 <div ref={observerRef} className={`logo-container ${converged?'converged':''}`}>
-                    <div className="circle c-navy"></div>
+                    <div className="circle c-navy dark:bg-slate-300"></div>
                     <div className="circle c-gold-tr"></div>
                     <div className="circle c-gold-bl"></div>
                     <div className="circle c-green"></div>

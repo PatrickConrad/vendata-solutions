@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router"
+
 export const Hero = () => {
 
     return (
@@ -13,12 +15,12 @@ export const Hero = () => {
                     We build custom software that automates the mundane, clarifies your data, and scales your vision.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="btn-gold px-10 py-4 rounded-xl font-bold text-lg">
+                    <Link to="/contact" className="btn-gold px-10 py-4 rounded-xl font-bold text-lg">
                         Consult Our Engineers
-                    </button>
-                    <button className="border-2 border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">
+                    </Link>
+                    <a href="#services" className="border-2 border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">
                         View Solutions
-                    </button>
+                    </a>
                 </div>
             </div>
         </header>

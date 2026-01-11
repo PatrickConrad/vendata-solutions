@@ -15,4 +15,4 @@ export default defineConfig({
     viteReact(),
     tailwindcss()
   ],
-})
+}) 

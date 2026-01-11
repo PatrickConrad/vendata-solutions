@@ -1,7 +1,10 @@
-export const ServiceModal = (props: { text: string}) => {
+import { ReactNode } from "react"
+
+export const ServiceModal = (props: { title: string, description: string|ReactNode}) => {
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-lg max-w-lg w-full flex items-center justify-center">
-        <p>{props.text}</p>
+    <div>
+        <h2>{props.title}</h2>
+        {props.description}
     </div>
   )
 }

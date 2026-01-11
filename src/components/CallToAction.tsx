@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router"
+
 export const CallToAction = () => {
     return(
         <section className="py-20 bg-white">
@@ -7,10 +9,10 @@ export const CallToAction = () => {
                     <br/>
                     Your software should be too.
                 </h2>
-                <p className="text-v-gold font-bold text-xl mb-12 italic">"Stop working for your business. Start making it work for you."</p>
-                <button className="btn-gold px-12 py-5 rounded-2xl font-black text-xl tracking-wide uppercase">
+                <p className="text-v-gold font-bold text-xl mb-12 italic">"Stop working for your business. Start making IT work for you."</p>
+                <Link to="/contact" className="btn-gold px-12 py-5 rounded-2xl font-black text-xl tracking-wide uppercase">
                     Let's Build Your Future
-                </button>
+                </Link>
             </div>
         </section>
     )

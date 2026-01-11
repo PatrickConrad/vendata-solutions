@@ -45,7 +45,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
             <head>
                 <HeadContent />
             </head>
-            <body className='bg-white text-slate-900'>
+            <body className='dark text-slate-200'>
                 <Nav />
                 {children}
                 <Footer/>
