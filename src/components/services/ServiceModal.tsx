@@ -1,15 +1,15 @@
-import { Link } from "@tanstack/react-router"
 import { ReactNode, useState } from "react";
-import { Modal } from "./Modal";
+import { Modal } from "../Modal";
+import { ServiceLayout } from "./ServiceLayout";
 
 type ServiceProps = {
     title: string,
     tagLine: string|ReactNode,
     icon: ReactNode,
-    modal: string|ReactNode
+    modal: ReactNode
 }
 
-export const Service = (props: ServiceProps) => {
+export const ServiceModal = (props: ServiceProps) => {
     const [openModal, setOpenModal] = useState(false);
     return(
          <>
@@ -36,8 +36,9 @@ export const Service = (props: ServiceProps) => {
                         >
                         ✕
                         </button>
-                        <h3>{props.title}</h3>
-                        <>{props.modal}</>
+                        {
+                            <ServiceLayout title={props.title} subtitle={props.tagLine} icon={props.icon} body={props.modal} />
+                        }
                     </>
                 </Modal>
             }

@@ -7,8 +7,8 @@ export const Route = createFileRoute('/contact')({
 
 function RouteComponent() {
   return (
-    <main className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200">
-      <section className="pt-24 text-center">
+    <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200">
+      <section className="pt-4 text-center">
         <h1 className="text-5xl font-extrabold mb-6 text-(--v-navy) dark:text-white">
           Contact Us
         </h1>
@@ -22,6 +22,6 @@ function RouteComponent() {
           <ContactForm />
         </div>
       </section>
-    </main>
+    </div>
   )
 }

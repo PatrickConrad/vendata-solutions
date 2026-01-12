@@ -23,7 +23,10 @@ export const Route = createRootRoute({
             }
         ],
         links: [
-            { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" }
+            { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" },
+            { rel: "icon", href: "/nb-logo.png" },
+            { rel: "apple-touch-icon", href: "/nb-logo.png" }
+
         ] 
     }),
     component: RootComponent,
@@ -47,7 +50,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
             </head>
             <body className='dark text-slate-200'>
                 <Nav />
-                {children}
+                <main className='pt-20'>{children}</main>
                 <Footer/>
             </body>
         </html>

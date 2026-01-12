@@ -5,9 +5,14 @@
     --v-navy: #1B365D;
     --v-gold: #D4AF37;
     --v-green: #4A773C;
+    --v-icon: #1B365D;
 }
 
-body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    overflow-x: hidden; 
+    color: var(--v-navy);
+}
 
 .text-v-navy { color: var(--v-navy); }
 .text-v-gold { color: var(--v-gold); }
@@ -88,6 +93,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
         --v-navy: #244779; /* lighter blue-gray for dark background */
         --v-gold: #D4AF37; /* bright gold */
         --v-green: #578d46; /* bright green */
+        --v-icon: #ffffff;
     }
 
 

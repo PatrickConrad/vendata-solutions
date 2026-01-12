@@ -6,13 +6,15 @@ interface ScrollLinkProps {
   hash?: string;          // optional section id
   children: ReactNode;
   className?: string;
+  onClick?: (opt: boolean) => void
 }
 
-export function ScrollLink({ to, hash, children, className }: ScrollLinkProps) {
+export function ScrollLink({ to, hash, children, className, onClick }: ScrollLinkProps) {
   const router = useRouter();
 
   const handleClick = (e: MouseEvent) => {
     e.preventDefault();
+    onClick && onClick(false);
 
     if (router.state.location.pathname === to) {
       // already on page → scroll to element

@@ -2,6 +2,10 @@ import * as fs from 'node:fs'
 import { createFileRoute, useRouter } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
 import { lazy } from 'react'
+import { Hero } from '../components/Hero'
+import { Services } from '../components/services/Services'
+import { Convergence } from '../components/Convergence'
+import { CallToAction } from '../components/CallToAction'
 
 const filePath = 'count.txt'
 
@@ -23,10 +27,20 @@ export const updateCount = createServerFn({ method: 'POST'})
         console.log(`data: ${data}`) 
         const count = await readCount()
         await fs.promises.writeFile(filePath, `${count+data}`);
-    })
+})
 
 export const Route = createFileRoute('/')({
-    component: lazy(() => import('../components/Home').then(m => ({ default: m.Home }))),
+    component: RouteComponent,
     loader: async () => await getCount()
 })
 
+function RouteComponent() {
+    return (
+        <>
+            <Hero />
+            <Services />
+            <Convergence />
+            <CallToAction />
+        </>
+    )
+}

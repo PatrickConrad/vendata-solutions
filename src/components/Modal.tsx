@@ -21,7 +21,7 @@ export const Modal = (props: ModalProps) => {
     }, [])
     return (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center">
-            <div ref={modalRef} className="min-w-[80%] h-[80vh] bg-white rounded-2xl shadow-lg p-20 relative flex flex-col overflow-y-auto">
+            <div ref={modalRef} className="min-w-[80%] max-h-[80vh] bg-white rounded-2xl shadow-lg p-5 md:p-20 relative flex flex-col overflow-y-auto">
                 {props.children}
             </div>
         </div>

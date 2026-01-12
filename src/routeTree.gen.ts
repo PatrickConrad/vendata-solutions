@@ -10,17 +10,31 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AppRouteImport } from './routes/app'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as R404RouteImport } from './routes/$404'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ServicesPrecisionAutomationRouteImport } from './routes/services/precision-automation'
-import { Route as ServicesCustomResourcesRouteImport } from './routes/services/custom-resources'
-import { Route as ServicesActionableDataRouteImport } from './routes/services/actionable-data'
-import { Route as Services404RouteImport } from './routes/services/$404'
+import { Route as ConsultationIndexRouteImport } from './routes/consultation/index'
+import { Route as ConsultationBookRouteImport } from './routes/consultation/book'
+import { Route as AuthSignupRouteImport } from './routes/auth.signup'
+import { Route as AuthLoginRouteImport } from './routes/auth.login'
+import { Route as AppDashboardRouteImport } from './routes/app.dashboard'
+import { Route as AppLayoutRouteImport } from './routes/app._layout'
 
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppRoute = AppRouteImport.update({
+  id: '/app',
+  path: '/app',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -38,58 +52,76 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesPrecisionAutomationRoute =
-  ServicesPrecisionAutomationRouteImport.update({
-    id: '/services/precision-automation',
-    path: '/services/precision-automation',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesCustomResourcesRoute = ServicesCustomResourcesRouteImport.update({
-  id: '/services/custom-resources',
-  path: '/services/custom-resources',
+const ConsultationIndexRoute = ConsultationIndexRouteImport.update({
+  id: '/consultation/',
+  path: '/consultation/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesActionableDataRoute = ServicesActionableDataRouteImport.update({
-  id: '/services/actionable-data',
-  path: '/services/actionable-data',
+const ConsultationBookRoute = ConsultationBookRouteImport.update({
+  id: '/consultation/book',
+  path: '/consultation/book',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Services404Route = Services404RouteImport.update({
-  id: '/services/$404',
-  path: '/services/$404',
-  getParentRoute: () => rootRouteImport,
+const AuthSignupRoute = AuthSignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => AuthRoute,
+} as any)
+const AuthLoginRoute = AuthLoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => AuthRoute,
+} as any)
+const AppDashboardRoute = AppDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppLayoutRoute = AppLayoutRouteImport.update({
+  id: '/_layout',
+  getParentRoute: () => AppRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$404': typeof R404Route
   '/about': typeof AboutRoute
+  '/app': typeof AppLayoutRoute
+  '/auth': typeof AuthRouteWithChildren
   '/contact': typeof ContactRoute
-  '/services/$404': typeof Services404Route
-  '/services/actionable-data': typeof ServicesActionableDataRoute
-  '/services/custom-resources': typeof ServicesCustomResourcesRoute
-  '/services/precision-automation': typeof ServicesPrecisionAutomationRoute
+  '/app/dashboard': typeof AppDashboardRoute
+  '/auth/login': typeof AuthLoginRoute
+  '/auth/signup': typeof AuthSignupRoute
+  '/consultation/book': typeof ConsultationBookRoute
+  '/consultation': typeof ConsultationIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$404': typeof R404Route
   '/about': typeof AboutRoute
+  '/app': typeof AppLayoutRoute
+  '/auth': typeof AuthRouteWithChildren
   '/contact': typeof ContactRoute
-  '/services/$404': typeof Services404Route
-  '/services/actionable-data': typeof ServicesActionableDataRoute
-  '/services/custom-resources': typeof ServicesCustomResourcesRoute
-  '/services/precision-automation': typeof ServicesPrecisionAutomationRoute
+  '/app/dashboard': typeof AppDashboardRoute
+  '/auth/login': typeof AuthLoginRoute
+  '/auth/signup': typeof AuthSignupRoute
+  '/consultation/book': typeof ConsultationBookRoute
+  '/consultation': typeof ConsultationIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$404': typeof R404Route
   '/about': typeof AboutRoute
+  '/app': typeof AppRouteWithChildren
+  '/auth': typeof AuthRouteWithChildren
   '/contact': typeof ContactRoute
-  '/services/$404': typeof Services404Route
-  '/services/actionable-data': typeof ServicesActionableDataRoute
-  '/services/custom-resources': typeof ServicesCustomResourcesRoute
-  '/services/precision-automation': typeof ServicesPrecisionAutomationRoute
+  '/app/_layout': typeof AppLayoutRoute
+  '/app/dashboard': typeof AppDashboardRoute
+  '/auth/login': typeof AuthLoginRoute
+  '/auth/signup': typeof AuthSignupRoute
+  '/consultation/book': typeof ConsultationBookRoute
+  '/consultation/': typeof ConsultationIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -97,42 +129,52 @@ export interface FileRouteTypes {
     | '/'
     | '/$404'
     | '/about'
+    | '/app'
+    | '/auth'
     | '/contact'
-    | '/services/$404'
-    | '/services/actionable-data'
-    | '/services/custom-resources'
-    | '/services/precision-automation'
+    | '/app/dashboard'
+    | '/auth/login'
+    | '/auth/signup'
+    | '/consultation/book'
+    | '/consultation'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/$404'
     | '/about'
+    | '/app'
+    | '/auth'
     | '/contact'
-    | '/services/$404'
-    | '/services/actionable-data'
-    | '/services/custom-resources'
-    | '/services/precision-automation'
+    | '/app/dashboard'
+    | '/auth/login'
+    | '/auth/signup'
+    | '/consultation/book'
+    | '/consultation'
   id:
     | '__root__'
     | '/'
     | '/$404'
     | '/about'
+    | '/app'
+    | '/auth'
     | '/contact'
-    | '/services/$404'
-    | '/services/actionable-data'
-    | '/services/custom-resources'
-    | '/services/precision-automation'
+    | '/app/_layout'
+    | '/app/dashboard'
+    | '/auth/login'
+    | '/auth/signup'
+    | '/consultation/book'
+    | '/consultation/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   R404Route: typeof R404Route
   AboutRoute: typeof AboutRoute
+  AppRoute: typeof AppRouteWithChildren
+  AuthRoute: typeof AuthRouteWithChildren
   ContactRoute: typeof ContactRoute
-  Services404Route: typeof Services404Route
-  ServicesActionableDataRoute: typeof ServicesActionableDataRoute
-  ServicesCustomResourcesRoute: typeof ServicesCustomResourcesRoute
-  ServicesPrecisionAutomationRoute: typeof ServicesPrecisionAutomationRoute
+  ConsultationBookRoute: typeof ConsultationBookRoute
+  ConsultationIndexRoute: typeof ConsultationIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -142,6 +184,20 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/app': {
+      id: '/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -165,46 +221,84 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/precision-automation': {
-      id: '/services/precision-automation'
-      path: '/services/precision-automation'
-      fullPath: '/services/precision-automation'
-      preLoaderRoute: typeof ServicesPrecisionAutomationRouteImport
+    '/consultation/': {
+      id: '/consultation/'
+      path: '/consultation'
+      fullPath: '/consultation'
+      preLoaderRoute: typeof ConsultationIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/custom-resources': {
-      id: '/services/custom-resources'
-      path: '/services/custom-resources'
-      fullPath: '/services/custom-resources'
-      preLoaderRoute: typeof ServicesCustomResourcesRouteImport
+    '/consultation/book': {
+      id: '/consultation/book'
+      path: '/consultation/book'
+      fullPath: '/consultation/book'
+      preLoaderRoute: typeof ConsultationBookRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/actionable-data': {
-      id: '/services/actionable-data'
-      path: '/services/actionable-data'
-      fullPath: '/services/actionable-data'
-      preLoaderRoute: typeof ServicesActionableDataRouteImport
-      parentRoute: typeof rootRouteImport
+    '/auth/signup': {
+      id: '/auth/signup'
+      path: '/signup'
+      fullPath: '/auth/signup'
+      preLoaderRoute: typeof AuthSignupRouteImport
+      parentRoute: typeof AuthRoute
     }
-    '/services/$404': {
-      id: '/services/$404'
-      path: '/services/$404'
-      fullPath: '/services/$404'
-      preLoaderRoute: typeof Services404RouteImport
-      parentRoute: typeof rootRouteImport
+    '/auth/login': {
+      id: '/auth/login'
+      path: '/login'
+      fullPath: '/auth/login'
+      preLoaderRoute: typeof AuthLoginRouteImport
+      parentRoute: typeof AuthRoute
+    }
+    '/app/dashboard': {
+      id: '/app/dashboard'
+      path: '/dashboard'
+      fullPath: '/app/dashboard'
+      preLoaderRoute: typeof AppDashboardRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/_layout': {
+      id: '/app/_layout'
+      path: ''
+      fullPath: '/app'
+      preLoaderRoute: typeof AppLayoutRouteImport
+      parentRoute: typeof AppRoute
     }
   }
 }
+
+interface AppRouteChildren {
+  AppLayoutRoute: typeof AppLayoutRoute
+  AppDashboardRoute: typeof AppDashboardRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppLayoutRoute: AppLayoutRoute,
+  AppDashboardRoute: AppDashboardRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
+interface AuthRouteChildren {
+  AuthLoginRoute: typeof AuthLoginRoute
+  AuthSignupRoute: typeof AuthSignupRoute
+}
+
+const AuthRouteChildren: AuthRouteChildren = {
+  AuthLoginRoute: AuthLoginRoute,
+  AuthSignupRoute: AuthSignupRoute,
+}
+
+const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   R404Route: R404Route,
   AboutRoute: AboutRoute,
+  AppRoute: AppRouteWithChildren,
+  AuthRoute: AuthRouteWithChildren,
   ContactRoute: ContactRoute,
-  Services404Route: Services404Route,
-  ServicesActionableDataRoute: ServicesActionableDataRoute,
-  ServicesCustomResourcesRoute: ServicesCustomResourcesRoute,
-  ServicesPrecisionAutomationRoute: ServicesPrecisionAutomationRoute,
+  ConsultationBookRoute: ConsultationBookRoute,
+  ConsultationIndexRoute: ConsultationIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
