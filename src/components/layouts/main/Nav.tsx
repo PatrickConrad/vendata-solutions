@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router"
-import { ScrollLink } from "../utils/ScrollLink"
+import { ScrollLink } from "../../../utils/ScrollLink"
 import { useState } from "react"
 
 function Nav() {
@@ -10,13 +10,13 @@ function Nav() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div className="flex items-center">
                 <Link to='/'>
-                    <img src="nb-logo-w-text.png" alt="Vendata Solutions Logo" className="mt-3 h-40" />
+                    <img src="nb-logo-w-text.png" alt="Vendata Solutions Logo" className="h-15" />
                 </Link>
             </div>
             <div className="hidden md:flex items-center gap-8 font-bold text-v-navy/70">
                 <ScrollLink to="/" hash="services" className="hover:text-(--v-gold) transition">Services</ScrollLink>
                 <Link to="/about" className="hover:text-(--v-gold) transition">About</Link>
-                <Link to="/contact" className="btn-gold px-6 py-2.5 rounded-lg text-sm">Start Working Smarter</Link>
+                <Link to="/consultation" className="btn-gold px-6 py-2.5 rounded-lg text-sm">Start Working Smarter</Link>
             </div>
 
             {/* Hamburger Button (Mobile) */}

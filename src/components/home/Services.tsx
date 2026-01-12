@@ -1,5 +1,5 @@
 import { services } from "../../data/services"
-import { ServiceModal } from "./ServiceModal"
+import { ServiceModal } from "../services/ServiceModal"
 
 export const Services = (props: Record<string, unknown>) => {
   

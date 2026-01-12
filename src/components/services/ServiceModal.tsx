@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
-import { Modal } from "../Modal";
 import { ServiceLayout } from "./ServiceLayout";
+import { Modal } from "../layouts/main/Modal";
 
 type ServiceProps = {
     title: string,

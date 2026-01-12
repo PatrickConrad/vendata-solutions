@@ -1,8 +1,8 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from '@tanstack/react-router';
 import type { ReactNode } from 'react';
-import Nav from '../components/Nav';
+import Nav from '../components/layouts/main/Nav';
+import { Footer } from '../components/layouts/main/Footer';
 import '../app.css'
-import { Footer } from '../components/Footer';
 
 export const Route = createRootRoute({
     head: () => ({

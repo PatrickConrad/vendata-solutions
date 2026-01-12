@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react"
 import { verifyPin } from "../../../server/EmailPin"
-import { Navigate } from "@tanstack/react-router"
+import { useNavigate } from "@tanstack/react-router"
 
 type Step2Props = {
   email: string
@@ -8,12 +8,13 @@ type Step2Props = {
 export const Step2 = ({email}: Step2Props) => {
     const [pin, setPin] = useState("");
     const [error, setError] = useState<boolean>(false);
+    const navigate = useNavigate();
     const handleSubmit = async (e: FormEvent) => {
       e.preventDefault()
       try{
         setError(false)
         await verifyPin({data: { email, pin }})
-        Navigate({to: '/consultation/book'})
+        navigate({to: '/consultation/book'})
       }
       catch(err: any){
         console.log('Error submitting')
@@ -25,19 +26,20 @@ export const Step2 = ({email}: Step2Props) => {
   return (
 
     <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
-              type="text"
-              maxLength={6}
-              placeholder="Enter 6-digit code"
-              value={pin}
-              onChange={e => setPin(e.target.value)}
+            type="text"
+            maxLength={6}
+            placeholder="Enter 6-digit code"
+            value={pin}
+            onChange={e => setPin(e.target.value)}
+            className="input px-4 py-3 rounded-lg border border-gray-300 focus:border-v-gold focus:ring-2 focus:ring-v-gold focus:outline-none text-center text-lg tracking-widest"
           />
-          <button className="btn-gold">Verify</button>
-          {
-            error && <p className="text-red">Error verifying pin. Please try again.</p>
-          }
-        </form>
+          <button className="btn-gold w-full py-3 rounded-lg font-bold text-lg">
+            Verify
+          </button>
+          {error && <p className="text-red-500 text-center">Error verifying pin. Please try again.</p>}
+      </form>
     </div>
 
   )

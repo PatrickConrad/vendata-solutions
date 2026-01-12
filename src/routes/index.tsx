@@ -1,11 +1,10 @@
 import * as fs from 'node:fs'
 import { createFileRoute, useRouter } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { lazy } from 'react'
-import { Hero } from '../components/Hero'
-import { Services } from '../components/services/Services'
-import { Convergence } from '../components/Convergence'
-import { CallToAction } from '../components/CallToAction'
+import { Hero } from '../components/home/Hero'
+import { Services } from '../components/home/Services'
+import { CallToAction } from '../components/home/CallToAction'
+import { UnifiedSection } from '../components/home/UnifiedSection'
 
 const filePath = 'count.txt'
 
@@ -39,7 +38,7 @@ function RouteComponent() {
         <>
             <Hero />
             <Services />
-            <Convergence />
+            <UnifiedSection />
             <CallToAction />
         </>
     )

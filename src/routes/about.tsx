@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/about')({
   component: RouteComponent,
@@ -85,9 +85,9 @@ function RouteComponent() {
         <h2 className="text-3xl lg:text-4xl font-extrabold mb-6">
           Ready to make your business work for you?
         </h2>
-        <button className="btn-gold px-10 py-4 rounded-xl font-bold text-lg mt-4">
+        <Link to="/consultation" className="btn-gold px-10 py-4 rounded-xl font-bold text-lg mt-4">
           Consult Our Engineers
-        </button>
+        </Link>
       </section>
     </main>
   </>

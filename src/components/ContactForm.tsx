@@ -1,4 +1,4 @@
-import { Captcha } from './Captcha';
+import { Captcha } from './reusable/Captcha';
 import { useCaptcha } from '../hooks/useCaptcha';
 import { useState } from 'react';
 

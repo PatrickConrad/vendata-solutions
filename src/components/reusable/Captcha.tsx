@@ -1,5 +1,5 @@
 import { LoadCanvasTemplate } from 'react-simple-captcha';
-import { useCaptcha } from '../hooks/useCaptcha'
+import { useCaptcha } from '../../hooks/useCaptcha'
 
 interface CaptchaProps {
   onChange?: (value: string) => void;
