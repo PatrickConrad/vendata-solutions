@@ -29,57 +29,104 @@ function RouteComponent() {
         </p>
 
         {!submitted ? (
-          <form onSubmit={handleSubmit} className="bg-v-navy dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6">
-            
+          <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6">
+
             {/* Name */}
+            <label className="text-slate-700 dark:text-slate-300 font-medium">
+              Your Name <span className="text-red-500">*</span>
+            </label>
             <input
               type="text"
               required
-              placeholder="Your Name"
+              placeholder="John Doe"
               value={name}
               onChange={e => setName(e.target.value)}
-              className="input px-4 py-3 rounded-lg border border-gray-300 focus:border-v-gold focus:ring-2 focus:ring-v-gold focus:outline-none"
+              className="
+                px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600
+                placeholder-gray-400 dark:placeholder-slate-500
+                focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none
+                bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100
+              "
             />
 
             {/* Company */}
+            <label className="text-slate-700 dark:text-slate-300 font-medium">
+              Company (Optional)
+            </label>
             <input
               type="text"
-              placeholder="Company (optional)"
+              placeholder="Acme Inc."
               value={company}
               onChange={e => setCompany(e.target.value)}
-              className="input px-4 py-3 rounded-lg border border-gray-300 focus:border-v-gold focus:ring-2 focus:ring-v-gold focus:outline-none"
+              className="
+                px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600
+                placeholder-gray-400 dark:placeholder-slate-500
+                focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none
+                bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100
+              "
             />
 
             {/* Date */}
+            <label className="text-slate-700 dark:text-slate-300 font-medium">
+              Select Date <span className="text-red-500">*</span>
+            </label>
             <input
               type="date"
               required
               value={date}
               onChange={e => setDate(e.target.value)}
-              className="input px-4 py-3 rounded-lg border border-gray-300 focus:border-v-gold focus:ring-2 focus:ring-v-gold focus:outline-none"
+              className="
+                px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600
+                placeholder-gray-400 dark:placeholder-slate-500
+                focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none
+                bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100
+              "
             />
 
             {/* Time */}
+            <label className="text-slate-700 dark:text-slate-300 font-medium">
+              Select Time <span className="text-red-500">*</span>
+            </label>
             <input
               type="time"
               required
               value={time}
               onChange={e => setTime(e.target.value)}
-              className="input px-4 py-3 rounded-lg border border-gray-300 focus:border-v-gold focus:ring-2 focus:ring-v-gold focus:outline-none"
+              className="
+                px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600
+                placeholder-gray-400 dark:placeholder-slate-500
+                focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none
+                bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100
+              "
             />
 
             {/* Submit Button */}
-            <button className="btn-gold w-full py-3 rounded-lg font-bold text-lg">
+            <button className="w-full py-3 rounded-lg font-bold text-lg text-white bg-green-600 hover:bg-green-700 transition-colors">
               Confirm Booking
             </button>
+
+            {/* Google Scheduler */}
+            <div className="mt-6">
+              <p className="text-slate-600 dark:text-slate-300 text-sm mb-2">
+                Or schedule directly via Google Calendar:
+              </p>
+              <iframe
+                src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=America%2FNew_York"
+                style={{ border: 0 }}
+                className="w-full h-72 rounded-lg shadow-inner"
+                frameBorder="0"
+                scrolling="no"
+              ></iframe>
+            </div>
+
           </form>
         ) : (
-          <div className="bg-v-navy dark:bg-slate-800 rounded-2xl p-8 shadow-xl text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Booking Confirmed!</h2>
-            <p className="text-v-gold mb-2">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl text-center">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Booking Confirmed!</h2>
+            <p className="text-green-500 mb-2">
               Thanks, {name}! Your consultation has been scheduled.
             </p>
-            <p className="text-white/80">
+            <p className="text-slate-700 dark:text-slate-300">
               You will receive a confirmation email shortly.
             </p>
           </div>

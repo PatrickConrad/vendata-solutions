@@ -1,5 +1,50 @@
 import { createServerFn } from "@tanstack/react-start"
 import { encrypt, generatePin, hash } from "../utils/encryption"
+import { sendEmail } from "../utils/sendEmail";
+
+
+type Payload = {
+  email: string;
+  captcha: string;
+};
+
+export const getConsultationPin = createServerFn({ method: "POST" })
+  .inputValidator((data: Payload) => data)
+  .handler(async ({ data }) => {
+    const { email, captcha } = data;
+
+    if (!email || !captcha) {
+      throw new Error("Missing email or captcha token");
+    }
+
+    if (import.meta.env.DEV && captcha === "dev-bypass-token") {
+      return { success: true };
+    }
+
+    const verifyRes = await verifyCaptcha(captcha);
+    
+
+    const result = await verifyRes.json();
+
+    if (!result.success) {
+      console.error("Turnstile failed:", result);
+      throw new Error("Captcha verification failed");
+    }
+
+    // 2. Generate PIN
+    const pin = Math.floor(100000 + Math.random() * 900000).toString();
+
+    // TODO: Store PIN in DB / Redis with expiration
+    console.log("Generated PIN:", pin);
+
+    // 3. Send Email (example with Resend / Nodemailer)
+    await sendEmail(email, `<div>Here is your verification pin code: ${pin}`, 'VenData Solutions - Verfication Pin');
+
+    return { success: true};
+  });
+
+
+
 
 
 export const requestConsultationPin = createServerFn({

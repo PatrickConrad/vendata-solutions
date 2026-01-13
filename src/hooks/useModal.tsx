@@ -1,84 +1,45 @@
-// import { PropsWithChildren, useEffect } from "react";
-// import { BrandSoftwareProcessesChart, CustomProcessesChart, ManualProcessesChart } from "../svg/charts";
+import { useEffect, RefObject } from "react"
 
-// const graphs = {
-//   manual: {
-//     title: "Manual Processes",
-//     description:
-//       "Manual effort works early, but time commitment increases while effectiveness drops as the business grows.",
-//     svg: ''
-//   },
+export function useModalClose(
+  ref: RefObject<HTMLElement | null>,
+  isOpen: boolean,
+  onClose: () => void,
+  isNavMenu: boolean = false // Toggle logic for the Nav specific check
+) {
+  useEffect(() => {
+    if (!isOpen) return
 
-//   brand: {
-//     title: "Off-the-Shelf Software",
-//     description:
-//       "Brand software starts strong, but rising costs and workarounds reduce effectiveness over time.",
-//     svg: `
-      
-//     `
-//   },
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!ref.current) return
 
-//   custom: {
-//     title: "Custom Software",
-//     description:
-//       "Custom systems improve with your business — reducing time, cost, and friction as you scale.",
-//     svg: `
-      
-//     `
-//   }
-// };
+      const target = event.target as Node
+      const rect = ref.current.getBoundingClientRect()
 
+      if (isNavMenu) {
+        // NAV LOGIC: Only close if the click is BELOW the menu bottom
+        // This ignores the header and the menu itself
+        if (event.clientY > rect.bottom) {
+          onClose()
+        }
+      } else {
+        // MODAL LOGIC: Standard outside click
+        if (!ref.current.contains(target)) {
+          onClose()
+        }
+      }
+    }
 
-// type PopupModalProps = PropsWithChildren & {
-//     closeModal: () => void;
-//     graph: string
-// }
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose()
+    }
 
-// function PopupModal(props: PopupModalProps) {
-//     // useEffect(()=>{
-//     //     if(document!=null){
-//     //         const modalTitle = document.getElementById("modal-title")??null;
-//     //         const modalDescription = document.getElementById("modal-description")??null;
-//     //         const modalGraph = document.getElementById("modal-graph")??null;
-//     //         const modal = document.getElementById("modal")??null
+    // Delay prevents the "Open" click from immediately triggering the close
+      document.addEventListener("mousedown", handleClickOutside)
+      document.addEventListener("keydown", handleEscape)
 
-//     //         if(modalTitle!=null) modalTitle.innerText = graphs[type].title;
-//     //         if(modalDescription!=null) modalDescription.innerText = graphs[type].description;
-//     //         if(modalGraph!=null) modalGraph.innerHTML = graphs[type].svg;
-//     //         if(modal!=null) modal.style.display = "flx";
-            
-
-//     //         return () => {
-//     //             if(modalTitle!=null) modalTitle==
-//     //             if(modalDescription!=null) modalDescription.innerText = graphs[type].description;
-//     //             if(modalGraph!=null) modalGraph.innerHTML = graphs[type].svg;
-//     //             if(modal!=null) modal.style.display = "flx";
-//     //         }
-
-//     // }, [type])
-
-//     return (
-//         <div className="modal">
-//             <div className="innerModal">
-//                 <div className="closeBtnRow">
-//                     <button className="closeBtn" onClick={()=>props.closeModal()}>X</button>
-//                 </div>
-//                 <div className="modalContent">
-//                     {
-//                         props.graph === 'custom'
-//                         ?
-//                         <CustomProcessesChart />
-//                         :
-//                         props.graph === 'brandname'
-//                         ?
-//                         <BrandSoftwareProcessesChart />
-//                         :
-//                         <ManualProcessesChart />
-//                     }
-//                 </div>
-//             </div>
-//         </div>
-//     )
-
-
-// }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener("keydown", handleEscape)
+    }
+  }, [isOpen, onClose, ref, isNavMenu])
+}

@@ -1,0 +1,1 @@
+import{j as o}from"./main-CQ9R0Kdk.js";import{C as n}from"./ComingSoon-CGWQjRHV.js";import"./Divider-Chbkh7hE.js";function m(){return o.jsx("div",{className:"w-full flex align-middle justify-center py-30",children:o.jsx(n,{})})}export{m as component};

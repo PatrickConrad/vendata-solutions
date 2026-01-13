@@ -14,19 +14,18 @@ export const Route = createRootRoute({
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1'
             },
-            {
-                title: "VenData Solutions"
-            },
+            { title: "VenData Solutions | Custom ERP, API Bridging & Automation" },
             {
                 name: 'description',
-                content: "This is VenData Solutions"
-            }
+                content: "VenData Solutions unifies business operations through custom ERP/CRM development, API bridging, and precision automation. We eliminate data silos and manual bottlenecks to build a seamless digital infrastructure."
+            },
+            { property: 'og:title', content: "VenData Solutions | Operational Excellence through Data" },
+            { property: 'og:description', content: "Connect your tools, automate your workflows, and gain actionable insights with custom software solutions from VenData." },
         ],
         links: [
             { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" },
             { rel: "icon", href: "/nb-logo.png" },
-            { rel: "apple-touch-icon", href: "/nb-logo.png" }
-
+            { rel: "apple-touch-icon", href: "/nb-logo.png" },
         ] 
     }),
     component: RootComponent,

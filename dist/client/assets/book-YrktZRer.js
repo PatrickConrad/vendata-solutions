@@ -1,0 +1,21 @@
+import{r as a,j as e}from"./main-CQ9R0Kdk.js";function h(){const[r,l]=a.useState(""),[s,n]=a.useState(""),[o,d]=a.useState(""),[c,i]=a.useState(""),[x,u]=a.useState(!1),m=async t=>{t.preventDefault(),u(!0)};return e.jsx("div",{className:"min-h-screen flex flex-col justify-center items-center bg-white dark:bg-slate-900 px-6 pb-20",children:e.jsxs("div",{className:"max-w-lg w-full",children:[e.jsx("h1",{className:"text-4xl font-extrabold text-v-navy dark:text-white mb-6 text-center",children:"Schedule Your Free Consultation"}),e.jsx("p",{className:"text-lg text-slate-600 dark:text-slate-300 mb-10 text-center leading-relaxed",children:"Fill in the details below and choose a time that works for you. We’ll confirm your consultation via email."}),x?e.jsxs("div",{className:"bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl text-center",children:[e.jsx("h2",{className:"text-2xl font-bold text-slate-900 dark:text-white mb-4",children:"Booking Confirmed!"}),e.jsxs("p",{className:"text-green-500 mb-2",children:["Thanks, ",r,"! Your consultation has been scheduled."]}),e.jsx("p",{className:"text-slate-700 dark:text-slate-300",children:"You will receive a confirmation email shortly."})]}):e.jsxs("form",{onSubmit:m,className:"bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6",children:[e.jsxs("label",{className:"text-slate-700 dark:text-slate-300 font-medium",children:["Your Name ",e.jsx("span",{className:"text-red-500",children:"*"})]}),e.jsx("input",{type:"text",required:!0,placeholder:"John Doe",value:r,onChange:t=>l(t.target.value),className:`\r
+                px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600\r
+                placeholder-gray-400 dark:placeholder-slate-500\r
+                focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none\r
+                bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100\r
+              `}),e.jsx("label",{className:"text-slate-700 dark:text-slate-300 font-medium",children:"Company (Optional)"}),e.jsx("input",{type:"text",placeholder:"Acme Inc.",value:s,onChange:t=>n(t.target.value),className:`\r
+                px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600\r
+                placeholder-gray-400 dark:placeholder-slate-500\r
+                focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none\r
+                bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100\r
+              `}),e.jsxs("label",{className:"text-slate-700 dark:text-slate-300 font-medium",children:["Select Date ",e.jsx("span",{className:"text-red-500",children:"*"})]}),e.jsx("input",{type:"date",required:!0,value:o,onChange:t=>d(t.target.value),className:`\r
+                px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600\r
+                placeholder-gray-400 dark:placeholder-slate-500\r
+                focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none\r
+                bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100\r
+              `}),e.jsxs("label",{className:"text-slate-700 dark:text-slate-300 font-medium",children:["Select Time ",e.jsx("span",{className:"text-red-500",children:"*"})]}),e.jsx("input",{type:"time",required:!0,value:c,onChange:t=>i(t.target.value),className:`\r
+                px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600\r
+                placeholder-gray-400 dark:placeholder-slate-500\r
+                focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:outline-none\r
+                bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100\r
+              `}),e.jsx("button",{className:"w-full py-3 rounded-lg font-bold text-lg text-white bg-green-600 hover:bg-green-700 transition-colors",children:"Confirm Booking"}),e.jsxs("div",{className:"mt-6",children:[e.jsx("p",{className:"text-slate-600 dark:text-slate-300 text-sm mb-2",children:"Or schedule directly via Google Calendar:"}),e.jsx("iframe",{src:"https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=America%2FNew_York",style:{border:0},className:"w-full h-72 rounded-lg shadow-inner",frameBorder:"0",scrolling:"no"})]})]})]})})}export{h as component};

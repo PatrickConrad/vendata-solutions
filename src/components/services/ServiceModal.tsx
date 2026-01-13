@@ -10,10 +10,17 @@ type ServiceProps = {
 }
 
 export const ServiceModal = (props: ServiceProps) => {
-    const [openModal, setOpenModal] = useState(false);
+    const [open, setOpen] = useState(false);
     return(
          <>
-            <div onClick={()=>setOpenModal(true)} className="bg-white p-10 rounded-3xl shadow-sm border-b-4 border-v-navy hover:shadow-xl transition-all cursor-pointer">
+            <div 
+                onClick={(e)=>{
+                    e.preventDefault()
+                    e.stopPropagation()
+                    setOpen(true)
+                }} 
+                className="bg-white p-10 rounded-3xl shadow-sm border-b-4 border-v-navy hover:shadow-xl transition-all cursor-pointer"
+            >
                <div className="w-14 h-14 bg-v-navy/5 rounded-2xl flex items-center justify-center mb-8">
                    {props.icon}
                </div>
@@ -25,12 +32,12 @@ export const ServiceModal = (props: ServiceProps) => {
             </div>
 
             {
-                openModal 
+                open 
                 && 
-                <Modal closeModal={()=>setOpenModal(false)}>
+                <Modal onClose={()=>setOpen(false)} open={open}>
                     <>
                         <button
-                            onClick={()=>setOpenModal(false)}
+                            onClick={()=>setOpen(false)}
                             className="cursor-pointer absolute top-3 right-3 text-gray-500 hover:text-gray-800"
                             aria-label="Close modal"
                         >

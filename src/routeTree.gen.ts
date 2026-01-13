@@ -9,19 +9,25 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ContentRouteImport } from './routes/content'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as R404RouteImport } from './routes/$404'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContentIndexRouteImport } from './routes/content.index'
 import { Route as ConsultationIndexRouteImport } from './routes/consultation/index'
+import { Route as ContentPostIdRouteImport } from './routes/content.$postId'
 import { Route as ConsultationBookRouteImport } from './routes/consultation/book'
-import { Route as AuthSignupRouteImport } from './routes/auth.signup'
-import { Route as AuthLoginRouteImport } from './routes/auth.login'
 import { Route as AppDashboardRouteImport } from './routes/app.dashboard'
 import { Route as AppLayoutRouteImport } from './routes/app._layout'
 
+const ContentRoute = ContentRouteImport.update({
+  id: '/content',
+  path: '/content',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -52,25 +58,25 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContentIndexRoute = ContentIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ContentRoute,
+} as any)
 const ConsultationIndexRoute = ConsultationIndexRouteImport.update({
   id: '/consultation/',
   path: '/consultation/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContentPostIdRoute = ContentPostIdRouteImport.update({
+  id: '/$postId',
+  path: '/$postId',
+  getParentRoute: () => ContentRoute,
+} as any)
 const ConsultationBookRoute = ConsultationBookRouteImport.update({
   id: '/consultation/book',
   path: '/consultation/book',
   getParentRoute: () => rootRouteImport,
-} as any)
-const AuthSignupRoute = AuthSignupRouteImport.update({
-  id: '/signup',
-  path: '/signup',
-  getParentRoute: () => AuthRoute,
-} as any)
-const AuthLoginRoute = AuthLoginRouteImport.update({
-  id: '/login',
-  path: '/login',
-  getParentRoute: () => AuthRoute,
 } as any)
 const AppDashboardRoute = AppDashboardRouteImport.update({
   id: '/dashboard',
@@ -87,26 +93,27 @@ export interface FileRoutesByFullPath {
   '/$404': typeof R404Route
   '/about': typeof AboutRoute
   '/app': typeof AppLayoutRoute
-  '/auth': typeof AuthRouteWithChildren
+  '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
+  '/content': typeof ContentRouteWithChildren
   '/app/dashboard': typeof AppDashboardRoute
-  '/auth/login': typeof AuthLoginRoute
-  '/auth/signup': typeof AuthSignupRoute
   '/consultation/book': typeof ConsultationBookRoute
+  '/content/$postId': typeof ContentPostIdRoute
   '/consultation': typeof ConsultationIndexRoute
+  '/content/': typeof ContentIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$404': typeof R404Route
   '/about': typeof AboutRoute
   '/app': typeof AppLayoutRoute
-  '/auth': typeof AuthRouteWithChildren
+  '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
   '/app/dashboard': typeof AppDashboardRoute
-  '/auth/login': typeof AuthLoginRoute
-  '/auth/signup': typeof AuthSignupRoute
   '/consultation/book': typeof ConsultationBookRoute
+  '/content/$postId': typeof ContentPostIdRoute
   '/consultation': typeof ConsultationIndexRoute
+  '/content': typeof ContentIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -114,14 +121,15 @@ export interface FileRoutesById {
   '/$404': typeof R404Route
   '/about': typeof AboutRoute
   '/app': typeof AppRouteWithChildren
-  '/auth': typeof AuthRouteWithChildren
+  '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
+  '/content': typeof ContentRouteWithChildren
   '/app/_layout': typeof AppLayoutRoute
   '/app/dashboard': typeof AppDashboardRoute
-  '/auth/login': typeof AuthLoginRoute
-  '/auth/signup': typeof AuthSignupRoute
   '/consultation/book': typeof ConsultationBookRoute
+  '/content/$postId': typeof ContentPostIdRoute
   '/consultation/': typeof ConsultationIndexRoute
+  '/content/': typeof ContentIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -132,11 +140,12 @@ export interface FileRouteTypes {
     | '/app'
     | '/auth'
     | '/contact'
+    | '/content'
     | '/app/dashboard'
-    | '/auth/login'
-    | '/auth/signup'
     | '/consultation/book'
+    | '/content/$postId'
     | '/consultation'
+    | '/content/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -146,10 +155,10 @@ export interface FileRouteTypes {
     | '/auth'
     | '/contact'
     | '/app/dashboard'
-    | '/auth/login'
-    | '/auth/signup'
     | '/consultation/book'
+    | '/content/$postId'
     | '/consultation'
+    | '/content'
   id:
     | '__root__'
     | '/'
@@ -158,12 +167,13 @@ export interface FileRouteTypes {
     | '/app'
     | '/auth'
     | '/contact'
+    | '/content'
     | '/app/_layout'
     | '/app/dashboard'
-    | '/auth/login'
-    | '/auth/signup'
     | '/consultation/book'
+    | '/content/$postId'
     | '/consultation/'
+    | '/content/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -171,14 +181,22 @@ export interface RootRouteChildren {
   R404Route: typeof R404Route
   AboutRoute: typeof AboutRoute
   AppRoute: typeof AppRouteWithChildren
-  AuthRoute: typeof AuthRouteWithChildren
+  AuthRoute: typeof AuthRoute
   ContactRoute: typeof ContactRoute
+  ContentRoute: typeof ContentRouteWithChildren
   ConsultationBookRoute: typeof ConsultationBookRoute
   ConsultationIndexRoute: typeof ConsultationIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/content': {
+      id: '/content'
+      path: '/content'
+      fullPath: '/content'
+      preLoaderRoute: typeof ContentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -221,6 +239,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/content/': {
+      id: '/content/'
+      path: '/'
+      fullPath: '/content/'
+      preLoaderRoute: typeof ContentIndexRouteImport
+      parentRoute: typeof ContentRoute
+    }
     '/consultation/': {
       id: '/consultation/'
       path: '/consultation'
@@ -228,26 +253,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsultationIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/content/$postId': {
+      id: '/content/$postId'
+      path: '/$postId'
+      fullPath: '/content/$postId'
+      preLoaderRoute: typeof ContentPostIdRouteImport
+      parentRoute: typeof ContentRoute
+    }
     '/consultation/book': {
       id: '/consultation/book'
       path: '/consultation/book'
       fullPath: '/consultation/book'
       preLoaderRoute: typeof ConsultationBookRouteImport
       parentRoute: typeof rootRouteImport
-    }
-    '/auth/signup': {
-      id: '/auth/signup'
-      path: '/signup'
-      fullPath: '/auth/signup'
-      preLoaderRoute: typeof AuthSignupRouteImport
-      parentRoute: typeof AuthRoute
-    }
-    '/auth/login': {
-      id: '/auth/login'
-      path: '/login'
-      fullPath: '/auth/login'
-      preLoaderRoute: typeof AuthLoginRouteImport
-      parentRoute: typeof AuthRoute
     }
     '/app/dashboard': {
       id: '/app/dashboard'
@@ -278,25 +296,27 @@ const AppRouteChildren: AppRouteChildren = {
 
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 
-interface AuthRouteChildren {
-  AuthLoginRoute: typeof AuthLoginRoute
-  AuthSignupRoute: typeof AuthSignupRoute
+interface ContentRouteChildren {
+  ContentPostIdRoute: typeof ContentPostIdRoute
+  ContentIndexRoute: typeof ContentIndexRoute
 }
 
-const AuthRouteChildren: AuthRouteChildren = {
-  AuthLoginRoute: AuthLoginRoute,
-  AuthSignupRoute: AuthSignupRoute,
+const ContentRouteChildren: ContentRouteChildren = {
+  ContentPostIdRoute: ContentPostIdRoute,
+  ContentIndexRoute: ContentIndexRoute,
 }
 
-const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren)
+const ContentRouteWithChildren =
+  ContentRoute._addFileChildren(ContentRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   R404Route: R404Route,
   AboutRoute: AboutRoute,
   AppRoute: AppRouteWithChildren,
-  AuthRoute: AuthRouteWithChildren,
+  AuthRoute: AuthRoute,
   ContactRoute: ContactRoute,
+  ContentRoute: ContentRouteWithChildren,
   ConsultationBookRoute: ConsultationBookRoute,
   ConsultationIndexRoute: ConsultationIndexRoute,
 }
