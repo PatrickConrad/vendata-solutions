@@ -1,5 +1,5 @@
 import { createServerFn } from "@tanstack/react-start"
-import { getConsultationPinServer, requestConsultationPinServer, verifyPinServer } from "./email.server";
+import { getConsultationPinServer, requestConsultationPinServer, verifyPinServer } from "../../src/utils/email.server";
 
 
 type Payload = {

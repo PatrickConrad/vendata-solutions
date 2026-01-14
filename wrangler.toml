@@ -1,0 +1,8 @@
+name = "vendata-solutions"
+type = "javascript" # or "webpack" / "modules" if using ES modules
+
+account_id = "082a2346245ba30a6cd9efdaae07e205"
+workers_dev = true
+compatibility_date = "2026-01-13" # today’s date, update when deploying
+
+

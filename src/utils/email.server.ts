@@ -1,5 +1,5 @@
-import { encrypt, generatePin, hash } from "../utils/encryption"
-import { sendEmail } from "../utils/sendEmail";
+import { encrypt, generatePin, hash } from "./encryption"
+import { sendEmail } from "./sendEmail";
 
 
 
