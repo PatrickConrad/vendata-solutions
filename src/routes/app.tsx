@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Outlet } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/app')({
   head: () => ({
@@ -14,5 +14,10 @@ export const Route = createFileRoute('/app')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/app"!</div>
+  return (
+    <>
+      <h3>Hello from app</h3>
+      <Outlet />
+    </>
+  )
 }

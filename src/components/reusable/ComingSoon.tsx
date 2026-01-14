@@ -22,7 +22,15 @@ export function ComingSoon() {
         <Divider />
 
         
-          {/* Logo */}
+      
+
+        {/* CTA */}
+        <p className="text-slate-500 dark:text-slate-400">
+          Want early access or updates?
+        </p>
+
+
+        {/* Logo */}
         <div className="flex justify-center">
           <img
             src="/nb-logo-w-text.png"
@@ -30,11 +38,6 @@ export function ComingSoon() {
             className="h-25 md:h-40"
           />
         </div>
-
-        {/* CTA */}
-        <p className="text-slate-500 dark:text-slate-400">
-          Want early access or updates?
-        </p>
 
         {/* <Link
           to="/contact"

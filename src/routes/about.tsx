@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Divider } from '../components/reusable/Divider'
+import { Convergence } from '../components/reusable/Convergence'
 
 export const Route = createFileRoute('/about')({
   head: () => ({
@@ -18,21 +19,26 @@ function RouteComponent() {
   return <>
     <main className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200">
       {/* Hero Section */}
-      <section className="py-24 bg-(--v-navy) dark:bg-(--v-navy) text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <h1 className="text-(--v-gold) text-5xl lg:text-6xl font-extrabold mb-6">
+      <section className="py-28 bg-gradient-to-br from-[var(--v-navy)] to-slate-900 text-white text-center relative overflow-hidden">
+        {/* Decorative glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-v-gold/10 rounded-full blur-[140px]" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6">
+          <h1 className="text-v-gold text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight">
             About VenData Solutions
           </h1>
-          <Divider className="w-24 h-1 bg-v-green mt-5 mb-10"/>
-          <p className="text-xl lg:text-2xl leading-relaxed max-w-2xl mx-auto">
-            We create intelligent software that automates, clarifies, and scales your business. 
+
+          <Divider className="w-24 h-1 bg-v-green mx-auto mb-10" />
+
+          <p className="text-xl lg:text-2xl leading-relaxed text-slate-200 max-w-2xl mx-auto">
+            We create intelligent software that automates, clarifies, and scales your business.  
             Our mission is to make your business work for you — not the other way around.
           </p>
         </div>
       </section>
 
       {/* Mission / Vision */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-800">
+      <section className="px-15 py-24 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl font-extrabold text-(--v-navy) dark:text-white mb-6">
@@ -43,7 +49,7 @@ function RouteComponent() {
               and provide clear insights into their operations.
             </p>
 
-            <h2 className="text-(--v-gold)  text-4xl font-extrabold  dark:text-(--v-green) mb-6">
+            <h2 className="text-(--v-gold)  text-4xl font-extrabold  dark:text-(--v-gold) mb-6">
               Our Vision
             </h2>
             <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -51,12 +57,8 @@ function RouteComponent() {
               and unlock data-driven growth.
             </p>
           </div>
-          <div className="flex justify-center lg:justify-end">
-            <img 
-              src="team-illustration.png" 
-              alt="Team illustration" 
-              className="rounded-3xl shadow-xl w-full max-w-md"
-            />
+          <div className="flex justify-center lg:justify-end p-10">
+            <Convergence />
           </div>
         </div>
       </section>
@@ -75,13 +77,13 @@ function RouteComponent() {
                 We constantly explore smarter ways to solve problems and build systems that scale.
               </p>
             </div>
-            <div className="bg-(--v-gold) text-(--v-navy) rounded-2xl p-8 shadow-lg">
+            <div className="bg-v-gold text-(--v-navy) rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold mb-4">Transparency</h3>
               <p className="text-base">
                 Clear insights and honest communication are at the core of every project.
               </p>
             </div>
-            <div className="bg-(--v-green) text-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-v-green text-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold mb-4">Impact</h3>
               <p className="text-base">
                 We deliver results that genuinely improve our clients’ workflow and bottom line.

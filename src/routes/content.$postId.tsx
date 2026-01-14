@@ -1,7 +1,6 @@
 import { createFileRoute, notFound } from '@tanstack/react-router'
-import { getPost } from '../server/BlogPosts'
 import { PostNotFound } from '../components/content/PostNotFound'
-
+import { getPost } from '../utils/blog.functions'
 export const Route = createFileRoute('/content/$postId')({
  // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({ params }) => {

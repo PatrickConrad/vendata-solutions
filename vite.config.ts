@@ -10,11 +10,23 @@ export default defineConfig({
     port: 3000,
   },
   plugins: [
-    tsConfigPaths(),
+    tailwindcss(),
+    tsConfigPaths({
+      projects: ['./tsconfig.json']
+    }),
     cloudflare({ viteEnvironment: { name: 'ssr' } }),
     tanstackStart(),
     // react's vite plugin must come after start's vite plugin
     viteReact(),
-    tailwindcss()
+    
   ],
+  build: {
+    target: 'esnext',       // Modern JS output
+    outDir: 'dist',         // Output folder for Cloudflare Pages
+    rollupOptions: {
+      output: {
+        entryFileNames: '[name].js', // Keeps file names predictable
+      },
+    },
+  },
 }) 

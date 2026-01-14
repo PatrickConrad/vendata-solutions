@@ -8,8 +8,8 @@ export const Route = createFileRoute('/content')({
 
 function RouteComponent() {
   return (
-    <div className='w-full flex align-middle justify-center py-30'>
+    <main className='w-full flex align-middle justify-center py-30'>
       <Outlet />
-    </div>
+    </main>
   )
 }

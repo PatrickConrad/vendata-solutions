@@ -1,5 +1,5 @@
 import { FormEvent, useState } from "react"
-import { requestConsultationPin } from "../../../server/EmailPin"
+import { requestConsultationPin } from "../../../types/EmailPin"
 import { Turnstile } from "../../../components/reusable/Turnstile";
 
 type Step1Props = {

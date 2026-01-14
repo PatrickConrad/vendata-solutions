@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { FormEvent, useEffect, useState } from 'react'
 import { Step1 } from './-components/step1'
 import { Step2 } from './-components/step2'
-import { getConsultationPin, requestConsultationPin } from '../../server/EmailPin'
+import { getConsultationPin, requestConsultationPin } from '../../types/EmailPin'
 import { Turnstile } from '../../components/reusable/Turnstile'
 import { Book } from '../../components/Book'
 

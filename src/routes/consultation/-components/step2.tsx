@@ -1,5 +1,5 @@
 import { FormEvent, useState } from "react"
-import { verifyPin } from "../../../server/EmailPin"
+import { verifyPin } from "../../../types/EmailPin"
 import { useNavigate } from "@tanstack/react-router"
 
 type Step2Props = {

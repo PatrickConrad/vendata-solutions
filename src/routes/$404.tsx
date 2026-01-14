@@ -14,5 +14,9 @@ export const Route = createFileRoute('/$404')({
 })
 
 function RouteComponent() {
-  return <div className='p-50'>Hello "/$404"!</div>
+  return (
+    <main className='min-h-[80vh] w-full flex text-center justify-center align-middle p-50'>
+      <h2>404 - Page Not Found</h2>
+    </main>
+  )
 }
