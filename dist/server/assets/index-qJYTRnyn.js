@@ -1,5 +1,5 @@
-import { a as reactExports, n as jsxRuntimeExports, s as createServerFn } from "./worker-entry-CxbBKW3I.js";
-import { e as createSsrRpc } from "./router-DLSk2VYk.js";
+import { a as reactExports, n as jsxRuntimeExports, s as createServerFn } from "./worker-entry-CDewFTeQ.js";
+import { e as createSsrRpc } from "./router-C4hQ9YRK.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -99,7 +99,7 @@ function Book() {
     window.addEventListener("keydown", handleEnter);
     return () => window.removeEventListener("keydown", handleEnter);
   }, [step, info]);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen flex flex-col justify-center items-center bg-white dark:bg-slate-900 px-6 w-full", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "py-30 flex flex-col justify-center items-center bg-white dark:bg-slate-900 px-6 w-full", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl font-extrabold text-v-navy dark:text-white mb-6 text-center", children: "Book a Strategy Call" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-slate-600 dark:text-slate-300 mb-10 text-center leading-relaxed", children: "Let’s get you scheduled in just a few quick steps." }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-center gap-2 mb-8", children: [1, 2, 3].map((n) => /* @__PURE__ */ jsxRuntimeExports.jsx(

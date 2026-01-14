@@ -1,4 +1,4 @@
-import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, O as Outlet, T as TSS_SERVER_FUNCTION, q as getServerFnById, s as createServerFn, v as notFound } from "./worker-entry-CxbBKW3I.js";
+import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, O as Outlet, T as TSS_SERVER_FUNCTION, q as getServerFnById, s as createServerFn, v as notFound } from "./worker-entry-CDewFTeQ.js";
 const preloadWarning = "Error preloading route! ☝️";
 class BaseRoute {
   constructor(options) {
@@ -478,7 +478,7 @@ const Link = reactExports.forwardRef(
 function isCtrlEvent(e2) {
   return !!(e2.metaKey || e2.altKey || e2.ctrlKey || e2.shiftKey);
 }
-let Route$e = class Route extends BaseRoute {
+let Route$i = class Route extends BaseRoute {
   /**
    * @deprecated Use the `createRoute` function instead.
    */
@@ -530,7 +530,7 @@ let Route$e = class Route extends BaseRoute {
   }
 };
 function createRoute(options) {
-  return new Route$e(
+  return new Route$i(
     // TODO: Help us TypeChris, you're our only hope!
     options
   );
@@ -5256,10 +5256,74 @@ function Nav() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(MobileMenu, { open, onClose: () => setOpen(false) })
   ] });
 }
-const Footer = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "py-12 border-t border-gray-100 text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-400 font-medium", children: "© 2026 Vendata Solutions. All rights reserved." }) });
+const socialIcons = {
+  linkedin: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", width: "24", height: "24", fill: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM0.5 8h4V24h-4V8zM8.5 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-8.2c0-1.95-.03-4.45-2.71-4.45-2.71 0-3.13 2.12-3.13 4.3V24h-4V8z" }) }),
+  facebook: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", width: "24", height: "24", fill: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M22.675 0h-21.35C.595 0 0 .594 0 1.326v21.348C0 23.406.595 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.505 0-1.797.716-1.797 1.765v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.406 24 22.674V1.326C24 .594 23.406 0 22.675 0z" }) }),
+  instagram: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", width: "24", height: "24", fill: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.5-.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" }) }),
+  youtube: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", width: "24", height: "24", fill: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M23.498 6.186a3.01 3.01 0 0 0-2.12-2.13C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.378.556a3.01 3.01 0 0 0-2.12 2.13C0 8.06 0 12 0 12s0 3.94.502 5.814a3.01 3.01 0 0 0 2.12 2.13C4.495 20.5 12 20.5 12 20.5s7.505 0 9.378-.556a3.01 3.01 0 0 0 2.12-2.13C24 15.94 24 12 24 12s0-3.94-.502-5.814zM9.75 15.5v-7l6 3.5-6 3.5z" }) })
 };
-const Route$d = createRootRoute({
+function SocialBar({ className }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `px-10 flex flex-col w-full justify-center align-middle ${className}`, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: "py-3 text-(--v-gold) flex justify-center", href: "https://linkedin.com/company/vendata-solutions", target: "_blank", children: socialIcons.linkedin }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: "py-3 text-(--v-gold) flex justify-center", href: "https://instagram.com", target: "_blank", children: socialIcons.instagram }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: "py-3 text-(--v-gold) flex justify-center", href: "https://facebook.com", target: "_blank", children: socialIcons.facebook }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: "py-3 text-(--v-gold) flex justify-center", href: "https://youtube.com", target: "_blank", children: socialIcons.youtube })
+  ] });
+}
+function Footer() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "bg-slate-900 text-slate-300 py-16", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 flex flex-col", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col gap-4 text-center md:text-start", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "VenData Solutions" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm md:text-lg leading-relaxed w-full", children: "Data-driven systems, automation, and AI solutions for modern businesses." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col md:flex-row md:justify-evenly", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full text-center md:text-start", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "Company" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-4 text-sm md:text-lg", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/", className: "hover:text-v-gold transition", children: "Home" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "hover:text-v-gold transition", children: "About" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/contact", className: "hover:text-v-gold transition", children: "Contact" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "hover:text-v-gold transition", children: "Book a Call" }) })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("br", {})
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full text-center md:text-start", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "Resources" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-4 text-sm md:text-md", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/content", className: "hover:text-v-gold transition", children: "Blog" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/privacy", className: "hover:text-v-gold transition", children: "Privacy Policy" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/terms", className: "hover:text-v-gold transition", children: "Terms of Service" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/sitemap.xml", className: "hover:text-v-gold transition", children: "Sitemap" }) })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("br", {})
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full text-center md:text-start", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "Contact" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm md:text-md leading-relaxed", children: [
+          "Ready to scale?",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "text-v-gold hover:underline font-medium", children: "Schedule a strategy call" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(SocialBar, { className: "flex flex-col md:flex-row px-5 align-middle justify-center" })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-7xl mx-auto px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t border-slate-800 mt-16 pt-8 text-center md:text-left text-xs text-slate-500", children: [
+      "© ",
+      (/* @__PURE__ */ new Date()).getFullYear(),
+      " VenData Solutions. All rights reserved."
+    ] }) })
+  ] });
+}
+const Route$h = createRootRoute({
   head: () => ({
     meta: [
       {
@@ -5294,7 +5358,15 @@ function RootComponent() {
 }
 function RootDocument({ children }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("html", { suppressHydrationWarning: true, children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("head", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeadContent, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("head", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(HeadContent, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("script", { children: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-9PXEB6HMVC');
+                    ` })
+    ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("body", { className: "dark text-slate-200", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Nav, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx("main", { className: "pt-20", children }),
@@ -5302,11 +5374,53 @@ function RootDocument({ children }) {
     ] })
   ] });
 }
-const $$splitComponentImporter$c = () => import("./content-CjR7Nnxh.js");
+const $$splitComponentImporter$g = () => import("./terms-DEj9vv5D.js");
+const Route$g = createFileRoute("/terms")({
+  component: lazyRouteComponent($$splitComponentImporter$g, "component")
+});
+const $$splitComponentImporter$f = () => import("./sitemap_._xml-BTU5dmpx.js");
+const Route$f = createFileRoute("/sitemap.xml")({
+  loader: async () => {
+    const urls = ["/", "/about", "/contact", "/consultation", "/content"];
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map((url) => `
+  <url>
+    <loc>https://vendata.solutions${url}</loc>
+  </url>
+`).join("")}
+</urlset>`;
+    return xml;
+  },
+  headers: () => ({
+    "Content-Type": "application/xml"
+  }),
+  component: lazyRouteComponent($$splitComponentImporter$f, "component")
+});
+const $$splitComponentImporter$e = () => import("./robots_._txt-BTU5dmpx.js");
+const Route$e = createFileRoute("/robots.txt")({
+  loader: async () => {
+    return `
+User-agent: *
+Allow: /
+
+Sitemap: https://vendata.solutions/sitemap.xml
+`.trim();
+  },
+  headers: () => ({
+    "Content-Type": "text/plain"
+  }),
+  component: lazyRouteComponent($$splitComponentImporter$e, "component")
+});
+const $$splitComponentImporter$d = () => import("./privacy-BBvkqfvz.js");
+const Route$d = createFileRoute("/privacy")({
+  component: lazyRouteComponent($$splitComponentImporter$d, "component")
+});
+const $$splitComponentImporter$c = () => import("./content-BgSGx4dw.js");
 const Route$c = createFileRoute("/content")({
   component: lazyRouteComponent($$splitComponentImporter$c, "component")
 });
-const $$splitComponentImporter$b = () => import("./contact-zDMjIsUG.js");
+const $$splitComponentImporter$b = () => import("./contact-BmaSaW8o.js");
 const Route$b = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -5318,7 +5432,7 @@ const Route$b = createFileRoute("/contact")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$b, "component")
 });
-const $$splitComponentImporter$a = () => import("./auth-DF-O5YYj.js");
+const $$splitComponentImporter$a = () => import("./auth-IqOieyuG.js");
 const Route$a = createFileRoute("/auth")({
   head: () => ({
     meta: [{
@@ -5330,7 +5444,7 @@ const Route$a = createFileRoute("/auth")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$a, "component")
 });
-const $$splitComponentImporter$9 = () => import("./app-BBj3W7j3.js");
+const $$splitComponentImporter$9 = () => import("./app-Bp0kfdZl.js");
 const Route$9 = createFileRoute("/app")({
   head: () => ({
     meta: [{
@@ -5342,7 +5456,7 @@ const Route$9 = createFileRoute("/app")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$9, "component")
 });
-const $$splitComponentImporter$8 = () => import("./about-DLqJw5nE.js");
+const $$splitComponentImporter$8 = () => import("./about-CEYR94tX.js");
 const Route$8 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -5354,7 +5468,7 @@ const Route$8 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$8, "component")
 });
-const $$splitComponentImporter$7 = () => import("./_404-DwxUbRY-.js");
+const $$splitComponentImporter$7 = () => import("./_404-CrkRZ4NW.js");
 const Route$7 = createFileRoute("/$404")({
   head: () => ({
     meta: [{
@@ -5366,16 +5480,16 @@ const Route$7 = createFileRoute("/$404")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-const $$splitComponentImporter$6 = () => import("./index-Dg25A4L_.js");
+const $$splitComponentImporter$6 = () => import("./index-CkmywQUl.js");
 const Route$6 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter$6, "component")
   // loader: async () => await getCount()
 });
-const $$splitComponentImporter$5 = () => import("./content.index-K4R5tiCe.js");
+const $$splitComponentImporter$5 = () => import("./content.index-95s8H0u1.js");
 const Route$5 = createFileRoute("/content/")({
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-const $$splitComponentImporter$4 = () => import("./index-BdQaUDi-.js");
+const $$splitComponentImporter$4 = () => import("./index-qJYTRnyn.js");
 const Route$4 = createFileRoute("/consultation/")({
   head: () => ({
     meta: [{
@@ -5404,8 +5518,8 @@ const createSsrRpc = (functionId, importer) => {
   });
 };
 const getPost = createServerFn().inputValidator((data) => data).handler(createSsrRpc("7d7e857e3252f6ecf0c7eabed1b93b93ea9bc14341b78a5c25ea74735091c89a"));
-const $$splitNotFoundComponentImporter = () => import("./content._postId-DgMs5JXa.js");
-const $$splitComponentImporter$3 = () => import("./content._postId-CSTdxGe4.js");
+const $$splitNotFoundComponentImporter = () => import("./content._postId-CSA7Q850.js");
+const $$splitComponentImporter$3 = () => import("./content._postId-0jEWe3ZB.js");
 const Route$3 = createFileRoute("/content/$postId")({
   // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({
@@ -5460,52 +5574,72 @@ const Route$3 = createFileRoute("/content/$postId")({
   component: lazyRouteComponent($$splitComponentImporter$3, "component"),
   notFoundComponent: lazyRouteComponent($$splitNotFoundComponentImporter, "notFoundComponent")
 });
-const $$splitComponentImporter$2 = () => import("./book-CrWRB6f3.js");
+const $$splitComponentImporter$2 = () => import("./book-D9vS0Sp7.js");
 const Route$2 = createFileRoute("/consultation/book")({
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./app.dashboard-CNBpQh8d.js");
+const $$splitComponentImporter$1 = () => import("./app.dashboard-ByjLSAkk.js");
 const Route$1 = createFileRoute("/app/dashboard")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./app._layout-DOCkjQwJ.js");
+const $$splitComponentImporter = () => import("./app._layout-_3K2tJtT.js");
 const Route2 = createFileRoute("/app/_layout")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
+});
+const TermsRoute = Route$g.update({
+  id: "/terms",
+  path: "/terms",
+  getParentRoute: () => Route$h
+});
+const SitemapDotxmlRoute = Route$f.update({
+  id: "/sitemap.xml",
+  path: "/sitemap.xml",
+  getParentRoute: () => Route$h
+});
+const RobotsDottxtRoute = Route$e.update({
+  id: "/robots.txt",
+  path: "/robots.txt",
+  getParentRoute: () => Route$h
+});
+const PrivacyRoute = Route$d.update({
+  id: "/privacy",
+  path: "/privacy",
+  getParentRoute: () => Route$h
 });
 const ContentRoute = Route$c.update({
   id: "/content",
   path: "/content",
-  getParentRoute: () => Route$d
+  getParentRoute: () => Route$h
 });
 const ContactRoute = Route$b.update({
   id: "/contact",
   path: "/contact",
-  getParentRoute: () => Route$d
+  getParentRoute: () => Route$h
 });
 const AuthRoute = Route$a.update({
   id: "/auth",
   path: "/auth",
-  getParentRoute: () => Route$d
+  getParentRoute: () => Route$h
 });
 const AppRoute = Route$9.update({
   id: "/app",
   path: "/app",
-  getParentRoute: () => Route$d
+  getParentRoute: () => Route$h
 });
 const AboutRoute = Route$8.update({
   id: "/about",
   path: "/about",
-  getParentRoute: () => Route$d
+  getParentRoute: () => Route$h
 });
 const R404Route = Route$7.update({
   id: "/$404",
   path: "/$404",
-  getParentRoute: () => Route$d
+  getParentRoute: () => Route$h
 });
 const IndexRoute = Route$6.update({
   id: "/",
   path: "/",
-  getParentRoute: () => Route$d
+  getParentRoute: () => Route$h
 });
 const ContentIndexRoute = Route$5.update({
   id: "/",
@@ -5515,7 +5649,7 @@ const ContentIndexRoute = Route$5.update({
 const ConsultationIndexRoute = Route$4.update({
   id: "/consultation/",
   path: "/consultation/",
-  getParentRoute: () => Route$d
+  getParentRoute: () => Route$h
 });
 const ContentPostIdRoute = Route$3.update({
   id: "/$postId",
@@ -5525,7 +5659,7 @@ const ContentPostIdRoute = Route$3.update({
 const ConsultationBookRoute = Route$2.update({
   id: "/consultation/book",
   path: "/consultation/book",
-  getParentRoute: () => Route$d
+  getParentRoute: () => Route$h
 });
 const AppDashboardRoute = Route$1.update({
   id: "/dashboard",
@@ -5554,10 +5688,14 @@ const rootRouteChildren = {
   AuthRoute,
   ContactRoute,
   ContentRoute: ContentRouteWithChildren,
+  PrivacyRoute,
+  RobotsDottxtRoute,
+  SitemapDotxmlRoute,
+  TermsRoute,
   ConsultationBookRoute,
   ConsultationIndexRoute
 };
-const routeTree = Route$d._addFileChildren(rootRouteChildren)._addFileTypes();
+const routeTree = Route$h._addFileChildren(rootRouteChildren)._addFileTypes();
 const getRouter = () => {
   const router2 = createRouter({
     routeTree,

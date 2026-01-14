@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import Nav from '../components/layouts/main/Nav';
 import { Footer } from '../components/layouts/main/Footer';
 import '../app.css'
+import { AnalyticsTracker } from '../components/reusable/AnalyticsTracker';
 
 export const Route = createRootRoute({
     head: () => ({
@@ -46,8 +47,21 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <html suppressHydrationWarning>
             <head>
                 <HeadContent />
+                <script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-9PXEB6HMVC"
+                />
+                <script>
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-9PXEB6HMVC');
+                    `}
+                </script>
             </head>
             <body className='dark text-slate-200'>
+                <AnalyticsTracker />
                 <Nav />
                 <main className='pt-20'>{children}</main>
                 <Footer/>
