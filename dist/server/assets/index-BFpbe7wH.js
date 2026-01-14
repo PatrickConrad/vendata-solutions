@@ -1,40 +1,58 @@
-import { s as createServerFn, a as reactExports, n as jsxRuntimeExports } from "./worker-entry-DHLhqJTu.js";
-import { e as createSsrRpc } from "./router-Er_brnpy.js";
+import { a as reactExports, n as jsxRuntimeExports, s as createServerFn } from "./worker-entry-D5KBIN_A.js";
+import { e as createSsrRpc } from "./router-DIxlBTKn.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
 import "node:stream/web";
-createServerFn({
-  method: "POST"
-}).inputValidator((data) => data).handler(createSsrRpc("8147475b68f8d7ce2daf0bc2cd3e8f06a8554b6e7ca57a9c105e8663e39f2959"));
-createServerFn({
-  method: "POST"
-}).inputValidator((email) => {
-  return email;
-}).handler(createSsrRpc("73197069f402ffc7bdc1f24cb5d29b5ec21bc2a7ffe2df0ff104e22689f8a713"));
-createServerFn({
-  method: "POST"
-}).inputValidator((input) => input).handler(createSsrRpc("ce9bda8ad2507591b51649d15304cdd16e1c8af776d47b325fb76a928b769c66"));
 const sitekey = "0x4AAAAAACMRHYyVsYg5_rNf";
 function Turnstile({ setToken }) {
+  const containerRef = reactExports.useRef(null);
+  const widgetIdRef = reactExports.useRef(null);
   reactExports.useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-    script.onload = () => {
-      window.turnstile.render("#turnstile-container", {
-        sitekey,
-        callback: (token) => setToken(token)
-      });
+    if (!document.querySelector('script[src*="turnstile/v0/api.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+    const renderWidget = () => {
+      if (window.turnstile && containerRef.current && !widgetIdRef.current) {
+        widgetIdRef.current = window.turnstile.render(containerRef.current, {
+          sitekey,
+          callback: (token) => setToken(token),
+          theme: "auto",
+          // THIS FIXES THE WIDTH:
+          size: "flexible"
+        });
+      }
     };
+    if (window.turnstile) {
+      renderWidget();
+    } else {
+      const interval = setInterval(() => {
+        if (window.turnstile) {
+          renderWidget();
+          clearInterval(interval);
+        }
+      }, 100);
+      return () => clearInterval(interval);
+    }
     return () => {
-      document.body.removeChild(script);
+      if (widgetIdRef.current) {
+        window.turnstile?.remove(widgetIdRef.current);
+        widgetIdRef.current = null;
+      }
     };
   }, [setToken]);
-  if (typeof window === "undefined" || false) return null;
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { id: "turnstile-container" });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      ref: containerRef,
+      id: "turnstile-container",
+      className: "w-full flex justify-center min-h-[65px]"
+    }
+  );
 }
 function Book() {
   const [step, setStep] = reactExports.useState(1);
@@ -148,6 +166,17 @@ function Book() {
     ] })
   ] });
 }
+createServerFn({
+  method: "POST"
+}).inputValidator((data) => data).handler(createSsrRpc("86dcb2d9ff949870ad447116fc58cbe65908abb71b286bf73647bbe003004267"));
+createServerFn({
+  method: "POST"
+}).inputValidator((email) => {
+  return email;
+}).handler(createSsrRpc("1bf3031431d51463038e5d1b6560e5f1b1627b95ccc6da061853bebbf738e8e0"));
+createServerFn({
+  method: "POST"
+}).inputValidator((input) => input).handler(createSsrRpc("cfa2100eea0bb98e0fdcda22c2e02d30a78aa2b1b44b256568a5f72d87396b78"));
 function RouteComponent() {
   const [email, setEmail] = reactExports.useState("");
   const [sent, setSent] = reactExports.useState(false);

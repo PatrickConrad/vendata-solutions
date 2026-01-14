@@ -1,4 +1,4 @@
-import { y as notImplementedClass, z as notImplemented, A as getAugmentedNamespace, B as getDefaultExportFromCjs, x as createServerRpc, s as createServerFn } from "./worker-entry-DHLhqJTu.js";
+import { y as notImplementedClass, z as notImplemented, A as getAugmentedNamespace, B as getDefaultExportFromCjs, x as createServerRpc, s as createServerFn } from "./worker-entry-D5KBIN_A.js";
 import crypto from "crypto";
 import require$$0$6 from "events";
 import require$$0$2 from "url";
@@ -11182,16 +11182,7 @@ async function sendEmail(email, body, subject, from) {
     html: body
   });
 }
-const getConsultationPin_createServerFn_handler = createServerRpc("8147475b68f8d7ce2daf0bc2cd3e8f06a8554b6e7ca57a9c105e8663e39f2959", (opts, signal) => getConsultationPin.__executeServer(opts, signal));
-const getConsultationPin = createServerFn({
-  method: "POST"
-}).inputValidator((data) => data).handler(getConsultationPin_createServerFn_handler, async ({
-  data
-}) => {
-  const {
-    email,
-    captcha
-  } = data;
+const getConsultationPinServer = async (email, captcha) => {
   if (!email || !captcha) {
     throw new Error("Missing email or captcha token");
   }
@@ -11204,11 +11195,29 @@ const getConsultationPin = createServerFn({
   const pin = Math.floor(1e5 + Math.random() * 9e5).toString();
   console.log("Generated PIN:", pin);
   await sendEmail(email, `<div>Here is your verification pin code: ${pin}`, "VenData Solutions - Verfication Pin");
-  return {
-    success: true
-  };
+  return { success: true };
+};
+const requestConsultationPinServer = async (email) => {
+  console.log({ email });
+  return { success: true };
+};
+const verifyPinServer = (email, pin) => {
+  hash(email);
+  return { verified: true };
+};
+const getConsultationPin_createServerFn_handler = createServerRpc("86dcb2d9ff949870ad447116fc58cbe65908abb71b286bf73647bbe003004267", (opts, signal) => getConsultationPin.__executeServer(opts, signal));
+const getConsultationPin = createServerFn({
+  method: "POST"
+}).inputValidator((data) => data).handler(getConsultationPin_createServerFn_handler, async ({
+  data
+}) => {
+  const {
+    email,
+    captcha
+  } = data;
+  return getConsultationPinServer(email, captcha);
 });
-const requestConsultationPin_createServerFn_handler = createServerRpc("73197069f402ffc7bdc1f24cb5d29b5ec21bc2a7ffe2df0ff104e22689f8a713", (opts, signal) => requestConsultationPin.__executeServer(opts, signal));
+const requestConsultationPin_createServerFn_handler = createServerRpc("1bf3031431d51463038e5d1b6560e5f1b1627b95ccc6da061853bebbf738e8e0", (opts, signal) => requestConsultationPin.__executeServer(opts, signal));
 const requestConsultationPin = createServerFn({
   method: "POST"
 }).inputValidator((email) => {
@@ -11216,14 +11225,9 @@ const requestConsultationPin = createServerFn({
 }).handler(requestConsultationPin_createServerFn_handler, async ({
   data
 }) => {
-  console.log({
-    data
-  });
-  return {
-    success: true
-  };
+  return requestConsultationPinServer(data);
 });
-const verifyPin_createServerFn_handler = createServerRpc("ce9bda8ad2507591b51649d15304cdd16e1c8af776d47b325fb76a928b769c66", (opts, signal) => verifyPin.__executeServer(opts, signal));
+const verifyPin_createServerFn_handler = createServerRpc("cfa2100eea0bb98e0fdcda22c2e02d30a78aa2b1b44b256568a5f72d87396b78", (opts, signal) => verifyPin.__executeServer(opts, signal));
 const verifyPin = createServerFn({
   method: "POST"
 }).inputValidator((input) => input).handler(verifyPin_createServerFn_handler, async ({
@@ -11233,10 +11237,7 @@ const verifyPin = createServerFn({
     email,
     pin
   } = data;
-  hash(email);
-  return {
-    verified: true
-  };
+  return verifyPinServer(email);
 });
 export {
   getConsultationPin_createServerFn_handler,
