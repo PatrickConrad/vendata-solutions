@@ -1,5 +1,5 @@
-import { a as reactExports, n as jsxRuntimeExports, s as createServerFn } from "./worker-entry-D5KBIN_A.js";
-import { e as createSsrRpc } from "./router-DIxlBTKn.js";
+import { a as reactExports, n as jsxRuntimeExports, s as createServerFn } from "./worker-entry-Cq-lVOIe.js";
+import { e as createSsrRpc } from "./router-Rr7JCWmJ.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -50,7 +50,7 @@ function Turnstile({ setToken }) {
     {
       ref: containerRef,
       id: "turnstile-container",
-      className: "w-full flex justify-center min-h-[65px]"
+      className: "w-flex justify-center min-h-[65px]"
     }
   );
 }
@@ -109,51 +109,54 @@ function Book() {
       },
       n
     )) }),
-    step === 1 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bookingForm w-[90%] md:w-lg bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-2", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "text-slate-700 dark:text-slate-300 font-medium", children: [
-          "Full Name ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-red-500", children: "*" })
+    step === 1 && /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bookingForm w-[90%] md:w-lg bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-2", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "text-slate-700 dark:text-slate-300 font-medium", children: [
+            "Full Name ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-red-500", children: "*" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "input",
+            {
+              type: "text",
+              required: true,
+              placeholder: "John Doe",
+              value: info.name,
+              className: `bookingForm  ${clickedNext && info.name === "" ? "error" : ""}`,
+              onChange: (e) => setInfo((prev) => ({ ...prev, name: e.target.value }))
+            }
+          )
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-2", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "bookingForm text-slate-700 dark:text-slate-300 font-medium", children: [
+            "Email Address ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-red-500", children: "*" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "input",
+            {
+              type: "email",
+              required: true,
+              placeholder: "john@company.com",
+              value: info.email,
+              className: `bookingForm ${clickedNext && info.email === "" ? "error" : ""}`,
+              onChange: (e) => setInfo((prev) => ({ ...prev, email: e.target.value }))
+            }
+          )
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "input",
+          "button",
           {
-            type: "text",
-            required: true,
-            placeholder: "John Doe",
-            value: info.name,
-            className: `bookingForm  ${clickedNext && info.name === "" ? "error" : ""}`,
-            onChange: (e) => setInfo((prev) => ({ ...prev, name: e.target.value }))
+            onClick: next,
+            className: "btn-gold px-12 py-5 rounded-2xl font-black text-l md:text-xl tracking-wide uppercase",
+            children: "Continue"
           }
-        )
+        ),
+        step === 1 && (info.email === "" || info.name === "") && clickedNext ? /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "w-full flex justify-center", style: { color: "red" }, children: "Both name & email are required" }) : null
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-2", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "bookingForm text-slate-700 dark:text-slate-300 font-medium", children: [
-          "Email Address ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-red-500", children: "*" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "input",
-          {
-            type: "email",
-            required: true,
-            placeholder: "john@company.com",
-            value: info.email,
-            className: `bookingForm ${clickedNext && info.email === "" ? "error" : ""}`,
-            onChange: (e) => setInfo((prev) => ({ ...prev, email: e.target.value }))
-          }
-        )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Turnstile, { setToken }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "button",
-        {
-          onClick: next,
-          className: "btn-gold px-12 py-5 rounded-2xl font-black text-l md:text-xl tracking-wide uppercase",
-          children: "Continue"
-        }
-      ),
-      step === 1 && (info.email === "" || info.name === "") && clickedNext ? /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "w-full flex justify-center", style: { color: "red" }, children: "Both name & email are required" }) : null
+      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Turnstile, { setToken })
     ] }),
     step === 2 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6 w-full", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-between", children: /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: back, className: "text-slate-500 hover:text-slate-800", children: "← Back" }) }),

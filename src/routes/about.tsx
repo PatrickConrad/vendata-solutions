@@ -17,7 +17,7 @@ export const Route = createFileRoute('/about')({
 
 function RouteComponent() {
   return <>
-    <main className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200">
+    <main className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200 overflow-x-hidden">
       {/* Hero Section */}
       <section className="py-28 bg-gradient-to-br from-[var(--v-navy)] to-slate-900 text-white text-center relative overflow-hidden">
         {/* Decorative glow */}
@@ -37,19 +37,21 @@ function RouteComponent() {
         </div>
       </section>
 
-      {/* Mission / Vision */}
-      <section className="px-15 py-24 bg-slate-50 dark:bg-slate-800">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-4xl font-extrabold text-(--v-navy) dark:text-white mb-6">
+    {/* Mission / Vision */}
+      <section className="px-6 py-16 md:py-24 bg-slate-50 dark:bg-slate-800">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    
+          {/* Text Content - Constrained with max-w-2xl so it doesn't span the whole screen */}
+          <div className="max-w-2xl mx-auto lg:mx-0">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-(--v-navy) dark:text-white mb-6">
               Our Mission
             </h2>
-            <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+            <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-10">
               To empower businesses with smart tools that remove friction, improve efficiency, 
               and provide clear insights into their operations.
             </p>
 
-            <h2 className="text-(--v-gold)  text-4xl font-extrabold  dark:text-(--v-gold) mb-6">
+            <h2 className="text-(--v-gold) text-3xl md:text-4xl font-extrabold mb-6">
               Our Vision
             </h2>
             <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -57,9 +59,14 @@ function RouteComponent() {
               and unlock data-driven growth.
             </p>
           </div>
-          <div className="flex justify-center lg:justify-end p-10">
-            <Convergence />
+
+          {/* Visual Component */}
+          <div className="w-full flex justify-center lg:justify-end mt-10 lg:mt-0">
+            <div className="w-full max-w-[400px] lg:max-w-none">
+              <Convergence />
+            </div>
           </div>
+
         </div>
       </section>
 
