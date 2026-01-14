@@ -1,0 +1,1 @@
+import{j as e}from"../main.js";function t(){return e.jsx("main",{className:"min-h-[80vh] w-full flex text-center justify-center align-middle p-50",children:e.jsx("h2",{children:"404 - Page Not Found"})})}export{t as component};

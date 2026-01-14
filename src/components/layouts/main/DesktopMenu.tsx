@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ScrollLink } from "../../../utils/ScrollLink";
+import { ScrollLink } from "../../reusable/ScrollLink";
 
 export const DesktopMenu = () => (
   <div className="hidden md:flex items-center gap-8 font-bold text-v-navy/70">

@@ -1,5 +1,5 @@
 import { RefObject, useEffect, useRef } from "react"
-import { ScrollLink } from "../../../utils/ScrollLink"
+import { ScrollLink } from "../../reusable/ScrollLink"
 import { useModalClose } from "../../../hooks/useModal"
 
 interface MobileMenuProps {

@@ -1,6 +1,6 @@
 import { createServerFn } from "@tanstack/react-start"
-import { encrypt, generatePin, hash } from "../utils/encryption"
-import { sendEmail } from "../utils/sendEmail";
+import { encrypt, generatePin, hash } from "../../utils/encryption"
+import { sendEmail } from "../../utils/sendEmail";
 
 
 type Payload = {

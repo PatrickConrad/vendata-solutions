@@ -1,0 +1,19 @@
+import { jsxs, jsx } from 'react/jsx-runtime';
+import { D as Divider } from './Divider-ANadgHN3.js';
+
+function RouteComponent() {
+  return /* @__PURE__ */ jsxs("main", { className: "py-35 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200", children: [
+    /* @__PURE__ */ jsxs("section", { className: "pt-4 text-center", children: [
+      /* @__PURE__ */ jsx("h1", { className: "text-5xl font-extrabold mb-6 text-(--v-navy) dark:text-white", children: "Contact Us" }),
+      /* @__PURE__ */ jsx(Divider, { className: "w-20 h-1 mb-4 bg-v-gold" }),
+      /* @__PURE__ */ jsxs("p", { className: "text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed", children: [
+        "Have questions or want to get started? ",
+        /* @__PURE__ */ jsx("br", {}),
+        " Send us a message and we’ll get back to you."
+      ] })
+    ] }),
+    /* @__PURE__ */ jsx("section", { className: "py-16", children: /* @__PURE__ */ jsx("div", { className: "max-w-2xl mx-auto px-6" }) })
+  ] });
+}
+
+export { RouteComponent as component };

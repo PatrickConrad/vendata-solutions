@@ -5,4 +5,6 @@ account_id = "082a2346245ba30a6cd9efdaae07e205"
 workers_dev = true
 compatibility_date = "2026-01-13" # today’s date, update when deploying
 
-
+[site]
+bucket = "./dist/client"      # Vite build output folder
+entry-point = "."             # project root is fine
