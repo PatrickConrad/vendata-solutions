@@ -1,5 +1,5 @@
-import { s as createServerFn, a as reactExports, n as jsxRuntimeExports } from "./worker-entry-BWq6xedy.js";
-import { e as createSsrRpc } from "./router-CsmvKqpe.js";
+import { s as createServerFn, a as reactExports, n as jsxRuntimeExports } from "./worker-entry-DHLhqJTu.js";
+import { e as createSsrRpc } from "./router-Er_brnpy.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -72,6 +72,15 @@ function Book() {
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
   }, []);
+  reactExports.useEffect(() => {
+    const handleEnter = (e) => {
+      if (e.key === "Enter" && step === 1) {
+        next();
+      }
+    };
+    window.addEventListener("keydown", handleEnter);
+    return () => window.removeEventListener("keydown", handleEnter);
+  }, [step, info]);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen flex flex-col justify-center items-center bg-white dark:bg-slate-900 px-6 w-full", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl font-extrabold text-v-navy dark:text-white mb-6 text-center", children: "Book a Strategy Call" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-slate-600 dark:text-slate-300 mb-10 text-center leading-relaxed", children: "Let’s get you scheduled in just a few quick steps." }),
@@ -128,7 +137,7 @@ function Book() {
       ),
       step === 1 && (info.email === "" || info.name === "") && clickedNext ? /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "w-full flex justify-center", style: { color: "red" }, children: "Both name & email are required" }) : null
     ] }),
-    step === 2 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6", children: [
+    step === 2 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6 w-full", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-between", children: /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: back, className: "text-slate-500 hover:text-slate-800", children: "← Back" }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 dark:text-slate-300 text-center", children: "Select a time that works best for you." }),
       calendlyIframe

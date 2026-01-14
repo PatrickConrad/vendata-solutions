@@ -9,7 +9,8 @@ declare global {
           sitekey: string
           callback?: (token: string) => void
           'error-callback'?: () => void
-          theme?: 'light' | 'dark' | 'auto'
+          theme?: 'light' | 'dark' | 'auto',
+          size?: 'normal' | 'flexible' | 'compact'
         }
       ) => string
       reset: (widgetId?: string) => void
