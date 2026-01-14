@@ -58,7 +58,7 @@ export function Book() {
   }, [step, info]); // Re-run if step or info changes
 
   return (
-      <div className="min-h-screen flex flex-col justify-center items-center bg-white dark:bg-slate-900 px-6 w-full">
+      <div className="py-30 flex flex-col justify-center items-center bg-white dark:bg-slate-900 px-6 w-full">
 
         <h1 className="text-4xl font-extrabold text-v-navy dark:text-white mb-6 text-center">
           Book a Strategy Call
