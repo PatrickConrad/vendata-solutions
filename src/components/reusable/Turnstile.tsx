@@ -68,7 +68,7 @@ export function Turnstile({ setToken }: TurnstileProps) {
         <div 
             ref={containerRef} 
             id='turnstile-container' 
-            className="w-full flex justify-center min-h-[65px]"
+            className="w-flex justify-center min-h-[65px]"
         ></div>
     );
 }

@@ -82,52 +82,54 @@ export function Book() {
 
         {/* STEP 1 — CONTACT */}
         {step === 1 && (
-          <div className="bookingForm w-[90%] md:w-lg bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6">
-
-            <div className="flex flex-col gap-2">
-              <label className="text-slate-700 dark:text-slate-300 font-medium">
-                Full Name <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                required
-                placeholder="John Doe"
-                value={info.name}
-                className={`bookingForm  ${clickedNext&&info.name===''?'error':''}`}
-                onChange={(e)=>setInfo((prev)=>({...prev, name: e.target.value}))}
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="bookingForm text-slate-700 dark:text-slate-300 font-medium">
-                Email Address <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="email"
-                required
-                placeholder="john@company.com"
-                value={info.email}
-                className={`bookingForm ${clickedNext&&info.email===''?'error':''}`}
-                onChange={(e)=>setInfo((prev)=>({...prev, email: e.target.value}))}              />
-            </div>
-
-            <Turnstile setToken={setToken} />
-
+          <>
+            <div className="bookingForm w-[90%] md:w-lg bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6">
             
-            <button
-              onClick={next}
-              className="btn-gold px-12 py-5 rounded-2xl font-black text-l md:text-xl tracking-wide uppercase"
-            >
-              Continue
-            </button>
-            {
-              step===1&&(info.email===''||info.name==='')&&clickedNext
-              ?
-              <p className='w-full flex justify-center' style={{color: 'red'}}>Both name & email are required</p>
-              :
-              null
-            }
-          </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-slate-700 dark:text-slate-300 font-medium">
+                  Full Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="John Doe"
+                  value={info.name}
+                  className={`bookingForm  ${clickedNext&&info.name===''?'error':''}`}
+                  onChange={(e)=>setInfo((prev)=>({...prev, name: e.target.value}))}
+                />
+              </div>
+            
+              <div className="flex flex-col gap-2">
+                <label className="bookingForm text-slate-700 dark:text-slate-300 font-medium">
+                  Email Address <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  required
+                  placeholder="john@company.com"
+                  value={info.email}
+                  className={`bookingForm ${clickedNext&&info.email===''?'error':''}`}
+                  onChange={(e)=>setInfo((prev)=>({...prev, email: e.target.value}))}              />
+              </div>
+              
+              <button
+                onClick={next}
+                className="btn-gold px-12 py-5 rounded-2xl font-black text-l md:text-xl tracking-wide uppercase"
+              >
+                Continue
+              </button>
+              {
+                step===1&&(info.email===''||info.name==='')&&clickedNext
+                ?
+                <p className='w-full flex justify-center' style={{color: 'red'}}>Both name & email are required</p>
+                :
+                null
+              }
+            </div>
+            <br/>
+            <Turnstile setToken={setToken} />
+          </>
+
         )}
 
         {/* STEP 2 — CALENDAR */}
