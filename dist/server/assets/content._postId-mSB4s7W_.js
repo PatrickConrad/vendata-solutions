@@ -1,5 +1,5 @@
 import { jsx, Fragment, jsxs } from 'react/jsx-runtime';
-import { R as Route } from './router-CbJ83bIf.js';
+import { R as Route } from './router-C5efAZQM.js';
 import '@tanstack/react-router';
 import 'react';
 import '@fortawesome/free-solid-svg-icons';

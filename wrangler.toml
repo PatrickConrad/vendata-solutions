@@ -1,10 +1,10 @@
 name = "vendata-solutions"
-type = "javascript" # or "webpack" / "modules" if using ES modules
-
 account_id = "082a2346245ba30a6cd9efdaae07e205"
 workers_dev = true
-compatibility_date = "2026-01-13" # today’s date, update when deploying
+compatibility_date = "2026-01-13"
 
-[site]
-bucket = "./dist/client"      # Vite build output folder
-entry-point = "."             # project root is fine
+[build]
+command = "npm run build"
+upload = { 
+    dir = "./dist/client"
+}

@@ -262,7 +262,7 @@ const Route$7 = createFileRoute("/$404")({
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
 
-const $$splitComponentImporter$6 = () => import('./index-CrXhRv9e.js');
+const $$splitComponentImporter$6 = () => import('./index-8jACUy_S.js');
 const Route$6 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter$6, "component")
   // loader: async () => await getCount()
@@ -273,7 +273,7 @@ const Route$5 = createFileRoute("/content/")({
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
 
-const $$splitComponentImporter$4 = () => import('./index-D8q0d7h6.js');
+const $$splitComponentImporter$4 = () => import('./index-BXAf2G0C.js');
 const Route$4 = createFileRoute("/consultation/")({
   head: () => ({
     meta: [{
@@ -306,7 +306,7 @@ const createSsrRpc = (functionId, importer) => {
 const getPost = createServerFn().inputValidator((data) => data).handler(createSsrRpc("7d7e857e3252f6ecf0c7eabed1b93b93ea9bc14341b78a5c25ea74735091c89a"));
 
 const $$splitNotFoundComponentImporter = () => import('./content._postId-BMPKn2OL.js');
-const $$splitComponentImporter$3 = () => import('./content._postId-rarr7gma.js');
+const $$splitComponentImporter$3 = () => import('./content._postId-mSB4s7W_.js');
 const Route$3 = createFileRoute("/content/$postId")({
   // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({

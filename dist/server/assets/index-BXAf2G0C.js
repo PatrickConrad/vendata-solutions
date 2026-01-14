@@ -1,6 +1,6 @@
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { useEffect, useState, useMemo } from 'react';
-import { c as createSsrRpc } from './router-CbJ83bIf.js';
+import { c as createSsrRpc } from './router-C5efAZQM.js';
 import { c as createServerFn } from '../server.js';
 import '@tanstack/react-router';
 import '@fortawesome/free-solid-svg-icons';
