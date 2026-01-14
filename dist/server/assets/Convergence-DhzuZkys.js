@@ -1,4 +1,4 @@
-import { a as reactExports, n as jsxRuntimeExports } from "./worker-entry-D3dwCX8P.js";
+import { a as reactExports, n as jsxRuntimeExports } from "./worker-entry-BWq6xedy.js";
 const Convergence = () => {
   const observerRef = reactExports.useRef(null);
   const [converged, setConverged] = reactExports.useState(false);

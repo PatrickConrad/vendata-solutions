@@ -46,6 +46,17 @@ export function Book() {
     return () => window.removeEventListener("message", handleMessage)
   }, [])
 
+  useEffect(() => {
+    const handleEnter = (e: KeyboardEvent) => {
+      if (e.key === 'Enter' && step === 1) {
+        next();
+      }
+    };
+
+    window.addEventListener('keydown', handleEnter);
+    return () => window.removeEventListener('keydown', handleEnter);
+  }, [step, info]); // Re-run if step or info changes
+
   return (
       <div className="min-h-screen flex flex-col justify-center items-center bg-white dark:bg-slate-900 px-6 w-full">
 
@@ -121,7 +132,7 @@ export function Book() {
 
         {/* STEP 2 — CALENDAR */}
         {step === 2 && (
-          <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6 w-full">
             <div className="flex justify-between">
               <button onClick={back} className="text-slate-500 hover:text-slate-800">
                 ← Back
