@@ -1,17 +1,15 @@
-import { jsx, jsxs } from 'react/jsx-runtime';
-import { useRef, useState, useEffect } from 'react';
-
+import { a as reactExports, n as jsxRuntimeExports } from "./worker-entry-D3dwCX8P.js";
 const Convergence = () => {
-  const observerRef = useRef(null);
-  const [converged, setConverged] = useState(false);
-  useEffect(() => {
+  const observerRef = reactExports.useRef(null);
+  const [converged, setConverged] = reactExports.useState(false);
+  reactExports.useEffect(() => {
     if (!observerRef.current) return;
     const observer = new IntersectionObserver(([entry]) => {
       setConverged(entry.isIntersecting);
     }, { threshold: 1 });
     observer.observe(observerRef.current);
   }, []);
-  useEffect(() => {
+  reactExports.useEffect(() => {
     const handleScroll = () => {
       if (!observerRef.current) return;
       const scrolled = window.pageYOffset;
@@ -27,12 +25,13 @@ const Convergence = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  return /* @__PURE__ */ jsx("div", { className: "lg:w-1/2 flex justify-center", children: /* @__PURE__ */ jsxs("div", { ref: observerRef, className: `logo-container ${converged ? "converged" : ""}`, children: [
-    /* @__PURE__ */ jsx("div", { className: "circle c-navy dark:bg-slate-300" }),
-    /* @__PURE__ */ jsx("div", { className: "circle c-gold-tr" }),
-    /* @__PURE__ */ jsx("div", { className: "circle c-gold-bl" }),
-    /* @__PURE__ */ jsx("div", { className: "circle c-green" })
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:w-1/2 flex justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { ref: observerRef, className: `logo-container ${converged ? "converged" : ""}`, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "circle c-navy dark:bg-slate-300" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "circle c-gold-tr" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "circle c-gold-bl" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "circle c-green" })
   ] }) });
 };
-
-export { Convergence as C };
+export {
+  Convergence as C
+};
