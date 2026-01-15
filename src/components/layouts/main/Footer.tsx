@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col">
 
         {/* Brand - Span 1 column */}
-        <div className="w-full flex flex-col gap-4 text-center md:text-start">
+        <div className="w-full flex flex-col gap-4 text-center">
           <h3 className="text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl">VenData Solutions</h3>
           <p className="text-sm md:text-lg leading-relaxed w-full">
             Data-driven systems, automation, and AI solutions for modern businesses.
@@ -19,8 +19,8 @@ export function Footer() {
         <br/>
 
         {/* Navigation */}
-        <div className="w-full flex flex-col md:flex-row md:justify-evenly">
-            <div className="w-full text-center md:text-start">
+        <div className="w-full flex flex-col md:flex-row justify-center md:gap-24">
+            <div className="text-center">
               <h4 className="text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl">Company</h4>
               <ul className="space-y-4 text-sm md:text-lg">
                 <li><Link to="/" className="hover:text-v-gold transition">Home</Link></li>
@@ -32,9 +32,9 @@ export function Footer() {
             </div>
             <br/>
             {/* Resources */}
-            <div className="w-full text-center md:text-start">
+            <div className="text-center">
               <h4 className="text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl">Resources</h4>
-              <ul className="space-y-4 text-sm md:text-md">
+              <ul className="space-y-4 text-sm md:text-lg">
                 <li><Link to="/content" className="hover:text-v-gold transition">Blog</Link></li>
                 <li><Link to="/privacy" className="hover:text-v-gold transition">Privacy Policy</Link></li>
                 <li><Link to="/terms" className="hover:text-v-gold transition">Terms of Service</Link></li>
@@ -48,9 +48,9 @@ export function Footer() {
         <br/>
         <br/>
         {/* Contact/Support Info (Fills the 4th column for balance) */}
-        <div className="w-full text-center md:text-start">
+        <div className="w-full text-center">
           <h4 className="text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl">Contact</h4>
-          <p className="text-sm md:text-md leading-relaxed">
+          <p className="text-sm md:text-lg leading-relaxed">
             Ready to scale?<br />
             <Link to="/consultation" className="text-v-gold hover:underline font-medium">
               Schedule a strategy call
@@ -60,14 +60,14 @@ export function Footer() {
         <br/>
         <br/>
 
-        <SocialBar className="flex flex-col md:flex-row px-5 align-middle justify-center" />
+        <SocialBar className="flex px-5 align-middle justify-center" />
 
 
       </div>
 
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto px-6">
-        <div className="border-t border-slate-800 mt-16 pt-8 text-center md:text-left text-xs text-slate-500">
+        <div className="border-t border-slate-800 mt-16 pt-8 text-center text-xs text-slate-500">
           © {new Date().getFullYear()} VenData Solutions. All rights reserved.
         </div>
       </div>

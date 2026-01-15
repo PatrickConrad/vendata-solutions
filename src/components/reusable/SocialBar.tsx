@@ -31,11 +31,11 @@ type SocialBarProps = {
 }
 export function SocialBar({className}: SocialBarProps) {
   return (
-    <div className={`px-10 flex flex-col w-full justify-center align-middle ${className}`}>
+    <div className={`px-10 w-full justify-evenly align-middle ${className}`}>
       <a className='py-3 text-(--v-gold) flex justify-center' href="https://linkedin.com/company/vendata-solutions" target="_blank">{socialIcons.linkedin}</a>
-      <a className='py-3 text-(--v-gold) flex justify-center' href="https://instagram.com" target="_blank">{socialIcons.instagram}</a>
-      <a className='py-3 text-(--v-gold) flex justify-center' href="https://facebook.com" target="_blank">{socialIcons.facebook}</a>
-      <a className='py-3 text-(--v-gold) flex justify-center' href="https://youtube.com" target="_blank">{socialIcons.youtube}</a>
+      <a className='py-3 text-(--v-gold) flex justify-center' href="https://www.instagram.com/vendata_solutions/" target="_blank">{socialIcons.instagram}</a>
+      <a className='py-3 text-(--v-gold) flex justify-center' href="https://www.facebook.com/profile.php?id=61586272962924" target="_blank">{socialIcons.facebook}</a>
+      <a className='py-3 text-(--v-gold) flex justify-center' href="https://www.youtube.com/@VendataSolutions" target="_blank">{socialIcons.youtube}</a>
     </div>
   )
 }
