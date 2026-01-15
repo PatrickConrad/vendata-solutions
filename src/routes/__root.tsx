@@ -22,12 +22,28 @@ export const Route = createRootRoute({
             },
             { property: 'og:title', content: "VenData Solutions | Operational Excellence through Data" },
             { property: 'og:description', content: "Connect your tools, automate your workflows, and gain actionable insights with custom software solutions from VenData." },
+            { property: 'og:image', content: "https://www.vendatasolutions.com/nb-logo-w-text.png" },
+
         ],
         links: [
             { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" },
             { rel: "icon", href: "/nb-logo.png" },
             { rel: "apple-touch-icon", href: "/nb-logo.png" },
-        ] 
+        ],
+        scripts: [
+            {
+                src:'https://www.googletagmanager.com/gtag/js?id=G-9PXEB6HMVC',
+                async: true
+            },
+            {
+                children: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-9PXEB6HMVC');
+                `
+            }
+        ]
     }),
     component: RootComponent,
     notFoundComponent: ()=><h1>404 - Page Not Found</h1>
@@ -47,18 +63,6 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <html suppressHydrationWarning>
             <head>
                 <HeadContent />
-                <script
-                    async
-                    src="https://www.googletagmanager.com/gtag/js?id=G-9PXEB6HMVC"
-                />
-                <script>
-                    {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-9PXEB6HMVC');
-                    `}
-                </script>
             </head>
             <body className='dark text-slate-200'>
                 <AnalyticsTracker />
