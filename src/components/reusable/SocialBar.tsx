@@ -31,7 +31,7 @@ type SocialBarProps = {
 }
 export function SocialBar({className}: SocialBarProps) {
   return (
-    <div className={`px-10 w-full justify-evenly align-middle ${className}`}>
+    <div className={`px-10 w-full justify-center align-middle gap-10 ${className}`}>
       <a className='py-3 text-(--v-gold) flex justify-center' href="https://linkedin.com/company/vendata-solutions" target="_blank">{socialIcons.linkedin}</a>
       <a className='py-3 text-(--v-gold) flex justify-center' href="https://www.instagram.com/vendata_solutions/" target="_blank">{socialIcons.instagram}</a>
       <a className='py-3 text-(--v-gold) flex justify-center' href="https://www.facebook.com/profile.php?id=61586272962924" target="_blank">{socialIcons.facebook}</a>

@@ -60,7 +60,7 @@ export function Footer() {
         <br/>
         <br/>
 
-        <SocialBar className="flex px-5 align-middle justify-center" />
+        <SocialBar className="flex" />
 
 
       </div>

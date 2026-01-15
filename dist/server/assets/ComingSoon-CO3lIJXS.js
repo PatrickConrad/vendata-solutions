@@ -1,5 +1,5 @@
-import { n as jsxRuntimeExports } from "./worker-entry-CygbQVfs.js";
-import { D as Divider } from "./Divider-BuJaMcOh.js";
+import { n as jsxRuntimeExports } from "./worker-entry-Dz-12jLL.js";
+import { D as Divider } from "./Divider-CDQkE-3p.js";
 function ComingSoon() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-3xl text-center space-y-10", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-4xl sm:text-6xl font-extrabold text-v-navy dark:text-white leading-tight", children: [
