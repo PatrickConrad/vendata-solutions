@@ -38,7 +38,7 @@ export const ServiceModal = (props: ServiceProps) => {
                     <>
                         <button
                             onClick={()=>setOpen(false)}
-                            className="cursor-pointer absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+                            className="cursor-pointer absolute top-3 right-6 white hover:text-(--v-gold)"
                             aria-label="Close modal"
                         >
                         ✕

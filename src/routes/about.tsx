@@ -24,11 +24,11 @@ function RouteComponent() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-v-gold/10 rounded-full blur-[140px]" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <h1 className="text-v-gold text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight">
+          <h1 className="text-slate-200 text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight">
             About VenData Solutions
           </h1>
 
-          <Divider className="w-24 h-1 bg-v-green mx-auto mb-10" />
+          <Divider className="w-24 h-1 bg-v-gold mx-auto mb-10" />
 
           <p className="text-xl lg:text-2xl leading-relaxed text-slate-200 max-w-2xl mx-auto">
             We create intelligent software that automates, clarifies, and scales your business.  
@@ -43,15 +43,15 @@ function RouteComponent() {
     
           {/* Text Content - Constrained with max-w-2xl so it doesn't span the whole screen */}
           <div className="max-w-2xl mx-auto lg:mx-0">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-(--v-navy) dark:text-white mb-6">
+            <h2 className="text-(--v-navy) text-3xl md:text-4xl font-extrabold dark:text-(--v-gold) mb-6">
               Our Mission
             </h2>
-            <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-10">
+            <p className="text-lg text-slate-700 dark:text-slate-300  leading-relaxed mb-10">
               To empower businesses with smart tools that remove friction, improve efficiency, 
               and provide clear insights into their operations.
             </p>
 
-            <h2 className="text-(--v-gold) text-3xl md:text-4xl font-extrabold mb-6">
+            <h2 className="text-(--v-gold) text-3xl md:text-4xl font-extrabold mb-6 dark:text-slate-300">
               Our Vision
             </h2>
             <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -101,7 +101,7 @@ function RouteComponent() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-800 text-center">
+      <section className="px-3 py-24 bg-slate-50 dark:bg-slate-800 text-center">
         <h2 className="text-3xl lg:text-4xl font-extrabold mb-6">
           Ready to make your business work for you?
         </h2>

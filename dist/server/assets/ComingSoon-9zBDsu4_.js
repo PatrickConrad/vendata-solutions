@@ -1,5 +1,5 @@
-import { n as jsxRuntimeExports } from "./worker-entry-EOuCOXw8.js";
-import { D as Divider } from "./Divider-HbfzwWkC.js";
+import { n as jsxRuntimeExports } from "./worker-entry-Bm0eEFuy.js";
+import { D as Divider } from "./Divider-D5mnLAyX.js";
 function ComingSoon() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-3xl text-center space-y-10", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-4xl sm:text-6xl font-extrabold text-v-navy dark:text-white leading-tight", children: [
@@ -12,7 +12,7 @@ function ComingSoon() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       "img",
       {
-        src: "/nb-logo-w-text.png",
+        src: "/vendata-venn-logo-full-text.png",
         alt: "Vendata Solutions",
         className: "h-25 md:h-40"
       }
