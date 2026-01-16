@@ -1,4 +1,4 @@
-import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, O as Outlet, T as TSS_SERVER_FUNCTION, q as getServerFnById, s as createServerFn, v as notFound } from "./worker-entry-Bm0eEFuy.js";
+import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, O as Outlet, T as TSS_SERVER_FUNCTION, q as getServerFnById, s as createServerFn, v as notFound } from "./worker-entry-BTC8oXXG.js";
 const preloadWarning = "Error preloading route! ☝️";
 class BaseRoute {
   constructor(options) {
@@ -5270,53 +5270,55 @@ function SocialBar({ className }) {
     /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: "py-3 text-(--v-gold) flex justify-center", href: "https://www.youtube.com/@VendataSolutions", target: "_blank", children: socialIcons.youtube })
   ] });
 }
+const FooterResources = ({ className }) => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `${className ?? "text-center"}`, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "Resources" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-4 text-sm md:text-lg", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/content", className: "hover:text-v-gold transition", children: "Blog" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/privacy", className: "hover:text-v-gold transition", children: "Privacy Policy" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/terms", className: "hover:text-v-gold transition", children: "Terms of Service" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/sitemap.xml", className: "hover:text-v-gold transition", children: "Sitemap" }) })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("br", {})
+  ] });
+};
+const FooterCompany = ({ className }) => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `${className ?? "text-center"}`, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "Company" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-4 text-sm md:text-lg", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/", className: "hover:text-v-gold transition", children: "Home" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "hover:text-v-gold transition", children: "About" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/contact", className: "hover:text-v-gold transition", children: "Contact" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "hover:text-v-gold transition", children: "Book a Call" }) })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("br", {})
+  ] });
+};
+const FooterContact = ({ className }) => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `${className ?? "w-full text-center"}`, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "Contact" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm md:text-lg leading-relaxed", children: [
+      "Ready to scale?",
+      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "text-v-gold hover:underline font-medium", children: "Schedule a strategy call" })
+    ] })
+  ] });
+};
 function Footer() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "bg-slate-900 text-slate-300 py-16", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 flex flex-col", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col gap-4 text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "VenData Solutions" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col gap-4 text-center order-1 md:pt-10 md:order-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-(--v-gold) text-md font-semibold mb-2 uppercase tracking-wider md:text-xl", children: "VenData Solutions" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm md:text-lg leading-relaxed w-full", children: "Data-driven systems, automation, and AI solutions for modern businesses." })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col md:flex-row justify-center md:gap-24", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "Company" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-4 text-sm md:text-lg", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/", className: "hover:text-v-gold transition", children: "Home" }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "hover:text-v-gold transition", children: "About" }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/contact", className: "hover:text-v-gold transition", children: "Contact" }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "hover:text-v-gold transition", children: "Book a Call" }) })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("br", {})
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "Resources" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-4 text-sm md:text-lg", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/content", className: "hover:text-v-gold transition", children: "Blog" }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/privacy", className: "hover:text-v-gold transition", children: "Privacy Policy" }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/terms", className: "hover:text-v-gold transition", children: "Terms of Service" }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/sitemap.xml", className: "hover:text-v-gold transition", children: "Sitemap" }) })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("br", {})
-        ] })
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex flex-col md:flex-row justify-evenly md:gap-24 order-2 md:order-1", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(FooterCompany, { className: "pt-10 md:pt-0 text-center order-1" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(FooterContact, { className: "pt-10 md:pt-0 text-center order-3 md:order-2" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(FooterResources, { className: "pt-10 md:pt-0 text-center order-2 md:order-3" })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "Contact" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm md:text-lg leading-relaxed", children: [
-          "Ready to scale?",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "text-v-gold hover:underline font-medium", children: "Schedule a strategy call" })
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(SocialBar, { className: "flex" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx(SocialBar, { className: "flex order-3 pt-10" })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-7xl mx-auto px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t border-slate-800 mt-16 pt-8 text-center text-xs text-slate-500", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full mx-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t border-slate-800 mt-16 pt-8 text-center text-xs text-slate-500", children: [
       "© ",
       (/* @__PURE__ */ new Date()).getFullYear(),
       " VenData Solutions. All rights reserved."
@@ -5394,7 +5396,7 @@ function RootDocument({ children }) {
     ] })
   ] });
 }
-const $$splitComponentImporter$g = () => import("./terms-C2UvMTm1.js");
+const $$splitComponentImporter$g = () => import("./terms-CtLcw2ts.js");
 const Route$g = createFileRoute("/terms")({
   component: lazyRouteComponent($$splitComponentImporter$g, "component")
 });
@@ -5432,15 +5434,15 @@ Sitemap: https://vendata.solutions/sitemap.xml
   }),
   component: lazyRouteComponent($$splitComponentImporter$e, "component")
 });
-const $$splitComponentImporter$d = () => import("./privacy-JQS_0tRX.js");
+const $$splitComponentImporter$d = () => import("./privacy-ChniNn3c.js");
 const Route$d = createFileRoute("/privacy")({
   component: lazyRouteComponent($$splitComponentImporter$d, "component")
 });
-const $$splitComponentImporter$c = () => import("./content-Bc4njc5j.js");
+const $$splitComponentImporter$c = () => import("./content-AMh49HYf.js");
 const Route$c = createFileRoute("/content")({
   component: lazyRouteComponent($$splitComponentImporter$c, "component")
 });
-const $$splitComponentImporter$b = () => import("./contact-CwJd_5ia.js");
+const $$splitComponentImporter$b = () => import("./contact-qvPoS8We.js");
 const Route$b = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -5452,7 +5454,7 @@ const Route$b = createFileRoute("/contact")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$b, "component")
 });
-const $$splitComponentImporter$a = () => import("./auth-Cqxlw7BK.js");
+const $$splitComponentImporter$a = () => import("./auth-CCc3IRTB.js");
 const Route$a = createFileRoute("/auth")({
   head: () => ({
     meta: [{
@@ -5464,7 +5466,7 @@ const Route$a = createFileRoute("/auth")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$a, "component")
 });
-const $$splitComponentImporter$9 = () => import("./app-tPh3Fd9V.js");
+const $$splitComponentImporter$9 = () => import("./app-vMAC2djm.js");
 const Route$9 = createFileRoute("/app")({
   head: () => ({
     meta: [{
@@ -5476,7 +5478,7 @@ const Route$9 = createFileRoute("/app")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$9, "component")
 });
-const $$splitComponentImporter$8 = () => import("./about-ockgC90G.js");
+const $$splitComponentImporter$8 = () => import("./about-BTGBCIQB.js");
 const Route$8 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -5488,7 +5490,7 @@ const Route$8 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$8, "component")
 });
-const $$splitComponentImporter$7 = () => import("./_404-BdiusOSq.js");
+const $$splitComponentImporter$7 = () => import("./_404-DtGuJy6I.js");
 const Route$7 = createFileRoute("/$404")({
   head: () => ({
     meta: [{
@@ -5500,16 +5502,16 @@ const Route$7 = createFileRoute("/$404")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-const $$splitComponentImporter$6 = () => import("./index-D2xsXEih.js");
+const $$splitComponentImporter$6 = () => import("./index-iN4fgAvH.js");
 const Route$6 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter$6, "component")
   // loader: async () => await getCount()
 });
-const $$splitComponentImporter$5 = () => import("./content.index-DXf-NwB3.js");
+const $$splitComponentImporter$5 = () => import("./content.index-CVCOrzwr.js");
 const Route$5 = createFileRoute("/content/")({
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-const $$splitComponentImporter$4 = () => import("./index-DyxkDjR8.js");
+const $$splitComponentImporter$4 = () => import("./index-nXJgADGR.js");
 const Route$4 = createFileRoute("/consultation/")({
   head: () => ({
     meta: [{
@@ -5538,8 +5540,8 @@ const createSsrRpc = (functionId, importer) => {
   });
 };
 const getPost = createServerFn().inputValidator((data) => data).handler(createSsrRpc("7d7e857e3252f6ecf0c7eabed1b93b93ea9bc14341b78a5c25ea74735091c89a"));
-const $$splitNotFoundComponentImporter = () => import("./content._postId-C-KH5iSU.js");
-const $$splitComponentImporter$3 = () => import("./content._postId-CVUdC7hL.js");
+const $$splitNotFoundComponentImporter = () => import("./content._postId-CcrP18cd.js");
+const $$splitComponentImporter$3 = () => import("./content._postId-ZGSo-iHb.js");
 const Route$3 = createFileRoute("/content/$postId")({
   // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({
@@ -5594,15 +5596,15 @@ const Route$3 = createFileRoute("/content/$postId")({
   component: lazyRouteComponent($$splitComponentImporter$3, "component"),
   notFoundComponent: lazyRouteComponent($$splitNotFoundComponentImporter, "notFoundComponent")
 });
-const $$splitComponentImporter$2 = () => import("./book-D967dW0j.js");
+const $$splitComponentImporter$2 = () => import("./book-DRzc11vi.js");
 const Route$2 = createFileRoute("/consultation/book")({
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./app.dashboard-BKzDui24.js");
+const $$splitComponentImporter$1 = () => import("./app.dashboard-BgYvbBd8.js");
 const Route$1 = createFileRoute("/app/dashboard")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./app._layout-BqNrz9ab.js");
+const $$splitComponentImporter = () => import("./app._layout-Cn6Yd2dI.js");
 const Route2 = createFileRoute("/app/_layout")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });

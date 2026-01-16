@@ -28,7 +28,7 @@ export function Footer() {
       
        
        
-        <SocialBar className="flex order-3 pt-10" />
+        <SocialBar className="flex order-3 pt-10" linkClassNames="py-3 text-(--v-gold) flex justify-center hover:text-(--v-green)"/>
 
 
       </div>

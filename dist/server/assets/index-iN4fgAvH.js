@@ -1,6 +1,6 @@
-import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-Bm0eEFuy.js";
-import { L as Link, S as ServiceIcon, f as faCircleNodes, a as faPenToSquare, b as faHammer, c as faBullseye, d as faBridge, u as useModalClose } from "./router-_nF4lk5C.js";
-import { C as Convergence } from "./Convergence-BVP-t81i.js";
+import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-BTC8oXXG.js";
+import { L as Link, S as ServiceIcon, f as faCircleNodes, a as faPenToSquare, b as faHammer, c as faBullseye, d as faBridge, u as useModalClose } from "./router-D1tVLFlb.js";
+import { C as Convergence } from "./Convergence-CpvBU5W6.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -209,7 +209,7 @@ const ServiceModal = (props) => {
         "button",
         {
           onClick: () => setOpen(false),
-          className: "cursor-pointer absolute top-3 right-3 text-gray-500 hover:text-gray-800",
+          className: "cursor-pointer absolute top-3 right-6 white hover:text-(--v-gold)",
           "aria-label": "Close modal",
           children: "✕"
         }

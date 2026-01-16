@@ -136,7 +136,7 @@ export function Book() {
         {step === 2 && (
           <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6 w-full">
             <div className="flex justify-between">
-              <button onClick={back} className="text-slate-500 hover:text-slate-800">
+              <button onClick={back} className="text-slate-500 cursor-pointer hover:text-(--v-gold) md:pl-10">
                 ← Back
               </button>
 

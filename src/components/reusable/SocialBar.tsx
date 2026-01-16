@@ -27,15 +27,16 @@ const socialIcons = {
 }
 
 type SocialBarProps = {
-    className?: string
+    className?: string,
+    linkClassNames?: string
 }
-export function SocialBar({className}: SocialBarProps) {
+export function SocialBar({className, linkClassNames}: SocialBarProps) {
   return (
     <div className={`px-10 w-full justify-center align-middle gap-10 ${className}`}>
-      <a className='py-3 text-(--v-gold) flex justify-center' href="https://linkedin.com/company/vendata-solutions" target="_blank">{socialIcons.linkedin}</a>
-      <a className='py-3 text-(--v-gold) flex justify-center' href="https://www.instagram.com/vendata_solutions/" target="_blank">{socialIcons.instagram}</a>
-      <a className='py-3 text-(--v-gold) flex justify-center' href="https://www.facebook.com/profile.php?id=61586272962924" target="_blank">{socialIcons.facebook}</a>
-      <a className='py-3 text-(--v-gold) flex justify-center' href="https://www.youtube.com/@VendataSolutions" target="_blank">{socialIcons.youtube}</a>
+      <a className={`${linkClassNames??'py-3 text-(--v-gold) flex justify-center'}`} href="https://linkedin.com/company/vendata-solutions" target="_blank">{socialIcons.linkedin}</a>
+      <a className={`${linkClassNames??'py-3 text-(--v-gold) flex justify-center'}`} href="https://www.instagram.com/vendata_solutions/" target="_blank">{socialIcons.instagram}</a>
+      <a className={`${linkClassNames??'py-3 text-(--v-gold) flex justify-center'}`} href="https://www.facebook.com/profile.php?id=61586272962924" target="_blank">{socialIcons.facebook}</a>
+      <a className={`${linkClassNames??'py-3 text-(--v-gold) flex justify-center'}`} href="https://www.youtube.com/@VendataSolutions" target="_blank">{socialIcons.youtube}</a>
     </div>
   )
 }
