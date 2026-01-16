@@ -1,4 +1,4 @@
-import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, O as Outlet, T as TSS_SERVER_FUNCTION, q as getServerFnById, s as createServerFn, v as notFound } from "./worker-entry-BTC8oXXG.js";
+import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, O as Outlet, T as TSS_SERVER_FUNCTION, q as getServerFnById, s as createServerFn, v as notFound } from "./worker-entry-DY3GHevn.js";
 const preloadWarning = "Error preloading route! ☝️";
 class BaseRoute {
   constructor(options) {
@@ -5262,12 +5262,12 @@ const socialIcons = {
   instagram: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", width: "24", height: "24", fill: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.5-.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" }) }),
   youtube: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", width: "24", height: "24", fill: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M23.498 6.186a3.01 3.01 0 0 0-2.12-2.13C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.378.556a3.01 3.01 0 0 0-2.12 2.13C0 8.06 0 12 0 12s0 3.94.502 5.814a3.01 3.01 0 0 0 2.12 2.13C4.495 20.5 12 20.5 12 20.5s7.505 0 9.378-.556a3.01 3.01 0 0 0 2.12-2.13C24 15.94 24 12 24 12s0-3.94-.502-5.814zM9.75 15.5v-7l6 3.5-6 3.5z" }) })
 };
-function SocialBar({ className }) {
+function SocialBar({ className, linkClassNames }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `px-10 w-full justify-center align-middle gap-10 ${className}`, children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: "py-3 text-(--v-gold) flex justify-center", href: "https://linkedin.com/company/vendata-solutions", target: "_blank", children: socialIcons.linkedin }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: "py-3 text-(--v-gold) flex justify-center", href: "https://www.instagram.com/vendata_solutions/", target: "_blank", children: socialIcons.instagram }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: "py-3 text-(--v-gold) flex justify-center", href: "https://www.facebook.com/profile.php?id=61586272962924", target: "_blank", children: socialIcons.facebook }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: "py-3 text-(--v-gold) flex justify-center", href: "https://www.youtube.com/@VendataSolutions", target: "_blank", children: socialIcons.youtube })
+    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: `${linkClassNames ?? "py-3 text-(--v-gold) flex justify-center"}`, href: "https://linkedin.com/company/vendata-solutions", target: "_blank", children: socialIcons.linkedin }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: `${linkClassNames ?? "py-3 text-(--v-gold) flex justify-center"}`, href: "https://www.instagram.com/vendata_solutions/", target: "_blank", children: socialIcons.instagram }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: `${linkClassNames ?? "py-3 text-(--v-gold) flex justify-center"}`, href: "https://www.facebook.com/profile.php?id=61586272962924", target: "_blank", children: socialIcons.facebook }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: `${linkClassNames ?? "py-3 text-(--v-gold) flex justify-center"}`, href: "https://www.youtube.com/@VendataSolutions", target: "_blank", children: socialIcons.youtube })
   ] });
 }
 const FooterResources = ({ className }) => {
@@ -5316,7 +5316,7 @@ function Footer() {
         /* @__PURE__ */ jsxRuntimeExports.jsx(FooterContact, { className: "pt-10 md:pt-0 text-center order-3 md:order-2" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(FooterResources, { className: "pt-10 md:pt-0 text-center order-2 md:order-3" })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(SocialBar, { className: "flex order-3 pt-10" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx(SocialBar, { className: "flex order-3 pt-10", linkClassNames: "py-3 text-(--v-gold) flex justify-center hover:text-(--v-green)" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full mx-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t border-slate-800 mt-16 pt-8 text-center text-xs text-slate-500", children: [
       "© ",
@@ -5396,7 +5396,7 @@ function RootDocument({ children }) {
     ] })
   ] });
 }
-const $$splitComponentImporter$g = () => import("./terms-CtLcw2ts.js");
+const $$splitComponentImporter$g = () => import("./terms-BYdr_rOX.js");
 const Route$g = createFileRoute("/terms")({
   component: lazyRouteComponent($$splitComponentImporter$g, "component")
 });
@@ -5434,15 +5434,15 @@ Sitemap: https://vendata.solutions/sitemap.xml
   }),
   component: lazyRouteComponent($$splitComponentImporter$e, "component")
 });
-const $$splitComponentImporter$d = () => import("./privacy-ChniNn3c.js");
+const $$splitComponentImporter$d = () => import("./privacy-De4kvvhm.js");
 const Route$d = createFileRoute("/privacy")({
   component: lazyRouteComponent($$splitComponentImporter$d, "component")
 });
-const $$splitComponentImporter$c = () => import("./content-AMh49HYf.js");
+const $$splitComponentImporter$c = () => import("./content-wn9gNPVD.js");
 const Route$c = createFileRoute("/content")({
   component: lazyRouteComponent($$splitComponentImporter$c, "component")
 });
-const $$splitComponentImporter$b = () => import("./contact-qvPoS8We.js");
+const $$splitComponentImporter$b = () => import("./contact-m1lZ8o8t.js");
 const Route$b = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -5454,7 +5454,7 @@ const Route$b = createFileRoute("/contact")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$b, "component")
 });
-const $$splitComponentImporter$a = () => import("./auth-CCc3IRTB.js");
+const $$splitComponentImporter$a = () => import("./auth-CujqCUl0.js");
 const Route$a = createFileRoute("/auth")({
   head: () => ({
     meta: [{
@@ -5466,7 +5466,7 @@ const Route$a = createFileRoute("/auth")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$a, "component")
 });
-const $$splitComponentImporter$9 = () => import("./app-vMAC2djm.js");
+const $$splitComponentImporter$9 = () => import("./app-KzIIoN8D.js");
 const Route$9 = createFileRoute("/app")({
   head: () => ({
     meta: [{
@@ -5478,7 +5478,7 @@ const Route$9 = createFileRoute("/app")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$9, "component")
 });
-const $$splitComponentImporter$8 = () => import("./about-BTGBCIQB.js");
+const $$splitComponentImporter$8 = () => import("./about-CD3OXU84.js");
 const Route$8 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -5490,7 +5490,7 @@ const Route$8 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$8, "component")
 });
-const $$splitComponentImporter$7 = () => import("./_404-DtGuJy6I.js");
+const $$splitComponentImporter$7 = () => import("./_404-DrmMUHmX.js");
 const Route$7 = createFileRoute("/$404")({
   head: () => ({
     meta: [{
@@ -5502,16 +5502,16 @@ const Route$7 = createFileRoute("/$404")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-const $$splitComponentImporter$6 = () => import("./index-iN4fgAvH.js");
+const $$splitComponentImporter$6 = () => import("./index-DgQT1ECe.js");
 const Route$6 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter$6, "component")
   // loader: async () => await getCount()
 });
-const $$splitComponentImporter$5 = () => import("./content.index-CVCOrzwr.js");
+const $$splitComponentImporter$5 = () => import("./content.index-B3hq4vCb.js");
 const Route$5 = createFileRoute("/content/")({
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-const $$splitComponentImporter$4 = () => import("./index-nXJgADGR.js");
+const $$splitComponentImporter$4 = () => import("./index-UyL6iWGS.js");
 const Route$4 = createFileRoute("/consultation/")({
   head: () => ({
     meta: [{
@@ -5540,8 +5540,8 @@ const createSsrRpc = (functionId, importer) => {
   });
 };
 const getPost = createServerFn().inputValidator((data) => data).handler(createSsrRpc("7d7e857e3252f6ecf0c7eabed1b93b93ea9bc14341b78a5c25ea74735091c89a"));
-const $$splitNotFoundComponentImporter = () => import("./content._postId-CcrP18cd.js");
-const $$splitComponentImporter$3 = () => import("./content._postId-ZGSo-iHb.js");
+const $$splitNotFoundComponentImporter = () => import("./content._postId-DTWBqYjm.js");
+const $$splitComponentImporter$3 = () => import("./content._postId-BD5fXivv.js");
 const Route$3 = createFileRoute("/content/$postId")({
   // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({
@@ -5596,15 +5596,15 @@ const Route$3 = createFileRoute("/content/$postId")({
   component: lazyRouteComponent($$splitComponentImporter$3, "component"),
   notFoundComponent: lazyRouteComponent($$splitNotFoundComponentImporter, "notFoundComponent")
 });
-const $$splitComponentImporter$2 = () => import("./book-DRzc11vi.js");
+const $$splitComponentImporter$2 = () => import("./book-CEy_aPlV.js");
 const Route$2 = createFileRoute("/consultation/book")({
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./app.dashboard-BgYvbBd8.js");
+const $$splitComponentImporter$1 = () => import("./app.dashboard-CnSGZbV-.js");
 const Route$1 = createFileRoute("/app/dashboard")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./app._layout-Cn6Yd2dI.js");
+const $$splitComponentImporter = () => import("./app._layout-2r4xhwNo.js");
 const Route2 = createFileRoute("/app/_layout")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });

@@ -7,3 +7,8 @@ export const getPost = createServerFn()
     .handler(async ({data}) => {
         return serverGetPosts(data.postId);
 })
+
+export const getPosts = createServerFn()
+    .handler(async () => {
+        return serverGetPosts();
+})

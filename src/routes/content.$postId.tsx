@@ -11,7 +11,7 @@ export const Route = createFileRoute('/content/$postId')({
   
   // 2. Inject data into the Head
   head: ({loaderData}) => {
-    if (!loaderData?.title || !loaderData?.body) {
+    if (loaderData==null||Array.isArray(loaderData)||!loaderData?.title || !loaderData?.body) {
       return { title: 'Post Not Found | VenData Solutions' }
     }
     console.log({loaderData})
@@ -47,11 +47,14 @@ export const Route = createFileRoute('/content/$postId')({
 
 function RouteComponent() {
   const data = Route.useLoaderData()
+  if(Array.isArray(data)){
+    return null
+  }
 
   return (
     <>
     {
-      !data || !data.title || !data.body 
+      !data || !data.title
       ?
       <p>Loading...</p>
       :
@@ -61,7 +64,7 @@ function RouteComponent() {
         </h1>
         <div className="h-1 w-20 bg-v-gold mb-8" />
         <p className="text-lg text-slate-700 leading-relaxed first-letter:text-3xl">
-          {data.body}
+          {data.body==null?data.excerpt:data.body}
         </p>
       </article>
     }

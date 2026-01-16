@@ -1,5 +1,5 @@
-import { a as reactExports, n as jsxRuntimeExports, s as createServerFn } from "./worker-entry-BTC8oXXG.js";
-import { e as createSsrRpc } from "./router-D1tVLFlb.js";
+import { a as reactExports, n as jsxRuntimeExports, s as createServerFn } from "./worker-entry-DY3GHevn.js";
+import { e as createSsrRpc } from "./router-DkvrXX35.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -159,7 +159,7 @@ function Book() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(Turnstile, { setToken })
     ] }),
     step === 2 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6 w-full", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-between", children: /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: back, className: "text-slate-500 hover:text-slate-800", children: "← Back" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-between", children: /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: back, className: "text-slate-500 cursor-pointer hover:text-(--v-gold) md:pl-10", children: "← Back" }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 dark:text-slate-300 text-center", children: "Select a time that works best for you." }),
       calendlyIframe
     ] }),
