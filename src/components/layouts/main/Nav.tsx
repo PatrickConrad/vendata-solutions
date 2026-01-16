@@ -12,7 +12,7 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" onClick={()=>setOpen(false)}>
-          <img src="/nb-logo-w-text.png" alt="Vendata Solutions Logo" className="h-15" />
+          <img src="/vendata-venn-logo-full-text.png" alt="Vendata Solutions Logo" className="h-15" />
         </Link>
 
         {/* Desktop Menu */}
