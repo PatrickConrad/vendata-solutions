@@ -10,7 +10,7 @@ export const UnifiedSection = () => {
                 <h2 className="text-4xl lg:text-5xl font-extrabold text-v-navy">
                     Our Process: Simple, Transparent, Effective
                 </h2>
-                <div className="w-20 h-1.5 bg-v-gold mb-8"></div>
+                <div className="w-20 h-1.5 bg-v-gold mt-5 mb-8"></div>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">
                         Each step of our process is straightforward, but when combined, they create a cohesive system that drives measurable results. We focus on clarity, efficiency, and impactful solutions.
                     </p>
