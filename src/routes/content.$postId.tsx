@@ -69,7 +69,7 @@ function RouteComponent() {
         </p>
       </article>
     } */}
-    <div className='w-full flex align-middle justify-center py-30'>
+    <div className='w-full flex align-middle justify-center py-15'>
       <ComingSoon />
     </div>
     </>

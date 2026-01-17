@@ -1,6 +1,6 @@
-import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-DY51TXeM.js";
-import { D as Divider } from "./Divider-Bzww8d6L.js";
-import { L as Link, R as Route } from "./router-BmlRhtAT.js";
+import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-TuQocxbw.js";
+import { D as Divider } from "./Divider-DcUxW1Lm.js";
+import { L as Link, R as Route } from "./router-Deva9g8D.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -14,7 +14,7 @@ const LatestPost = ({ post }) => {
       className: "group block bg-v-navy rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition  hover:border hover:border-(--v-gold)",
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-10", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-block mb-4 text-v-gold font-bold uppercase tracking-wide", children: "Featured" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-lg md:text-4xl font-extrabold text-white mb-4 group-hover:text-v-gold transition", children: post.title }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-xl md:text-4xl font-extrabold text-white mb-4 group-hover:text-v-gold transition", children: post.title }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-200 text-md md:text-lg mb-6 leading-relaxed", children: post.excerpt }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-slate-300 text-sm", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: post.date }),
@@ -46,7 +46,7 @@ function BlogIndex() {
   const sortedPosts = reactExports.useMemo(() => posts.sort((post1, post2) => {
     return new Date(post2.date).getTime() - new Date(post1.date).getTime();
   }), []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-h-screen w-full bg-white dark:bg-slate-900 px-6 py-10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-[80%] lg:max-w-[50%] mx-auto", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-h-screen w-full bg-white dark:bg-slate-900 px-6 py-10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-[95%] lg:max-w-[50%] mx-auto", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6 text-center", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-5xl font-extrabold text-(--v-navy) dark:text-(--v-gold) mb-4", children: "VenData Insights" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Divider, { className: "h-1 w-20 bg-v-gold mb-5 " }),

@@ -3,7 +3,7 @@ import { Divider } from "./Divider";
 
 export function ComingSoon() {
   return (
-      <div className="max-w-3xl text-center space-y-10">
+      <div className="max-w-3xl text-center space-y-10 px-3">
         
        
 
@@ -22,7 +22,7 @@ export function ComingSoon() {
         <Divider />
 
         
-      
+       
 
         {/* CTA */}
         <p className="text-slate-500 dark:text-slate-400">
