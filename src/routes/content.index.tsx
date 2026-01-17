@@ -26,7 +26,7 @@ function BlogIndex() {
 
   return (
     <div className="min-h-screen w-full bg-white dark:bg-slate-900 px-6 py-10">
-      <div className="max-w-[80%] lg:max-w-[50%] mx-auto">
+      <div className="max-w-[95%] lg:max-w-[50%] mx-auto">
 
         {/* Header */}
         <div className="mb-6 text-center">

@@ -16,7 +16,7 @@ export const LatestPost = ({post}: LatestPostProps) => {
                 <span className="inline-block mb-4 text-v-gold font-bold uppercase tracking-wide">
                 Featured
                 </span>
-                <h2 className="text-lg md:text-4xl font-extrabold text-white mb-4 group-hover:text-v-gold transition">
+                <h2 className="text-xl md:text-4xl font-extrabold text-white mb-4 group-hover:text-v-gold transition">
                 {post.title}
                 </h2>
                 <p className="text-slate-200 text-md md:text-lg mb-6 leading-relaxed">
