@@ -11,7 +11,7 @@ export const Post = ({post}: PostProps) => {
             key={post.slug}
             to={`/content/$postId`}
             params={{ postId: post.slug }}
-            className="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6  transition shadow-sm hover:shadow-lg dark:hover:border dark:hover:border-(--v-gold)"
+            className="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 md:px-15 lg:px-20 transition shadow-sm hover:shadow-lg dark:hover:border dark:hover:border-(--v-gold)"
         >
             <h3 className="text-xl font-bold text-v-navy dark:text-white group-hover:text-v-gold transition mb-2">
                 {post.title}
