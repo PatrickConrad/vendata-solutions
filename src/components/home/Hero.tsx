@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router"
 export const Hero = () => {
 
     return (
-        <header className="hero-gradient pt-15 pb-25 md:pt-23 md:pb-32 relative overflow-hidden flex items-center justify-center text-center">
+        <header className="hero-gradient pt-20 pb-20 md:pt-23 md:pb-32 relative overflow-hidden flex items-center justify-center text-center">
             <div className="absolute top-0 right-0 w-1/2 h-full bg-v-gold/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
             <div className="max-w-4xl mx-auto px-6 relative z-10">
                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-8">

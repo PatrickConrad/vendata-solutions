@@ -1,20 +1,20 @@
-import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-B8CgGp0a.js";
-import { L as Link, S as ServiceIcon, f as faCircleNodes, a as faPenToSquare, b as faHammer, c as faBullseye, d as faBridge, u as useModalClose } from "./router--fBIoi7A.js";
-import { C as Convergence } from "./Convergence-CV1SJ2mF.js";
+import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-BzZ48LBX.js";
+import { L as Link, S as ServiceIcon, f as faCircleNodes, a as faPenToSquare, b as faHammer, c as faBullseye, d as faBridge, u as useModalClose } from "./router-D4i3iHFs.js";
+import { C as Convergence } from "./Convergence-DcLo-Wgg.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
 import "node:stream/web";
 const Hero = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "hero-gradient pt-23 pb-32 relative overflow-hidden flex items-center justify-center text-center", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "hero-gradient pt-20 pb-20 md:pt-23 md:pb-32 relative overflow-hidden flex items-center justify-center text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-0 right-0 w-1/2 h-full bg-v-gold/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-4xl mx-auto px-6 relative z-10", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-8", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-8", children: [
         "Stop working for your business.",
         /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-v-gold underline decoration-v-green decoration-4 underline-offset-8", children: "Start making IT work for you." })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-slate-300 mb-10 leading-relaxed mx-auto max-w-2xl", children: "We build custom software that automates the mundane, clarifies your data, and scales your vision." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-md md:text-xl text-slate-300 mb-10 leading-relaxed mx-auto max-w-2xl", children: "We build custom software that automates the mundane, clarifies your data, and scales your vision." }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "btn-gold px-10 py-4 rounded-xl font-bold text-lg", children: "Get A Free Consultation" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#services", className: "border-2 border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition", children: "View Solutions" })
@@ -234,11 +234,11 @@ const CallToAction = () => {
   ] }) });
 };
 const UnifiedSection = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "convergence-section", className: "py-32 bg-white overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "convergence-section", className: "pt-32 md:pt-15 bg-white overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Convergence, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-1/2", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl lg:text-5xl font-extrabold text-v-navy mb-6", children: "Our Process: Simple, Transparent, Effective" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-20 h-1.5 bg-v-gold mb-8" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl lg:text-5xl font-extrabold text-v-navy", children: "Our Process: Simple, Transparent, Effective" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-20 h-1.5 bg-v-gold mt-5 mb-8" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-slate-600 leading-relaxed mb-8", children: "Each step of our process is straightforward, but when combined, they create a cohesive system that drives measurable results. We focus on clarity, efficiency, and impactful solutions." }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-6", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4", children: [
@@ -269,8 +269,7 @@ const UnifiedSection = () => {
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 mt-1", children: "We continuously observe performance and adjust systems as processes or goals evolve." })
           ] })
         ] })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 mt-10", children: "Just like our logo’s convergence, each step is simple alone — but combined, the solution becomes clear, elegant, and powerful." })
+      ] })
     ] })
   ] }) });
 };

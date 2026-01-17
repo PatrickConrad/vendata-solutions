@@ -1,1 +1,0 @@
-import{R as t,j as e}from"../main.js";import{C as n}from"./ComingSoon-Bh90NRV4.js";import"./Divider-BkZ6YwML.js";function u(){const r=t.useLoaderData();return Array.isArray(r)?(r.find(o=>o.featured),r.filter(o=>o.featured==null),e.jsx(n,{})):null}export{u as component};
