@@ -1,9 +1,5 @@
-import { n as jsxRuntimeExports } from "./worker-entry-DltuNVmZ.js";
-import { D as Divider } from "./Divider-DmgLIqT1.js";
-import "node:events";
-import "node:async_hooks";
-import "node:stream";
-import "node:stream/web";
+import { n as jsxRuntimeExports } from "./worker-entry-B8CgGp0a.js";
+import { D as Divider } from "./Divider-CnjdnuWb.js";
 function ComingSoon() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-3xl text-center space-y-10", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-4xl sm:text-6xl font-extrabold text-v-navy dark:text-white leading-tight", children: [
@@ -23,9 +19,6 @@ function ComingSoon() {
     ) })
   ] });
 }
-function RouteComponent() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full flex align-middle justify-center py-30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ComingSoon, {}) });
-}
 export {
-  RouteComponent as component
+  ComingSoon as C
 };

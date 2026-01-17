@@ -13,7 +13,7 @@ export function Footer() {
        <div className="w-full flex flex-col gap-4 text-center order-1 md:pt-10 md:order-2">
           <h3 className="text-(--v-gold) text-md font-semibold mb-2 uppercase tracking-wider md:text-xl">VenData Solutions</h3>
           <p className="text-sm md:text-lg leading-relaxed w-full">
-            Data-driven systems, automation, and AI solutions for modern businesses.
+            Understand. Improve. Build. Adapt.
           </p>
         </div>
         {/* Navigation */}

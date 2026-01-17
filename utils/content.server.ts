@@ -1,8 +1,9 @@
 import { tempPosts } from "../src/data/posts";
+import { ContentPost } from "../src/types/content";
 
 
 
-export const serverGetPosts = (postId?: string) =>{
+export const serverGetPosts = (postId?: string): ContentPost|ContentPost[]|null =>{
     if(!postId){
         return tempPosts;
     }

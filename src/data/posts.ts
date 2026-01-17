@@ -7,13 +7,6 @@ export const tempPosts = [
         date: "May 20, 2025"
     },
     {
-        slug: "why-custom-software-wins",
-        title: "Why Custom Software Beats Off-the-Shelf Tools",
-        excerpt: "Learn how tailored software solutions give businesses a competitive edge.",
-        date: "Jan 12, 2026",
-        featured: true,
-    },
-    {
         slug: "automation-for-growth",
         title: "How Automation Fuels Business Growth",
         excerpt: "Discover how smart automation can save time and scale operations.",
@@ -26,29 +19,9 @@ export const tempPosts = [
         date: "Dec 28, 2025",
     },
     {
-        slug: 'intro-to-automation',
-        title: "How Automation Bridges the Operational Gap",
-        excerpt: "In today's digital landscape, data silos are the silent killers of productivity",
-        body: "In today's digital landscape, data silos are the silent killers of productivity. At VenData Solutions, we specialize in building the bridges that allow your tools to talk to each other. By implementing precision automation, businesses can reclaim thousands of hours lost to manual data entry.",
-        date: "May 20, 2025"
-    },
-    {
         slug: "why-custom-software-wins",
         title: "Why Custom Software Beats Off-the-Shelf Tools",
         excerpt: "Learn how tailored software solutions give businesses a competitive edge.",
-        date: "Jan 12, 2026",
-        featured: true,
-    },
-    {
-        slug: "automation-for-growth",
-        title: "How Automation Fuels Business Growth",
-        excerpt: "Discover how smart automation can save time and scale operations.",
-        date: "Jan 5, 2026",
-    },
-    {
-        slug: "data-clarity",
-        title: "Turning Data Into Clear Business Decisions",
-        excerpt: "Transform raw data into actionable insights.",
-        date: "Dec 28, 2025",
-    },
+        date: "Jan 12, 2026"
+    }
 ]

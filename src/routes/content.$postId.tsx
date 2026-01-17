@@ -1,6 +1,7 @@
 import { createFileRoute, notFound } from '@tanstack/react-router'
 import { PostNotFound } from '../components/content/PostNotFound'
 import { getPost } from '../../server/routes/content'
+import { ComingSoon } from '../components/reusable/ComingSoon'
 export const Route = createFileRoute('/content/$postId')({
  // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({ params }) => {
@@ -53,7 +54,7 @@ function RouteComponent() {
 
   return (
     <>
-    {
+    {/* {
       !data || !data.title
       ?
       <p>Loading...</p>
@@ -67,7 +68,10 @@ function RouteComponent() {
           {data.body==null?data.excerpt:data.body}
         </p>
       </article>
-    }
+    } */}
+    <div className='w-full flex align-middle justify-center py-30'>
+      <ComingSoon />
+    </div>
     </>
    
   )

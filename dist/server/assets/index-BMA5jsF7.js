@@ -1,6 +1,6 @@
-import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-DltuNVmZ.js";
-import { L as Link, S as ServiceIcon, f as faCircleNodes, a as faPenToSquare, b as faHammer, c as faBullseye, d as faBridge, u as useModalClose } from "./router-BeQHsHea.js";
-import { C as Convergence } from "./Convergence-BwyhpgO_.js";
+import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-B8CgGp0a.js";
+import { L as Link, S as ServiceIcon, f as faCircleNodes, a as faPenToSquare, b as faHammer, c as faBullseye, d as faBridge, u as useModalClose } from "./router--fBIoi7A.js";
+import { C as Convergence } from "./Convergence-CV1SJ2mF.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -237,23 +237,40 @@ const UnifiedSection = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "convergence-section", className: "py-32 bg-white overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Convergence, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-1/2", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl lg:text-5xl font-extrabold text-v-navy mb-6", children: "Unified Business Intelligence" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl lg:text-5xl font-extrabold text-v-navy mb-6", children: "Our Process: Simple, Transparent, Effective" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-20 h-1.5 bg-v-gold mb-8" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-slate-600 leading-relaxed", children: "We transform complex and fragmented business data into a single, cohesive system that drives smarter decisions, improves operational efficiency, and unlocks new opportunities for growth." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-3 h-3 rounded-full bg-v-navy" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-v-navy", children: "Seamless Data Integration" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-slate-600 leading-relaxed mb-8", children: "Each step of our process is straightforward, but when combined, they create a cohesive system that drives measurable results. We focus on clarity, efficiency, and impactful solutions." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-6", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-3 h-3 rounded-full bg-v-navy mt-1" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-v-navy", children: "Assess Current Processes & Goals" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 mt-1", children: "We review your workflows, integrations, and objectives to understand where you are and what matters most." })
+          ] })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-3 h-3 rounded-full bg-v-gold" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-v-navy", children: "Real-time Insights & Analytics" })
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-3 h-3 rounded-full bg-v-gold mt-1" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-v-navy", children: "Enhance & Extend Existing Systems" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 mt-1", children: "We improve current integrations and leverage prebuilt Vendata tools, adding efficiency without reinventing the wheel." })
+          ] })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-3 h-3 rounded-full bg-v-green" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-v-navy", children: "Automated Processes & Workflows" })
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-3 h-3 rounded-full bg-v-green mt-1" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-v-navy", children: "Build Custom Solutions Where Needed" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 mt-1", children: "If custom software is required, we focus only on the tools that deliver value and profitability." })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-3 h-3 rounded-full bg-v-gold mt-1" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-v-navy", children: "Monitor & Adapt" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 mt-1", children: "We continuously observe performance and adjust systems as processes or goals evolve." })
+          ] })
         ] })
-      ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 mt-10", children: "Just like our logo’s convergence, each step is simple alone — but combined, the solution becomes clear, elegant, and powerful." })
     ] })
   ] }) });
 };
