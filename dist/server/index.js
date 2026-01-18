@@ -1,4 +1,4 @@
-import { D, C } from "./assets/worker-entry-TuQocxbw.js";
+import { D, C } from "./assets/worker-entry-Cvwd2iGy.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";

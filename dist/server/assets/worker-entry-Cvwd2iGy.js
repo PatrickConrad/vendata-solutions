@@ -19727,7 +19727,7 @@ function getResponse() {
   return event.res;
 }
 async function getStartManifest() {
-  const { tsrStartManifest } = await import("./_tanstack-start-manifest_v-DXYvX-Hj.js");
+  const { tsrStartManifest } = await import("./_tanstack-start-manifest_v-BTOBEb4t.js");
   const startManifest = tsrStartManifest();
   const rootRoute = startManifest.routes[rootRouteId] = startManifest.routes[rootRouteId] || {};
   rootRoute.assets = rootRoute.assets || [];
@@ -19764,19 +19764,19 @@ async function getStartManifest() {
 }
 const manifest = { "7d7e857e3252f6ecf0c7eabed1b93b93ea9bc14341b78a5c25ea74735091c89a": {
   functionName: "getPost_createServerFn_handler",
-  importer: () => import("./content-DlGIA_0h.js")
+  importer: () => import("./content-D5gkydSF.js")
 }, "d272144f1318d10ea310ced5cd7027f8a2446e3e606218ceac770b3c3bd059fc": {
   functionName: "getPosts_createServerFn_handler",
-  importer: () => import("./content-DlGIA_0h.js")
+  importer: () => import("./content-D5gkydSF.js")
 }, "86dcb2d9ff949870ad447116fc58cbe65908abb71b286bf73647bbe003004267": {
   functionName: "getConsultationPin_createServerFn_handler",
-  importer: () => import("./email-nIotZHgW.js")
+  importer: () => import("./email-Ce3LBhb0.js")
 }, "1bf3031431d51463038e5d1b6560e5f1b1627b95ccc6da061853bebbf738e8e0": {
   functionName: "requestConsultationPin_createServerFn_handler",
-  importer: () => import("./email-nIotZHgW.js")
+  importer: () => import("./email-Ce3LBhb0.js")
 }, "cfa2100eea0bb98e0fdcda22c2e02d30a78aa2b1b44b256568a5f72d87396b78": {
   functionName: "verifyPin_createServerFn_handler",
-  importer: () => import("./email-nIotZHgW.js")
+  importer: () => import("./email-Ce3LBhb0.js")
 } };
 async function getServerFnById(id) {
   const serverFnInfo = manifest[id];
@@ -20057,7 +20057,7 @@ function createStartHandler(cb) {
   let routerEntry = null;
   const getEntries = async () => {
     if (routerEntry === null) {
-      routerEntry = await import("./router-Deva9g8D.js").then((n) => n.r);
+      routerEntry = await import("./router-CSrdRt6r.js").then((n) => n.r);
     }
     if (startEntry === null) {
       startEntry = await import("./start-HYkvq4Ni.js");

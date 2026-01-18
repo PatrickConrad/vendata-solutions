@@ -1,10 +1,10 @@
-import { n as jsxRuntimeExports } from "./worker-entry-TuQocxbw.js";
-import { C as ComingSoon } from "./ComingSoon-BRV8RbcN.js";
+import { n as jsxRuntimeExports } from "./worker-entry-Cvwd2iGy.js";
+import { C as ComingSoon } from "./ComingSoon-DPp3qJWH.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
 import "node:stream/web";
-import "./Divider-DcUxW1Lm.js";
+import "./Divider-DJBpOVPA.js";
 function RouteComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full flex align-middle justify-center py-30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ComingSoon, {}) });
 }

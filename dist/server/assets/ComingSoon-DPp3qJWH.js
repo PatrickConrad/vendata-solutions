@@ -1,7 +1,7 @@
-import { n as jsxRuntimeExports } from "./worker-entry-TuQocxbw.js";
-import { D as Divider } from "./Divider-DcUxW1Lm.js";
+import { n as jsxRuntimeExports } from "./worker-entry-Cvwd2iGy.js";
+import { D as Divider } from "./Divider-DJBpOVPA.js";
 function ComingSoon() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-3xl text-center space-y-10", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-3xl text-center space-y-10 px-3", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-4xl sm:text-6xl font-extrabold text-v-navy dark:text-white leading-tight", children: [
       "Something Powerful is ",
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-v-gold", children: "Coming Soon" })

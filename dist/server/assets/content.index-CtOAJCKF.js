@@ -1,6 +1,6 @@
-import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-TuQocxbw.js";
-import { D as Divider } from "./Divider-DcUxW1Lm.js";
-import { L as Link, R as Route } from "./router-Deva9g8D.js";
+import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-Cvwd2iGy.js";
+import { D as Divider } from "./Divider-DJBpOVPA.js";
+import { L as Link, R as Route } from "./router-CSrdRt6r.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -46,7 +46,7 @@ function BlogIndex() {
   const sortedPosts = reactExports.useMemo(() => posts.sort((post1, post2) => {
     return new Date(post2.date).getTime() - new Date(post1.date).getTime();
   }), []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-h-screen w-full bg-white dark:bg-slate-900 px-6 py-10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-[95%] lg:max-w-[50%] mx-auto", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-h-screen w-full bg-white dark:bg-slate-900 px-6 py-10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full lg:max-w-[50%] mx-auto", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6 text-center", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-5xl font-extrabold text-(--v-navy) dark:text-(--v-gold) mb-4", children: "VenData Insights" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Divider, { className: "h-1 w-20 bg-v-gold mb-5 " }),

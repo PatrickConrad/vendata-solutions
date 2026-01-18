@@ -1,4 +1,4 @@
-import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, O as Outlet, T as TSS_SERVER_FUNCTION, q as getServerFnById, s as createServerFn, v as notFound } from "./worker-entry-TuQocxbw.js";
+import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, O as Outlet, T as TSS_SERVER_FUNCTION, q as getServerFnById, s as createServerFn, v as notFound } from "./worker-entry-Cvwd2iGy.js";
 const preloadWarning = "Error preloading route! ☝️";
 class BaseRoute {
   constructor(options) {
@@ -5396,7 +5396,7 @@ function RootDocument({ children }) {
     ] })
   ] });
 }
-const $$splitComponentImporter$g = () => import("./terms-6uSB-0K0.js");
+const $$splitComponentImporter$g = () => import("./terms-DSf1cdCS.js");
 const Route$g = createFileRoute("/terms")({
   component: lazyRouteComponent($$splitComponentImporter$g, "component")
 });
@@ -5434,15 +5434,15 @@ Sitemap: https://vendata.solutions/sitemap.xml
   }),
   component: lazyRouteComponent($$splitComponentImporter$e, "component")
 });
-const $$splitComponentImporter$d = () => import("./privacy-Drz4WpXn.js");
+const $$splitComponentImporter$d = () => import("./privacy-CrksYJea.js");
 const Route$d = createFileRoute("/privacy")({
   component: lazyRouteComponent($$splitComponentImporter$d, "component")
 });
-const $$splitComponentImporter$c = () => import("./content-DwspeIi9.js");
+const $$splitComponentImporter$c = () => import("./content-CaKdP-tH.js");
 const Route$c = createFileRoute("/content")({
   component: lazyRouteComponent($$splitComponentImporter$c, "component")
 });
-const $$splitComponentImporter$b = () => import("./contact-B56ifQl3.js");
+const $$splitComponentImporter$b = () => import("./contact-DZwUyUG7.js");
 const Route$b = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -5454,7 +5454,7 @@ const Route$b = createFileRoute("/contact")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$b, "component")
 });
-const $$splitComponentImporter$a = () => import("./auth-BaaS9azL.js");
+const $$splitComponentImporter$a = () => import("./auth-Tj5kU3Y8.js");
 const Route$a = createFileRoute("/auth")({
   head: () => ({
     meta: [{
@@ -5466,7 +5466,7 @@ const Route$a = createFileRoute("/auth")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$a, "component")
 });
-const $$splitComponentImporter$9 = () => import("./app-Brrl4Lpu.js");
+const $$splitComponentImporter$9 = () => import("./app-pI8W5EPP.js");
 const Route$9 = createFileRoute("/app")({
   head: () => ({
     meta: [{
@@ -5478,7 +5478,7 @@ const Route$9 = createFileRoute("/app")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$9, "component")
 });
-const $$splitComponentImporter$8 = () => import("./about-BHjrnjht.js");
+const $$splitComponentImporter$8 = () => import("./about-DGjB74H1.js");
 const Route$8 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -5490,7 +5490,7 @@ const Route$8 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$8, "component")
 });
-const $$splitComponentImporter$7 = () => import("./_404-Bbag1uSa.js");
+const $$splitComponentImporter$7 = () => import("./_404-BrnEVQYb.js");
 const Route$7 = createFileRoute("/$404")({
   head: () => ({
     meta: [{
@@ -5502,7 +5502,7 @@ const Route$7 = createFileRoute("/$404")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-const $$splitComponentImporter$6 = () => import("./index-C9M2LTnB.js");
+const $$splitComponentImporter$6 = () => import("./index-BoA_2w6Z.js");
 const Route$6 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter$6, "component")
   // loader: async () => await getCount()
@@ -5521,7 +5521,7 @@ const createSsrRpc = (functionId, importer) => {
 };
 const getPost = createServerFn().inputValidator((data) => data).handler(createSsrRpc("7d7e857e3252f6ecf0c7eabed1b93b93ea9bc14341b78a5c25ea74735091c89a"));
 const getPosts = createServerFn().handler(createSsrRpc("d272144f1318d10ea310ced5cd7027f8a2446e3e606218ceac770b3c3bd059fc"));
-const $$splitComponentImporter$5 = () => import("./content.index-BpNZ_r0T.js");
+const $$splitComponentImporter$5 = () => import("./content.index-CtOAJCKF.js");
 const Route$5 = createFileRoute("/content/")({
   loader: async ({
     params
@@ -5532,7 +5532,7 @@ const Route$5 = createFileRoute("/content/")({
   },
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-const $$splitComponentImporter$4 = () => import("./index-mZV8l6gk.js");
+const $$splitComponentImporter$4 = () => import("./index-CrsVSG_8.js");
 const Route$4 = createFileRoute("/consultation/")({
   head: () => ({
     meta: [{
@@ -5548,8 +5548,8 @@ const Route$4 = createFileRoute("/consultation/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitNotFoundComponentImporter = () => import("./content._postId-DPgyrHuk.js");
-const $$splitComponentImporter$3 = () => import("./content._postId-lU8tCHG4.js");
+const $$splitNotFoundComponentImporter = () => import("./content._postId-CMmSC8OK.js");
+const $$splitComponentImporter$3 = () => import("./content._postId-plhMZYGO.js");
 const Route$3 = createFileRoute("/content/$postId")({
   // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({
@@ -5604,15 +5604,15 @@ const Route$3 = createFileRoute("/content/$postId")({
   component: lazyRouteComponent($$splitComponentImporter$3, "component"),
   notFoundComponent: lazyRouteComponent($$splitNotFoundComponentImporter, "notFoundComponent")
 });
-const $$splitComponentImporter$2 = () => import("./book-BKvUe9ta.js");
+const $$splitComponentImporter$2 = () => import("./book-BF7soNct.js");
 const Route$2 = createFileRoute("/consultation/book")({
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./app.dashboard-26rYt7wA.js");
+const $$splitComponentImporter$1 = () => import("./app.dashboard-DEWAQtSH.js");
 const Route$1 = createFileRoute("/app/dashboard")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./app._layout-C9MkMf8N.js");
+const $$splitComponentImporter = () => import("./app._layout-DVBqJusP.js");
 const Route2 = createFileRoute("/app/_layout")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });
