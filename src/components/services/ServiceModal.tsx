@@ -15,13 +15,17 @@ export const ServiceModal = (props: ServiceProps) => {
     const router = useRouter()
     const open = modal === props.title
     const closeModal = () => router.history.back()
-    const openModal = ()=>router.navigate({
-        to: '/',
-        search: (prev) => ({
-            ...prev,
-            modal: props.title
+    const openModal = ()=>{
+        return router.navigate({
+            to: '/',
+            hash: undefined,
+            search: (prev) => ({
+                ...prev,
+                modal: props.title
+            }),
+            replace: false
         })
-    })
+    }
     return(
          <>
             <div 
