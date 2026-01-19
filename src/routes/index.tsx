@@ -5,6 +5,7 @@ import { Hero } from '../components/home/Hero'
 import { Services } from '../components/home/Services'
 import { CallToAction } from '../components/home/CallToAction'
 import { UnifiedSection } from '../components/home/UnifiedSection'
+import { services } from '../data/services'
 
 // const filePath = 'count.txt'
 
@@ -28,8 +29,17 @@ import { UnifiedSection } from '../components/home/UnifiedSection'
 //         await fs.promises.writeFile(filePath, `${count+data}`);
 // })
 
+type ModalType = {
+    modal?: string
+}
+
 export const Route = createFileRoute('/')({
     component: RouteComponent,
+    validateSearch: (search: Record<string, unknown>):ModalType => {
+        return {
+            modal: (search.modal as string) ?? ''
+        }
+    }
     // loader: async () => await getCount()
 })
 

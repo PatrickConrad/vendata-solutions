@@ -23,14 +23,14 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
         <ScrollLink to="/auth" onClick={onClose} className="hover:text-(--v-gold) transition">
           Clients
         </ScrollLink>
-        <ScrollLink to="/content" onClick={onClose} className="hover:text-(--v-gold) transition">
-          Content
-        </ScrollLink>
-        <ScrollLink to="/" hash="services" onClick={onClose} className="hover:text-(--v-gold)">
-          Services
+        <ScrollLink to="/insights" onClick={onClose} className="hover:text-(--v-gold) transition">
+          Insights
         </ScrollLink>
         <ScrollLink to="/about" onClick={onClose} className="hover:text-(--v-gold)">
           About
+        </ScrollLink>
+        <ScrollLink to="/" hash="services" onClick={onClose} className="hover:text-(--v-gold)">
+          Services
         </ScrollLink>
         <ScrollLink
           to="/consultation"

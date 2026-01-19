@@ -1,5 +1,5 @@
 import { faClose, faBars } from "@fortawesome/free-solid-svg-icons";
-import { ServiceIcon } from "../../services/ServiceIcon";
+import { ServiceIcon } from "../../reusable/ServiceIcon";
 
 
 type MobileMenuBtnProps = {

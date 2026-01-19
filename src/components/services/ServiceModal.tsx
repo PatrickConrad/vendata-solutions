@@ -1,6 +1,8 @@
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import { ServiceLayout } from "./ServiceLayout";
 import { Modal } from "../layouts/main/Modal";
+import { useRouter, useSearch } from "@tanstack/react-router";
+import { navigateWithHash } from "../reusable/ScrollLink";
 
 type ServiceProps = {
     title: string,
@@ -10,14 +12,31 @@ type ServiceProps = {
 }
 
 export const ServiceModal = (props: ServiceProps) => {
-    const [open, setOpen] = useState(false);
+    const {modal} = useSearch({ from: "/" })
+    const router = useRouter()
+    const open = modal === props.title
+    const closeModal = () => router.navigate({
+        to: '/',
+        search: (prev: any) => {
+            const { modal, ...rest } = prev; // Remove modal from params
+            return rest;
+        },
+        hash: 'services'
+    })
+    const openModal = ()=>router.navigate({
+        to: '/',
+        search: (prev) => ({
+            ...prev,
+            modal: props.title
+        })
+    })
     return(
          <>
             <div 
                 onClick={(e)=>{
                     e.preventDefault()
                     e.stopPropagation()
-                    setOpen(true)
+                    openModal();
                 }} 
                 className="bg-white p-10 rounded-3xl shadow-sm border-b-4 border-v-navy hover:shadow-xl transition-all cursor-pointer"
             >
@@ -25,7 +44,7 @@ export const ServiceModal = (props: ServiceProps) => {
                    {props.icon}
                </div>
                <h3 className="text-2xl font-bold text-v-navy mb-4">{props.title}</h3>
-               <p className="text-slate-600 mb-4">
+               <p className="text-slate-600 text-md mb-4">
                    {props.tagLine}
                </p>
                 
@@ -34,10 +53,10 @@ export const ServiceModal = (props: ServiceProps) => {
             {
                 open 
                 && 
-                <Modal onClose={()=>setOpen(false)} open={open}>
+                <Modal onClose={()=>closeModal()} open={open}>
                     <>
                         <button
-                            onClick={()=>setOpen(false)}
+                            onClick={()=>closeModal()}
                             className="cursor-pointer absolute top-3 right-6 white hover:text-(--v-gold)"
                             aria-label="Close modal"
                         >

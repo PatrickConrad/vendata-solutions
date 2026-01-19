@@ -1,16 +1,31 @@
 import { PropsWithChildren, useEffect, useRef, useState } from "react"
 import { useModalClose } from "../../../hooks/useModal";
+import { createPortal } from "react-dom";
 
 type ModalProps = PropsWithChildren & {
     onClose: () => void,
     open: boolean
 }
 
+ 
+
 
 export const Modal = ({onClose, open, children}: ModalProps) => {
     const modalRef = useRef<HTMLDivElement|null>(null)
     useModalClose(modalRef, open, onClose);
-    return (
+    useEffect(() => {
+        if (open) {
+            document.body.style.overflow = "hidden"
+        }
+        return () => {
+            document.body.style.overflow = ""
+        }
+    }, [open])
+
+    //nothing if not open
+    if (!open) return null;
+
+    return createPortal(
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center">
             <div 
                 ref={modalRef} 
@@ -18,7 +33,8 @@ export const Modal = ({onClose, open, children}: ModalProps) => {
             >
                 {children}
             </div>
-        </div>
+        </div>,
+        document.body
     )
   
 }

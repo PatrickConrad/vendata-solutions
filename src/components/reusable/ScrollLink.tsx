@@ -9,33 +9,38 @@ interface ScrollLinkProps {
   onClick?: (opt: boolean) => void
 }
 
-export function ScrollLink({ to, hash, children, className, onClick }: ScrollLinkProps) {
+export const navigateWithHash = (to: string = '/', hash?: string) => {
   const router = useRouter();
 
-  const handleClick = (e: MouseEvent) => {
-    e.preventDefault();
-    onClick && onClick(false);
-
-    if (router.state.location.pathname === to) {
+  if (router.state.location.pathname === to) {
       // already on page → scroll to element
       if (hash) {
         const el = document.getElementById(hash);
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       }
-    } else {
-      // navigate first, then scroll
-      router.navigate({
-        to,
-        hash
-        }).then(() => {
-            if (hash) {
-            setTimeout(() => {
-                const el = document.getElementById(hash);
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }, 50); // small delay to ensure element is rendered
-            }
-        });
-    }
+  } else {
+    // navigate first, then scroll
+    router.navigate({
+      to,
+      hash
+      }).then(() => {
+          if (hash) {
+          setTimeout(() => {
+              const el = document.getElementById(hash);
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 50); // small delay to ensure element is rendered
+          }
+      });
+  }
+}
+
+export function ScrollLink({ to, hash, children, className, onClick }: ScrollLinkProps) {
+
+  const handleClick = (e: MouseEvent) => {
+    e.preventDefault();
+    onClick && onClick(false);
+    navigateWithHash(to, hash);
+   
   };
 
   return (
