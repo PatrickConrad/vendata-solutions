@@ -1,4 +1,4 @@
-import { ServiceIcon } from "../services/ServiceIcon";
+import { ServiceIcon } from "./ServiceIcon";
 
 
 

@@ -15,7 +15,18 @@ export default defineConfig({
       projects: ['./tsconfig.json']
     }),
     cloudflare({ viteEnvironment: { name: 'ssr' } }),
-    tanstackStart(),
+    tanstackStart(
+      {
+        prerender: {
+          enabled: true,
+          crawlLinks: true
+        },
+        sitemap: {
+          enabled: true,
+          host: 'https://vendata.solutions'
+        }
+      }
+    ),
     // react's vite plugin must come after start's vite plugin
     viteReact(),
     

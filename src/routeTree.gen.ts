@@ -10,19 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as ContentRouteImport } from './routes/content'
+import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as R404RouteImport } from './routes/$404'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ContentIndexRouteImport } from './routes/content.index'
+import { Route as InsightsIndexRouteImport } from './routes/insights.index'
 import { Route as ConsultationIndexRouteImport } from './routes/consultation/index'
-import { Route as ContentPostIdRouteImport } from './routes/content.$postId'
+import { Route as InsightsPostIdRouteImport } from './routes/insights.$postId'
 import { Route as ConsultationBookRouteImport } from './routes/consultation/book'
 import { Route as AppDashboardRouteImport } from './routes/app.dashboard'
 import { Route as AppLayoutRouteImport } from './routes/app._layout'
@@ -30,11 +29,6 @@ import { Route as AppLayoutRouteImport } from './routes/app._layout'
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
@@ -47,9 +41,9 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ContentRoute = ContentRouteImport.update({
-  id: '/content',
-  path: '/content',
+const InsightsRoute = InsightsRouteImport.update({
+  id: '/insights',
+  path: '/insights',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -82,20 +76,20 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ContentIndexRoute = ContentIndexRouteImport.update({
+const InsightsIndexRoute = InsightsIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => ContentRoute,
+  getParentRoute: () => InsightsRoute,
 } as any)
 const ConsultationIndexRoute = ConsultationIndexRouteImport.update({
   id: '/consultation/',
   path: '/consultation/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ContentPostIdRoute = ContentPostIdRouteImport.update({
+const InsightsPostIdRoute = InsightsPostIdRouteImport.update({
   id: '/$postId',
   path: '/$postId',
-  getParentRoute: () => ContentRoute,
+  getParentRoute: () => InsightsRoute,
 } as any)
 const ConsultationBookRoute = ConsultationBookRouteImport.update({
   id: '/consultation/book',
@@ -119,16 +113,15 @@ export interface FileRoutesByFullPath {
   '/app': typeof AppLayoutRoute
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
-  '/content': typeof ContentRouteWithChildren
+  '/insights': typeof InsightsRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/consultation/book': typeof ConsultationBookRoute
-  '/content/$postId': typeof ContentPostIdRoute
+  '/insights/$postId': typeof InsightsPostIdRoute
   '/consultation': typeof ConsultationIndexRoute
-  '/content/': typeof ContentIndexRoute
+  '/insights/': typeof InsightsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -139,13 +132,12 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/consultation/book': typeof ConsultationBookRoute
-  '/content/$postId': typeof ContentPostIdRoute
+  '/insights/$postId': typeof InsightsPostIdRoute
   '/consultation': typeof ConsultationIndexRoute
-  '/content': typeof ContentIndexRoute
+  '/insights': typeof InsightsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -155,17 +147,16 @@ export interface FileRoutesById {
   '/app': typeof AppRouteWithChildren
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
-  '/content': typeof ContentRouteWithChildren
+  '/insights': typeof InsightsRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/app/_layout': typeof AppLayoutRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/consultation/book': typeof ConsultationBookRoute
-  '/content/$postId': typeof ContentPostIdRoute
+  '/insights/$postId': typeof InsightsPostIdRoute
   '/consultation/': typeof ConsultationIndexRoute
-  '/content/': typeof ContentIndexRoute
+  '/insights/': typeof InsightsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -176,16 +167,15 @@ export interface FileRouteTypes {
     | '/app'
     | '/auth'
     | '/contact'
-    | '/content'
+    | '/insights'
     | '/privacy'
     | '/robots.txt'
-    | '/sitemap.xml'
     | '/terms'
     | '/app/dashboard'
     | '/consultation/book'
-    | '/content/$postId'
+    | '/insights/$postId'
     | '/consultation'
-    | '/content/'
+    | '/insights/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -196,13 +186,12 @@ export interface FileRouteTypes {
     | '/contact'
     | '/privacy'
     | '/robots.txt'
-    | '/sitemap.xml'
     | '/terms'
     | '/app/dashboard'
     | '/consultation/book'
-    | '/content/$postId'
+    | '/insights/$postId'
     | '/consultation'
-    | '/content'
+    | '/insights'
   id:
     | '__root__'
     | '/'
@@ -211,17 +200,16 @@ export interface FileRouteTypes {
     | '/app'
     | '/auth'
     | '/contact'
-    | '/content'
+    | '/insights'
     | '/privacy'
     | '/robots.txt'
-    | '/sitemap.xml'
     | '/terms'
     | '/app/_layout'
     | '/app/dashboard'
     | '/consultation/book'
-    | '/content/$postId'
+    | '/insights/$postId'
     | '/consultation/'
-    | '/content/'
+    | '/insights/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -231,10 +219,9 @@ export interface RootRouteChildren {
   AppRoute: typeof AppRouteWithChildren
   AuthRoute: typeof AuthRoute
   ContactRoute: typeof ContactRoute
-  ContentRoute: typeof ContentRouteWithChildren
+  InsightsRoute: typeof InsightsRouteWithChildren
   PrivacyRoute: typeof PrivacyRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   ConsultationBookRoute: typeof ConsultationBookRoute
   ConsultationIndexRoute: typeof ConsultationIndexRoute
@@ -247,13 +234,6 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/robots.txt': {
@@ -270,11 +250,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/content': {
-      id: '/content'
-      path: '/content'
-      fullPath: '/content'
-      preLoaderRoute: typeof ContentRouteImport
+    '/insights': {
+      id: '/insights'
+      path: '/insights'
+      fullPath: '/insights'
+      preLoaderRoute: typeof InsightsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -319,12 +299,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/content/': {
-      id: '/content/'
+    '/insights/': {
+      id: '/insights/'
       path: '/'
-      fullPath: '/content/'
-      preLoaderRoute: typeof ContentIndexRouteImport
-      parentRoute: typeof ContentRoute
+      fullPath: '/insights/'
+      preLoaderRoute: typeof InsightsIndexRouteImport
+      parentRoute: typeof InsightsRoute
     }
     '/consultation/': {
       id: '/consultation/'
@@ -333,12 +313,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsultationIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/content/$postId': {
-      id: '/content/$postId'
+    '/insights/$postId': {
+      id: '/insights/$postId'
       path: '/$postId'
-      fullPath: '/content/$postId'
-      preLoaderRoute: typeof ContentPostIdRouteImport
-      parentRoute: typeof ContentRoute
+      fullPath: '/insights/$postId'
+      preLoaderRoute: typeof InsightsPostIdRouteImport
+      parentRoute: typeof InsightsRoute
     }
     '/consultation/book': {
       id: '/consultation/book'
@@ -376,18 +356,19 @@ const AppRouteChildren: AppRouteChildren = {
 
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 
-interface ContentRouteChildren {
-  ContentPostIdRoute: typeof ContentPostIdRoute
-  ContentIndexRoute: typeof ContentIndexRoute
+interface InsightsRouteChildren {
+  InsightsPostIdRoute: typeof InsightsPostIdRoute
+  InsightsIndexRoute: typeof InsightsIndexRoute
 }
 
-const ContentRouteChildren: ContentRouteChildren = {
-  ContentPostIdRoute: ContentPostIdRoute,
-  ContentIndexRoute: ContentIndexRoute,
+const InsightsRouteChildren: InsightsRouteChildren = {
+  InsightsPostIdRoute: InsightsPostIdRoute,
+  InsightsIndexRoute: InsightsIndexRoute,
 }
 
-const ContentRouteWithChildren =
-  ContentRoute._addFileChildren(ContentRouteChildren)
+const InsightsRouteWithChildren = InsightsRoute._addFileChildren(
+  InsightsRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -396,10 +377,9 @@ const rootRouteChildren: RootRouteChildren = {
   AppRoute: AppRouteWithChildren,
   AuthRoute: AuthRoute,
   ContactRoute: ContactRoute,
-  ContentRoute: ContentRouteWithChildren,
+  InsightsRoute: InsightsRouteWithChildren,
   PrivacyRoute: PrivacyRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   ConsultationBookRoute: ConsultationBookRoute,
   ConsultationIndexRoute: ConsultationIndexRoute,

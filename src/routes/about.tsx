@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Divider } from '../components/reusable/Divider'
 import { Convergence } from '../components/reusable/Convergence'
+import { ServiceIcon } from '../components/reusable/ServiceIcon'
+import { faArrowTrendUp, faChartLine, faCogs, faCompass, faLightbulb, faMicroscope, faPuzzlePiece, faRocket, faShieldHalved } from '@fortawesome/free-solid-svg-icons'
 
 export const Route = createFileRoute('/about')({
   head: () => ({
@@ -16,100 +18,127 @@ export const Route = createFileRoute('/about')({
 })
 
 function RouteComponent() {
-  return <>
-    <main className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200 overflow-x-hidden">
-      {/* Hero Section */}
-      <section className="py-28 bg-gradient-to-br from-[var(--v-navy)] to-slate-900 text-white text-center relative overflow-hidden">
-        {/* Decorative glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-v-gold/10 rounded-full blur-[140px]" />
-
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <h1 className="text-slate-200 text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight">
-            About VenData Solutions
+  return ( 
+    <main className="bg-white dark:bg-slate-900 font-plus-jakarta">
+      
+      {/* 1. THE TALE: THE OWNER VS THE OVERHEAD */}
+      <section className="py-24 px-6 bg-v-navy text-white relative overflow-hidden">
+        <div className="max-w-4xl mx-auto relative z-10">
+          <span className="text-v-gold uppercase tracking-[0.3em] font-bold text-sm">A Tale as Old as Commerce</span>
+          <h1 className="text-5xl md:text-7xl font-extrabold mt-4 mb-8 leading-tight">
+            The Owner <span className="text-v-green">vs.</span> <br />The Overhead
           </h1>
+          <div className="space-y-6 text-xl text-slate-300 leading-relaxed">
+            <p>
+              It is a struggle every visionary knows: the relentless weight of the mundane. In the fight for market share, your greatest enemy isn't the competition—it’s the friction within your own walls.
+            </p>
+            <p className="border-l-4 border-v-green pl-6 italic font-light">
+              "Every employee is an investment. Every second is a currency. Yet, the modern emergence of SaaS promised a revolution that only delivered a maze."
+            </p>
+            <p>
+              We see the same story time and again: logistics buried in manual entry, and owners fighting a daily vendetta against the very tools meant to save them.
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <Divider className="w-24 h-1 bg-v-gold mx-auto mb-10" />
-
-          <p className="text-xl lg:text-2xl leading-relaxed text-slate-200 max-w-2xl mx-auto">
-            We create intelligent software that automates, clarifies, and scales your business.  
-            Our mission is to make your business work for you — not the other way around.
+      {/* 2. THE PHILOSOPHY: BEYOND THE CODE */}
+      <section className="py-24 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="space-y-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-v-navy dark:text-white leading-tight">
+            True Innovation is <br />
+            <span className="text-v-green">Creative Problem Solving</span>
+          </h2>
+          <p className="text-lg text-slate-600 dark:text-slate-300">
+            VenData wasn't built to simply "write code." We were built to understand the heartbeat of your business. Our team doesn't look at a tech stack in isolation; we look at the goals, the target markets, and the untapped potential being held back by operational gaps.
+          </p>
+          <p className="text-lg text-slate-600 dark:text-slate-300">
+            We bridge the divide between high-level business development and technical execution. We don't just fix what is broken—we partner with you to find the innovative "unfair advantages" that allow you to scale without the bloat.
           </p>
         </div>
-      </section>
-
-    {/* Mission / Vision */}
-      <section className="px-6 py-16 md:py-24 bg-slate-50 dark:bg-slate-800">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-    
-          {/* Text Content - Constrained with max-w-2xl so it doesn't span the whole screen */}
-          <div className="max-w-2xl mx-auto lg:mx-0">
-            <h2 className="text-(--v-navy) text-3xl md:text-4xl font-extrabold dark:text-(--v-gold) mb-6">
-              Our Mission
-            </h2>
-            <p className="text-lg text-slate-700 dark:text-slate-300  leading-relaxed mb-10">
-              To empower businesses with smart tools that remove friction, improve efficiency, 
-              and provide clear insights into their operations.
-            </p>
-
-            <h2 className="text-(--v-gold) text-3xl md:text-4xl font-extrabold mb-6 dark:text-slate-300">
-              Our Vision
-            </h2>
-            <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-              To be the most trusted partner for businesses looking to modernize their workflow 
-              and unlock data-driven growth.
-            </p>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border-b-4 border-v-navy">
+            <ServiceIcon icon={faShieldHalved} color="var(--v-navy)" />
+            <h4 className="font-bold mt-4 text-v-navy dark:text-white">Defend Your Time</h4>
           </div>
-
-          {/* Visual Component */}
-          <div className="w-full flex justify-center lg:justify-end mt-10 lg:mt-0">
-            <div className="w-full max-w-[400px] lg:max-w-none">
-              <Convergence />
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Values / Approach */}
-      <section className="py-24 bg-white dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-extrabold text-(--v-navy) dark:text-white mb-12">
-            Our Core Values
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="bg-(--v-navy) dark:bg-(--v-navy) text-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold mb-4">Innovation</h3>
-              <p className="text-base">
-                We constantly explore smarter ways to solve problems and build systems that scale.
-              </p>
-            </div>
-            <div className="bg-v-gold text-(--v-navy) rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold mb-4">Transparency</h3>
-              <p className="text-base">
-                Clear insights and honest communication are at the core of every project.
-              </p>
-            </div>
-            <div className="bg-v-green text-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold mb-4">Impact</h3>
-              <p className="text-base">
-                We deliver results that genuinely improve our clients’ workflow and bottom line.
-              </p>
-            </div>
+          <div className="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border-b-4 border-v-green">
+            <ServiceIcon icon={faRocket} color="var(--v-green)"  />
+            <h4 className="font-bold mt-4 text-v-navy dark:text-white">Accelerate Growth</h4>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="px-3 py-24 bg-slate-50 dark:bg-slate-800 text-center">
-        <h2 className="text-3xl lg:text-4xl font-extrabold mb-6">
-          Ready to make your business work for you?
+      {/* 3. THE 4-PILLAR PROCESS */}
+      <section className="py-24 px-6 bg-slate-50 dark:bg-slate-800/50 border-y border-slate-100 dark:border-slate-800">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-v-navy dark:text-white mb-16">The VenData Process</h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { icon: faMicroscope, title: "The Deep Audit", text: "We dissect your operations to find where the friction hides and where the data stalls." },
+              { icon: faCompass, title: "Strategic Roadmap", text: "We align your technical architecture with your 3-year growth goals, not just today's fix." },
+              { icon: faCogs, title: "Seamless Bridging", text: "We build the high-impact logic that connects your tools into a single, unified organism." },
+              { icon: faArrowTrendUp, title: "Continuous Value", text: "We partner for the long haul, evolving your systems as your market territory expands." }
+            ].map((pillar, idx) => (
+              <div key={idx} className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border-t-4 border-slate-200 dark:border-slate-700 hover:border-v-green transition-all group">
+                <div className="text-v-navy dark:text-v-gold mb-6 group-hover:scale-110 transition-transform">
+                  <ServiceIcon icon={pillar.icon} />
+                </div>
+                <h3 className="font-bold text-xl mb-3 text-v-navy dark:text-white">{pillar.title}</h3>
+                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{pillar.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. LEADERSHIP: THE PERSONAL VENDETTA */}
+      <section className="py-24 px-6 max-w-5xl mx-auto">
+        <h2 className="text-4xl font-bold text-center text-v-navy dark:text-white mb-16 underline decoration-v-gold decoration-4 underline-offset-8">Leadership</h2>
+        
+        <div className="space-y-24">
+          {/* Founder Profile */}
+          <div className="flex flex-col md:flex-row gap-12 items-center md:items-start">
+            <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+              <img 
+                src="./Founder-Patrick-Conrad-Profile-Image.jpeg" 
+                alt="Patrick Conrad" 
+                className="w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white dark:border-slate-800"
+              />
+            </div>
+            <div className="flex-grow">
+              <h3 className="text-3xl font-bold text-v-navy dark:text-white mb-2">Patrick Conrad</h3>
+              <p className="text-v-gold font-bold uppercase tracking-widest text-sm mb-6">Founder & Principal Consultant</p>
+              <div className="space-y-4 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p>
+                  "I didn't start in a server room. I started in the trenches of marketing and business development, helping owners maximize goals and navigate complex target markets."
+                </p>
+                <p>
+                  "I taught myself to code because I was tired of seeing brilliant strategies die on the vine due to inadequate tech. I built VenData to be the partner I wish I had—someone who understands the P&L as deeply as the API."
+                </p>
+                <p>
+                  "I'm most inspired by the intersection of high-level innovation and the gritty, creative problem-solving required to make a business actually work."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. THE FINAL CALL */}
+      <section className="py-32 px-6 text-center bg-v-navy text-white">
+        <h2 className="text-4xl md:text-6xl font-black mb-4 italic tracking-tighter">
+          End the <span className="text-v-green">Vendetta.</span>
         </h2>
-        <Divider className='w-24 h-1 bg-v-green mt-5 mb-15' />
-        <Link to="/consultation" className="btn-gold px-10 py-4 rounded-xl font-bold text-lg mt-4">
-          Consult Our Engineers
+        <h3 className="text-2xl font-bold text-v-gold mb-12 uppercase tracking-[0.2em]">
+          Call VenData.
+        </h3>
+        <Link 
+          to="/consultation" 
+          className="btn-gold px-12 py-6 rounded-2xl font-black text-2xl tracking-tighter uppercase inline-block"
+        >
+          Begin the Partnership
         </Link>
       </section>
     </main>
-  </>
+  )
 }

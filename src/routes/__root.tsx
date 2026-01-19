@@ -4,6 +4,7 @@ import Nav from '../components/layouts/main/Nav';
 import { Footer } from '../components/layouts/main/Footer';
 import '../app.css'
 import { AnalyticsTracker } from '../components/reusable/AnalyticsTracker';
+import { AppProvider } from '../context/AppContext';
 
 export const Route = createRootRoute({
     head: () => ({
@@ -61,15 +62,17 @@ function RootComponent() {
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
     return (
         <html suppressHydrationWarning>
-            <head>
-                <HeadContent />
-            </head>
-            <body className='dark text-slate-200'>
-                <AnalyticsTracker />
-                <Nav />
-                <main className='pt-20'>{children}</main>
-                <Footer/>
-            </body>
+            <AppProvider>
+                <head>
+                    <HeadContent />
+                </head>
+                <body className='dark text-slate-200'>
+                    <AnalyticsTracker />
+                    <Nav />
+                    <main className='pt-20'>{children}</main>
+                    <Footer/>
+                </body>
+            </AppProvider>
         </html>
     )
 }

@@ -9,7 +9,7 @@ export const Post = ({post}: PostProps) => {
     return (
         <Link
             key={post.slug}
-            to={`/content/$postId`}
+            to={`/insights/$postId`}
             params={{ postId: post.slug }}
             className="group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 md:px-15 lg:px-20 transition shadow-sm hover:shadow-lg dark:hover:border dark:hover:border-(--v-gold)"
         >
