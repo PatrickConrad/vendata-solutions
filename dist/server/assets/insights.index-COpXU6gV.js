@@ -1,6 +1,6 @@
-import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-nqGiYEjk.js";
-import { D as Divider } from "./Divider-D6diecbo.js";
-import { L as Link, R as Route } from "./router-Cc3DPEKG.js";
+import { n as jsxRuntimeExports, a as reactExports } from "./worker-entry-ervQTZ6q.js";
+import { D as Divider } from "./Divider-DGXOU1NH.js";
+import { L as Link, R as Route } from "./router-CNBPvxJV.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -9,7 +9,7 @@ const LatestPost = ({ post }) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
     Link,
     {
-      to: "/content/$postId",
+      to: "/insights/$postId",
       params: { postId: post.slug },
       className: "group block bg-v-navy rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition  hover:border hover:border-(--v-gold)",
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-10", children: [
@@ -28,7 +28,7 @@ const Post = ({ post }) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     Link,
     {
-      to: `/content/$postId`,
+      to: `/insights/$postId`,
       params: { postId: post.slug },
       className: "group bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 md:px-15 lg:px-20 transition shadow-sm hover:shadow-lg dark:hover:border dark:hover:border-(--v-gold)",
       children: [

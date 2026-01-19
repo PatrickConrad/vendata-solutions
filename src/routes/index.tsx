@@ -37,7 +37,7 @@ export const Route = createFileRoute('/')({
     component: RouteComponent,
     validateSearch: (search: Record<string, unknown>):ModalType => {
         return {
-            modal: (search.modal as string) ?? ''
+            modal: (search.modal as string) ?? undefined
         }
     }
     // loader: async () => await getCount()

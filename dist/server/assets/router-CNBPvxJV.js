@@ -1,4 +1,4 @@
-import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, O as Outlet, T as TSS_SERVER_FUNCTION, q as getServerFnById, s as createServerFn, v as notFound } from "./worker-entry-nqGiYEjk.js";
+import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, O as Outlet, T as TSS_SERVER_FUNCTION, q as getServerFnById, s as createServerFn, v as notFound } from "./worker-entry-ervQTZ6q.js";
 const preloadWarning = "Error preloading route! ☝️";
 class BaseRoute {
   constructor(options) {
@@ -1043,29 +1043,32 @@ const Scripts = () => {
   }
   return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: allScripts.map((asset, i2) => /* @__PURE__ */ reactExports.createElement(Asset, { ...asset, key: `tsr-scripts-${asset.tag}-${i2}` })) });
 };
-function ScrollLink({ to: to2, hash, children, className, onClick }) {
+const navigateWithHash = (to2 = "/", hash) => {
   const router2 = useRouter();
+  if (router2.state.location.pathname === to2) {
+    if (hash) {
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  } else {
+    router2.navigate({
+      to: to2,
+      hash
+    }).then(() => {
+      if (hash) {
+        setTimeout(() => {
+          const el = document.getElementById(hash);
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }, 50);
+      }
+    });
+  }
+};
+function ScrollLink({ to: to2, hash, children, className, onClick }) {
   const handleClick = (e2) => {
     e2.preventDefault();
     onClick && onClick(false);
-    if (router2.state.location.pathname === to2) {
-      if (hash) {
-        const el = document.getElementById(hash);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      router2.navigate({
-        to: to2,
-        hash
-      }).then(() => {
-        if (hash) {
-          setTimeout(() => {
-            const el = document.getElementById(hash);
-            if (el) el.scrollIntoView({ behavior: "smooth" });
-          }, 50);
-        }
-      });
-    }
+    navigateWithHash(to2, hash);
   };
   return /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: handleClick, className: `${className} cursor-pointer`, children });
 }
@@ -1107,9 +1110,9 @@ const MobileMenu = ({ open, onClose }) => {
       className: `md:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`,
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-6 px-6 py-8 font-bold text-v-navy/80", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/auth", onClick: onClose, className: "hover:text-(--v-gold) transition", children: "Clients" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/content", onClick: onClose, className: "hover:text-(--v-gold) transition", children: "Content" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/", hash: "services", onClick: onClose, className: "hover:text-(--v-gold)", children: "Services" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/insights", onClick: onClose, className: "hover:text-(--v-gold) transition", children: "Insights" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/about", onClick: onClose, className: "hover:text-(--v-gold)", children: "About" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/", hash: "services", onClick: onClose, className: "hover:text-(--v-gold)", children: "Services" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           ScrollLink,
           {
@@ -1123,27 +1126,22 @@ const MobileMenu = ({ open, onClose }) => {
     }
   );
 };
-const DesktopMenu = () => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hidden md:flex items-center gap-8 font-bold text-v-navy/70", children: [
-  /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/auth", className: "hover:text-(--v-gold) transition", children: "Clients" }),
-  /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/content", className: "hover:text-(--v-gold) transition", children: "Content" }),
-  /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/", hash: "services", className: "hover:text-(--v-gold) transition", children: "Services" }),
-  /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "hover:text-(--v-gold) transition", children: "About" }),
-  /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "btn-gold px-6 py-2.5 rounded-lg text-sm", children: "Start Working Smarter" })
-] });
-var faBridge = {
-  prefix: "fas",
-  iconName: "bridge",
-  icon: [512, 512, [], "e4c8", "M32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l8 0 0 64-40 0 0 112c37.6 9.4 64 43.2 64 82l0 94c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-64c0-53 43-96 96-96s96 43 96 96l0 64c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-94c0-38.8 26.4-72.6 64-82l0-112-40 0 0-64 8 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM424 96l0 64-80 0 0-64 80 0zM296 96l0 64-80 0 0-64 80 0zM88 96l80 0 0 64-80 0 0-64z"]
-};
-var faPenToSquare = {
-  prefix: "fas",
-  iconName: "pen-to-square",
-  icon: [512, 512, ["edit"], "f044", "M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"]
-};
-var faBullseye = {
-  prefix: "fas",
-  iconName: "bullseye",
-  icon: [512, 512, [], "f140", "M448 256a192 192 0 1 0 -384 0 192 192 0 1 0 384 0zM0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0zm256 80a80 80 0 1 0 0-160 80 80 0 1 0 0 160zm0-224a144 144 0 1 1 0 288 144 144 0 1 1 0-288zM224 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"]
+const DesktopMenu = () => {
+  const [toggeled, setToggled] = reactExports.useState(false);
+  reactExports.useEffect(() => {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    setToggled(prefersDark);
+    document.documentElement.classList.toggle("dark", prefersDark);
+  }, []);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hidden md:flex items-center gap-8 font-bold text-v-navy/70", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/auth", className: "hover:text-(--v-gold) transition", children: "Clients" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/insights", className: "hover:text-(--v-gold) transition", children: "Insights" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "hover:text-(--v-gold) transition", children: "About" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/", hash: "services", className: "hover:text-(--v-gold) transition", children: "Services" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "btn-gold px-6 py-2.5 rounded-lg text-sm", children: "Start Working Smarter" })
+  ] });
 };
 var faXmark = {
   prefix: "fas",
@@ -1151,16 +1149,6 @@ var faXmark = {
   icon: [384, 512, [128473, 10005, 10006, 10060, 215, "close", "multiply", "remove", "times"], "f00d", "M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"]
 };
 var faClose = faXmark;
-var faCircleNodes = {
-  prefix: "fas",
-  iconName: "circle-nodes",
-  icon: [512, 512, [], "e4e2", "M418.4 157.9c35.3-8.3 61.6-40 61.6-77.9 0-44.2-35.8-80-80-80-43.4 0-78.7 34.5-80 77.5L136.2 151.1C121.7 136.8 101.9 128 80 128 35.8 128 0 163.8 0 208s35.8 80 80 80c12.2 0 23.8-2.7 34.1-7.6L259.7 407.8c-2.4 7.6-3.7 15.8-3.7 24.2 0 44.2 35.8 80 80 80s80-35.8 80-80c0-27.7-14-52.1-35.4-66.4l37.8-207.7zM156.3 232.2c2.2-6.9 3.5-14.2 3.7-21.7l183.8-73.5c3.6 3.5 7.4 6.7 11.6 9.5L317.6 354.1c-5.5 1.3-10.8 3.1-15.8 5.5L156.3 232.2z"]
-};
-var faHammer = {
-  prefix: "fas",
-  iconName: "hammer",
-  icon: [640, 512, [128296], "f6e3", "M246.9 18.3L271 3.8c21.6-13 46.3-19.8 71.5-19.8 36.8 0 72.2 14.6 98.2 40.7l63.9 63.9c15 15 23.4 35.4 23.4 56.6l0 30.9 19.7 19.7 0 0c15.6-15.6 40.9-15.6 56.6 0s15.6 40.9 0 56.6l-64 64c-15.6 15.6-40.9 15.6-56.6 0s-15.6-40.9 0-56.6L464 240 433.1 240c-21.2 0-41.6-8.4-56.6-23.4l-49.1-49.1c-15-15-23.4-35.4-23.4-56.6l0-12.7c0-11.2-5.9-21.7-15.5-27.4l-41.6-25c-10.4-6.2-10.4-21.2 0-27.4zM50.7 402.7l222.1-222.1 90.5 90.5-222.1 222.1c-25 25-65.5 25-90.5 0s-25-65.5 0-90.5z"]
-};
 var faBars = {
   prefix: "fas",
   iconName: "bars",
@@ -5274,7 +5262,7 @@ const FooterResources = ({ className }) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `${className ?? "text-center"}`, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-(--v-gold) text-md font-semibold mb-6 uppercase tracking-wider md:text-xl", children: "Resources" }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-4 text-sm md:text-lg", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/content", className: "hover:text-(--v-gold) transition", children: "Content" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/insights", className: "hover:text-(--v-gold) transition", children: "Insights" }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/privacy", className: "hover:text-(--v-gold) transition", children: "Privacy Policy" }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/terms", className: "hover:text-(--v-gold) transition", children: "Terms of Service" }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/sitemap.xml", className: "hover:text-(--v-gold) transition", children: "Sitemap" }) })
@@ -5337,6 +5325,39 @@ function AnalyticsTracker() {
   }, [router2]);
   return null;
 }
+const initialState = {
+  user: null,
+  theme: "light"
+};
+function appReducer(state, action) {
+  switch (action.type) {
+    case "LOGIN":
+      return { ...state, user: action.payload };
+    case "LOGOUT":
+      return { ...state, user: null };
+    case "TOGGLE_THEME":
+      return { ...state, theme: state.theme === "light" ? "dark" : "light" };
+    default:
+      return state;
+  }
+}
+const StateContext = reactExports.createContext(null);
+const ActionsContext = reactExports.createContext(null);
+function AppProvider({ children }) {
+  const [state, dispatch] = reactExports.useReducer(appReducer, initialState);
+  const dispatchRef = reactExports.useRef(dispatch);
+  dispatchRef.current = dispatch;
+  const actions = reactExports.useMemo(
+    () => ({
+      login: (user) => dispatchRef.current({ type: "LOGIN", payload: user }),
+      logout: () => dispatchRef.current({ type: "LOGOUT" }),
+      toggleTheme: () => dispatchRef.current({ type: "TOGGLE_THEME" })
+    }),
+    []
+  );
+  const memoState = reactExports.useMemo(() => state, [state.user, state.theme]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(StateContext.Provider, { value: memoState, children: /* @__PURE__ */ jsxRuntimeExports.jsx(ActionsContext.Provider, { value: actions, children }) });
+}
 const Route$h = createRootRoute({
   head: () => ({
     meta: [
@@ -5386,7 +5407,7 @@ function RootComponent() {
   ] });
 }
 function RootDocument({ children }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("html", { suppressHydrationWarning: true, children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("html", { suppressHydrationWarning: true, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(AppProvider, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("head", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeadContent, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("body", { className: "dark text-slate-200", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(AnalyticsTracker, {}),
@@ -5394,9 +5415,9 @@ function RootDocument({ children }) {
       /* @__PURE__ */ jsxRuntimeExports.jsx("main", { className: "pt-20", children }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
     ] })
-  ] });
+  ] }) });
 }
-const $$splitComponentImporter$g = () => import("./terms-BbzujY7S.js");
+const $$splitComponentImporter$g = () => import("./terms-D7XNP3-d.js");
 const Route$g = createFileRoute("/terms")({
   component: lazyRouteComponent($$splitComponentImporter$g, "component")
 });
@@ -5434,15 +5455,15 @@ Sitemap: https://vendata.solutions/sitemap.xml
   }),
   component: lazyRouteComponent($$splitComponentImporter$e, "component")
 });
-const $$splitComponentImporter$d = () => import("./privacy-DnUAcy2C.js");
+const $$splitComponentImporter$d = () => import("./privacy-DS5_VL-i.js");
 const Route$d = createFileRoute("/privacy")({
   component: lazyRouteComponent($$splitComponentImporter$d, "component")
 });
-const $$splitComponentImporter$c = () => import("./content-gvsLkGId.js");
-const Route$c = createFileRoute("/content")({
+const $$splitComponentImporter$c = () => import("./insights-Cg2AK6px.js");
+const Route$c = createFileRoute("/insights")({
   component: lazyRouteComponent($$splitComponentImporter$c, "component")
 });
-const $$splitComponentImporter$b = () => import("./contact-DL20K1oX.js");
+const $$splitComponentImporter$b = () => import("./contact-BhV0X5rm.js");
 const Route$b = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -5454,7 +5475,7 @@ const Route$b = createFileRoute("/contact")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$b, "component")
 });
-const $$splitComponentImporter$a = () => import("./auth--DiLAYQZ.js");
+const $$splitComponentImporter$a = () => import("./auth-CW9ZbQ8_.js");
 const Route$a = createFileRoute("/auth")({
   head: () => ({
     meta: [{
@@ -5466,7 +5487,7 @@ const Route$a = createFileRoute("/auth")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$a, "component")
 });
-const $$splitComponentImporter$9 = () => import("./app-CIvzqwad.js");
+const $$splitComponentImporter$9 = () => import("./app-n2K5lnIX.js");
 const Route$9 = createFileRoute("/app")({
   head: () => ({
     meta: [{
@@ -5478,7 +5499,7 @@ const Route$9 = createFileRoute("/app")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$9, "component")
 });
-const $$splitComponentImporter$8 = () => import("./about-CVzkQ1rg.js");
+const $$splitComponentImporter$8 = () => import("./about-Dqc_M6BE.js");
 const Route$8 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -5490,7 +5511,7 @@ const Route$8 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$8, "component")
 });
-const $$splitComponentImporter$7 = () => import("./_404-ttUSfrXa.js");
+const $$splitComponentImporter$7 = () => import("./_404-MazQ1yIg.js");
 const Route$7 = createFileRoute("/$404")({
   head: () => ({
     meta: [{
@@ -5502,9 +5523,14 @@ const Route$7 = createFileRoute("/$404")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-const $$splitComponentImporter$6 = () => import("./index-z5c7NYd2.js");
+const $$splitComponentImporter$6 = () => import("./index-DUQcTvxo.js");
 const Route$6 = createFileRoute("/")({
-  component: lazyRouteComponent($$splitComponentImporter$6, "component")
+  component: lazyRouteComponent($$splitComponentImporter$6, "component"),
+  validateSearch: (search) => {
+    return {
+      modal: search.modal ?? ""
+    };
+  }
   // loader: async () => await getCount()
 });
 const createSsrRpc = (functionId, importer) => {
@@ -5521,8 +5547,8 @@ const createSsrRpc = (functionId, importer) => {
 };
 const getPost = createServerFn().inputValidator((data) => data).handler(createSsrRpc("7d7e857e3252f6ecf0c7eabed1b93b93ea9bc14341b78a5c25ea74735091c89a"));
 const getPosts = createServerFn().handler(createSsrRpc("d272144f1318d10ea310ced5cd7027f8a2446e3e606218ceac770b3c3bd059fc"));
-const $$splitComponentImporter$5 = () => import("./content.index-DYqWMvFy.js");
-const Route$5 = createFileRoute("/content/")({
+const $$splitComponentImporter$5 = () => import("./insights.index-COpXU6gV.js");
+const Route$5 = createFileRoute("/insights/")({
   loader: async ({
     params
   }) => {
@@ -5532,7 +5558,7 @@ const Route$5 = createFileRoute("/content/")({
   },
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-const $$splitComponentImporter$4 = () => import("./index-DdO8x3BX.js");
+const $$splitComponentImporter$4 = () => import("./index-0ur4Apcn.js");
 const Route$4 = createFileRoute("/consultation/")({
   head: () => ({
     meta: [{
@@ -5548,9 +5574,9 @@ const Route$4 = createFileRoute("/consultation/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitNotFoundComponentImporter = () => import("./content._postId-Bhocwynu.js");
-const $$splitComponentImporter$3 = () => import("./content._postId-CXHFN61V.js");
-const Route$3 = createFileRoute("/content/$postId")({
+const $$splitNotFoundComponentImporter = () => import("./insights._postId-CSBAxak8.js");
+const $$splitComponentImporter$3 = () => import("./insights._postId-SoZf_BtA.js");
+const Route$3 = createFileRoute("/insights/$postId")({
   // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({
     params
@@ -5604,15 +5630,15 @@ const Route$3 = createFileRoute("/content/$postId")({
   component: lazyRouteComponent($$splitComponentImporter$3, "component"),
   notFoundComponent: lazyRouteComponent($$splitNotFoundComponentImporter, "notFoundComponent")
 });
-const $$splitComponentImporter$2 = () => import("./book-Bp0aT1Vc.js");
+const $$splitComponentImporter$2 = () => import("./book-D-Jqn6hz.js");
 const Route$2 = createFileRoute("/consultation/book")({
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./app.dashboard-C3kbDOCz.js");
+const $$splitComponentImporter$1 = () => import("./app.dashboard-BZDWugVy.js");
 const Route$1 = createFileRoute("/app/dashboard")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./app._layout-DVj-86TG.js");
+const $$splitComponentImporter = () => import("./app._layout-BupubSBO.js");
 const Route2 = createFileRoute("/app/_layout")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });
@@ -5636,9 +5662,9 @@ const PrivacyRoute = Route$d.update({
   path: "/privacy",
   getParentRoute: () => Route$h
 });
-const ContentRoute = Route$c.update({
-  id: "/content",
-  path: "/content",
+const InsightsRoute = Route$c.update({
+  id: "/insights",
+  path: "/insights",
   getParentRoute: () => Route$h
 });
 const ContactRoute = Route$b.update({
@@ -5671,20 +5697,20 @@ const IndexRoute = Route$6.update({
   path: "/",
   getParentRoute: () => Route$h
 });
-const ContentIndexRoute = Route$5.update({
+const InsightsIndexRoute = Route$5.update({
   id: "/",
   path: "/",
-  getParentRoute: () => ContentRoute
+  getParentRoute: () => InsightsRoute
 });
 const ConsultationIndexRoute = Route$4.update({
   id: "/consultation/",
   path: "/consultation/",
   getParentRoute: () => Route$h
 });
-const ContentPostIdRoute = Route$3.update({
+const InsightsPostIdRoute = Route$3.update({
   id: "/$postId",
   path: "/$postId",
-  getParentRoute: () => ContentRoute
+  getParentRoute: () => InsightsRoute
 });
 const ConsultationBookRoute = Route$2.update({
   id: "/consultation/book",
@@ -5705,11 +5731,13 @@ const AppRouteChildren = {
   AppDashboardRoute
 };
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren);
-const ContentRouteChildren = {
-  ContentPostIdRoute,
-  ContentIndexRoute
+const InsightsRouteChildren = {
+  InsightsPostIdRoute,
+  InsightsIndexRoute
 };
-const ContentRouteWithChildren = ContentRoute._addFileChildren(ContentRouteChildren);
+const InsightsRouteWithChildren = InsightsRoute._addFileChildren(
+  InsightsRouteChildren
+);
 const rootRouteChildren = {
   IndexRoute,
   R404Route,
@@ -5717,7 +5745,7 @@ const rootRouteChildren = {
   AppRoute: AppRouteWithChildren,
   AuthRoute,
   ContactRoute,
-  ContentRoute: ContentRouteWithChildren,
+  InsightsRoute: InsightsRouteWithChildren,
   PrivacyRoute,
   RobotsDottxtRoute,
   SitemapDotxmlRoute,
@@ -5741,14 +5769,10 @@ const router = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
 export {
   Link as L,
   Route$5 as R,
-  ServiceIcon as S,
-  faPenToSquare as a,
-  faHammer as b,
-  faBullseye as c,
-  faBridge as d,
-  createSsrRpc as e,
-  faCircleNodes as f,
-  Route$3 as g,
-  router as r,
+  useSearch as a,
+  Route$3 as b,
+  createSsrRpc as c,
+  router as d,
+  reactDomExports as r,
   useModalClose as u
 };

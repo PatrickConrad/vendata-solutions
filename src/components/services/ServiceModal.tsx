@@ -18,7 +18,7 @@ export const ServiceModal = (props: ServiceProps) => {
     const closeModal = () => router.navigate({
         to: '/',
         search: (prev: any) => {
-            const { modal, ...rest } = prev; // Remove modal from params
+            const { modal: undefined, ...rest } = prev; // Remove modal from params
             return rest;
         },
         hash: 'services'
