@@ -1,6 +1,6 @@
-import { n as jsxRuntimeExports, a as reactExports, b as useRouter } from "./worker-entry-ervQTZ6q.js";
-import { L as Link, u as useModalClose, r as reactDomExports, a as useSearch } from "./router-CNBPvxJV.js";
-import { C as Convergence } from "./Convergence-BxEG8yaG.js";
+import { n as jsxRuntimeExports, a as reactExports, b as useRouter } from "./worker-entry-E6FKuTx6.js";
+import { L as Link, u as useModalClose, r as reactDomExports, a as useSearch } from "./router-DGaxBniL.js";
+import { C as Convergence } from "./Convergence-CJu_a0ji.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -332,7 +332,7 @@ const ServiceModal = (props) => {
   const closeModal = () => router.navigate({
     to: "/",
     search: (prev) => {
-      const { modal: modal2, ...rest } = prev;
+      const { modal: undefined$1, ...rest } = prev;
       return rest;
     },
     hash: "services"

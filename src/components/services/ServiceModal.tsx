@@ -15,14 +15,7 @@ export const ServiceModal = (props: ServiceProps) => {
     const {modal} = useSearch({ from: "/" })
     const router = useRouter()
     const open = modal === props.title
-    const closeModal = () => router.navigate({
-        to: '/',
-        search: (prev: any) => {
-            const { modal: undefined, ...rest } = prev; // Remove modal from params
-            return rest;
-        },
-        hash: 'services'
-    })
+    const closeModal = () => router.history.back()
     const openModal = ()=>router.navigate({
         to: '/',
         search: (prev) => ({
