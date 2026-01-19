@@ -1,6 +1,5 @@
-import { n as jsxRuntimeExports, a as reactExports, b as useRouter } from "./worker-entry-DdGEDYHt.js";
-import { L as Link, u as useModalClose, r as reactDomExports, a as useSearch } from "./router-D7W9bRCO.js";
-import { C as Convergence } from "./Convergence-C6qjisZA.js";
+import { n as jsxRuntimeExports, a as reactExports, b as useRouter } from "./worker-entry-Bzk-yzD2.js";
+import { L as Link, u as useModalClose, r as reactDomExports, g as useSearch } from "./router-DLO-ZjhP.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -330,13 +329,17 @@ const ServiceModal = (props) => {
   const router = useRouter();
   const open = modal === props.title;
   const closeModal = () => router.history.back();
-  const openModal = () => router.navigate({
-    to: "/",
-    search: (prev) => ({
-      ...prev,
-      modal: props.title
-    })
-  });
+  const openModal = () => {
+    return router.navigate({
+      to: "/",
+      hash: void 0,
+      search: (prev) => ({
+        ...prev,
+        modal: props.title
+      }),
+      replace: false
+    });
+  };
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs(
       "div",
@@ -381,6 +384,39 @@ const CallToAction = () => {
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-v-gold font-bold text-xl mb-12 italic", children: '"Stop working for your business. Start making IT work for you."' }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "btn-gold px-12 py-5 rounded-2xl font-black text-l md:text-xl tracking-wide uppercase", children: "Build Your Future" })
+  ] }) });
+};
+const Convergence = () => {
+  const observerRef = reactExports.useRef(null);
+  const [converged, setConverged] = reactExports.useState(false);
+  reactExports.useEffect(() => {
+    if (!observerRef.current) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setConverged(entry.isIntersecting);
+    }, { threshold: 1 });
+    observer.observe(observerRef.current);
+  }, []);
+  reactExports.useEffect(() => {
+    const handleScroll = () => {
+      if (!observerRef.current) return;
+      const scrolled = window.pageYOffset;
+      const sectionTop = observerRef.current.offsetTop;
+      const sectionHeight = observerRef.current.offsetHeight;
+      if (scrolled > sectionTop - window.innerHeight && scrolled < sectionTop + sectionHeight) {
+        const move = (scrolled - sectionTop) * 0.05;
+        observerRef.current.querySelectorAll(".circle").forEach((el, i) => {
+          el.style.marginTop = `${move * (i + 1)}px`;
+        });
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:w-1/2 flex justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { ref: observerRef, className: `logo-container ${converged ? "converged" : ""}`, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "circle c-navy dark:bg-slate-300" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "circle c-gold-tr" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "circle c-gold-bl" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "circle c-green" })
   ] }) });
 };
 const UnifiedSection = () => {

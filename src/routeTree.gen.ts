@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as InsightsRouteImport } from './routes/insights'
@@ -30,11 +29,6 @@ import { Route as AppLayoutRouteImport } from './routes/app._layout'
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
@@ -122,7 +116,6 @@ export interface FileRoutesByFullPath {
   '/insights': typeof InsightsRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/consultation/book': typeof ConsultationBookRoute
@@ -139,7 +132,6 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/consultation/book': typeof ConsultationBookRoute
@@ -158,7 +150,6 @@ export interface FileRoutesById {
   '/insights': typeof InsightsRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/app/_layout': typeof AppLayoutRoute
   '/app/dashboard': typeof AppDashboardRoute
@@ -179,7 +170,6 @@ export interface FileRouteTypes {
     | '/insights'
     | '/privacy'
     | '/robots.txt'
-    | '/sitemap.xml'
     | '/terms'
     | '/app/dashboard'
     | '/consultation/book'
@@ -196,7 +186,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/privacy'
     | '/robots.txt'
-    | '/sitemap.xml'
     | '/terms'
     | '/app/dashboard'
     | '/consultation/book'
@@ -214,7 +203,6 @@ export interface FileRouteTypes {
     | '/insights'
     | '/privacy'
     | '/robots.txt'
-    | '/sitemap.xml'
     | '/terms'
     | '/app/_layout'
     | '/app/dashboard'
@@ -234,7 +222,6 @@ export interface RootRouteChildren {
   InsightsRoute: typeof InsightsRouteWithChildren
   PrivacyRoute: typeof PrivacyRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   ConsultationBookRoute: typeof ConsultationBookRoute
   ConsultationIndexRoute: typeof ConsultationIndexRoute
@@ -247,13 +234,6 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/robots.txt': {
@@ -400,7 +380,6 @@ const rootRouteChildren: RootRouteChildren = {
   InsightsRoute: InsightsRouteWithChildren,
   PrivacyRoute: PrivacyRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   ConsultationBookRoute: ConsultationBookRoute,
   ConsultationIndexRoute: ConsultationIndexRoute,
