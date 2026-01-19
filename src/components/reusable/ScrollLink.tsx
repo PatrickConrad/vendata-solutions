@@ -9,10 +9,13 @@ interface ScrollLinkProps {
   onClick?: (opt: boolean) => void
 }
 
-export const navigateWithHash = (to: string = '/', hash?: string) => {
-  const router = useRouter();
 
-  if (router.state.location.pathname === to) {
+export function ScrollLink({ to, hash, children, className, onClick }: ScrollLinkProps) {
+  const router = useRouter()
+  const handleClick = (e: MouseEvent) => {
+    e.preventDefault();
+    onClick && onClick(false);
+    if (router.state.location.pathname === to) {
       // already on page → scroll to element
       if (hash) {
         const el = document.getElementById(hash);
@@ -32,14 +35,6 @@ export const navigateWithHash = (to: string = '/', hash?: string) => {
           }
       });
   }
-}
-
-export function ScrollLink({ to, hash, children, className, onClick }: ScrollLinkProps) {
-
-  const handleClick = (e: MouseEvent) => {
-    e.preventDefault();
-    onClick && onClick(false);
-    navigateWithHash(to, hash);
    
   };
 

@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import { ServiceLayout } from "./ServiceLayout";
 import { Modal } from "../layouts/main/Modal";
 import { useRouter, useSearch } from "@tanstack/react-router";
-import { navigateWithHash } from "../reusable/ScrollLink";
 
 type ServiceProps = {
     title: string,
