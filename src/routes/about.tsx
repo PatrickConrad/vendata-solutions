@@ -100,11 +100,11 @@ function RouteComponent() {
           <div className="flex flex-col md:flex-row gap-12 items-center md:items-start">
             <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
               <img 
-                src="./Founder-Patrick-Conrad-Profile-Image.jpeg" 
+                src="/Founder-Patrick-Conrad-Profile-Image.jpeg" 
                 alt="Patrick Conrad" 
                 className="w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white dark:border-slate-800"
               />
-            </div>
+            </div> 
             <div className="flex-grow">
               <h3 className="text-3xl font-bold text-v-navy dark:text-white mb-2">Patrick Conrad</h3>
               <p className="text-v-gold font-bold uppercase tracking-widest text-sm mb-6">Founder & Principal Consultant</p>
