@@ -17,12 +17,15 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
     <div
       ref={menuRef}
       className={`md:hidden bg-white border-t border-b border-gray-500 overflow-hidden transition-all duration-300 ${
-        open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        open ? "max-h-105 opacity-100" : "max-h-0 opacity-0"
       }`}
     >
       <div className="flex flex-col gap-6 px-6 py-8 font-bold text-v-navy/80">
-        <ScrollLink to="/auth" onClick={onClose} className="hover:text-(--v-gold) transition">
-          Clients
+        <ScrollLink to="/auth" onClick={onClose} className="decoration-1 hover:text-(--v-gold)">
+          Login
+        </ScrollLink>
+        <ScrollLink to="/our-work" onClick={onClose} className="hover:text-(--v-gold) transition">
+          Our Work
         </ScrollLink>
         <ScrollLink to="/insights" onClick={onClose} className="hover:text-(--v-gold) transition">
           Insights
@@ -30,7 +33,7 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
         <ScrollLink to="/about" onClick={onClose} className="hover:text-(--v-gold)">
           About
         </ScrollLink>
-        <ScrollLink to="/" hash="services" onClick={onClose} className="hover:text-(--v-gold)">
+        <ScrollLink to="/services" onClick={onClose} className="hover:text-(--v-gold)">
           Services
         </ScrollLink>
         <ScrollLink

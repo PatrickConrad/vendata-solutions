@@ -1,5 +1,5 @@
-import { n as jsxRuntimeExports } from "./worker-entry-Bw8oqfzM.js";
-import { S as ServiceIcon, c as faShieldHalved, d as faRocket, e as faMicroscope, g as faCompass, h as faCogs, i as faArrowTrendUp, L as Link } from "./router-Bht7tn6g.js";
+import { n as jsxRuntimeExports } from "./worker-entry-4OPvhNwq.js";
+import { S as ServiceIcon, c as faShieldHalved, d as faRocket, e as faMicroscope, g as faCompass, h as faCogs, i as faArrowTrendUp, L as Link } from "./router-Dji8URu-.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -69,7 +69,7 @@ function RouteComponent() {
     /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "py-24 px-6 max-w-5xl mx-auto", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl font-bold text-center text-v-navy dark:text-white mb-16 underline decoration-v-gold decoration-4 underline-offset-8", children: "Leadership" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-24", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row gap-12 items-center md:items-start", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-48 h-48 md:w-64 md:h-64 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "./Founder-Patrick-Conrad-Profile-Image.jpeg", alt: "Patrick Conrad", className: "w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white dark:border-slate-800" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-48 h-48 md:w-64 md:h-64 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/Founder-Patrick-Conrad-Profile-Image.jpeg", alt: "Patrick Conrad", className: "w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white dark:border-slate-800" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-grow", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-3xl font-bold text-v-navy dark:text-white mb-2", children: "Patrick Conrad" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-v-gold font-bold uppercase tracking-widest text-sm mb-6", children: "Founder & Principal Consultant" }),
