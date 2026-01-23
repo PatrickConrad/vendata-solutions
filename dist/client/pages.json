@@ -19,6 +19,9 @@
       "path": "/insights"
     },
     {
+      "path": "/our-work"
+    },
+    {
       "path": "/privacy"
     },
     {
@@ -45,5 +48,5 @@
     }
   ],
   "host": "https://vendata.solutions",
-  "lastBuilt": "2026-01-23T16:18:56.474Z"
+  "lastBuilt": "2026-01-23T20:43:32.320Z"
 }

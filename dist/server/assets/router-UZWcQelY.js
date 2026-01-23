@@ -1,4 +1,4 @@
-import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, q as useHydrated, O as Outlet, T as TSS_SERVER_FUNCTION, s as getServerFnById, v as createServerFn, x as notFound } from "./worker-entry-4OPvhNwq.js";
+import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, q as useHydrated, O as Outlet, T as TSS_SERVER_FUNCTION, s as getServerFnById, v as createServerFn, x as notFound } from "./worker-entry-Cgf3wYBt.js";
 const preloadWarning = "Error preloading route! ☝️";
 class BaseRoute {
   constructor(options) {
@@ -478,7 +478,7 @@ const Link = reactExports.forwardRef(
 function isCtrlEvent(e2) {
   return !!(e2.metaKey || e2.altKey || e2.ctrlKey || e2.shiftKey);
 }
-let Route$i = class Route extends BaseRoute {
+let Route$j = class Route extends BaseRoute {
   /**
    * @deprecated Use the `createRoute` function instead.
    */
@@ -530,7 +530,7 @@ let Route$i = class Route extends BaseRoute {
   }
 };
 function createRoute(options) {
-  return new Route$i(
+  return new Route$j(
     // TODO: Help us TypeChris, you're our only hope!
     options
   );
@@ -1347,12 +1347,13 @@ const MobileMenu = ({ open, onClose }) => {
     "div",
     {
       ref: menuRef,
-      className: `md:hidden bg-white border-t border-b border-gray-500 overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`,
+      className: `md:hidden bg-white border-t border-b border-gray-500 overflow-hidden transition-all duration-300 ${open ? "max-h-105 opacity-100" : "max-h-0 opacity-0"}`,
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-6 px-6 py-8 font-bold text-v-navy/80", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/auth", onClick: onClose, className: "hover:text-(--v-gold) transition", children: "Clients" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/auth", onClick: onClose, className: "decoration-1 hover:text-(--v-gold)", children: "Login" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/our-work", onClick: onClose, className: "hover:text-(--v-gold) transition", children: "Our Work" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/insights", onClick: onClose, className: "hover:text-(--v-gold) transition", children: "Insights" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/about", onClick: onClose, className: "hover:text-(--v-gold)", children: "About" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/", hash: "services", onClick: onClose, className: "hover:text-(--v-gold)", children: "Services" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/services", onClick: onClose, className: "hover:text-(--v-gold)", children: "Services" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           ScrollLink,
           {
@@ -1366,81 +1367,6 @@ const MobileMenu = ({ open, onClose }) => {
       ] })
     }
   );
-};
-const DesktopMenu = () => {
-  const [toggeled, setToggled] = reactExports.useState(false);
-  reactExports.useEffect(() => {
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    setToggled(prefersDark);
-    document.documentElement.classList.toggle("dark", prefersDark);
-  }, []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hidden md:flex items-center gap-8 font-bold text-v-navy/70", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/auth", className: "hover:text-(--v-gold) transition", children: "Clients" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/insights", className: "hover:text-(--v-gold) transition", children: "Insights" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "hover:text-(--v-gold) transition", children: "About" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/", hash: "services", className: "hover:text-(--v-gold) transition", children: "Services" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "btn-gold px-6 py-2.5 rounded-lg text-sm", children: "Start Working Smarter" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(OrbitToggle, {})
-  ] });
-};
-var faGears = {
-  prefix: "fas",
-  iconName: "gears",
-  icon: [640, 512, ["cogs"], "f085", "M415.9 210.5c12.2-3.3 25 2.5 30.5 13.8L465 261.9c10.3 1.4 20.4 4.2 29.9 8.1l35-23.3c10.5-7 24.4-5.6 33.3 3.3l19.2 19.2c8.9 8.9 10.3 22.9 3.3 33.3l-23.3 34.9c1.9 4.7 3.6 9.6 5 14.7 1.4 5.1 2.3 10.1 3 15.2l37.7 18.6c11.3 5.6 17.1 18.4 13.8 30.5l-7 26.2c-3.3 12.1-14.6 20.3-27.2 19.5l-42-2.7c-6.3 8.1-13.6 15.6-21.9 22l2.7 41.9c.8 12.6-7.4 24-19.5 27.2l-26.2 7c-12.2 3.3-24.9-2.5-30.5-13.8l-18.6-37.6c-10.3-1.4-20.4-4.2-29.9-8.1l-35 23.3c-10.5 7-24.4 5.6-33.3-3.3l-19.2-19.2c-8.9-8.9-10.3-22.8-3.3-33.3l23.3-35c-1.9-4.7-3.6-9.6-5-14.7s-2.3-10.2-3-15.2l-37.7-18.6c-11.3-5.6-17-18.4-13.8-30.5l7-26.2c3.3-12.1 14.6-20.3 27.2-19.5l41.9 2.7c6.3-8.1 13.6-15.6 21.9-22l-2.7-41.8c-.8-12.6 7.4-24 19.5-27.2l26.2-7zM448.4 340a44 44 0 1 0 .1 88 44 44 0 1 0 -.1-88zM224.9-45.5l26.2 7c12.1 3.3 20.3 14.7 19.5 27.2l-2.7 41.8c8.3 6.4 15.6 13.8 21.9 22l42-2.7c12.5-.8 23.9 7.4 27.2 19.5l7 26.2c3.2 12.1-2.5 24.9-13.8 30.5l-37.7 18.6c-.7 5.1-1.7 10.2-3 15.2s-3.1 10-5 14.7l23.3 35c7 10.5 5.6 24.4-3.3 33.3L307.3 262c-8.9 8.9-22.8 10.3-33.3 3.3L239 242c-9.5 3.9-19.6 6.7-29.9 8.1l-18.6 37.6c-5.6 11.3-18.4 17-30.5 13.8l-26.2-7c-12.2-3.3-20.3-14.7-19.5-27.2l2.7-41.9c-8.3-6.4-15.6-13.8-21.9-22l-42 2.7c-12.5 .8-23.9-7.4-27.2-19.5l-7-26.2c-3.2-12.1 2.5-24.9 13.8-30.5l37.7-18.6c.7-5.1 1.7-10.1 3-15.2 1.4-5.1 3-10 5-14.7L55.1 46.5c-7-10.5-5.6-24.4 3.3-33.3L77.6-6c8.9-8.9 22.8-10.3 33.3-3.3l35 23.3c9.5-3.9 19.6-6.7 29.9-8.1l18.6-37.6c5.6-11.3 18.3-17 30.5-13.8zM192.4 84a44 44 0 1 0 0 88 44 44 0 1 0 0-88z"]
-};
-var faCogs = faGears;
-var faArrowTrendUp = {
-  prefix: "fas",
-  iconName: "arrow-trend-up",
-  icon: [576, 512, [], "e098", "M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0c17.7 0 32 14.3 32 32l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-82.7-169.4 169.4c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160 384 160z"]
-};
-var faClock = {
-  prefix: "fas",
-  iconName: "clock",
-  icon: [512, 512, [128339, "clock-four"], "f017", "M256 0a256 256 0 1 1 0 512 256 256 0 1 1 0-512zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"]
-};
-var faRocket = {
-  prefix: "fas",
-  iconName: "rocket",
-  icon: [512, 512, [], "f135", "M128 320L24.5 320c-24.9 0-40.2-27.1-27.4-48.5L50 183.3C58.7 168.8 74.3 160 91.2 160l95 0c76.1-128.9 189.6-135.4 265.5-124.3 12.8 1.9 22.8 11.9 24.6 24.6 11.1 75.9 4.6 189.4-124.3 265.5l0 95c0 16.9-8.8 32.5-23.3 41.2l-88.2 52.9c-21.3 12.8-48.5-2.6-48.5-27.4L192 384c0-35.3-28.7-64-64-64l-.1 0zM400 160a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z"]
-};
-var faMicroscope = {
-  prefix: "fas",
-  iconName: "microscope",
-  icon: [512, 512, [128300], "f610", "M176 0c-26.5 0-48 21.5-48 48l0 208c0 26.5 21.5 48 48 48l64 0c26.5 0 48-21.5 48-48l0-64 32 0c70.7 0 128 57.3 128 128S390.7 448 320 448L32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l448 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16.9 0c30.4-34 48.9-78.8 48.9-128 0-106-86-192-192-192l-32 0 0-80c0-26.5-21.5-48-48-48L176 0zM120 352c-13.3 0-24 10.7-24 24s10.7 24 24 24l176 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-176 0z"]
-};
-var faXmark = {
-  prefix: "fas",
-  iconName: "xmark",
-  icon: [384, 512, [128473, 10005, 10006, 10060, 215, "close", "multiply", "remove", "times"], "f00d", "M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"]
-};
-var faClose = faXmark;
-var faCircleCheck = {
-  prefix: "fas",
-  iconName: "circle-check",
-  icon: [512, 512, [61533, "check-circle"], "f058", "M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512zM374 145.7c-10.7-7.8-25.7-5.4-33.5 5.3L221.1 315.2 169 263.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.8 7.5 18.8 7s13.4-4.1 17.5-9.8L379.3 179.2c7.8-10.7 5.4-25.7-5.3-33.5z"]
-};
-var faShieldHalved = {
-  prefix: "fas",
-  iconName: "shield-halved",
-  icon: [512, 512, ["shield-alt"], "f3ed", "M256 0c4.6 0 9.2 1 13.4 2.9L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.6 363.2-16.7 8-36.1 8-52.8 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.9 1 251.4 0 256 0zm0 66.8l0 378.1c138-66.8 175.1-214.8 176-303.4l-176-74.6 0 0z"]
-};
-var faCompass = {
-  prefix: "fas",
-  iconName: "compass",
-  icon: [512, 512, [129517], "f14e", "M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"]
-};
-var faLocationDot = {
-  prefix: "fas",
-  iconName: "location-dot",
-  icon: [384, 512, ["map-marker-alt"], "f3c5", "M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"]
-};
-var faBars = {
-  prefix: "fas",
-  iconName: "bars",
-  icon: [448, 512, ["navicon"], "f0c9", "M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"]
 };
 function _arrayLikeToArray(r2, a2) {
   (null == a2 || a2 > r2.length) && (a2 = r2.length);
@@ -5487,6 +5413,132 @@ var FontAwesomeIcon = React.forwardRef((props, ref) => {
   return makeReactConverter(abstract[0], extraProps);
 });
 FontAwesomeIcon.displayName = "FontAwesomeIcon";
+var faGears = {
+  prefix: "fas",
+  iconName: "gears",
+  icon: [640, 512, ["cogs"], "f085", "M415.9 210.5c12.2-3.3 25 2.5 30.5 13.8L465 261.9c10.3 1.4 20.4 4.2 29.9 8.1l35-23.3c10.5-7 24.4-5.6 33.3 3.3l19.2 19.2c8.9 8.9 10.3 22.9 3.3 33.3l-23.3 34.9c1.9 4.7 3.6 9.6 5 14.7 1.4 5.1 2.3 10.1 3 15.2l37.7 18.6c11.3 5.6 17.1 18.4 13.8 30.5l-7 26.2c-3.3 12.1-14.6 20.3-27.2 19.5l-42-2.7c-6.3 8.1-13.6 15.6-21.9 22l2.7 41.9c.8 12.6-7.4 24-19.5 27.2l-26.2 7c-12.2 3.3-24.9-2.5-30.5-13.8l-18.6-37.6c-10.3-1.4-20.4-4.2-29.9-8.1l-35 23.3c-10.5 7-24.4 5.6-33.3-3.3l-19.2-19.2c-8.9-8.9-10.3-22.8-3.3-33.3l23.3-35c-1.9-4.7-3.6-9.6-5-14.7s-2.3-10.2-3-15.2l-37.7-18.6c-11.3-5.6-17-18.4-13.8-30.5l7-26.2c3.3-12.1 14.6-20.3 27.2-19.5l41.9 2.7c6.3-8.1 13.6-15.6 21.9-22l-2.7-41.8c-.8-12.6 7.4-24 19.5-27.2l26.2-7zM448.4 340a44 44 0 1 0 .1 88 44 44 0 1 0 -.1-88zM224.9-45.5l26.2 7c12.1 3.3 20.3 14.7 19.5 27.2l-2.7 41.8c8.3 6.4 15.6 13.8 21.9 22l42-2.7c12.5-.8 23.9 7.4 27.2 19.5l7 26.2c3.2 12.1-2.5 24.9-13.8 30.5l-37.7 18.6c-.7 5.1-1.7 10.2-3 15.2s-3.1 10-5 14.7l23.3 35c7 10.5 5.6 24.4-3.3 33.3L307.3 262c-8.9 8.9-22.8 10.3-33.3 3.3L239 242c-9.5 3.9-19.6 6.7-29.9 8.1l-18.6 37.6c-5.6 11.3-18.4 17-30.5 13.8l-26.2-7c-12.2-3.3-20.3-14.7-19.5-27.2l2.7-41.9c-8.3-6.4-15.6-13.8-21.9-22l-42 2.7c-12.5 .8-23.9-7.4-27.2-19.5l-7-26.2c-3.2-12.1 2.5-24.9 13.8-30.5l37.7-18.6c.7-5.1 1.7-10.1 3-15.2 1.4-5.1 3-10 5-14.7L55.1 46.5c-7-10.5-5.6-24.4 3.3-33.3L77.6-6c8.9-8.9 22.8-10.3 33.3-3.3l35 23.3c9.5-3.9 19.6-6.7 29.9-8.1l18.6-37.6c5.6-11.3 18.3-17 30.5-13.8zM192.4 84a44 44 0 1 0 0 88 44 44 0 1 0 0-88z"]
+};
+var faCogs = faGears;
+var faArrowTrendUp = {
+  prefix: "fas",
+  iconName: "arrow-trend-up",
+  icon: [576, 512, [], "e098", "M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0c17.7 0 32 14.3 32 32l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-82.7-169.4 169.4c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160 384 160z"]
+};
+var faStethoscope = {
+  prefix: "fas",
+  iconName: "stethoscope",
+  icon: [576, 512, [129658], "f0f1", "M32 48C32 21.5 53.5 0 80 0l48 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0 0 128c0 53 43 96 96 96s96-43 96-96l0-128-32 0c-17.7 0-32-14.3-32-32S238.3 0 256 0l48 0c26.5 0 48 21.5 48 48l0 144c0 77.4-55 142-128 156.8l0 19.2c0 61.9 50.1 112 112 112s112-50.1 112-112l0-85.5c-37.3-13.2-64-48.7-64-90.5 0-53 43-96 96-96s96 43 96 96c0 41.8-26.7 77.4-64 90.5l0 85.5c0 97.2-78.8 176-176 176S160 465.2 160 368l0-19.2C87 334 32 269.4 32 192L32 48zM480 224a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"]
+};
+var faPlaneDeparture = {
+  prefix: "fas",
+  iconName: "plane-departure",
+  icon: [576, 512, [128747], "f5b0", "M372 143.9L172.7 40.2c-8-4.1-17.3-4.8-25.7-1.7l-41.1 15c-10.3 3.7-13.8 16.4-7.1 25L200.3 206.4 100.1 242.8 40 206.2c-6.2-3.8-13.8-4.5-20.7-2.1L3 210.1c-9.4 3.4-13.4 14.5-8.3 23.1l53.6 91.8c15.6 26.7 48.1 38.4 77.1 27.8l12.9-4.7 0 0 398.4-145c29.1-10.6 44-42.7 33.5-71.8s-42.7-44-71.8-33.5L372 143.9zM32.2 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l512 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-512 0z"]
+};
+var faClock = {
+  prefix: "fas",
+  iconName: "clock",
+  icon: [512, 512, [128339, "clock-four"], "f017", "M256 0a256 256 0 1 1 0 512 256 256 0 1 1 0-512zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"]
+};
+var faRocket = {
+  prefix: "fas",
+  iconName: "rocket",
+  icon: [512, 512, [], "f135", "M128 320L24.5 320c-24.9 0-40.2-27.1-27.4-48.5L50 183.3C58.7 168.8 74.3 160 91.2 160l95 0c76.1-128.9 189.6-135.4 265.5-124.3 12.8 1.9 22.8 11.9 24.6 24.6 11.1 75.9 4.6 189.4-124.3 265.5l0 95c0 16.9-8.8 32.5-23.3 41.2l-88.2 52.9c-21.3 12.8-48.5-2.6-48.5-27.4L192 384c0-35.3-28.7-64-64-64l-.1 0zM400 160a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z"]
+};
+var faUtensils = {
+  prefix: "fas",
+  iconName: "utensils",
+  icon: [512, 512, [127860, 61685, "cutlery"], "f2e7", "M63.9 14.4C63.1 6.2 56.2 0 48 0s-15.1 6.2-16 14.3L17.9 149.7c-1.3 6-1.9 12.1-1.9 18.2 0 45.9 35.1 83.6 80 87.7L96 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224.4c44.9-4.1 80-41.8 80-87.7 0-6.1-.6-12.2-1.9-18.2L223.9 14.3C223.1 6.2 216.2 0 208 0s-15.1 6.2-15.9 14.4L178.5 149.9c-.6 5.7-5.4 10.1-11.1 10.1-5.8 0-10.6-4.4-11.2-10.2L143.9 14.6C143.2 6.3 136.3 0 128 0s-15.2 6.3-15.9 14.6L99.8 149.8c-.5 5.8-5.4 10.2-11.2 10.2-5.8 0-10.6-4.4-11.1-10.1L63.9 14.4zM448 0C432 0 320 32 320 176l0 112c0 35.3 28.7 64 64 64l32 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-448c0-17.7-14.3-32-32-32z"]
+};
+var faMicroscope = {
+  prefix: "fas",
+  iconName: "microscope",
+  icon: [512, 512, [128300], "f610", "M176 0c-26.5 0-48 21.5-48 48l0 208c0 26.5 21.5 48 48 48l64 0c26.5 0 48-21.5 48-48l0-64 32 0c70.7 0 128 57.3 128 128S390.7 448 320 448L32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l448 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16.9 0c30.4-34 48.9-78.8 48.9-128 0-106-86-192-192-192l-32 0 0-80c0-26.5-21.5-48-48-48L176 0zM120 352c-13.3 0-24 10.7-24 24s10.7 24 24 24l176 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-176 0z"]
+};
+var faUserLock = {
+  prefix: "fas",
+  iconName: "user-lock",
+  icon: [576, 512, [], "f502", "M224 8a120 120 0 1 1 0 240 120 120 0 1 1 0-240zM194.3 304l59.4 0c29.7 0 57.7 7.3 82.3 20.1l0 4.3c-19.6 17.6-32 43.1-32 71.5l0 96c0 5.5 .5 10.9 1.3 16.1L45.7 512C29.3 512 16 498.7 16 482.3 16 383.8 95.8 304 194.3 304zm301.7 .1c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 47.9 64 0 0-47.9zM352 400c0-20.9 13.4-38.7 32-45.3l0-50.6c0-44.2 35.8-80 80-80s80 35.8 80 80l0 50.6c18.6 6.6 32 24.4 32 45.3l0 96c0 26.5-21.5 48-48 48l-128 0c-26.5 0-48-21.5-48-48l0-96z"]
+};
+var faDumbbell = {
+  prefix: "fas",
+  iconName: "dumbbell",
+  icon: [640, 512, [], "f44b", "M96 112c0-26.5 21.5-48 48-48s48 21.5 48 48l0 112 256 0 0-112c0-26.5 21.5-48 48-48s48 21.5 48 48l0 16 16 0c26.5 0 48 21.5 48 48l0 48c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 48c0 26.5-21.5 48-48 48l-16 0 0 16c0 26.5-21.5 48-48 48s-48-21.5-48-48l0-112-256 0 0 112c0 26.5-21.5 48-48 48s-48-21.5-48-48l0-16-16 0c-26.5 0-48-21.5-48-48l0-48c-17.7 0-32-14.3-32-32s14.3-32 32-32l0-48c0-26.5 21.5-48 48-48l16 0 0-16z"]
+};
+var faXmark = {
+  prefix: "fas",
+  iconName: "xmark",
+  icon: [384, 512, [128473, 10005, 10006, 10060, 215, "close", "multiply", "remove", "times"], "f00d", "M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"]
+};
+var faClose = faXmark;
+var faCircleCheck = {
+  prefix: "fas",
+  iconName: "circle-check",
+  icon: [512, 512, [61533, "check-circle"], "f058", "M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512zM374 145.7c-10.7-7.8-25.7-5.4-33.5 5.3L221.1 315.2 169 263.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.8 7.5 18.8 7s13.4-4.1 17.5-9.8L379.3 179.2c7.8-10.7 5.4-25.7-5.3-33.5z"]
+};
+var faCartFlatbed = {
+  prefix: "fas",
+  iconName: "cart-flatbed",
+  icon: [576, 512, ["dolly-flatbed"], "f474", "M32 0C14.3 0 0 14.3 0 32S14.3 64 32 64l16 0c8.8 0 16 7.2 16 16l0 288c0 39.8 29.1 72.8 67.1 79-2 5.3-3.1 11-3.1 17 0 26.5 21.5 48 48 48s48-21.5 48-48c0-5.6-1-11-2.7-16l197.5 0c-1.8 5-2.7 10.4-2.7 16 0 26.5 21.5 48 48 48s48-21.5 48-48c0-5.6-1-11-2.7-16l34.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-400 0c-8.8 0-16-7.2-16-16l0-288C128 35.8 92.2 0 48 0L32 0zM224 64c-26.5 0-48 21.5-48 48l0 176c0 26.5 21.5 48 48 48l240 0c26.5 0 48-21.5 48-48l0-176c0-26.5-21.5-48-48-48L224 64z"]
+};
+var faShieldHalved = {
+  prefix: "fas",
+  iconName: "shield-halved",
+  icon: [512, 512, ["shield-alt"], "f3ed", "M256 0c4.6 0 9.2 1 13.4 2.9L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.6 363.2-16.7 8-36.1 8-52.8 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.9 1 251.4 0 256 0zm0 66.8l0 378.1c138-66.8 175.1-214.8 176-303.4l-176-74.6 0 0z"]
+};
+var faCompass = {
+  prefix: "fas",
+  iconName: "compass",
+  icon: [512, 512, [129517], "f14e", "M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"]
+};
+var faMagnifyingGlassChart = {
+  prefix: "fas",
+  iconName: "magnifying-glass-chart",
+  icon: [512, 512, [], "e522", "M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zm-312 8l0 64c0 13.3 10.7 24 24 24s24-10.7 24-24l0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24zm80-96l0 160c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24s-24 10.7-24 24zm80 64l0 96c0 13.3 10.7 24 24 24s24-10.7 24-24l0-96c0-13.3-10.7-24-24-24s-24 10.7-24 24z"]
+};
+var faMicrochip = {
+  prefix: "fas",
+  iconName: "microchip",
+  icon: [512, 512, [], "f2db", "M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40c-35.3 0-64 28.7-64 64l-40 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l40 0 0 56-40 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l40 0 0 56-40 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l40 0c0 35.3 28.7 64 64 64l0 40c0 13.3 10.7 24 24 24s24-10.7 24-24l0-40 56 0 0 40c0 13.3 10.7 24 24 24s24-10.7 24-24l0-40 56 0 0 40c0 13.3 10.7 24 24 24s24-10.7 24-24l0-40c35.3 0 64-28.7 64-64l40 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-40 0 0-56 40 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-40 0 0-56 40 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-40 0c0-35.3-28.7-64-64-64l0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40-56 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40-56 0 0-40zM160 128l192 0c17.7 0 32 14.3 32 32l0 192c0 17.7-14.3 32-32 32l-192 0c-17.7 0-32-14.3-32-32l0-192c0-17.7 14.3-32 32-32zm16 48l0 160 160 0 0-160-160 0z"]
+};
+var faLocationDot = {
+  prefix: "fas",
+  iconName: "location-dot",
+  icon: [384, 512, ["map-marker-alt"], "f3c5", "M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"]
+};
+var faBars = {
+  prefix: "fas",
+  iconName: "bars",
+  icon: [448, 512, ["navicon"], "f0c9", "M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"]
+};
+const DesktopMenu = () => {
+  const [toggeled, setToggled] = reactExports.useState(false);
+  reactExports.useEffect(() => {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    setToggled(prefersDark);
+    document.documentElement.classList.toggle("dark", prefersDark);
+  }, []);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hidden md:flex items-center gap-8 font-bold text-v-navy/70", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/our-work", className: "hover:text-(--v-gold) transition", children: "Our Work" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/insights", className: "hover:text-(--v-gold) transition", children: "Insights" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "hover:text-(--v-gold) transition", children: "About" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/services", className: "hover:text-(--v-gold) transition", children: "Services" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "btn-gold px-6 py-2.5 rounded-lg text-sm", children: "Start Working Smarter" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4 border-l border-slate-200 dark:border-slate-700 pl-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        Link,
+        {
+          to: "/auth",
+          className: "flex items-center gap-2 text-v-navy dark:text-white hover:text-v-gold transition group",
+          title: "Client Portal",
+          children: /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faUserLock, className: "text-lg opacity-80 group-hover:opacity-100 dark:text-(--v-gold)" })
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(OrbitToggle, {})
+    ] })
+  ] });
+};
 const ServiceIcon = ({ icon: icon3, color, hover }) => {
   const [isHovered, setIsHovered] = reactExports.useState(false);
   const defaultColor = color ?? "var(--v-icon)";
@@ -5612,7 +5664,7 @@ function AnalyticsTracker() {
   }, [router2]);
   return null;
 }
-const Route$h = createRootRoute({
+const Route$i = createRootRoute({
   head: () => ({
     meta: [
       {
@@ -5671,15 +5723,328 @@ function RootDocument({ children }) {
     ] })
   ] }) });
 }
-const $$splitComponentImporter$f = () => import("./terms-jtwodN2j.js");
-const Route$g = createFileRoute("/terms")({
+const $$splitComponentImporter$f = () => import("./terms-BLroOZgM.js");
+const Route$h = createFileRoute("/terms")({
   component: lazyRouteComponent($$splitComponentImporter$f, "component")
 });
-const $$splitComponentImporter$e = () => import("./services-DH_Qv446.js");
-const Route$f = createFileRoute("/services")({
-  component: lazyRouteComponent($$splitComponentImporter$e, "component")
+function Services() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white dark:bg-slate-900 font-plus-jakarta transition-colors duration-300", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-24 px-6 bg-v-navy text-white text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-4xl mx-auto", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-5xl md:text-7xl font-black mb-6 italic tracking-tighter", children: [
+        "Logic-First ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-v-green", children: "Solutions." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl md:text-2xl text-slate-300 leading-relaxed font-medium", children: `We don't believe in "billable hours" for the sake of it. We provide high-impact technical interventions that pay for themselves.` }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10 flex flex-wrap justify-center gap-4", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/contact", className: "btn-gold px-10 py-4 rounded-xl font-black uppercase tracking-tight shadow-xl", children: "Free 30-Min Initial Consult" }) })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-24 px-6 max-w-7xl mx-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid md:grid-cols-2 gap-8", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-10 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-slate-100 dark:border-slate-700 flex flex-col", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4 mb-4", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faMagnifyingGlassChart, color: "var(--v-gold)", size: "lg" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold dark:text-white uppercase tracking-tight", children: "Strategic Investigation" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-4xl font-black text-v-green mb-4", children: [
+          "$100 ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-slate-400 font-normal uppercase", children: "per Request" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 dark:text-slate-300 mb-6 flex-grow", children: 'For specific "How do I fix X?" or "Can we automate Y?" questions. This covers the technical research required to give you a definitive answer.' }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white dark:bg-slate-900/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-700", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-3 text-sm font-bold dark:text-slate-200", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-v-gold", children: "1." }),
+            " Call 1 (15-minutes): Deep dive into the specific request."
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-v-gold", children: "2." }),
+            " Internal technical investigation & ROI analysis."
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-v-gold", children: "3." }),
+            " Call 2 (15-minutes): Findings, logic, and implementation strategy."
+          ] })
+        ] }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-[10px] uppercase text-slate-400 tracking-widest font-black", children: "* Waived for Retainer Clients" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-10 bg-v-navy text-white rounded-[2.5rem] shadow-2xl relative overflow-hidden flex flex-col", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-4 right-6 text-v-green font-black italic opacity-10 text-4xl uppercase", children: "Diagnostic" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4 mb-4", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faStethoscope, color: "var(--v-green)", size: "lg" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold uppercase tracking-tight", children: "The Process Audit" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-4xl font-black text-v-green mb-4", children: [
+          "$600 ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-slate-400 font-normal uppercase tracking-widest", children: "Flat Rate" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300 mb-8 flex-grow", children: "A surgical onsite analysis of your current business workflows, SaaS spend, and operational bottlenecks." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3 text-xs text-slate-300 bg-black/20 p-6 rounded-2xl border border-white/10", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "flex items-center gap-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faLocationDot, size: "xs" }),
+            " Includes 1 onsite visit (Washington-Baltimore area)."
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "flex items-center gap-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faClock, size: "xs" }),
+            " $400 per additional onsite visit."
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "flex items-center gap-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faPlaneDeparture, size: "xs" }),
+            " Travel outside DMV subject to additional fees."
+          ] })
+        ] })
+      ] })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-24 px-6 bg-slate-100 dark:bg-slate-950", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl md:text-5xl font-black dark:text-white uppercase italic tracking-wider", children: "Active Development" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-500 mt-2 text-lg", children: "Direct implementation work for standalone needs or following an audit." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid md:grid-cols-2 gap-8", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "group bg-white dark:bg-slate-900 p-12 rounded-[3rem] shadow-lg border-b-8 border-v-navy hover:-translate-y-2 transition-transform", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-3xl font-bold mb-2 dark:text-white uppercase tracking-tighter", children: "Optimization" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-5xl font-black text-v-green mb-6", children: [
+            "$80",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-lg font-medium text-slate-400", children: "/hr" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed", children: "Fixing and streamlining what you already have. We optimize your current tools to avoid software fatigue." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "p-4 bg-v-navy/5 dark:bg-white/5 border border-v-navy/10 dark:border-white/10 rounded-xl text-v-navy dark:text-v-gold text-sm font-black uppercase tracking-widest", children: "Access to VenData Prebuilt Library included" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "group bg-white dark:bg-slate-900 p-12 rounded-[3rem] shadow-lg border-b-8 border-v-green hover:-translate-y-2 transition-transform", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-3xl font-bold mb-2 dark:text-white uppercase tracking-tighter", children: "Custom Bridging" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-5xl font-black text-v-green mb-6", children: [
+            "$110",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-lg font-medium text-slate-400", children: "/hr" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed", children: 'The "Missing Link." Custom code connecting disparate data sources where no pre-built tool exists.' }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "p-4 bg-v-green/5 dark:bg-white/5 border border-v-green/10 dark:border-white/10 rounded-xl text-v-green text-sm font-black uppercase tracking-widest", children: "Full Source Code & Logic Ownership" })
+        ] })
+      ] })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-24 px-6 max-w-7xl mx-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid md:grid-cols-3 gap-8", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "md:col-span-2 p-12 border-4 border-v-gold/30 rounded-[3rem] bg-v-gold/5 relative overflow-hidden", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4 mb-6", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faShieldHalved, color: "var(--v-gold)", size: "lg" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl font-black dark:text-white italic tracking-tighter", children: "The Sentry Retainer" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-6xl font-black text-v-navy dark:text-v-gold mb-8", children: [
+          "$500",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xl tracking-normal", children: "/mo" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid sm:grid-cols-2 gap-8 text-slate-700 dark:text-slate-300", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-4 font-bold", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex gap-2 items-center text-v-green font-black uppercase text-sm", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faCircleCheck, size: "xs" }),
+              " 48hr Response Guarantee"
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex gap-2 items-center text-v-green font-black uppercase text-sm", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faCircleCheck, size: "xs" }),
+              " New/Beta Prebuilt Tools"
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex gap-2 items-center text-v-green font-black uppercase text-sm", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faCircleCheck, size: "xs" }),
+              " Waived Strategy & Design Fees"
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic leading-relaxed", children: "The Sentry reserves our technical bandwidth for your business. Implementation, custom coding, and optimization remain billed at standard hourly rates." })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-10 bg-slate-50 dark:bg-slate-800 rounded-[3rem] border border-v-navy/10 flex flex-col justify-center", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-bold text-lg mb-4 dark:text-white uppercase tracking-[0.2em] text-xs", children: "Error Policy" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-v-navy dark:text-v-gold font-black text-3xl mb-4", children: [
+          "$100 ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-slate-500 font-normal", children: "Deposit" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-500 leading-relaxed italic", children: "Investigation fee for breaks. If our logic failed, we fix it at $0 and refund the $100. If outside changes (API updates, human error) caused the break, standard rates apply." })
+      ] })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-24 px-6 bg-slate-900 text-white rounded-t-[4rem]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-5xl mx-auto", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faMicrochip, color: "var(--v-green)", size: "lg", className: "mb-6" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-5xl md:text-6xl font-black mb-6 italic tracking-tighter", children: "Full Custom Systems" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-slate-400 max-w-2xl mx-auto", children: "Ground-up application development for complex digital ecosystems." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid md:grid-cols-2 gap-12 items-stretch", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-slate-800 p-10 rounded-[2.5rem] border-l-8 border-v-gold flex flex-col", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-v-gold font-black uppercase tracking-[0.2em] text-xs mb-2", children: "Phase 1" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-3xl font-bold mb-4 uppercase tracking-tighter", children: "System Design" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-5xl font-black mb-6 text-v-green font-mono", children: "$500" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-400 mb-8 flex-grow leading-relaxed", children: "A full architectural blueprint including database schema, API logic, and user flows. We define the logic before a single line of code is written." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-v-gold text-sm font-black italic border-t border-slate-700 pt-4 uppercase tracking-widest", children: "* Waived for Retainer Clients" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-slate-800 p-10 rounded-[2.5rem] border-l-8 border-v-green flex flex-col", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-v-green font-black uppercase tracking-[0.2em] text-xs mb-2", children: "Phase 2" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-3xl font-bold mb-4 uppercase tracking-tighter", children: "Implementation" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-2xl font-black mb-6 text-slate-400 italic tracking-tighter", children: "Custom Quote" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-400 mb-8 flex-grow leading-relaxed", children: "Development fees are subject to the complexity defined in Phase 1. You receive a fixed-logic proposal based on the blueprint." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/consultation", className: "text-v-gold hover:text-white transition-colors font-black uppercase text-sm tracking-widest border-b-2 border-v-gold pb-1 inline-block", children: "Request Project Consult" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-20 text-center border-t border-slate-800 pt-12", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-slate-500 text-sm max-w-2xl mx-auto italic leading-relaxed", children: [
+        "New Project Discussions: Free 30-min Consult. ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+        "Repeat inquiries or returning businesses without a retainer: $100 Strategic Policy applies."
+      ] }) })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 px-6 bg-slate-950 text-slate-500 border-t border-white/5", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto grid md:grid-cols-3 gap-12", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h5", { className: "font-black uppercase text-xs tracking-widest text-v-gold mb-4", children: "Ownership & IP" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs leading-relaxed", children: "Clients own 100% of custom logic and bridges built for their environment. VenData Prebuilt Tools are licensed services; IP remains with VenData Solutions. Clients maintain tool access as long as they cover 3rd party hosting fees." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h5", { className: "font-black uppercase text-xs tracking-widest text-v-gold mb-4", children: "Maintenance" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs leading-relaxed", children: "Internal logic failures in VenData proprietary tools are fixed at $0. External outages caused by 3rd party API shifts, hosting failures, or client-side human error are billed at standard hourly rates." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h5", { className: "font-black uppercase text-xs tracking-widest text-v-gold mb-4", children: "Service Levels" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs leading-relaxed", children: '"Response" constitutes technical triage and a project timeline. Non-emergency requests are guaranteed 48-hour triage for Retainer holders. Emergency system outages always take immediate priority.' })
+      ] })
+    ] }) })
+  ] });
+}
+const Route$g = createFileRoute("/services")({
+  component: RouteComponent
 });
-const Route$e = createFileRoute("/robots.txt")({
+function RouteComponent() {
+  return (
+    // <div className="pt-20 bg-white dark:bg-slate-900 font-plus-jakarta transition-colors duration-300">
+    //   {/* HERO: THE PARTNERSHIP MODEL */}
+    //   <section className="py-24 px-6 bg-v-navy text-white text-center">
+    //     <div className="max-w-4xl mx-auto">
+    //       <h1 className="text-5xl md:text-7xl font-black mb-6 italic tracking-tighter">
+    //         A Four-Step <span className="text-v-green">Vendetta</span> Against Waste.
+    //       </h1>
+    //       <p className="text-xl md:text-2xl text-slate-300 leading-relaxed font-medium">
+    //         We don't believe in "billable hours" for the sake of it. We believe in high-impact interventions that pay for themselves.
+    //       </p>
+    //     </div>
+    //   </section>
+    //   {/* STEP 1: THE AUDIT (The Diagnostic) */}
+    //   <section className="py-24 px-6 max-w-7xl mx-auto">
+    //     <div className="grid md:grid-cols-2 gap-16 items-start">
+    //       <div>
+    //         <div className="flex items-center gap-4 mb-6">
+    //           <span className="bg-v-gold text-v-navy w-14 h-14 rounded-2xl flex items-center justify-center font-black text-2xl rotate-3">1</span>
+    //           <h2 className="text-4xl font-bold dark:text-white uppercase tracking-tight">The Process Audit</h2>
+    //         </div>
+    //         <p className="text-5xl font-black text-v-green mb-6">$600 <span className="text-sm text-slate-400 font-normal uppercase tracking-widest">Flat Rate</span></p>
+    //         <div className="space-y-6 text-slate-600 dark:text-slate-300 mb-8 text-lg leading-relaxed">
+    //           <p>The audit is pure discovery. We aren't here to sell you a new subscription; we're here to learn your business, your workflows, and your P&L.</p>
+    //           <ul className="grid gap-3">
+    //             {[
+    //               "Deep dive into existing tools & SaaS spend",
+    //               "Identification of hidden operational bottlenecks",
+    //               "Analysis of time-waste vs. revenue generation",
+    //               "A custom roadmap of actionable 'No-Code' and 'Low-Code' wins"
+    //             ].map((item, i) => (
+    //               <li key={i} className="flex items-start gap-3 bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-800">
+    //                 <ServiceIcon icon={faCircleCheck} color="var(--v-green)" />
+    //                 <span className="font-medium">{item}</span>
+    //               </li>
+    //             ))}
+    //           </ul>
+    //         </div>
+    //       </div>
+    //       {/* Logistics Box */}
+    //       <div className="bg-slate-50 dark:bg-slate-800 p-10 rounded-[2.5rem] border-2 border-dashed border-v-gold/30 sticky top-32">
+    //         <h4 className="font-bold text-v-navy dark:text-v-gold mb-6 uppercase text-sm tracking-[0.2em]">Logistics & Travel</h4>
+    //         <div className="space-y-6">
+    //            <div className="flex gap-4">
+    //               <div className="text-v-gold"><ServiceIcon icon={faLocationDot}/></div>
+    //               <p className="text-slate-600 dark:text-slate-300"><strong className="text-v-navy dark:text-white block">Local-First Audit</strong> Includes one onsite visit within the Washington-Baltimore area.</p>
+    //            </div>
+    //            <div className="flex gap-4">
+    //               <div className="text-v-gold"><ServiceIcon icon={faPlaneDeparture} /></div>
+    //               <p className="text-slate-600 dark:text-slate-300"><strong className="text-v-navy dark:text-white block">Travel & Board</strong> Sites outside the DMV are subject to additional fees and expenses.</p>
+    //            </div>
+    //            <div className="flex gap-4">
+    //               <div className="text-v-gold"><ServiceIcon icon={faClock} /></div>
+    //               <p className="text-slate-600 dark:text-slate-300"><strong className="text-v-navy dark:text-white block">Extended Discovery</strong> $400 per additional onsite visit if required.</p>
+    //            </div>
+    //            <hr className="border-slate-200 dark:border-slate-700" />
+    //            <p className="italic text-sm text-slate-500">You are paying for attention and skill. If we find nothing, we won't invent a problem. You keep the roadmap regardless of whether you hire us for Step 2.</p>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </section>
+    //   {/* STEP 2 & 3: EXECUTION */}
+    //   <section className="py-24 px-6 bg-slate-100 dark:bg-slate-950">
+    //     <div className="max-w-7xl mx-auto">
+    //       <div className="grid md:grid-cols-2 gap-8">
+    //         {/* Optimization */}
+    //         <div className="group bg-white dark:bg-slate-900 p-12 rounded-[3rem] shadow-xl border-b-8 border-v-navy hover:-translate-y-2 transition-transform">
+    //            <span className="bg-v-navy text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">Step 2</span>
+    //            <h3 className="text-3xl font-bold mt-6 mb-4 dark:text-white">Process Optimization</h3>
+    //            <p className="text-4xl font-black text-v-green mb-6">$80<span className="text-lg font-medium text-slate-400">/hr</span></p>
+    //            <p className="text-slate-600 dark:text-slate-400 mb-8 text-lg">We optimize your current tools first. No desire to reinvent the wheel or trigger software fatigue.</p>
+    //            <div className="p-5 bg-v-navy/5 dark:bg-white/5 border border-v-navy/10 dark:border-white/10 rounded-2xl text-v-navy dark:text-slate-300 text-sm font-bold">
+    //              Access to VenData prebuilt internal tooling: <span className="text-v-green ml-2">FREE</span>
+    //            </div>
+    //         </div>
+    //         {/* Custom Bridges */}
+    //         <div className="group bg-white dark:bg-slate-900 p-12 rounded-[3rem] shadow-xl border-b-8 border-v-green hover:-translate-y-2 transition-transform">
+    //            <span className="bg-v-green text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">Step 3</span>
+    //            <h3 className="text-3xl font-bold mt-6 mb-4 dark:text-white">Custom Bridging</h3>
+    //            <p className="text-4xl font-black text-v-green mb-6">$110<span className="text-lg font-medium text-slate-400">/hr</span></p>
+    //            <p className="text-slate-600 dark:text-slate-400 mb-8 text-lg">Small, high-impact bridges to connect disparate data. We talk ROI and business logic before a single line of code is written.</p>
+    //            <div className="p-5 bg-v-green/5 dark:bg-white/5 border border-v-green/10 dark:border-white/10 rounded-2xl text-v-green dark:text-v-green text-sm font-bold">
+    //              Full keys and source code handed over to your admins.
+    //            </div>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </section>
+    //   {/* STEP 4: MONITORING & ADVISORY */}
+    //   <section className="py-24 px-6 max-w-7xl mx-auto">
+    //     <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+    //       <div className="max-w-xl">
+    //         <span className="text-v-gold font-black uppercase tracking-[0.3em] text-sm">Step 4</span>
+    //         <h2 className="text-5xl font-bold dark:text-white mt-2">The Sentry</h2>
+    //         <p className="text-slate-500 mt-4 text-lg">Ongoing continuity and research-backed strategy to ensure your new systems don't just work, but evolve.</p>
+    //       </div>
+    //     </div>
+    //     <div className="grid md:grid-cols-3 gap-8">
+    //        <div className="p-10 border border-slate-100 dark:border-slate-800 rounded-[2rem] hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+    //           <h4 className="font-bold text-xl mb-2 dark:text-white">The Safety Net</h4>
+    //           <p className="text-v-green font-bold mb-6">Included in Retainer</p>
+    //           <p className="text-slate-500 italic leading-relaxed">Outages due to our internal code are fixed at no cost. Always.</p>
+    //        </div>
+    //        <div className="p-10 border-2 border-v-gold/30 rounded-[2rem] bg-v-gold/5 relative overflow-hidden">
+    //           <div className="absolute top-0 right-0 bg-v-gold text-v-navy font-black text-[10px] px-3 py-1 uppercase tracking-tighter">Recommended</div>
+    //           <h4 className="font-bold text-xl mb-2 dark:text-white">Strategic Advisory</h4>
+    //           <p className="text-v-navy dark:text-v-gold font-bold mb-6">$100 / Call</p>
+    //           <p className="text-slate-600 dark:text-slate-300 leading-relaxed">15-minute high-density calls for tech decisions. No guessing; just logic and ROI.</p>
+    //        </div>
+    //        <div className="p-10 border border-slate-100 dark:border-slate-800 rounded-[2rem] hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+    //           <h4 className="font-bold text-xl mb-2 dark:text-white">Site Requests</h4>
+    //           <p className="text-v-green font-bold mb-6">$350 / Request</p>
+    //           <p className="text-slate-500 italic leading-relaxed">New hardware deployments or one-time architectural expansions.</p>
+    //        </div>
+    //     </div>
+    //   </section>
+    //   {/* FINAL CALL */}
+    //   <section className="py-32 px-6 bg-v-navy text-center text-white relative overflow-hidden">
+    //     {/* Visual Decoration */}
+    //     <div className="absolute inset-0 opacity-10 pointer-events-none">
+    //       <div className="absolute top-0 left-0 w-64 h-64 bg-v-green rounded-full blur-[120px]"></div>
+    //       <div className="absolute bottom-0 right-0 w-64 h-64 bg-v-gold rounded-full blur-[120px]"></div>
+    //     </div>
+    //     <div className="relative z-10">
+    //       <h2 className="text-4xl md:text-5xl font-bold mb-10 tracking-tight">Ready to Define the ROI?</h2>
+    //       <Link to="/consultation" className="btn-gold px-14 py-5 rounded-2xl text-2xl font-black uppercase tracking-tighter inline-block shadow-2xl">
+    //         Book Step 1 Audit
+    //       </Link>
+    //       <div className="mt-10 max-w-xl mx-auto space-y-2">
+    //         <p className="text-slate-400 text-sm italic">
+    //           Audit fee covers local onsite discovery.
+    //         </p>
+    //         <p className="text-slate-500 text-xs">
+    //           Outages due to changes out of our control (3rd party API shifts, etc) are subject to standard hourly rates.
+    //         </p>
+    //       </div>
+    //     </div>
+    //   </section>
+    // </div>
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Services, {})
+  );
+}
+const Route$f = createFileRoute("/robots.txt")({
   server: {
     handlers: {
       GET: async () => {
@@ -5696,15 +6061,19 @@ Sitemap: https://vendata.solutions/sitemap.xml`;
     }
   }
 });
-const $$splitComponentImporter$d = () => import("./privacy-By8cCNpc.js");
-const Route$d = createFileRoute("/privacy")({
+const $$splitComponentImporter$e = () => import("./privacy-Bbk_mv06.js");
+const Route$e = createFileRoute("/privacy")({
+  component: lazyRouteComponent($$splitComponentImporter$e, "component")
+});
+const $$splitComponentImporter$d = () => import("./our-work-s2HyRw2s.js");
+const Route$d = createFileRoute("/our-work")({
   component: lazyRouteComponent($$splitComponentImporter$d, "component")
 });
-const $$splitComponentImporter$c = () => import("./insights-2tn_R_rr.js");
+const $$splitComponentImporter$c = () => import("./insights-D_lWs63i.js");
 const Route$c = createFileRoute("/insights")({
   component: lazyRouteComponent($$splitComponentImporter$c, "component")
 });
-const $$splitComponentImporter$b = () => import("./contact-DTbWSQEe.js");
+const $$splitComponentImporter$b = () => import("./contact-BVxy8lCb.js");
 const Route$b = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -5716,7 +6085,7 @@ const Route$b = createFileRoute("/contact")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$b, "component")
 });
-const $$splitComponentImporter$a = () => import("./auth-BP4YXtHs.js");
+const $$splitComponentImporter$a = () => import("./auth-DwkY8hHj.js");
 const Route$a = createFileRoute("/auth")({
   head: () => ({
     meta: [{
@@ -5728,7 +6097,7 @@ const Route$a = createFileRoute("/auth")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$a, "component")
 });
-const $$splitComponentImporter$9 = () => import("./app-BIlSUIR7.js");
+const $$splitComponentImporter$9 = () => import("./app-C7RQ_yL2.js");
 const Route$9 = createFileRoute("/app")({
   head: () => ({
     meta: [{
@@ -5740,7 +6109,7 @@ const Route$9 = createFileRoute("/app")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$9, "component")
 });
-const $$splitComponentImporter$8 = () => import("./about-DH8IFsRF.js");
+const $$splitComponentImporter$8 = () => import("./about-zNw3HRic.js");
 const Route$8 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -5752,7 +6121,7 @@ const Route$8 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$8, "component")
 });
-const $$splitComponentImporter$7 = () => import("./_404-CY6ptWuC.js");
+const $$splitComponentImporter$7 = () => import("./_404-DkhffIkj.js");
 const Route$7 = createFileRoute("/$404")({
   head: () => ({
     meta: [{
@@ -5764,7 +6133,7 @@ const Route$7 = createFileRoute("/$404")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-const $$splitComponentImporter$6 = () => import("./index-BkrlMQeF.js");
+const $$splitComponentImporter$6 = () => import("./index-CJRWZAIn.js");
 const Route$6 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter$6, "component"),
   validateSearch: (search) => {
@@ -5788,7 +6157,7 @@ const createSsrRpc = (functionId, importer) => {
 };
 const getPost = createServerFn().inputValidator((data) => data).handler(createSsrRpc("7d7e857e3252f6ecf0c7eabed1b93b93ea9bc14341b78a5c25ea74735091c89a"));
 const getPosts = createServerFn().handler(createSsrRpc("d272144f1318d10ea310ced5cd7027f8a2446e3e606218ceac770b3c3bd059fc"));
-const $$splitComponentImporter$5 = () => import("./insights.index-DmthP3k-.js");
+const $$splitComponentImporter$5 = () => import("./insights.index-CCf8w2La.js");
 const Route$5 = createFileRoute("/insights/")({
   loader: async ({
     params
@@ -5799,7 +6168,7 @@ const Route$5 = createFileRoute("/insights/")({
   },
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-const $$splitComponentImporter$4 = () => import("./index-FNkq3M-K.js");
+const $$splitComponentImporter$4 = () => import("./index-4H1c8XSn.js");
 const Route$4 = createFileRoute("/consultation/")({
   head: () => ({
     meta: [{
@@ -5815,8 +6184,8 @@ const Route$4 = createFileRoute("/consultation/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitNotFoundComponentImporter = () => import("./insights._postId-DB_pc24Y.js");
-const $$splitComponentImporter$3 = () => import("./insights._postId-BNUYB36r.js");
+const $$splitNotFoundComponentImporter = () => import("./insights._postId-Awqq2Nxa.js");
+const $$splitComponentImporter$3 = () => import("./insights._postId-CCQiW7Gz.js");
 const Route$3 = createFileRoute("/insights/$postId")({
   // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({
@@ -5874,72 +6243,77 @@ const Route$3 = createFileRoute("/insights/$postId")({
   component: lazyRouteComponent($$splitComponentImporter$3, "component"),
   notFoundComponent: lazyRouteComponent($$splitNotFoundComponentImporter, "notFoundComponent")
 });
-const $$splitComponentImporter$2 = () => import("./book-QEckMM6X.js");
+const $$splitComponentImporter$2 = () => import("./book-D4ywMyfb.js");
 const Route$2 = createFileRoute("/consultation/book")({
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./app.dashboard-CClwqB91.js");
+const $$splitComponentImporter$1 = () => import("./app.dashboard-DTZKdNeB.js");
 const Route$1 = createFileRoute("/app/dashboard")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./app._layout-C2_D5ENH.js");
+const $$splitComponentImporter = () => import("./app._layout-nNnEu3qQ.js");
 const Route2 = createFileRoute("/app/_layout")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });
-const TermsRoute = Route$g.update({
+const TermsRoute = Route$h.update({
   id: "/terms",
   path: "/terms",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
-const ServicesRoute = Route$f.update({
+const ServicesRoute = Route$g.update({
   id: "/services",
   path: "/services",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
-const RobotsDottxtRoute = Route$e.update({
+const RobotsDottxtRoute = Route$f.update({
   id: "/robots.txt",
   path: "/robots.txt",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
-const PrivacyRoute = Route$d.update({
+const PrivacyRoute = Route$e.update({
   id: "/privacy",
   path: "/privacy",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
+});
+const OurWorkRoute = Route$d.update({
+  id: "/our-work",
+  path: "/our-work",
+  getParentRoute: () => Route$i
 });
 const InsightsRoute = Route$c.update({
   id: "/insights",
   path: "/insights",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
 const ContactRoute = Route$b.update({
   id: "/contact",
   path: "/contact",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
 const AuthRoute = Route$a.update({
   id: "/auth",
   path: "/auth",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
 const AppRoute = Route$9.update({
   id: "/app",
   path: "/app",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
 const AboutRoute = Route$8.update({
   id: "/about",
   path: "/about",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
 const R404Route = Route$7.update({
   id: "/$404",
   path: "/$404",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
 const IndexRoute = Route$6.update({
   id: "/",
   path: "/",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
 const InsightsIndexRoute = Route$5.update({
   id: "/",
@@ -5949,7 +6323,7 @@ const InsightsIndexRoute = Route$5.update({
 const ConsultationIndexRoute = Route$4.update({
   id: "/consultation/",
   path: "/consultation/",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
 const InsightsPostIdRoute = Route$3.update({
   id: "/$postId",
@@ -5959,7 +6333,7 @@ const InsightsPostIdRoute = Route$3.update({
 const ConsultationBookRoute = Route$2.update({
   id: "/consultation/book",
   path: "/consultation/book",
-  getParentRoute: () => Route$h
+  getParentRoute: () => Route$i
 });
 const AppDashboardRoute = Route$1.update({
   id: "/dashboard",
@@ -5990,6 +6364,7 @@ const rootRouteChildren = {
   AuthRoute,
   ContactRoute,
   InsightsRoute: InsightsRouteWithChildren,
+  OurWorkRoute,
   PrivacyRoute,
   RobotsDottxtRoute,
   ServicesRoute,
@@ -5997,7 +6372,7 @@ const rootRouteChildren = {
   ConsultationBookRoute,
   ConsultationIndexRoute
 };
-const routeTree = Route$h._addFileChildren(rootRouteChildren)._addFileTypes();
+const routeTree = Route$i._addFileChildren(rootRouteChildren)._addFileTypes();
 const getRouter = () => {
   const router2 = createRouter({
     routeTree,
@@ -6012,6 +6387,7 @@ const router = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
 }, Symbol.toStringTag, { value: "Module" }));
 export {
   EyeIcon as E,
+  FontAwesomeIcon as F,
   GraphIcon as G,
   Link as L,
   MusicalNotesIcon as M,
@@ -6020,12 +6396,12 @@ export {
   Route$5 as R,
   ServiceIcon as S,
   TargetIcon as T,
-  faLocationDot as a,
-  faClock as b,
+  faUtensils as a,
+  faDumbbell as b,
   faShieldHalved as c,
   faRocket as d,
   faMicroscope as e,
-  faCircleCheck as f,
+  faCartFlatbed as f,
   faCompass as g,
   faCogs as h,
   faArrowTrendUp as i,

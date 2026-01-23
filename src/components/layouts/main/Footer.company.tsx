@@ -12,7 +12,9 @@ export const FooterCompany = ({className}: FooterCompanyProps) => {
             <li><Link to="/" className="hover:text-(--v-gold) transition">Home</Link></li>
             <li><Link to="/about" className="hover:text-(--v-gold) transition">About</Link></li>
             <li><Link to="/contact" className="hover:text-(--v-gold) transition">Contact</Link></li>
-            <li><Link to="/consultation" className="hover:text-(--v-gold) transition">Book a Call</Link></li>
+            <li><Link to="/services" className="hover:text-(--v-gold) transition">Services</Link></li>
+            <li><Link to="/our-work" className="hover:text-(--v-gold) transition">Our Work</Link></li>
+
         </ul>
         <br/>
     </div>
