@@ -6,7 +6,7 @@ export type User = {
 
 export type AppState = {
   user: User | null;
-  theme: "light" | "dark";
+  darkMode: boolean;
 };
 
 export type AppAction =

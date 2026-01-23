@@ -1,6 +1,7 @@
 import { RefObject, useEffect, useRef } from "react"
 import { ScrollLink } from "../../reusable/ScrollLink"
 import { useModalClose } from "../../../hooks/useModal"
+import { ThemeButton } from "../../reusable/ThemeBtn"
 
 interface MobileMenuProps {
   open: boolean
@@ -15,7 +16,7 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
   return (
     <div
       ref={menuRef}
-      className={`md:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 ${
+      className={`md:hidden bg-white border-t border-b border-gray-500 overflow-hidden transition-all duration-300 ${
         open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
       }`}
     >
@@ -39,6 +40,7 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
         >
           Start Working Smarter
         </ScrollLink>
+        <div className="w-full flex justify-center"><ThemeButton /></div>
       </div>
     </div>
   )

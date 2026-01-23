@@ -7,10 +7,10 @@ import { faArrowTrendUp, faChartLine, faCogs, faCompass, faLightbulb, faMicrosco
 export const Route = createFileRoute('/about')({
   head: () => ({
     meta: [
-      { title: "About Us | The Team Behind VenData Solutions" },
+      { title: "About Us | The Team Behind Vendata Solutions" },
       {
         name: 'description',
-        content: "Discover the expertise behind VenData Solutions. We specialize in building custom ERP/CRM systems and API integrations that empower businesses to operate with technical precision."
+        content: "Discover the expertise behind Vendata Solutions. We specialize in building custom ERP/CRM systems and API integrations that empower businesses to operate with technical precision."
       }
     ],
   }),
@@ -30,13 +30,13 @@ function RouteComponent() {
           </h1>
           <div className="space-y-6 text-xl text-slate-300 leading-relaxed">
             <p>
-              It is a struggle every visionary knows: the relentless weight of the mundane. In the fight for market share, your greatest enemy isn't the competition—it’s the friction within your own walls.
+              It is a struggle every visionary knows; the relentless weight of the mundane. In the fight for market share, your greatest enemy isn't the competition: it’s the friction within your own walls.
             </p>
             <p className="border-l-4 border-v-green pl-6 italic font-light">
               "Every employee is an investment. Every second is a currency. Yet, the modern emergence of SaaS promised a revolution that only delivered a maze."
             </p>
             <p>
-              We see the same story time and again: logistics buried in manual entry, and owners fighting a daily vendetta against the very tools meant to save them.
+              We see the same story time and again; logistics buried in manual entry, and owners fighting a daily vendetta against the very tools meant to save them.
             </p>
           </div>
         </div>
@@ -50,10 +50,10 @@ function RouteComponent() {
             <span className="text-v-green">Creative Problem Solving</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            VenData wasn't built to simply "write code." We were built to understand the heartbeat of your business. Our team doesn't look at a tech stack in isolation; we look at the goals, the target markets, and the untapped potential being held back by operational gaps.
+            Vendata wasn't built to simply "write code." We were built to understand the heartbeat of your business. Our team doesn't look at a tech stack in isolation; we look at the goals, the target markets, and the untapped potential being held back by operational gaps.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            We bridge the divide between high-level business development and technical execution. We don't just fix what is broken—we partner with you to find the innovative "unfair advantages" that allow you to scale without the bloat.
+            We bridge the divide between high-level business development and technical execution. We don't just fix what is broken; we partner with you to find the innovative "unfair advantages" that allow you to scale without the bloat.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-4">
@@ -71,7 +71,7 @@ function RouteComponent() {
       {/* 3. THE 4-PILLAR PROCESS */}
       <section className="py-24 px-6 bg-slate-50 dark:bg-slate-800/50 border-y border-slate-100 dark:border-slate-800">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-v-navy dark:text-white mb-16">The VenData Process</h2>
+          <h2 className="text-4xl font-bold text-center text-(--v-navy) dark:text-(--v-gold) mb-16">The Vendata Process</h2>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { icon: faMicroscope, title: "The Deep Audit", text: "We dissect your operations to find where the friction hides and where the data stalls." },
@@ -113,7 +113,7 @@ function RouteComponent() {
                   "I didn't start in a server room. I started in the trenches of marketing and business development, helping owners maximize goals and navigate complex target markets."
                 </p>
                 <p>
-                  "I taught myself to code because I was tired of seeing brilliant strategies die on the vine due to inadequate tech. I built VenData to be the partner I wish I had—someone who understands the P&L as deeply as the API."
+                  "I taught myself to code because I was tired of seeing brilliant strategies die on the vine due to inadequate tech. I built Vendata to be the partner I wish I had: someone who understands the P&L as deeply as the API."
                 </p>
                 <p>
                   "I'm most inspired by the intersection of high-level innovation and the gritty, creative problem-solving required to make a business actually work."
@@ -129,14 +129,11 @@ function RouteComponent() {
         <h2 className="text-4xl md:text-6xl font-black mb-4 italic tracking-tighter">
           End the <span className="text-v-green">Vendetta.</span>
         </h2>
-        <h3 className="text-2xl font-bold text-v-gold mb-12 uppercase tracking-[0.2em]">
-          Call VenData.
-        </h3>
         <Link 
           to="/consultation" 
           className="btn-gold px-12 py-6 rounded-2xl font-black text-2xl tracking-tighter uppercase inline-block"
         >
-          Begin the Partnership
+          Work with Vendata
         </Link>
       </section>
     </main>

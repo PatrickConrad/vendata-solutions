@@ -33,10 +33,11 @@ export function ComingSoon() {
         {/* Logo */}
         <div className="flex justify-center">
           <img
-            src="/vendata-venn-logo-full-text.png"
+            src="/vendata-venn-logo-full-text.svg"
             alt="Vendata Solutions"
             className="h-25 md:h-40"
           />
+      
         </div>
 
         {/* <Link

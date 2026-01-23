@@ -31,7 +31,7 @@ function BlogIndex() {
         {/* Header */}
         <div className="mb-6 text-center">
           <h1 className="text-5xl font-extrabold text-(--v-navy) dark:text-(--v-gold) mb-4">
-            VenData Insights
+            Vendata Insights
           </h1>
           <Divider className="h-1 w-20 bg-v-gold mb-5 "/>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">

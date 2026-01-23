@@ -16,13 +16,13 @@ export const Route = createRootRoute({
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1'
             },
-            { title: "VenData Solutions | Custom ERP, API Bridging & Automation" },
+            { title: "Vendata Solutions | Custom ERP, API Bridging & Automation" },
             {
                 name: 'description',
-                content: "VenData Solutions unifies business operations through custom ERP/CRM development, API bridging, and precision automation. We eliminate data silos and manual bottlenecks to build a seamless digital infrastructure."
+                content: "Vendata Solutions unifies business operations through custom ERP/CRM development, API bridging, and precision automation. We eliminate data silos and manual bottlenecks to build a seamless digital infrastructure."
             },
-            { property: 'og:title', content: "VenData Solutions | Operational Excellence through Data" },
-            { property: 'og:description', content: "Connect your tools, automate your workflows, and gain actionable insights with custom software solutions from VenData." },
+            { property: 'og:title', content: "Vendata Solutions | Operational Excellence through Data" },
+            { property: 'og:description', content: "Connect your tools, automate your workflows, and gain actionable insights with custom software solutions from Vendata." },
             { property: 'og:image', content: "https://www.vendatasolutions.com/vendata-ven-logo-full-text.png" },
 
         ],
@@ -61,12 +61,12 @@ function RootComponent() {
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
     return (
-        <html suppressHydrationWarning>
+        <html>
             <AppProvider>
                 <head>
                     <HeadContent />
                 </head>
-                <body className='dark text-slate-200'>
+                <body className='text-slate-200'>
                     <AnalyticsTracker />
                     <Nav />
                     <main className='pt-20'>{children}</main>

@@ -34,7 +34,7 @@ export const services = {
   },
   solutions: {
     title: "Purpose-Built Solutions",
-    shortDesc: <>Build only the tools you truly need — lean, high-impact solutions that <span className="text-v-green font-semibold">solve real business problems.</span></>,
+    shortDesc: <>Build only the tools you truly need - lean, high-impact solutions that <span className="text-v-green font-semibold">solve real business problems.</span></>,
     modal: <PurposeBuiltSolutionsServiceBody />,
     icon: <TargetIcon  color="var(--v-gold)"/>
   }

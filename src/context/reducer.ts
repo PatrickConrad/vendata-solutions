@@ -1,8 +1,9 @@
 import { AppAction, AppState } from "./types";
 
+
 export const initialState: AppState = {
   user: null,
-  theme: "light",
+  darkMode: false,
 };
 
 export function appReducer(state: AppState, action: AppAction): AppState {
@@ -14,7 +15,7 @@ export function appReducer(state: AppState, action: AppAction): AppState {
       return { ...state, user: null };
 
     case "TOGGLE_THEME":
-      return { ...state, theme: state.theme === "light" ? "dark" : "light" };
+      return { ...state, darkMode: !state.darkMode };
 
     default:
       return state;

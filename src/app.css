@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
     --v-navy: #1B365D;
@@ -7,6 +8,8 @@
     --v-green: #4A773C;
     --v-icon: #1B365D;
 }
+
+
 
 body { 
     font-family: 'Plus Jakarta Sans', sans-serif; 
@@ -123,7 +126,7 @@ body {
 }
 
 
-@media (prefers-color-scheme: dark) {
+.dark {
   :root {
         --v-navy: #244779; /* lighter blue-gray for dark background */
         --v-gold: #D4AF37; /* bright gold */

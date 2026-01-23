@@ -80,7 +80,7 @@ export function Book() {
           ))}
         </div>
 
-        {/* STEP 1 — CONTACT */}
+        {/* STEP 1 - CONTACT */}
         {step === 1 && (
           <>
             <div className="bookingForm w-[90%] md:w-lg bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6">
@@ -132,7 +132,7 @@ export function Book() {
 
         )}
 
-        {/* STEP 2 — CALENDAR */}
+        {/* STEP 2 - CALENDAR */}
         {step === 2 && (
           <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6 w-full">
             <div className="flex justify-between">
@@ -157,12 +157,12 @@ export function Book() {
           </div>
         )}
 
-        {/* STEP 3 — OPTIONAL QUESTIONS */}
+        {/* STEP 3 - OPTIONAL QUESTIONS */}
         {/* {step === 3 && (
           <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl flex flex-col gap-6">
 
             <p className="text-slate-600 dark:text-slate-300 text-center">
-              Optional — help us prepare for your call.
+              Optional - help us prepare for your call.
             </p>
 
             <div className="flex flex-col gap-2">

@@ -3,7 +3,7 @@ export function ProcessClarityServiceBody() {
     <>
       <p>
         Most businesses are buried under inefficient workflows, outdated habits, and tools that no longer serve them.
-        That’s not strategy — that’s surrender.
+        That’s not strategy - that’s surrender.
       </p>
 
       <p>
@@ -27,7 +27,7 @@ export function InsightfulIntelligenceServiceBody() {
     <>
       <p>
         Big tech sells dashboards. We deliver understanding.
-        Because numbers alone don’t win battles — insight does.
+        Because numbers alone don’t win battles - insight does.
       </p>
 
       <p>
@@ -55,7 +55,7 @@ export function SystemHarmonyServiceBody() {
       </p>
 
       <p>
-        Your existing tools don’t need replacing — they need alignment.
+        Your existing tools don’t need replacing - they need alignment.
         We connect, enhance, and streamline your systems so they work as one force.
       </p>
 
@@ -79,7 +79,7 @@ export function ConnectedOperationsServiceBody() {
       </p>
 
       <p>
-        We connect your platforms into a single, coordinated operation —
+        We connect your platforms into a single, coordinated operation -
         so information moves fast and decisions hit harder.
       </p>
 
@@ -103,7 +103,7 @@ export function SmartAutomationServiceBody() {
       </p>
 
       <p>
-        With intelligent automation, your business moves faster, cleaner, and smarter —
+        With intelligent automation, your business moves faster, cleaner, and smarter -
         without burning out your people.
       </p>
 
@@ -129,7 +129,7 @@ export function PurposeBuiltSolutionsServiceBody() {
 
       <p>
         When your business demands something better, we design focused tools
-        that integrate seamlessly and deliver real results — nothing extra.
+        that integrate seamlessly and deliver real results - nothing extra.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">

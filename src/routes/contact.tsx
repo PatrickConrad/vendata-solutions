@@ -5,10 +5,10 @@ import { Divider } from '../components/reusable/Divider'
 export const Route = createFileRoute('/contact')({
   head: () => ({
     meta: [
-      { title: "Contact Us | VenData Solutions" },
+      { title: "Contact Us | Vendata Solutions" },
       {
         name: 'description',
-        content: "Ready to unify your business data? Contact VenData Solutions for expert consulting on custom ERP/CRM systems, API integrations, and automation. Let's build your solution."
+        content: "Ready to unify your business data? Contact Vendata Solutions for expert consulting on custom ERP/CRM systems, API integrations, and automation. Let's build your solution."
       }
     ],
   }),

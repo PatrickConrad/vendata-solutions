@@ -13,14 +13,14 @@ export const Route = createFileRoute('/insights/$postId')({
   // 2. Inject data into the Head
   head: ({loaderData}) => {
     if (loaderData==null||Array.isArray(loaderData)||!loaderData?.title || !loaderData?.body) {
-      return { title: 'Post Not Found | VenData Solutions' }
+      return { title: 'Post Not Found | Vendata Solutions' }
     }
     console.log({loaderData})
     const { title, body } = loaderData
 
     return {
       meta: [
-        { title: `${title.length>50?title.slice(0,50):title} | VenData Blog` },
+        { title: `${title.length>50?title.slice(0,50):title} | Vendata Blog` },
         { 
           name: 'description', 
           content: body.slice(0, 155) // Clean excerpt for SEO
@@ -38,7 +38,7 @@ export const Route = createFileRoute('/insights/$postId')({
     return (
       <>
         {/* You can inject a custom head for 404s here! */}
-        <title>Post Not Found | VenData Solutions</title>
+        <title>Post Not Found | Vendata Solutions</title>
         <meta name="robots" content="noindex" />
         <PostNotFound />
       </>

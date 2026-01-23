@@ -3,10 +3,10 @@ import { createFileRoute, Outlet } from '@tanstack/react-router'
 export const Route = createFileRoute('/app')({
   head: () => ({
     meta: [
-      { title: "Dashboard | VenData Solutions App" },
+      { title: "Dashboard | Vendata Solutions App" },
       {
         name: 'description',
-        content: "VenData Solutions Operations Dashboard. Centralized control for your custom ERP/CRM integrations and automated business processes."
+        content: "Vendata Solutions Operations Dashboard. Centralized control for your custom ERP/CRM integrations and automated business processes."
       }
     ],
   }),

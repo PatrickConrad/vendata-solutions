@@ -7,11 +7,11 @@ export const Route = createFileRoute('/consultation/')({
   head: () => ({
     meta: [
       { 
-        title: "Consultation | VenData Solutions"
+        title: "Consultation | Vendata Solutions"
       },
       {
         name: 'description',
-        content: "Schedule your consultation with VenData Solutions. Discover how our custom data automation and AI-driven software solutions can scale your business operations."
+        content: "Schedule your consultation with Vendata Solutions. Discover how our custom data automation and AI-driven software solutions can scale your business operations."
       }
     ],
     scripts: [

@@ -11,7 +11,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col">
 
        <div className="w-full flex flex-col gap-4 text-center order-1 md:pt-10 md:order-2">
-          <h3 className="text-(--v-gold) text-md font-semibold mb-2 uppercase tracking-wider md:text-xl">VenData Solutions</h3>
+          <h3 className="text-(--v-gold) text-md font-semibold mb-2 uppercase tracking-wider md:text-xl">Vendata Solutions</h3>
           <p className="text-sm md:text-lg leading-relaxed w-full">
             Understand. Improve. Build. Adapt.
           </p>
@@ -36,7 +36,7 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="w-full mx-auto">
         <div className="border-t border-slate-800 mt-16 pt-8 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} VenData Solutions. All rights reserved.
+          © {new Date().getFullYear()} Vendata Solutions. All rights reserved.
         </div>
       </div>
     </footer>

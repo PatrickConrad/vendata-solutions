@@ -1,9 +1,16 @@
 export const tempPosts = [
     {
+        slug: 'the-problems-with-saas',
+        title: "Why the Perfect SaaS is a Myth",
+        excerpt: "You're business is a Bentley. And you don't take that a Bently to Jiffy Lube.",
+        body: "You're in it. The business you've put your soul into is now reaping the reward.",
+        date: "May 20, 2025"
+    },
+    {
         slug: 'intro-to-automation',
         title: "How Automation Bridges the Operational Gap",
         excerpt: "In today's digital landscape, data silos are the silent killers of productivity",
-        body: "In today's digital landscape, data silos are the silent killers of productivity. At VenData Solutions, we specialize in building the bridges that allow your tools to talk to each other. By implementing precision automation, businesses can reclaim thousands of hours lost to manual data entry.",
+        body: "In today's digital landscape, data silos are the silent killers of productivity. At Vendata Solutions, we specialize in building the bridges that allow your tools to talk to each other. By implementing precision automation, businesses can reclaim thousands of hours lost to manual data entry.",
         date: "May 20, 2025"
     },
     {

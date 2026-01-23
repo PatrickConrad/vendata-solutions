@@ -4,10 +4,10 @@ import { ComingSoon } from '../components/reusable/ComingSoon'
 export const Route = createFileRoute('/auth')({
   head: () => ({
     meta: [
-      { title: "Sign In | VenData Solutions Portal" },
+      { title: "Sign In | Vendata Solutions Portal" },
       {
         name: 'description',
-        content: "Secure access to the VenData Solutions client portal. Manage your integrations, view data analytics, and monitor your custom automation workflows."
+        content: "Secure access to the Vendata Solutions client portal. Manage your integrations, view data analytics, and monitor your custom automation workflows."
       }
     ],
   }),

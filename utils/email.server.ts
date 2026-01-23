@@ -29,7 +29,7 @@ export const getConsultationPinServer = async (email: string, captcha: string ) 
     console.log("Generated PIN:", pin);
 
     // 3. Send Email (example with Resend / Nodemailer)
-    await sendEmail(email, `<div>Here is your verification pin code: ${pin}`, 'VenData Solutions - Verfication Pin');
+    await sendEmail(email, `<div>Here is your verification pin code: ${pin}`, 'Vendata Solutions - Verfication Pin');
 
     return { success: true};
 };

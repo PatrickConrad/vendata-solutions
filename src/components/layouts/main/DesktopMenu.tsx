@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ScrollLink } from "../../reusable/ScrollLink";
 import { useEffect, useState } from "react";
 import { useAppActions } from "../../../hooks/useAppActions";
+import { ThemeButton } from "../../reusable/ThemeBtn";
 
 export const DesktopMenu = () => {
 
@@ -30,10 +31,7 @@ export const DesktopMenu = () => {
       <Link to="/about" className="hover:text-(--v-gold) transition">About</Link>
       <ScrollLink to="/" hash="services" className="hover:text-(--v-gold) transition">Services</ScrollLink>
       <Link to="/consultation" className="btn-gold px-6 py-2.5 rounded-lg text-sm">Start Working Smarter</Link>
-      {/* <div onClick={()=>setMode()} className={`text-(--v-gold) hover:text-(--v-green)`}>
-        <SetIcon name={toggeled?'sun':'moon'}  className="w-8 h-8 cursor-pointer"/>
-      </div>
-       */}
+      <ThemeButton />
     </div>
   )
 }
