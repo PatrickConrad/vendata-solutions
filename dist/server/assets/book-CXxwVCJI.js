@@ -1,4 +1,4 @@
-import { a as reactExports, n as jsxRuntimeExports } from "./worker-entry-BSofegSj.js";
+import { a as reactExports, n as jsxRuntimeExports } from "./worker-entry-B5yTcS6_.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
