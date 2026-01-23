@@ -1,4 +1,4 @@
-import { y as createServerRpc, v as createServerFn } from "./worker-entry-B5yTcS6_.js";
+import { y as createServerRpc, v as createServerFn } from "./worker-entry-Bw8oqfzM.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -53,7 +53,7 @@ We look for the specific gaps—the niches the software missed—and we build th
 
 You shouldn't have to change your business to fit your software. Your software should be engineered to support your Bentley.
 
-[**End the Vendetta. Call VenData.**](http://localhost:3000/consultation)`
+[**End the Vendetta. Call VenData.**](http://vendata.solutions/consultation)`
 };
 const tempPosts = [
   PerfectSaas
