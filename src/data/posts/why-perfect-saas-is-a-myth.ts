@@ -2,9 +2,9 @@ export const PerfectSaas = {
     date: "January 22, 2026",
     slug: 'why-the-perfect-SaaS-is-a-myth',
     title: "Why the Perfect SaaS is a Myth",
-    excerpt: "You're business is a Bentley. And you don't take that a Bently to Jiffy Lube.",
+    excerpt: "You're business is a Bentley. Don't take it to Jiffy Lube.",
     body: `# Why the Perfect SaaS is a Myth
-    
+
 
 **You’re in it. The business you’ve put your soul into is now reaping the reward.** Orders are moving, the team is expanding, and the vision is no longer just a sketch on a napkin. But under the hood, things are starting to rattle.
 
