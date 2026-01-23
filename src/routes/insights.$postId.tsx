@@ -17,7 +17,7 @@ export const Route = createFileRoute('/insights/$postId')({
       return { title: 'Post Not Found | Vendata Solutions' }
     }
     console.log({loaderData})
-    const { title, body } = loaderData
+    const { title, excerpt } = loaderData
 
     return {
       meta: [
@@ -25,10 +25,10 @@ export const Route = createFileRoute('/insights/$postId')({
         { name: 'publish_date', content: loaderData.date },
         { 
           name: 'description', 
-          content: body.slice(0, 155) // Clean excerpt for SEO
+          content:  excerpt.length<155?excerpt:excerpt.slice(0, 155) // Clean excerpt for SEO
         },
         { property: 'og:title', content: title },
-        { property: 'og:description', content: body.slice(0, 155) },
+        { property: 'og:description', content: excerpt.length<155?excerpt:excerpt.slice(0, 155)},
         { property: 'og:type', content: 'article' },
         { name: 'twitter:card', content: 'summary_large_image' },
       ],
