@@ -46,6 +46,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
       root.classList.remove('dark');
     }
     // Save preference for next time
+    localStorage.setItem('vendata-theme', state.darkMode.toString());
+
   }, [state.darkMode, hydrated]);
 
   // Stable action creators
