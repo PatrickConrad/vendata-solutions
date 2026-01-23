@@ -41,12 +41,12 @@ export default function CaseStudiesPage() {
     <div className="bg-white dark:bg-slate-900 transition-colors duration-300">
       
       {/* HEADER */}
-      <section className="py-20 px-6 bg-slate-50 dark:bg-slate-950">
+      <section className="py-20 px-6 bg-slate-50 dark:bg-slate-950 bg-v-navy">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-black italic tracking-tighter dark:text-white mb-6 uppercase">
+          <h1 className="text-5xl md:text-7xl font-black italic tracking-tighter  text-white mb-6 uppercase">
             Proven <span className="text-v-gold">Logic.</span>
           </h1>
-          <p className="text-xl text-slate-500 dark:text-slate-400 font-medium">
+          <p className="text-xl text-slate-200 dark:text-slate-400 font-medium">
             Learn how we bridge technical gaps to create operational freedom.
           </p>
         </div>
