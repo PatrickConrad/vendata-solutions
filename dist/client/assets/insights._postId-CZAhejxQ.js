@@ -1,0 +1,1 @@
+import{p as t,j as r}from"../main.js";import{C as e}from"./ComingSoon-D7HDNocj.js";import"./Divider-BkZ6YwML.js";function i(){const o=t.useLoaderData();return Array.isArray(o)?null:r.jsx(r.Fragment,{children:r.jsx("div",{className:"w-full flex align-middle justify-center py-15",children:r.jsx(e,{})})})}export{i as component};

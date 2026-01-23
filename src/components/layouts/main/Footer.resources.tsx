@@ -12,7 +12,7 @@ export const FooterResources = ({className}: FooterResourcesProps) => {
             <li><Link to="/insights" className="hover:text-(--v-gold) transition">Insights</Link></li>
             <li><Link to="/privacy" className="hover:text-(--v-gold) transition">Privacy Policy</Link></li>
             <li><Link to="/terms" className="hover:text-(--v-gold) transition">Terms of Service</Link></li>
-            <li><Link to="/sitemap.xml" className="hover:text-(--v-gold) transition">Sitemap</Link></li>
+            {/* <li><Link to="/sitemap.xml" className="hover:text-(--v-gold) transition">Sitemap</Link></li> */}
         </ul>
         <br/>
     </div>

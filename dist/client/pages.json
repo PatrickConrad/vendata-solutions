@@ -1,0 +1,65 @@
+{
+  "pages": [
+    {
+      "path": "/"
+    },
+    {
+      "path": "/about"
+    },
+    {
+      "path": "/app"
+    },
+    {
+      "path": "/auth"
+    },
+    {
+      "path": "/contact"
+    },
+    {
+      "path": "/insights"
+    },
+    {
+      "path": "/privacy"
+    },
+    {
+      "path": "/services"
+    },
+    {
+      "path": "/terms"
+    },
+    {
+      "path": "/app/dashboard"
+    },
+    {
+      "path": "/consultation/book"
+    },
+    {
+      "path": "/consultation"
+    },
+    {
+      "path": "/insights/"
+    },
+    {
+      "path": "/insights/why-custom-software-wins",
+      "fromCrawl": true
+    },
+    {
+      "path": "/insights/automation-for-growth",
+      "fromCrawl": true
+    },
+    {
+      "path": "/insights/data-clarity",
+      "fromCrawl": true
+    },
+    {
+      "path": "/insights/the-problems-with-saas",
+      "fromCrawl": true
+    },
+    {
+      "path": "/insights/intro-to-automation",
+      "fromCrawl": true
+    }
+  ],
+  "host": "https://vendata.solutions",
+  "lastBuilt": "2026-01-23T04:30:48.865Z"
+}
