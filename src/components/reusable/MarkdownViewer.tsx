@@ -4,7 +4,7 @@ import remarkGfm from 'remark-gfm'
 export function MarkdownReader({ content, date }: { content: string, date: string }) {
   return (
     //prose is used to set themeing for all but custom images
-    <article className="prose w-xl md:w-3xl py-15">
+    <article className="prose px-5 w-xl md:w-3xl py-15">
       <ReactMarkdown 
         remarkPlugins={[remarkGfm]}
         components={{

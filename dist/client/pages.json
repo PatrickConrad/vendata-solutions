@@ -40,26 +40,10 @@
       "path": "/insights/"
     },
     {
-      "path": "/insights/why-custom-software-wins",
-      "fromCrawl": true
-    },
-    {
-      "path": "/insights/automation-for-growth",
-      "fromCrawl": true
-    },
-    {
-      "path": "/insights/data-clarity",
-      "fromCrawl": true
-    },
-    {
-      "path": "/insights/the-problems-with-saas",
-      "fromCrawl": true
-    },
-    {
-      "path": "/insights/intro-to-automation",
+      "path": "/insights/why-the-perfect-SaaS-is-a-myth",
       "fromCrawl": true
     }
   ],
   "host": "https://vendata.solutions",
-  "lastBuilt": "2026-01-23T04:42:30.691Z"
+  "lastBuilt": "2026-01-23T13:30:35.103Z"
 }
