@@ -2,6 +2,7 @@ import { createFileRoute, notFound } from '@tanstack/react-router'
 import { PostNotFound } from '../components/content/PostNotFound'
 import { getPost } from '../../server/routes/content'
 import { ComingSoon } from '../components/reusable/ComingSoon'
+import { MarkdownReader } from '../components/reusable/MarkdownViewer'
 export const Route = createFileRoute('/insights/$postId')({
  // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({ params }) => {
@@ -21,6 +22,7 @@ export const Route = createFileRoute('/insights/$postId')({
     return {
       meta: [
         { title: `${title.length>50?title.slice(0,50):title} | Vendata Blog` },
+        { name: 'publish_date', content: loaderData.date },
         { 
           name: 'description', 
           content: body.slice(0, 155) // Clean excerpt for SEO
@@ -54,24 +56,7 @@ function RouteComponent() {
 
   return (
     <>
-    {/* {
-      !data || !data.title
-      ?
-      <p>Loading...</p>
-      :
-      <article className="max-w-3xl mx-auto py-20 px-6">
-        <h1 className="text-4xl font-bold text-v-navy mb-4 capitalize">
-          {data.title}
-        </h1>
-        <div className="h-1 w-20 bg-v-gold mb-8" />
-        <p className="text-lg text-slate-700 leading-relaxed first-letter:text-3xl">
-          {data.body==null?data.excerpt:data.body}
-        </p>
-      </article>
-    } */}
-    <div className='w-full flex align-middle justify-center py-15'>
-      <ComingSoon />
-    </div>
+      <MarkdownReader content={data.body!} date={data.date} />
     </>
    
   )

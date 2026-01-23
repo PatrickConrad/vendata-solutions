@@ -9,9 +9,9 @@ export const SunIcon = ({className = "w-10 h-10", color="currentColor"}: IconPro
         viewBox="0 0 512 512" 
         fill="none" 
         stroke={`${color}`} 
-        stroke-width="20" 
-        stroke-linecap="round" 
-        stroke-linejoin="round"
+        strokeWidth="20" 
+        strokeLinecap="round" 
+        strokeLinejoin="round"
         className={`${className??'w-6 h-6'}`}
     >
         <circle cx="256" cy="256" r="80" />

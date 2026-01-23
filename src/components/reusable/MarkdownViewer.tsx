@@ -1,17 +1,28 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
-export function MarkdownReader({ content }: { content: string }) {
+export function MarkdownReader({ content, date }: { content: string, date: string }) {
   return (
-    <article className="
-      prose prose-slate lg:prose-xl dark:prose-invert max-w-none
-      /* Any one-off overrides can still go here */
-    ">
+    //prose is used to set themeing for all but custom images
+    <article className="prose w-xl md:w-3xl py-15">
       <ReactMarkdown 
         remarkPlugins={[remarkGfm]}
         components={{
-          // We only keep the IMG mapping because it has complex 
-          // layout requirements that CSS alone can't handle.
+          h1: ({ children }) => (
+            <div className="mb-8">
+              <h1 className="mb-1 text-v-navy dark:text-white">{children}</h1>
+              {date && (
+                <p className="text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0">
+                  {date}
+                </p>
+              )}
+            </div>
+          ),
+          a: ({ href, children }) => (
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              {children}
+            </a>
+          ),
           img: ({ src, alt }) => (
             <div className="my-12 flex flex-col items-center">
               <img 
