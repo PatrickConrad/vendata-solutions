@@ -1,5 +1,5 @@
-import { C as getDefaultExportFromCjs, n as jsxRuntimeExports } from "./worker-entry-DtSzxleN.js";
-import { l as Route } from "./router-C_3c_XVt.js";
+import { C as getDefaultExportFromCjs, n as jsxRuntimeExports } from "./worker-entry-Cwesk94q.js";
+import { l as Route } from "./router-BhUzs2VS.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -14692,7 +14692,7 @@ function remarkGfm(options) {
 function MarkdownReader({ content: content2, date }) {
   return (
     //prose is used to set themeing for all but custom images
-    /* @__PURE__ */ jsxRuntimeExports.jsx("article", { className: "prose w-xl md:w-3xl py-15", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+    /* @__PURE__ */ jsxRuntimeExports.jsx("article", { className: "prose px-5 w-xl md:w-3xl py-15", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       Markdown,
       {
         remarkPlugins: [remarkGfm],

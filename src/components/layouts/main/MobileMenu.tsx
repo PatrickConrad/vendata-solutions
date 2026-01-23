@@ -1,7 +1,7 @@
 import { RefObject, useEffect, useRef } from "react"
 import { ScrollLink } from "../../reusable/ScrollLink"
 import { useModalClose } from "../../../hooks/useModal"
-import { ThemeButton } from "../../reusable/ThemeBtn"
+import { OrbitToggle, ThemeButton } from "../../reusable/ThemeBtn"
 
 interface MobileMenuProps {
   open: boolean
@@ -40,7 +40,9 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
         >
           Start Working Smarter
         </ScrollLink>
-        <div className="w-full flex justify-center"><ThemeButton /></div>
+        <div className="w-full flex justify-center">
+          <OrbitToggle />
+        </div>
       </div>
     </div>
   )

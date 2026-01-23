@@ -55,12 +55,12 @@ export function OrbitToggle() {
     >
       {/* Sun Icon */}
       <span className="orbit-icon orbit-sun text-v-gold">
-        <SunIcon />
+        <SunIcon className="w-8 h-8"/>
       </span>
       
       {/* Moon Icon */}
-      <span className="orbit-icon orbit-moon text-v-gold">
-        <MoonIcon />
+      <span className="orbit-icon orbit-moon text-v-navy">
+        <MoonIcon className="w-8 h-8"/>
       </span>
     </button>
   );
