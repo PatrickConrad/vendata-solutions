@@ -12,14 +12,14 @@ export function MarkdownReader({ content, subHeading, date }: { content: string,
           h1: ({ children }) => (
             <div className="mb-8">
               <h1 className="mb-1 text-v-navy">{children}</h1>
-              {subHeading && (
-                <p className="text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0">
-                  {subHeading}
-                </p>
-              )}
               {date && (
                 <p className="text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0">
                   {date}
+                </p>
+              )}
+              {subHeading && (
+                <p className="text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0">
+                  {subHeading}
                 </p>
               )}
             </div>
