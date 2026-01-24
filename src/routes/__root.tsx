@@ -5,6 +5,7 @@ import { Footer } from '../components/layouts/main/Footer';
 import '../app.css'
 import { AnalyticsTracker } from '../components/reusable/AnalyticsTracker';
 import { AppProvider } from '../context/AppContext';
+import { OrbitToggle } from '../components/reusable/ThemeBtn';
 
 export const Route = createRootRoute({
     head: () => ({
@@ -71,6 +72,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
                     <Nav />
                     <main className='pt-20'>{children}</main>
                     <Footer/>
+                    <OrbitToggle />
                 </body>
             </AppProvider>
         </html>

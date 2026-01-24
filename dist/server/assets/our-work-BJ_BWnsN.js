@@ -1,5 +1,5 @@
-import { n as jsxRuntimeExports } from "./worker-entry-DXQcJuQi.js";
-import { f as faCartFlatbed, a as faUtensils, b as faDumbbell, F as FontAwesomeIcon, L as Link } from "./router-BGBagwIY.js";
+import { n as jsxRuntimeExports } from "./worker-entry-e6CAuN6k.js";
+import { f as faCartFlatbed, a as faUtensils, b as faDumbbell, F as FontAwesomeIcon, L as Link } from "./router-CxTZZCqb.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -35,12 +35,12 @@ function CaseStudiesPage() {
     }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white dark:bg-slate-900 transition-colors duration-300", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 px-6 bg-slate-50 dark:bg-slate-950", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-4xl mx-auto text-center", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-5xl md:text-7xl font-black italic tracking-tighter dark:text-white mb-6 uppercase", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 px-6 bg-slate-50 dark:bg-slate-950 bg-v-navy", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-4xl mx-auto text-center", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-5xl md:text-7xl font-black italic tracking-tighter  text-white mb-6 uppercase", children: [
         "Proven ",
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-v-gold", children: "Logic." })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-slate-500 dark:text-slate-400 font-medium", children: "Learn how we bridge technical gaps to create operational freedom." })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-slate-200 dark:text-slate-400 font-medium", children: "Learn how we bridge technical gaps to create operational freedom." })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-24 px-6 max-w-6xl mx-auto space-y-32", children: cases.map((c, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "group relative", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `absolute -inset-4 rounded-[4rem] bg-slate-50 dark:bg-slate-800/30 -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500` }),

@@ -43,7 +43,6 @@ export const DesktopMenu = () => {
           <FontAwesomeIcon icon={faUserLock} className="text-lg opacity-80 group-hover:opacity-100 dark:text-(--v-gold)" />
         </Link>
         
-        <OrbitToggle />
       </div>
     </div>
   )

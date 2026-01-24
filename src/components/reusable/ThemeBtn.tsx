@@ -26,8 +26,11 @@ export function ThemeButton() {
   );
 }
 
+type OrbitTogglePropType = {
+  isDesktop?: boolean 
+}
 
-export function OrbitToggle() {
+export function OrbitToggle({isDesktop = true}: OrbitTogglePropType) {
   const state = useContext(StateContext);
   const actions = useContext(ActionsContext);
   const [isSpinning, setIsSpinning] = useState(false);
@@ -48,9 +51,9 @@ export function OrbitToggle() {
   return (
     <button
       onClick={handleToggle}
-      className={`theme-orbit-container bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 ${
+      className={` theme-orbit-container bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 ${
         isSpinning ? "theme-orbit-spin" : ""
-      }`}
+      }${isDesktop?" fixed bottom-10 right-10 z-50 hidden md:flex":" flex relative"}`}
       aria-label="Toggle Theme"
     >
       {/* Sun Icon */}

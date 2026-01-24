@@ -21,18 +21,11 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
       }`}
     >
       <div className="flex flex-col gap-6 px-6 py-8 font-bold text-v-navy/80">
-        <ScrollLink
-          to="/consultation"
-          onClick={onClose}
-          className="btn-gold px-3 py-3 rounded-lg text-center text-sm"
-        >
-          Start Working Smarter
+        <ScrollLink to="/about" onClick={onClose} className="hover:text-(--v-gold)">
+          About
         </ScrollLink>
         <ScrollLink to="/services" onClick={onClose} className="hover:text-(--v-gold)">
           Services
-        </ScrollLink>
-        <ScrollLink to="/about" onClick={onClose} className="hover:text-(--v-gold)">
-          About
         </ScrollLink>
         <ScrollLink to="/our-work" onClick={onClose} className="hover:text-(--v-gold) transition">
           Our Work
@@ -43,8 +36,15 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
         <ScrollLink to="/auth" onClick={onClose} className="decoration-1 hover:text-(--v-gold)">
           Login
         </ScrollLink>
-        <div className="w-full flex justify-center">
-          <OrbitToggle />
+        <ScrollLink
+          to="/consultation"
+          onClick={onClose}
+          className="btn-gold px-3 py-3 rounded-lg text-center text-sm"
+        >
+          Start Working Smarter
+        </ScrollLink>
+        <div className="w-full flex justify-center h-10 ">
+          <OrbitToggle isDesktop={false} />
         </div>
       </div>
     </div>
