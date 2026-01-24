@@ -10,6 +10,8 @@ export const PerfectSaas = {
 
 **Your business is a Bentley**. It is a high-performance, precision-engineered machine built for a specific purpose. And you **don’t take a Bentley to Jiffy Lube.**
 
+![Bentley picture](https://vendata.solutions/bentley.jpg "Luxury. Precision. Style.")
+
 Yet, as most businesses scale, they try to do exactly that. They buy a "standard" oil change in the form of a one-size-fits-all SaaS subscription, hoping it can handle the horsepower of a custom operation. It works for a while, but eventually, the mismatch starts to tear the engine apart.
 
 ### The Story of the "Standard" Struggle
@@ -23,6 +25,8 @@ Sarah didn't buy a software solution; she bought a digital filing cabinet that h
 ### The Reality of "Almost"
 
 Running a business on software that "only does some of what you need" is like driving with a GPS that only knows 80% of the roads. You’re fine on the highway, but the moment you hit the specialized terrain where your business actually makes its money, you’re flying blind.
+
+![Missing Puzzle Picture](https://vendata.solutions/missing-puzzle.jpg "Missing pieces distort the big picture.")
 
 This creates a specific kind of operational rot:
 
@@ -48,5 +52,5 @@ We look for the specific gaps—the niches the software missed—and we build th
 
 You shouldn't have to change your business to fit your software. Your software should be engineered to support your Bentley.
 
-[**End the Vendetta. Call VenData.**](http://vendata.solutions/consultation)`
+[**End the Vendetta. Call VenData.**](https://vendata.solutions/consultation)`
 }

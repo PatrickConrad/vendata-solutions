@@ -16,7 +16,6 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
     useEffect(()=>{
 
     const handleScroll = (event: Event) => {
-      console.log({event})
       onClose();
     }
 

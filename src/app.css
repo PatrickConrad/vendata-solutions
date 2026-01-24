@@ -169,67 +169,74 @@ body {
     color: var(--v-navy);
     line-height: 1.75;
     font-size: 1.125rem;
+
+
+    h1 {
+        font-size: 2.25em;
+        font-weight: 800;
+        margin-top: 0;
+        margin-bottom: 0.88em;
+        line-height: 1.1;
+        color: var(--v-navy);
+    }
+
+    h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        line-height: 1.33;
+        color: var(--v-navy);
+    }
+
+    h3 {
+        font-size: 1.25em;
+        font-weight: 600;
+        margin-top: 1.6em;
+        margin-bottom: 0.6em;
+        line-height: 1.6;
+        color: var(--v-navy);
+    }
+
+    p {
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
+    }
+
+    a {
+        color: var(--v-navy);
+        text-decoration: underline;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    blockquote {
+        font-weight: 500;
+        font-style: italic;
+        color: var(--v-navy);
+        border-left-width: 0.25rem;
+        border-left-color: var(--v-gold);
+        padding-left: 1em;
+        margin-top: 1.6em;
+        margin-bottom: 1.6em;
+    }
+
+    ul {
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
+        list-style-type: disc;
+        padding-left: 1.625em;
+    }
+
+    li {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
 }
 
-.prose h1 {
-    font-size: 2.25em;
-    font-weight: 800;
-    margin-top: 0;
-    margin-bottom: 0.88em;
-    line-height: 1.1;
-    color: var(--v-navy);
-}
 
-.prose h2 {
-    font-size: 1.5em;
-    font-weight: 700;
-    margin-top: 2em;
-    margin-bottom: 1em;
-    line-height: 1.33;
-    color: var(--v-navy);
-}
-
-.prose h3 {
-    font-size: 1.25em;
-    font-weight: 600;
-    margin-top: 1.6em;
-    margin-bottom: 0.6em;
-    line-height: 1.6;
-    color: var(--v-navy);
-}
-
-.prose p {
-    margin-top: 1.25em;
-    margin-bottom: 1.25em;
-}
-
-.prose strong {
-    font-weight: 700;
-    color: var(--v-navy);
-}
-
-.prose blockquote {
-    font-weight: 500;
-    font-style: italic;
-    color: var(--v-navy);
-    border-left-width: 0.25rem;
-    border-left-color: var(--v-gold);
-    padding-left: 1em;
-    margin-top: 1.6em;
-    margin-bottom: 1.6em;
-}
-
-.prose ul {
-    margin-top: 1.25em;
-    margin-bottom: 1.25em;
-    list-style-type: disc;
-    padding-left: 1.625em;
-}
-
-.prose li {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
 
 
 
@@ -312,10 +319,24 @@ body {
 
     .prose {
         color: #e5e7eb;
+        h1 {
+            color: var(--v-gold)
+        }
+        
+        h2, h3 {
+            color: #ffffff;
+        }
+
+        blockquote p {
+            color: #ffffff
+        }
+
+        a {
+            color: var(--v-gold) !important;
+            text-decoration-color: var(--v-gold);
+        }
     }
-    .prose h1, .prose h2, .prose h3, strong {
-        color: #ffffff;
-    }
+   
 }
 
 
