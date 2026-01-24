@@ -62,13 +62,13 @@ export default function Services() {
                <FontAwesomeIcon icon={faStethoscope} color="var(--v-green)" size="lg" />
                <h2 className="text-2xl font-bold uppercase tracking-tight">The Process Audit</h2>
             </div>
-            <p className="text-4xl font-black text-v-green mb-4">$600 <span className="text-sm text-slate-400 font-normal uppercase tracking-widest">Flat Rate</span></p>
-            <p className="text-slate-300 mb-8 flex-grow">
+            <p className="text-4xl font-black text-v-green mb-4">$800 <span className="text-sm text-slate-400 font-normal uppercase tracking-widest">Flat Rate</span></p>
+            <p className="text-slate-300 mb-8 grow">
               A surgical onsite analysis of your current business workflows, SaaS spend, and operational bottlenecks. 
             </p>
             <div className="space-y-3 text-xs text-slate-300 bg-black/20 p-6 rounded-2xl border border-white/10">
                <p className="flex items-center gap-2"><FontAwesomeIcon icon={faLocationDot} size="xs" /> Includes 1 onsite visit (Washington-Baltimore area).</p>
-               <p className="flex items-center gap-2"><FontAwesomeIcon icon={faClock} size="xs" /> $400 per additional onsite visit.</p>
+               <p className="flex items-center gap-2"><FontAwesomeIcon icon={faClock} size="xs" /> $600 per additional onsite visit.</p>
                <p className="flex items-center gap-2"><FontAwesomeIcon icon={faPlaneDeparture} size="xs" /> Travel outside DMV subject to additional fees.</p>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function Services() {
             {/* Optimization */}
             <div className="group bg-white dark:bg-slate-900 p-12 rounded-[3rem] shadow-lg border-b-8 border-v-navy hover:-translate-y-2 transition-transform">
                <h3 className="text-3xl font-bold mb-2 dark:text-white uppercase tracking-tighter">Optimization</h3>
-               <p className="text-5xl font-black text-v-green mb-6">$80<span className="text-lg font-medium text-slate-400">/hr</span></p>
+               <p className="text-5xl font-black text-v-green mb-6">$100<span className="text-lg font-medium text-slate-400">/hr</span></p>
                <p className="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed">
                  Fixing and streamlining what you already have. We optimize your current tools to avoid software fatigue.
                </p>
@@ -98,7 +98,7 @@ export default function Services() {
             {/* Custom Bridges */}
             <div className="group bg-white dark:bg-slate-900 p-12 rounded-[3rem] shadow-lg border-b-8 border-v-green hover:-translate-y-2 transition-transform">
                <h3 className="text-3xl font-bold mb-2 dark:text-white uppercase tracking-tighter">Custom Bridging</h3>
-               <p className="text-5xl font-black text-v-green mb-6">$110<span className="text-lg font-medium text-slate-400">/hr</span></p>
+               <p className="text-5xl font-black text-v-green mb-6">$130<span className="text-lg font-medium text-slate-400">/hr</span></p>
                <p className="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed">
                  The "Missing Link." Custom code connecting disparate data sources where no pre-built tool exists.
                </p>
