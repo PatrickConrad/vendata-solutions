@@ -13,6 +13,23 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
 
     useModalClose(menuRef, open, onClose, true);
 
+    useEffect(()=>{
+
+    const handleScroll = (event: Event) => {
+      console.log({event})
+      onClose();
+    }
+
+    // Delay prevents the "Open" click from immediately triggering the close
+      document.addEventListener("scroll", handleScroll)
+
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+
   return (
     <div
       ref={menuRef}

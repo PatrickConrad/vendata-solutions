@@ -1,4 +1,4 @@
-import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, q as useHydrated, O as Outlet, T as TSS_SERVER_FUNCTION, s as getServerFnById, v as createServerFn, x as notFound } from "./worker-entry-BYWtftAZ.js";
+import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, q as useHydrated, O as Outlet, T as TSS_SERVER_FUNCTION, s as getServerFnById, v as createServerFn, x as notFound } from "./worker-entry-BfG-1LFl.js";
 const preloadWarning = "Error preloading route! ☝️";
 class BaseRoute {
   constructor(options) {
@@ -1089,11 +1089,14 @@ function useModalClose(ref, isOpen, onClose, isNavMenu = false) {
     const handleEscape = (event) => {
       if (event.key === "Escape") onClose();
     };
+    const handleScroll = (event) => onClose();
     document.addEventListener("mousedown", handleClickOutside);
     document.addEventListener("keydown", handleEscape);
+    document.addEventListener("scroll", handleScroll);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener("scroll", handleScroll);
     };
   }, [isOpen, onClose, ref, isNavMenu]);
 }
@@ -5722,7 +5725,7 @@ function RootDocument({ children }) {
     ] })
   ] }) });
 }
-const $$splitComponentImporter$f = () => import("./terms-DoaYFpR1.js");
+const $$splitComponentImporter$f = () => import("./terms-CHOWlfN1.js");
 const Route$h = createFileRoute("/terms")({
   component: lazyRouteComponent($$splitComponentImporter$f, "component")
 });
@@ -5770,10 +5773,10 @@ function Services() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold uppercase tracking-tight", children: "The Process Audit" })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-4xl font-black text-v-green mb-4", children: [
-          "$600 ",
+          "$800 ",
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-slate-400 font-normal uppercase tracking-widest", children: "Flat Rate" })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300 mb-8 flex-grow", children: "A surgical onsite analysis of your current business workflows, SaaS spend, and operational bottlenecks." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300 mb-8 grow", children: "A surgical onsite analysis of your current business workflows, SaaS spend, and operational bottlenecks." }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3 text-xs text-slate-300 bg-black/20 p-6 rounded-2xl border border-white/10", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "flex items-center gap-2", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faLocationDot, size: "xs" }),
@@ -5781,7 +5784,7 @@ function Services() {
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "flex items-center gap-2", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faClock, size: "xs" }),
-            " $400 per additional onsite visit."
+            " $600 per additional onsite visit."
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "flex items-center gap-2", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(FontAwesomeIcon, { icon: faPlaneDeparture, size: "xs" }),
@@ -5799,7 +5802,7 @@ function Services() {
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "group bg-white dark:bg-slate-900 p-12 rounded-[3rem] shadow-lg border-b-8 border-v-navy hover:-translate-y-2 transition-transform", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-3xl font-bold mb-2 dark:text-white uppercase tracking-tighter", children: "Optimization" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-5xl font-black text-v-green mb-6", children: [
-            "$80",
+            "$100",
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-lg font-medium text-slate-400", children: "/hr" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed", children: "Fixing and streamlining what you already have. We optimize your current tools to avoid software fatigue." }),
@@ -5808,7 +5811,7 @@ function Services() {
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "group bg-white dark:bg-slate-900 p-12 rounded-[3rem] shadow-lg border-b-8 border-v-green hover:-translate-y-2 transition-transform", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-3xl font-bold mb-2 dark:text-white uppercase tracking-tighter", children: "Custom Bridging" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-5xl font-black text-v-green mb-6", children: [
-            "$110",
+            "$130",
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-lg font-medium text-slate-400", children: "/hr" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed", children: 'The "Missing Link." Custom code connecting disparate data sources where no pre-built tool exists.' }),
@@ -6060,19 +6063,19 @@ Sitemap: https://vendata.solutions/sitemap.xml`;
     }
   }
 });
-const $$splitComponentImporter$e = () => import("./privacy-Cgsgep99.js");
+const $$splitComponentImporter$e = () => import("./privacy-DDLmTjjA.js");
 const Route$e = createFileRoute("/privacy")({
   component: lazyRouteComponent($$splitComponentImporter$e, "component")
 });
-const $$splitComponentImporter$d = () => import("./our-work-BVud98Vs.js");
+const $$splitComponentImporter$d = () => import("./our-work-DO4IX8BK.js");
 const Route$d = createFileRoute("/our-work")({
   component: lazyRouteComponent($$splitComponentImporter$d, "component")
 });
-const $$splitComponentImporter$c = () => import("./insights-CisChoI3.js");
+const $$splitComponentImporter$c = () => import("./insights-DDBLqitH.js");
 const Route$c = createFileRoute("/insights")({
   component: lazyRouteComponent($$splitComponentImporter$c, "component")
 });
-const $$splitComponentImporter$b = () => import("./contact-D-0qnAzY.js");
+const $$splitComponentImporter$b = () => import("./contact-qKgXuR4Q.js");
 const Route$b = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -6084,7 +6087,7 @@ const Route$b = createFileRoute("/contact")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$b, "component")
 });
-const $$splitComponentImporter$a = () => import("./auth-DlS8CUtT.js");
+const $$splitComponentImporter$a = () => import("./auth-BP_ItRtp.js");
 const Route$a = createFileRoute("/auth")({
   head: () => ({
     meta: [{
@@ -6096,7 +6099,7 @@ const Route$a = createFileRoute("/auth")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$a, "component")
 });
-const $$splitComponentImporter$9 = () => import("./app-DZh8pGdR.js");
+const $$splitComponentImporter$9 = () => import("./app-PLzv1JLl.js");
 const Route$9 = createFileRoute("/app")({
   head: () => ({
     meta: [{
@@ -6108,7 +6111,7 @@ const Route$9 = createFileRoute("/app")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$9, "component")
 });
-const $$splitComponentImporter$8 = () => import("./about-DYBmvZFC.js");
+const $$splitComponentImporter$8 = () => import("./about-Bci0B4BO.js");
 const Route$8 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -6120,7 +6123,7 @@ const Route$8 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$8, "component")
 });
-const $$splitComponentImporter$7 = () => import("./_404-CTD3RxLE.js");
+const $$splitComponentImporter$7 = () => import("./_404-DKNZRcBL.js");
 const Route$7 = createFileRoute("/$404")({
   head: () => ({
     meta: [{
@@ -6132,7 +6135,7 @@ const Route$7 = createFileRoute("/$404")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-const $$splitComponentImporter$6 = () => import("./index-oBAYWUdp.js");
+const $$splitComponentImporter$6 = () => import("./index-CnBIvQGG.js");
 const Route$6 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter$6, "component"),
   validateSearch: (search) => {
@@ -6156,7 +6159,7 @@ const createSsrRpc = (functionId, importer) => {
 };
 const getPost = createServerFn().inputValidator((data) => data).handler(createSsrRpc("7d7e857e3252f6ecf0c7eabed1b93b93ea9bc14341b78a5c25ea74735091c89a"));
 const getPosts = createServerFn().handler(createSsrRpc("d272144f1318d10ea310ced5cd7027f8a2446e3e606218ceac770b3c3bd059fc"));
-const $$splitComponentImporter$5 = () => import("./insights.index-d_e6IvS5.js");
+const $$splitComponentImporter$5 = () => import("./insights.index-n1zynhvI.js");
 const Route$5 = createFileRoute("/insights/")({
   loader: async ({
     params
@@ -6167,7 +6170,7 @@ const Route$5 = createFileRoute("/insights/")({
   },
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-const $$splitComponentImporter$4 = () => import("./index-pA-WGTLI.js");
+const $$splitComponentImporter$4 = () => import("./index-BBpMzxsA.js");
 const Route$4 = createFileRoute("/consultation/")({
   head: () => ({
     meta: [{
@@ -6183,8 +6186,8 @@ const Route$4 = createFileRoute("/consultation/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitNotFoundComponentImporter = () => import("./insights._postId-CvwevAvr.js");
-const $$splitComponentImporter$3 = () => import("./insights._postId-sr0Pta6O.js");
+const $$splitNotFoundComponentImporter = () => import("./insights._postId-KpydKfpi.js");
+const $$splitComponentImporter$3 = () => import("./insights._postId-D6aC1o9m.js");
 const Route$3 = createFileRoute("/insights/$postId")({
   // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({
@@ -6242,15 +6245,15 @@ const Route$3 = createFileRoute("/insights/$postId")({
   component: lazyRouteComponent($$splitComponentImporter$3, "component"),
   notFoundComponent: lazyRouteComponent($$splitNotFoundComponentImporter, "notFoundComponent")
 });
-const $$splitComponentImporter$2 = () => import("./book-BCTK99h1.js");
+const $$splitComponentImporter$2 = () => import("./book-DHab5jwl.js");
 const Route$2 = createFileRoute("/consultation/book")({
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./app.dashboard-BZSnyin7.js");
+const $$splitComponentImporter$1 = () => import("./app.dashboard-XenHgV9i.js");
 const Route$1 = createFileRoute("/app/dashboard")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./app._layout-DAmWuaHo.js");
+const $$splitComponentImporter = () => import("./app._layout-DDkFZaQB.js");
 const Route2 = createFileRoute("/app/_layout")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });

@@ -33,18 +33,14 @@ export function useModalClose(
       if (event.key === "Escape") onClose()
     }
 
-    const handleScroll = (event: Event) => onClose();
-
     // Delay prevents the "Open" click from immediately triggering the close
       document.addEventListener("mousedown", handleClickOutside)
       document.addEventListener("keydown", handleEscape)
-      document.addEventListener("scroll", handleScroll)
 
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside)
       document.removeEventListener("keydown", handleEscape)
-      document.removeEventListener("scroll", handleScroll)
     }
   }, [isOpen, onClose, ref, isNavMenu])
 }
