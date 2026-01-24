@@ -1,5 +1,5 @@
-import { C as getDefaultExportFromCjs, n as jsxRuntimeExports } from "./worker-entry-Dt2zdijq.js";
-import { l as Route } from "./router-BdAuSBw7.js";
+import { C as getDefaultExportFromCjs, n as jsxRuntimeExports } from "./worker-entry-DvH6h4Cb.js";
+import { l as Route } from "./router-BmICJWCx.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -14689,7 +14689,8 @@ function remarkGfm(options) {
   fromMarkdownExtensions.push(gfmFromMarkdown());
   toMarkdownExtensions.push(gfmToMarkdown(settings));
 }
-function MarkdownReader({ content: content2, date }) {
+function MarkdownReader({ content: content2, subHeading, date }) {
+  console.log({ subHeading });
   return (
     //prose is used to set themeing for all but custom images
     /* @__PURE__ */ jsxRuntimeExports.jsx("article", { className: "prose px-5 w-xl md:w-3xl py-15", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -14699,6 +14700,7 @@ function MarkdownReader({ content: content2, date }) {
         components: {
           h1: ({ children }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-8", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "mb-1 text-v-navy", children }),
+            subHeading && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0", children: subHeading }),
             date && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0", children: date })
           ] }),
           a: ({ href, children }) => /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href, target: "_blank", rel: "noopener noreferrer", children }),
@@ -14724,7 +14726,7 @@ function RouteComponent() {
   if (Array.isArray(data)) {
     return null;
   }
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(MarkdownReader, { content: data.body, date: data.date }) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(MarkdownReader, { content: data.body, subHeading: data.subHeading, date: data.date }) });
 }
 export {
   RouteComponent as component

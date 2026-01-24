@@ -33,7 +33,7 @@ export const DesktopMenu = () => {
       <Link to="/insights" className="hover:text-(--v-gold) transition">Insights</Link>
       <Link to="/about" className="hover:text-(--v-gold) transition">About</Link>
       <Link to="/services" className="hover:text-(--v-gold) transition">Services</Link>
-      <Link to="/consultation" className="btn-gold px-6 py-2.5 rounded-lg text-sm">Start Working Smarter</Link>
+      <Link to="/consultation" className="btn-gold  py-2.5 rounded-lg text-sm px-3">Start Working Smarter</Link>
       {/* <ThemeButton /> */}
       <div className="flex items-center gap-4 border-l border-slate-200 dark:border-slate-700 pl-6">
         <Link 

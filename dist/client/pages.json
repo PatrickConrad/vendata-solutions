@@ -43,10 +43,14 @@
       "path": "/insights/"
     },
     {
+      "path": "/insights/the-hidden-costs-that-never-show-up-on-your-P-and-L",
+      "fromCrawl": true
+    },
+    {
       "path": "/insights/why-the-perfect-SaaS-is-a-myth",
       "fromCrawl": true
     }
   ],
   "host": "https://vendata.solutions",
-  "lastBuilt": "2026-01-24T15:56:45.144Z"
+  "lastBuilt": "2026-01-24T18:30:07.345Z"
 }

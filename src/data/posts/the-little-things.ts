@@ -83,7 +83,7 @@ Either way, you’re stuck:
 
 That’s not resilience. That’s duct tape.
 
-## Why a software company is talking to you about this
+## Why a software company is talking to you about internal friction
 
 This is why a software company is lecturing you about how to run your business.
 
@@ -91,12 +91,11 @@ Because what people call “tech problems” are almost always **process problem
 
 A real process audit isn’t about tools. It’s about listening for friction. It’s about surfacing the little things before they calcify into culture.
 
-At Vendata Solutions, we don’t just look at systems — we look at behavior.  
-We don’t just hear employee complaints — we trace them to their root.
+At Vendata Solutions, we don’t just look at systems; we look at behavior. We don’t just hear employee complaints; we trace them to their root.
 
 Sometimes the fix is software.  
 Sometimes it’s structure.  
 Sometimes it’s simply acknowledging the cost of what’s being ignored.
 
 **The little things are never little.** They’re just quiet; until they aren’t.`
-}
+} 
