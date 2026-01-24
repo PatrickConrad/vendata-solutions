@@ -25,15 +25,13 @@ export const Route = createRootRoute({
            // Open Graph / Facebook / LinkedIn
             { property: 'og:title', content: "Vendata Solutions | Operational Excellence through Data" },
             { property: 'og:description', content: "Connect your tools, automate your workflows, and gain actionable insights." },
-            { property: 'og:image', content: "https://www.vendata.solutions/vendata-venn-logo-full-text.png" },
-            { property: 'og:image:secure_url', content: "https://www.vendata.solutions/vendata-venn-logo-full-text.png" },
+            { property: 'og:image', content: "https://www.vendata.solutions/vendata-venn-logo-full-text-social.png" },
+            { property: 'og:image:secure_url', content: "https://www.vendata.solutions/vendata-venn-logo-full-text-social.png" },
             { property: 'og:image:type', content: 'image/png' },
-            { property: 'og:image:width', content: '1200' },
-            { property: 'og:image:height', content: '630' },
 
             // Twitter
             { name: 'twitter:card', content: 'summary_large_image' },
-            { name: 'twitter:image', content: 'https://www.vendata.solutions/vendata-venn-logo-full-text.png' },
+            { name: 'twitter:image', content: 'https://www.vendata.solutions/vendata-venn-logo-full-text-social.png' },
         ],
         links: [
             { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" },

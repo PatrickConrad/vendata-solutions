@@ -18,9 +18,9 @@ export const Hero = () => {
                     <Link to="/consultation" className="btn-gold px-10 py-4 rounded-xl font-bold text-lg">
                         Get A Free Consultation
                     </Link>
-                    <a href="#services" className="border-2 border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">
+                    <Link to="/our-work" className="border-2 border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">
                         View Solutions
-                    </a>
+                    </Link>
                 </div>
             </div>
         </header>

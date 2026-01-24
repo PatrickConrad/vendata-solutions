@@ -11,7 +11,14 @@ export const Route = createFileRoute('/about')({
       {
         name: 'description',
         content: "Discover the expertise behind Vendata Solutions. We specialize in building custom ERP/CRM systems and API integrations that empower businesses to operate with technical precision."
-      }
+      },
+      { property: 'og:image', content: "https://www.vendata.solutions/vendata-venn-logo-full-text-social.png" },
+      { property: 'og:image:secure_url', content: "https://www.vendata.solutions/vendata-venn-logo-full-text-social.png" },
+      { property: 'og:image:type', content: 'image/png' },
+
+      // Twitter
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:image', content: 'https://www.vendata.solutions/vendata-venn-logo-full-text-social.png' },
     ],
   }),
   component: RouteComponent,
