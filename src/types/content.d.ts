@@ -3,5 +3,6 @@ export type ContentPost = {
     title: string, 
     excerpt:string,
     date: string,
-    body?: string
+    subHeading: string,
+    body: string
 }

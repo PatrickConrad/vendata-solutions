@@ -1,7 +1,8 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
-export function MarkdownReader({ content, date }: { content: string, date: string }) {
+export function MarkdownReader({ content, subHeading, date }: { content: string, subHeading: string, date: string }) {
+  console.log({subHeading})
   return (
     //prose is used to set themeing for all but custom images
     <article className="prose px-5 w-xl md:w-3xl py-15">
@@ -11,6 +12,11 @@ export function MarkdownReader({ content, date }: { content: string, date: strin
           h1: ({ children }) => (
             <div className="mb-8">
               <h1 className="mb-1 text-v-navy">{children}</h1>
+              {subHeading && (
+                <p className="text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0">
+                  {subHeading}
+                </p>
+              )}
               {date && (
                 <p className="text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0">
                   {date}

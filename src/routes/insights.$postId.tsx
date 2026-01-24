@@ -56,9 +56,9 @@ function RouteComponent() {
 
   return (
     <>
-      <MarkdownReader content={data.body!} date={data.date} />
+      <MarkdownReader content={data.body!} subHeading={data.subHeading} date={data.date} />
     </>
    
   )
 }
-  
+    

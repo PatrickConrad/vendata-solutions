@@ -1,5 +1,5 @@
-import { C as getDefaultExportFromCjs, n as jsxRuntimeExports } from "./worker-entry-DrHI9JZB.js";
-import { l as Route } from "./router-DmK0L24r.js";
+import { C as getDefaultExportFromCjs, n as jsxRuntimeExports } from "./worker-entry-Dt2zdijq.js";
+import { l as Route } from "./router-BdAuSBw7.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -14698,20 +14698,20 @@ function MarkdownReader({ content: content2, date }) {
         remarkPlugins: [remarkGfm],
         components: {
           h1: ({ children }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-8", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "mb-1 text-v-navy dark:text-white", children }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "mb-1 text-v-navy", children }),
             date && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0", children: date })
           ] }),
           a: ({ href, children }) => /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href, target: "_blank", rel: "noopener noreferrer", children }),
-          img: ({ src, alt }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "my-12 flex flex-col items-center", children: [
+          img: ({ src, alt, title }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "my-12 flex flex-col items-center", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(
               "img",
               {
                 src,
                 alt,
-                className: "rounded-3xl shadow-2xl border-2 border-slate-100 dark:border-slate-800"
+                className: "rounded-3xl shadow-2xl border-2 border-slate-100 dark:border-slate-800 max-h-90"
               }
             ),
-            alt && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-4 text-sm text-slate-400 font-medium", children: alt })
+            title && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-4 text-sm text-slate-400 font-medium", children: title })
           ] })
         },
         children: content2
