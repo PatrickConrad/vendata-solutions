@@ -1,5 +1,5 @@
-import { C as getDefaultExportFromCjs, n as jsxRuntimeExports } from "./worker-entry-B7pV8_m7.js";
-import { l as Route } from "./router-BJcfoUKa.js";
+import { C as getDefaultExportFromCjs, n as jsxRuntimeExports } from "./worker-entry-CXiVyz5L.js";
+import { l as Route } from "./router-C72EMag6.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -14700,8 +14700,8 @@ function MarkdownReader({ content: content2, subHeading, date }) {
         components: {
           h1: ({ children }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-8", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "mb-1 text-v-navy", children }),
-            subHeading && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0", children: subHeading }),
-            date && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0", children: date })
+            date && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0", children: date }),
+            subHeading && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-slate-400 dark:text-slate-500 font-medium m-0", children: subHeading })
           ] }),
           a: ({ href, children }) => /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href, target: "_blank", rel: "noopener noreferrer", children }),
           img: ({ src, alt, title }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "my-12 flex flex-col items-center", children: [

@@ -17,7 +17,7 @@ export const Route = createFileRoute('/insights/$postId')({
       return { title: 'Post Not Found | Vendata Solutions' }
     }
     console.log({loaderData})
-    const { title, excerpt } = loaderData
+    const { title, excerpt, image, author } = loaderData
 
     return {
       meta: [
@@ -30,7 +30,16 @@ export const Route = createFileRoute('/insights/$postId')({
         { property: 'og:title', content: title },
         { property: 'og:description', content: excerpt.length<155?excerpt:excerpt.slice(0, 155)},
         { property: 'og:type', content: 'article' },
+        { property: 'og:author', content: author??'Patrick Conrad' },
+        { property: 'og:image', content: image??"https://www.vendata.solutions/vendata-venn-logo-full-text.png" },
+        { property: 'og:image:secure_url', content: image??"https://www.vendata.solutions/vendata-venn-logo-full-text.png" },
+        { property: 'og:image:type', content: 'image/png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+
+        // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: image??'https://www.vendata.solutions/vendata-venn-logo-full-text.png' },
       ],
     }
   },

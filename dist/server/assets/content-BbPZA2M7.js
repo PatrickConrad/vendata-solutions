@@ -1,4 +1,4 @@
-import { y as createServerRpc, v as createServerFn } from "./worker-entry-B7pV8_m7.js";
+import { y as createServerRpc, v as createServerFn } from "./worker-entry-CXiVyz5L.js";
 import "node:events";
 import "node:async_hooks";
 import "node:stream";
@@ -33,13 +33,13 @@ That’s where the little things start to slip through the cracks.
 
 ## Responsibility doesn’t mean doing everything yourself
 
-No owner can — or should — be personally responsible for every task. But every owner *is* responsible for what gets ignored.
+No owner can; or should; be personally responsible for every task. But every owner *is* responsible for what gets ignored.
 
 What “accounting for the little things” looks like varies wildly:
 
 - Sometimes it *does* mean rolling up your sleeves and doing it yourself.
 - Sometimes it means putting trusted people in place.
-- Sometimes it means giving employees the freedom to solve problems creatively — and the authority to slow things down when something feels off.
+- Sometimes it means giving employees the freedom to solve problems creatively; and the authority to slow things down when something feels off.
 
 What it never looks like is dismissing concerns as noise.
 
@@ -55,15 +55,15 @@ Employee motivation is actually simple: **security**.
 
 - Security to pay their bills  
 - Security to grow instead of stagnate  
-- Security that their role — and their effort — matters  
+- Security that their role; and their effort; matters  
 
-What they don’t want is exactly what you want. And that’s not a moral failing — it’s just reality.
+What they don’t want is exactly what you want. And that’s not a moral failing; it’s just reality.
 
 That gap is why the little things matter. Because the little things are how you signal care.
 
 ## When good employees build bad systems
 
-Employees are paid to do a job. When they don’t have the right tools, the good ones don’t complain — they adapt.
+Employees are paid to do a job. When they don’t have the right tools, the good ones don’t complain; they adapt.
 
 They build workarounds. Personal systems. Notes. Spreadsheets. Shortcuts. They make it work.
 
@@ -71,7 +71,7 @@ From the outside, the problem looks solved.
 
 But it isn’t.
 
-Those “solutions” now live inside people’s heads. They become *how Jenny does her job* — not how the job is supposed to be done.
+Those “solutions” now live inside people’s heads. They become *how Jenny does her job*; not how the job is supposed to be done.
 
 Welcome to the most expensive subscription you don’t know you’re paying for:  
 **tribal knowledge.**

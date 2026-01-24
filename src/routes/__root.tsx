@@ -22,10 +22,18 @@ export const Route = createRootRoute({
                 name: 'description',
                 content: "Vendata Solutions unifies business operations through custom ERP/CRM development, API bridging, and precision automation. We eliminate data silos and manual bottlenecks to build a seamless digital infrastructure."
             },
+           // Open Graph / Facebook / LinkedIn
             { property: 'og:title', content: "Vendata Solutions | Operational Excellence through Data" },
-            { property: 'og:description', content: "Connect your tools, automate your workflows, and gain actionable insights with custom software solutions from Vendata." },
-            { property: 'og:image', content: "https://www.vendatasolutions.com/vendata-ven-logo-full-text.png" },
+            { property: 'og:description', content: "Connect your tools, automate your workflows, and gain actionable insights." },
+            { property: 'og:image', content: "https://www.vendata.solutions/vendata-venn-logo-full-text.png" },
+            { property: 'og:image:secure_url', content: "https://www.vendata.solutions/vendata-venn-logo-full-text.png" },
+            { property: 'og:image:type', content: 'image/png' },
+            { property: 'og:image:width', content: '1200' },
+            { property: 'og:image:height', content: '630' },
 
+            // Twitter
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:image', content: 'https://www.vendata.solutions/vendata-venn-logo-full-text.png' },
         ],
         links: [
             { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" },

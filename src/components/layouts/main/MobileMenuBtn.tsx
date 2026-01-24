@@ -14,7 +14,7 @@ export const MobileMenuBtn = ({open, setOpen}: MobileMenuBtnProps) => {
             e.stopPropagation()
                 setOpen()
           }}
-          className="md:hidden flex flex-col justify-center items-center gap-1.5"
+          className="min-[1020px]:hidden flex flex-col justify-center items-center gap-1.5"
           aria-label="Toggle menu"
         >
             <ServiceIcon icon={open?faClose:faBars} color="var(--v-navy)"/>

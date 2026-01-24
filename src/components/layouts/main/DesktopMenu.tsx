@@ -27,7 +27,7 @@ export const DesktopMenu = () => {
   }
 
   return (
-    <div className="hidden md:flex items-center gap-8 font-bold text-v-navy/70">
+    <div className="hidden min-[1020px]:flex items-center gap-8 font-bold text-v-navy/70">
       <Link to="/" className="hover:text-(--v-gold) transition">Home</Link>
       <Link to="/our-work" className="hover:text-(--v-gold) transition">Our Work</Link>
       <Link to="/insights" className="hover:text-(--v-gold) transition">Insights</Link>

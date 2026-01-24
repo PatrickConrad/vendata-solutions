@@ -4,5 +4,7 @@ export type ContentPost = {
     excerpt:string,
     date: string,
     subHeading: string,
-    body: string
+    body: string,
+    image?: string,
+    author?: string
 }

@@ -1,4 +1,4 @@
-import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, q as useHydrated, O as Outlet, T as TSS_SERVER_FUNCTION, s as getServerFnById, v as createServerFn, x as notFound } from "./worker-entry-B7pV8_m7.js";
+import { r as rootRouteId, i as invariant, t as trimPathLeft, j as joinPaths, a as reactExports, d as dummyMatchContext, m as matchContext, u as useRouterState, b as useRouter, c as requireReactDom, e as useForwardedRef, f as useIntersectionObserver, g as functionalUpdate, h as exactPathTest, k as removeTrailingSlash, l as deepEqual, R as React, n as jsxRuntimeExports, w as warning, o as isModuleNotFoundError, p as RouterCore, q as useHydrated, O as Outlet, T as TSS_SERVER_FUNCTION, s as getServerFnById, v as createServerFn, x as notFound } from "./worker-entry-CXiVyz5L.js";
 const preloadWarning = "Error preloading route! ☝️";
 class BaseRoute {
   constructor(options) {
@@ -1356,7 +1356,7 @@ const MobileMenu = ({ open, onClose }) => {
     "div",
     {
       ref: menuRef,
-      className: `md:hidden bg-white border-t border-b border-gray-500 overflow-hidden transition-all duration-300 ${open ? "max-h-105 opacity-100" : "max-h-0 opacity-0"}`,
+      className: `min-[1020px]:hidden bg-white border-t border-b border-gray-500 overflow-hidden transition-all duration-300 ${open ? "max-h-105 opacity-100" : "max-h-0 opacity-0"}`,
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-6 px-6 py-8 font-bold text-v-navy/80", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/about", onClick: onClose, className: "hover:text-(--v-gold)", children: "About" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollLink, { to: "/services", onClick: onClose, className: "hover:text-(--v-gold)", children: "Services" }),
@@ -5528,7 +5528,7 @@ const DesktopMenu = () => {
     setToggled(prefersDark);
     document.documentElement.classList.toggle("dark", prefersDark);
   }, []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hidden md:flex items-center gap-8 font-bold text-v-navy/70", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hidden min-[1020px]:flex items-center gap-8 font-bold text-v-navy/70", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/", className: "hover:text-(--v-gold) transition", children: "Home" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/our-work", className: "hover:text-(--v-gold) transition", children: "Our Work" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/insights", className: "hover:text-(--v-gold) transition", children: "Insights" }),
@@ -5574,7 +5574,7 @@ const MobileMenuBtn = ({ open, setOpen }) => {
         e2.stopPropagation();
         setOpen();
       },
-      className: "md:hidden flex flex-col justify-center items-center gap-1.5",
+      className: "min-[1020px]:hidden flex flex-col justify-center items-center gap-1.5",
       "aria-label": "Toggle menu",
       children: /* @__PURE__ */ jsxRuntimeExports.jsx(ServiceIcon, { icon: open ? faClose : faBars, color: "var(--v-navy)" })
     }
@@ -5687,9 +5687,17 @@ const Route$i = createRootRoute({
         name: "description",
         content: "Vendata Solutions unifies business operations through custom ERP/CRM development, API bridging, and precision automation. We eliminate data silos and manual bottlenecks to build a seamless digital infrastructure."
       },
+      // Open Graph / Facebook / LinkedIn
       { property: "og:title", content: "Vendata Solutions | Operational Excellence through Data" },
-      { property: "og:description", content: "Connect your tools, automate your workflows, and gain actionable insights with custom software solutions from Vendata." },
-      { property: "og:image", content: "https://www.vendatasolutions.com/vendata-ven-logo-full-text.png" }
+      { property: "og:description", content: "Connect your tools, automate your workflows, and gain actionable insights." },
+      { property: "og:image", content: "https://www.vendata.solutions/vendata-venn-logo-full-text.png" },
+      { property: "og:image:secure_url", content: "https://www.vendata.solutions/vendata-venn-logo-full-text.png" },
+      { property: "og:image:type", content: "image/png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      // Twitter
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.vendata.solutions/vendata-venn-logo-full-text.png" }
     ],
     links: [
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" },
@@ -5732,7 +5740,7 @@ function RootDocument({ children }) {
     ] })
   ] }) });
 }
-const $$splitComponentImporter$f = () => import("./terms-BREuIzgF.js");
+const $$splitComponentImporter$f = () => import("./terms-BHYej_gw.js");
 const Route$h = createFileRoute("/terms")({
   component: lazyRouteComponent($$splitComponentImporter$f, "component")
 });
@@ -6070,19 +6078,19 @@ Sitemap: https://vendata.solutions/sitemap.xml`;
     }
   }
 });
-const $$splitComponentImporter$e = () => import("./privacy-U1nO3duY.js");
+const $$splitComponentImporter$e = () => import("./privacy-BMLiSX17.js");
 const Route$e = createFileRoute("/privacy")({
   component: lazyRouteComponent($$splitComponentImporter$e, "component")
 });
-const $$splitComponentImporter$d = () => import("./our-work-ka524iO9.js");
+const $$splitComponentImporter$d = () => import("./our-work-BZWRjlqC.js");
 const Route$d = createFileRoute("/our-work")({
   component: lazyRouteComponent($$splitComponentImporter$d, "component")
 });
-const $$splitComponentImporter$c = () => import("./insights-D9XPlUlQ.js");
+const $$splitComponentImporter$c = () => import("./insights-BYR6fknC.js");
 const Route$c = createFileRoute("/insights")({
   component: lazyRouteComponent($$splitComponentImporter$c, "component")
 });
-const $$splitComponentImporter$b = () => import("./contact-COep-yyt.js");
+const $$splitComponentImporter$b = () => import("./contact-C2hyjlvR.js");
 const Route$b = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -6094,7 +6102,7 @@ const Route$b = createFileRoute("/contact")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$b, "component")
 });
-const $$splitComponentImporter$a = () => import("./auth-Dt0TdQMh.js");
+const $$splitComponentImporter$a = () => import("./auth-CEK0ALQk.js");
 const Route$a = createFileRoute("/auth")({
   head: () => ({
     meta: [{
@@ -6106,7 +6114,7 @@ const Route$a = createFileRoute("/auth")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$a, "component")
 });
-const $$splitComponentImporter$9 = () => import("./app-BoHtw13g.js");
+const $$splitComponentImporter$9 = () => import("./app-CjTOATPm.js");
 const Route$9 = createFileRoute("/app")({
   head: () => ({
     meta: [{
@@ -6118,7 +6126,7 @@ const Route$9 = createFileRoute("/app")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$9, "component")
 });
-const $$splitComponentImporter$8 = () => import("./about-BQkKYLy2.js");
+const $$splitComponentImporter$8 = () => import("./about-MAXKsjwS.js");
 const Route$8 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -6130,7 +6138,7 @@ const Route$8 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$8, "component")
 });
-const $$splitComponentImporter$7 = () => import("./_404-CDET48Fo.js");
+const $$splitComponentImporter$7 = () => import("./_404-Dp7_kZvE.js");
 const Route$7 = createFileRoute("/$404")({
   head: () => ({
     meta: [{
@@ -6142,7 +6150,7 @@ const Route$7 = createFileRoute("/$404")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-const $$splitComponentImporter$6 = () => import("./index-BsdEPAyA.js");
+const $$splitComponentImporter$6 = () => import("./index-CzIOLsWc.js");
 const Route$6 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter$6, "component"),
   validateSearch: (search) => {
@@ -6166,7 +6174,7 @@ const createSsrRpc = (functionId, importer) => {
 };
 const getPost = createServerFn().inputValidator((data) => data).handler(createSsrRpc("7d7e857e3252f6ecf0c7eabed1b93b93ea9bc14341b78a5c25ea74735091c89a"));
 const getPosts = createServerFn().handler(createSsrRpc("d272144f1318d10ea310ced5cd7027f8a2446e3e606218ceac770b3c3bd059fc"));
-const $$splitComponentImporter$5 = () => import("./insights.index-7vs_2keE.js");
+const $$splitComponentImporter$5 = () => import("./insights.index-skb19p_y.js");
 const Route$5 = createFileRoute("/insights/")({
   loader: async ({
     params
@@ -6177,7 +6185,7 @@ const Route$5 = createFileRoute("/insights/")({
   },
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-const $$splitComponentImporter$4 = () => import("./index-D2WgdF26.js");
+const $$splitComponentImporter$4 = () => import("./index-CDwSObt6.js");
 const Route$4 = createFileRoute("/consultation/")({
   head: () => ({
     meta: [{
@@ -6193,8 +6201,8 @@ const Route$4 = createFileRoute("/consultation/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitNotFoundComponentImporter = () => import("./insights._postId-BP5znGm8.js");
-const $$splitComponentImporter$3 = () => import("./insights._postId-jgOHHGG6.js");
+const $$splitNotFoundComponentImporter = () => import("./insights._postId-L0INbklP.js");
+const $$splitComponentImporter$3 = () => import("./insights._postId-CpwAJBR3.js");
 const Route$3 = createFileRoute("/insights/$postId")({
   // 1. Fetch data from the API (using JSONPlaceholder for now)
   loader: async ({
@@ -6222,45 +6230,84 @@ const Route$3 = createFileRoute("/insights/$postId")({
     });
     const {
       title,
-      excerpt
+      excerpt,
+      image,
+      author
     } = loaderData;
     return {
-      meta: [{
-        title: `${title.length > 50 ? title.slice(0, 50) : title} | Vendata Blog`
-      }, {
-        name: "publish_date",
-        content: loaderData.date
-      }, {
-        name: "description",
-        content: excerpt.length < 155 ? excerpt : excerpt.slice(0, 155)
-        // Clean excerpt for SEO
-      }, {
-        property: "og:title",
-        content: title
-      }, {
-        property: "og:description",
-        content: excerpt.length < 155 ? excerpt : excerpt.slice(0, 155)
-      }, {
-        property: "og:type",
-        content: "article"
-      }, {
-        name: "twitter:card",
-        content: "summary_large_image"
-      }]
+      meta: [
+        {
+          title: `${title.length > 50 ? title.slice(0, 50) : title} | Vendata Blog`
+        },
+        {
+          name: "publish_date",
+          content: loaderData.date
+        },
+        {
+          name: "description",
+          content: excerpt.length < 155 ? excerpt : excerpt.slice(0, 155)
+          // Clean excerpt for SEO
+        },
+        {
+          property: "og:title",
+          content: title
+        },
+        {
+          property: "og:description",
+          content: excerpt.length < 155 ? excerpt : excerpt.slice(0, 155)
+        },
+        {
+          property: "og:type",
+          content: "article"
+        },
+        {
+          property: "og:author",
+          content: author ?? "Patrick Conrad"
+        },
+        {
+          property: "og:image",
+          content: image ?? "https://www.vendata.solutions/vendata-venn-logo-full-text.png"
+        },
+        {
+          property: "og:image:secure_url",
+          content: image ?? "https://www.vendata.solutions/vendata-venn-logo-full-text.png"
+        },
+        {
+          property: "og:image:type",
+          content: "image/png"
+        },
+        {
+          property: "og:image:width",
+          content: "1200"
+        },
+        {
+          property: "og:image:height",
+          content: "630"
+        },
+        // Twitter
+        {
+          name: "twitter:card",
+          content: "summary_large_image"
+        },
+        {
+          name: "twitter:image",
+          content: image ?? "https://www.vendata.solutions/vendata-venn-logo-full-text.png"
+        }
+      ]
     };
   },
   component: lazyRouteComponent($$splitComponentImporter$3, "component"),
   notFoundComponent: lazyRouteComponent($$splitNotFoundComponentImporter, "notFoundComponent")
 });
-const $$splitComponentImporter$2 = () => import("./book-VObf_5F0.js");
+const $$splitComponentImporter$2 = () => import("./book-n17OJg1p.js");
 const Route$2 = createFileRoute("/consultation/book")({
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./app.dashboard-Bbht62Ri.js");
+const $$splitComponentImporter$1 = () => import("./app.dashboard-86UxoMUK.js");
 const Route$1 = createFileRoute("/app/dashboard")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./app._layout-DRRCSqJ4.js");
+const $$splitComponentImporter = () => import("./app._layout-DraWdb4B.js");
 const Route2 = createFileRoute("/app/_layout")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });

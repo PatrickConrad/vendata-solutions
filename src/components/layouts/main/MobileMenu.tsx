@@ -32,7 +32,7 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
   return (
     <div
       ref={menuRef}
-      className={`md:hidden bg-white border-t border-b border-gray-500 overflow-hidden transition-all duration-300 ${
+      className={`min-[1020px]:hidden bg-white border-t border-b border-gray-500 overflow-hidden transition-all duration-300 ${
         open ? "max-h-105 opacity-100" : "max-h-0 opacity-0"
       }`}
     >
