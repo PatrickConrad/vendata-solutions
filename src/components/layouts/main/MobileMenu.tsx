@@ -2,6 +2,8 @@ import { RefObject, useEffect, useRef } from "react"
 import { ScrollLink } from "../../reusable/ScrollLink"
 import { useModalClose } from "../../../hooks/useModal"
 import { OrbitToggle, ThemeButton } from "../../reusable/ThemeBtn"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faUserLock } from "@fortawesome/free-solid-svg-icons"
 
 interface MobileMenuProps {
   open: boolean
@@ -37,9 +39,6 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
       }`}
     >
       <div className="flex flex-col gap-6 px-6 py-8 font-bold text-v-navy/80">
-        <ScrollLink to="/auth" onClick={onClose} className="decoration-1 hover:text-(--v-gold)">
-          Login
-        </ScrollLink>
         <ScrollLink to="/about" onClick={onClose} className="hover:text-(--v-gold)">
           About
         </ScrollLink>
@@ -65,7 +64,12 @@ export const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
          Work with Vendata
         </ScrollLink>
         <div className="w-full flex justify-center h-10 ">
-          <OrbitToggle isDesktop={false} />
+          <ScrollLink 
+              to="/auth" 
+              onClick={onClose}
+          >
+            <FontAwesomeIcon icon={faUserLock} className="text-lg opacity-80 group-hover:opacity-100 dark:text-(--v-gold)" />
+          </ScrollLink>
         </div>
       </div>
     </div>
