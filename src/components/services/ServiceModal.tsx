@@ -1,13 +1,14 @@
 import { ReactNode } from "react";
 import { ServiceLayout } from "./ServiceLayout";
 import { Modal } from "../layouts/main/Modal";
-import { useRouter, useSearch } from "@tanstack/react-router";
+import { Link, useRouter, useSearch } from "@tanstack/react-router";
 
 type ServiceProps = {
     title: string,
     tagLine: string|ReactNode,
     icon: ReactNode,
-    modal: ReactNode
+    modal: ReactNode,
+    link: string
 }
 
 export const ServiceModal = (props: ServiceProps) => {
@@ -26,6 +27,8 @@ export const ServiceModal = (props: ServiceProps) => {
             replace: false
         })
     }
+
+
     return(
          <>
             <div 
@@ -61,6 +64,9 @@ export const ServiceModal = (props: ServiceProps) => {
                         {
                             <ServiceLayout title={props.title} subtitle={props.tagLine} icon={props.icon} body={props.modal} />
                         }
+                        <div className="w-full flex justify-center">
+                            <Link to={props.link} className="text-v-gold underline">Learn more</Link>
+                        </div>
                     </>
                 </Modal>
             }

@@ -8,7 +8,7 @@ export const LatestPost = ({post}: LatestPostProps) => {
   return (
 <div className="lg:col-span-2">
         <Link
-            to="/insights/$postId"
+            to="/intel/$postId"
             params={{ postId: post.slug }}
             className="group block bg-v-navy rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition  hover:border hover:border-(--v-gold)"
         >

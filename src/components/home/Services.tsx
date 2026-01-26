@@ -9,7 +9,7 @@ export const Services = (props: Record<string, unknown>) => {
                 <div className="grid md:grid-cols-3 gap-8">
                     {
                         Object.values(services).map((service)=>(
-                            <ServiceModal key={service.title} modal={service.modal} title={service.title} tagLine={service.shortDesc} icon={service.icon} />
+                            <ServiceModal key={service.title} modal={service.modal} title={service.title} tagLine={service.shortDesc} icon={service.icon} link={service.link}/>
                         ))
                     }
                 </div>

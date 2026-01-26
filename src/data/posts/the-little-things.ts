@@ -1,7 +1,7 @@
 export const LittleThings = {
     date: "January 24, 2026",
     slug: 'the-hidden-costs-that-never-show-up-on-your-P-and-L',
-    title: "Account for the Little Things: The hidden costs that never show up on your P&L",
+    title: "Account for the Little Things",
     excerpt: "Bosses who blame employees, downplay complaints, or write off friction as “part of the job” always feel it later.",
     subHeading: "As businesses scale, overlooked process gaps, manual workarounds, and employee friction quietly create hidden operational costs that compound long before they are ever noticed in financial reports.",
     body: `# Account for the Little Things

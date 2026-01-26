@@ -8,7 +8,7 @@ export const UnifiedSection = () => {
                 <Convergence />
                 <div className="lg:w-1/2">
                 <h2 className="text-4xl lg:text-5xl font-extrabold text-v-navy">
-                    Our Process: Simple, Transparent, Effective
+                    The Order of Operations: Simple, Transparent, Effective
                 </h2>
                 <div className="w-20 h-1.5 bg-v-gold mt-5 mb-8"></div>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8">

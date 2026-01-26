@@ -1,144 +1,132 @@
+// 1. Business Analysis & Audits
 export function ProcessClarityServiceBody() {
   return (
     <>
       <p>
-        Most businesses are buried under inefficient workflows, outdated habits, and tools that no longer serve them.
-        That’s not strategy - that’s surrender.
+        Most businesses suffer from hidden inefficiencies, outdated processes, and SaaS that doesn’t fit. 
+        Our audits uncover bottlenecks and identify what’s truly slowing you down.
       </p>
 
       <p>
-        We break down your processes, expose what’s slowing you down, and rebuild them with intention.
-        Less waste. More control. Clear direction forward.
+        We break down workflows, map team responsibilities, and highlight opportunities for immediate improvement.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
-        <li>Workflow audits</li>
-        <li>Bottleneck elimination</li>
-        <li>Operational clarity</li>
-        <li>Strategic realignment</li>
+        <li>Comprehensive workflow audits</li>
+        <li>Bottleneck identification & elimination</li>
+        <li>Team & tool evaluation</li>
+        <li>Actionable operational recommendations</li>
       </ul>
     </>
   )
 }
 
-
+// 2. Advisory & Strategy
 export function InsightfulIntelligenceServiceBody() {
   return (
     <>
       <p>
-        Big tech sells dashboards. We deliver understanding.
-        Because numbers alone don’t win battles - insight does.
+        Technical decisions can make or break efficiency. We act as your trusted advisor, helping evaluate SaaS tools, team workflows, and overall strategy.
       </p>
 
       <p>
-        We turn your data into a weapon: revealing threats, uncovering opportunities, 
-        and giving you the clarity to act before your competitors even notice.
+        Our goal: ensure every tool and process supports your growth and eliminates unnecessary friction.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
-        <li>Strategic analytics</li>
-        <li>Opportunity detection</li>
-        <li>Revenue intelligence</li>
-        <li>Decision support</li>
+        <li>SaaS validation & evaluation</li>
+        <li>Requirements gathering & analysis</li>
+        <li>Team performance assessment</li>
+        <li>Strategic guidance for operational improvements</li>
       </ul>
     </>
   )
 }
 
-
+// 3. SaaS & Process Optimization
 export function SystemHarmonyServiceBody() {
   return (
     <>
       <p>
-        Most businesses are locked into bloated software stacks that fight against them instead of for them.
-        We break those barriers.
+        Unlock the full potential of the technology you already use. Many businesses underutilize existing tools — we make them work harder for you.
       </p>
 
       <p>
-        Your existing tools don’t need replacing - they need alignment.
-        We connect, enhance, and streamline your systems so they work as one force.
+        Our optimizations streamline workflows, reduce friction, and increase efficiency without replacing your stack.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
-        <li>SaaS optimization</li>
-        <li>System alignment</li>
-        <li>Reduced tool friction</li>
-        <li>Operational control</li>
+        <li>Software utilization audits</li>
+        <li>Process streamlining & standardization</li>
+        <li>Reduced manual work & errors</li>
+        <li>Operational efficiency improvements</li>
       </ul>
     </>
   )
 }
 
-
+// 4. Prebuilt Tools & Bridging
 export function ConnectedOperationsServiceBody() {
   return (
     <>
       <p>
-        Disconnected systems slow you down, hide problems, and drain resources.
-        That’s how businesses lose momentum.
+        Gaps between systems create redundant work and slow down operations. Our prebuilt tools and bridging solutions fill these gaps seamlessly.
       </p>
 
       <p>
-        We connect your platforms into a single, coordinated operation -
-        so information moves fast and decisions hit harder.
+        Reduce repetitive tasks, unify disconnected platforms, and save valuable time.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
-        <li>Real-time integrations</li>
-        <li>Data flow automation</li>
-        <li>Operational alignment</li>
-        <li>System reliability</li>
+        <li>Ready-to-use integration templates</li>
+        <li>Automated data flow between systems</li>
+        <li>Reduced redundancy & manual updates</li>
+        <li>Faster operational cycles</li>
       </ul>
     </>
   )
 }
 
-
+// 5. Custom Automation & Integration
 export function SmartAutomationServiceBody() {
   return (
     <>
       <p>
-        Manual work steals time, energy, and momentum.
-        We take that burden off your team’s shoulders.
+        Manual workflows drain time and energy. We build custom automations to make your business faster, smarter, and more reliable.
       </p>
 
       <p>
-        With intelligent automation, your business moves faster, cleaner, and smarter -
-        without burning out your people.
+        From automating repetitive tasks to connecting platforms, we future-proof operations for growth.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
-        <li>Workflow automation</li>
-        <li>Smart triggers</li>
-        <li>Error reduction</li>
-        <li>Time reclamation</li>
+        <li>Custom workflow automation</li>
+        <li>Smart triggers & notifications</li>
+        <li>System integration & bridging</li>
+        <li>Time-saving, error-reducing solutions</li>
       </ul>
     </>
   )
 }
 
-
-
+// 6. Full Application & Web Development
 export function PurposeBuiltSolutionsServiceBody() {
   return (
     <>
       <p>
-        Big platforms sell bloated systems you don’t need.
-        We build only what moves the needle.
+        When off-the-shelf tools aren’t enough, we build purpose-built applications and websites to power your growth.
       </p>
 
       <p>
-        When your business demands something better, we design focused tools
-        that integrate seamlessly and deliver real results - nothing extra.
+        Every app is designed to integrate seamlessly, solve real business problems, and unlock new opportunities.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
-        <li>Custom ERP & CRM</li>
-        <li>Internal platforms</li>
-        <li>Targeted tools</li>
-        <li>High-impact solutions</li>
+        <li>Custom ERP, CRM, and internal platforms</li>
+        <li>Web and mobile applications</li>
+        <li>Scalable, high-performance solutions</li>
+        <li>Designed for operational efficiency and growth</li>
       </ul>
     </>
   )
 }
-

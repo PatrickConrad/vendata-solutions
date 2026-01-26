@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 export function PostNotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] px-6 text-center">
@@ -7,12 +9,12 @@ export function PostNotFound() {
         We couldn't find the article you're looking for. It may have been moved, 
         deleted, or hasn't been published yet.
       </p>
-      <a 
-        href="/content" 
+      <Link
+        to="/intel" 
         className="px-6 py-3 bg-v-navy text-white rounded-md hover:bg-slate-800 transition-colors"
       >
         Back to Blog
-      </a>
+      </Link>
     </div>
   )
 }

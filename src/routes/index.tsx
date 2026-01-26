@@ -3,6 +3,8 @@ import { Hero } from '../components/home/Hero'
 import { Services } from '../components/home/Services'
 import { CallToAction } from '../components/home/CallToAction'
 import { UnifiedSection } from '../components/home/UnifiedSection'
+import { StripeBanner } from '../components/reusable/RevolvingBanner'
+import { getIntegrations } from '../data/integrations'
 
 
 type ModalType = {
@@ -26,6 +28,7 @@ function RouteComponent() {
             <Services />
             <UnifiedSection />
             <CallToAction />
+            <StripeBanner title="Successful Integrations:" items={getIntegrations()}/>
         </>
     )
 }

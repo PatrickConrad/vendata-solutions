@@ -15,11 +15,11 @@ export const Hero = () => {
                     Innovative systems built on simple, effective processes that help your business move faster, work smarter, and grow stronger.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link to="/consultation" className="btn-gold px-10 py-4 rounded-xl font-bold text-lg">
-                        Get A Free Consultation
+                    <Link to="/services/diagnostics" className="btn-gold px-10 py-4 rounded-xl font-bold text-lg">
+                        Work with Vendata
                     </Link>
-                    <Link to="/our-work" className="border-2 border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">
-                        View Solutions
+                    <Link to="/showcase" className="border-2 border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">
+                        View Showcase
                     </Link>
                 </div>
             </div>

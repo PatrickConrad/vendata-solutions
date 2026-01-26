@@ -1,41 +1,62 @@
-import { ConnectedOperationsServiceBody, InsightfulIntelligenceServiceBody, ProcessClarityServiceBody, PurposeBuiltSolutionsServiceBody, SmartAutomationServiceBody, SystemHarmonyServiceBody } from "../components/services";
-import { EyeIcon, NexusIcon, MusicalNotesIcon, PlayButtonIcon, TargetIcon, ProcessAuditIcon, GraphIcon } from "../svg/icons";
+import { faDatabase, faGears, faMap, faPencilSquare, faPlay, faStream, faTools } from "@fortawesome/free-solid-svg-icons";
+import { 
+  ConnectedOperationsServiceBody, 
+  InsightfulIntelligenceServiceBody, 
+  ProcessClarityServiceBody, 
+  PurposeBuiltSolutionsServiceBody, 
+  SmartAutomationServiceBody, 
+  SystemHarmonyServiceBody 
+} from "../components/services";
+
+import { EyeIcon, NexusIcon, MusicalNotesIcon, PlayButtonIcon, TargetIcon, GraphIcon } from "../svg/icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const services = {
-  processAssessment: {
-    title: "Business Process Clarity",
-    shortDesc: <>Identify <span className="text-v-green font-semibold">friction points and bottlenecks</span> in order to better optimize efficiency.</>,
+  businessAnalysis: {
+    title: "Business Analysis & Audits",
+    shortDesc: <>Identify <span className="text-v-green font-semibold">bottlenecks, inefficiencies, and friction points</span> before they slow your team down.</>,
     modal: <ProcessClarityServiceBody />,
-    icon: <EyeIcon color="var(--v-green)" />
+    icon: <FontAwesomeIcon icon={faPencilSquare} size="2xl" color="var(--v-green)" />,
+    link: '/services/diagnostics'
   },
-  actionableData: {
-    title: "Insightful Intelligence",
-    shortDesc: <>Turn complex datasets into <span className="text-v-green font-semibold">actionable insights</span> that reveal hidden opportunities and threats before anyone else sees them.</>,
+
+  advisoryStrategy: {
+    title: "Advisory & Strategy",
+    shortDesc: <>Act as your technical advisor — <span className="text-v-green font-semibold">validate SaaS, assess requirements, and optimize team workflow</span>.</>,
     modal: <InsightfulIntelligenceServiceBody />,
-    icon: <GraphIcon />
+    icon: <FontAwesomeIcon icon={faMap} size="2xl" color="slate-50"/>,
+    link: '/services/diagnostics'
   },
-  integrationEnhancement: {
-    title: "Seamless System Harmony",
-    shortDesc: <>Make your existing tools work together without friction, <span className="text-v-green font-semibold">streamline operations</span> and cut through software chaos.</>,
+
+  saasOptimization: {
+    title: "SaaS & Process Optimization",
+    shortDesc: <>Fully leverage the <span className="text-v-green font-semibold">technology you already use</span> and improve operational efficiency.</>,
     modal: <SystemHarmonyServiceBody />,
-    icon: <MusicalNotesIcon color="var(--v-gold)" />
+    icon: <FontAwesomeIcon icon={faGears} size="2xl" color="var(--v-gold)" />,
+    link: '/services/optimization'
   },
-  apiBridging: {
-    title: "Connected Operations",
-    shortDesc: <>Bridge <span className="text-v-green font-semibold">disconnected systems</span> and reduce redundency so your business moves fast, coordinated, and precise.</>,
+
+  prebuiltBridging: {
+    title: "Prebuilt Tools & Bridging",
+    shortDesc: <>Flexible prebuilt solutions to <span className="text-v-green font-semibold">fill gaps and reduce manual work</span>.</>,
     modal: <ConnectedOperationsServiceBody />,
-    icon: <NexusIcon color="var(--v-green)" />
+    icon:<FontAwesomeIcon icon={faTools} size="2xl" color="var(--v-green)" />,
+    link: '/toolbox'
   },
-  automation: {
-    title: "Smart Automation",
-    shortDesc: <>Automate repetitive workflows and <span className="text-v-green font-semibold">reclaim your team’s time</span>; work smarter, not harder.</>,
+
+  automationIntegration: {
+    title: "Custom Automation & Integration",
+    shortDesc: <>Automate workflows and <span className="text-v-green font-semibold">connect disparate systems</span> to scale operations and save time.</>,
     modal: <SmartAutomationServiceBody />,
-    icon: <PlayButtonIcon />
+    icon: <FontAwesomeIcon icon={faPlay} size="2xl" color="slate-50"/>,
+    link: '/services/customization'
   },
-  solutions: {
-    title: "Purpose-Built Solutions",
-    shortDesc: <>Build only the tools you truly need - lean, high-impact solutions that <span className="text-v-green font-semibold">solve real business problems.</span></>,
+
+  fullAppDevelopment: {
+    title: "Full Application & Web Development",
+    shortDesc: <>Build <span className="text-v-green font-semibold">custom apps and platforms</span> to unlock growth and operational excellence.</>,
     modal: <PurposeBuiltSolutionsServiceBody />,
-    icon: <TargetIcon  color="var(--v-gold)"/>
+    icon: <FontAwesomeIcon icon={faDatabase} size="2xl" color="var(--v-gold)"/>,
+    link: '/services/applications'
   }
 }

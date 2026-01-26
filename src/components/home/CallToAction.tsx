@@ -10,8 +10,8 @@ export const CallToAction = () => {
                     Your software should be too.
                 </h2>
                 <p className="text-v-gold font-bold text-xl mb-12 italic">"Stop working for your business. Start making IT work for you."</p>
-                <Link to="/consultation" className="btn-gold px-12 py-5 rounded-2xl font-black text-l md:text-xl tracking-wide uppercase">
-                    Build Your Future
+                <Link to="/services/diagnostics" className="btn-gold px-12 py-5 rounded-2xl font-black text-l md:text-xl tracking-wide uppercase">
+                    Work with Vendata
                 </Link>
             </div>
         </section>

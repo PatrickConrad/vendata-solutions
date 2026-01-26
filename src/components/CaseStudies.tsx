@@ -5,6 +5,7 @@ import {
   faDumbbell
 } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "@tanstack/react-router"
+import { MatrixBackground } from "./reusable/matrixBackground"
 
 export default function CaseStudiesPage() {
   const cases = [
@@ -30,7 +31,7 @@ export default function CaseStudiesPage() {
       title: "Regional Fitness Non-Profit",
       subtitle: "Systems Centralization & Custom App Dev",
       challenge: "A large Maryland organization was drowning in disjointed member data across multiple expensive platforms. Manual entry errors were rampant, and a major enterprise upgrade was financially impractical.",
-      logic: "Using VenData bridging tools and APIs, we centralized member data into a single 'Source of Truth.' We then built a custom internal App to give the team live control. We specifically targeted the 'Camp Check-in' workflow which was a notorious manual bottleneck.",
+      logic: "Using Vendata bridging tools and APIs, we centralized member data into a single 'Source of Truth.' We then built a custom internal App to give the team live control. We specifically targeted the 'Camp Check-in' workflow which was a notorious manual bottleneck.",
       roi: "Camp drop-off and pick-up times were reduced by 74%. Customer service response times plummeted as staff no longer had to hunt for information across three different software suites.",
       icon: faDumbbell,
       color: "text-v-navy"
@@ -41,16 +42,17 @@ export default function CaseStudiesPage() {
     <div className="bg-white dark:bg-slate-900 transition-colors duration-300">
       
       {/* HEADER */}
-      <section className="py-20 px-6 bg-slate-50 dark:bg-slate-950 bg-v-navy">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-black italic tracking-tighter  text-white mb-6 uppercase">
-            Proven <span className="text-v-gold">Logic.</span>
-          </h1>
-          <p className="text-xl text-slate-200 dark:text-slate-400 font-medium">
-            Learn how we bridge technical gaps to create operational freedom.
-          </p>
-        </div>
-      </section>
+        <MatrixBackground height="30vh">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-black italic tracking-tighter  text-white mb-6 uppercase">
+              Proven <span className="text-v-gold">Logic.</span>
+            </h1>
+            <p className="text-xl text-slate-200 dark:text-slate-400 font-medium">
+              Learn how we bridge technical gaps to create operational freedom.
+            </p>
+          </div>
+        </MatrixBackground>
+        
 
       {/* THE CASE STUDIES STACK */}
       <section className="py-24 px-6 max-w-6xl mx-auto space-y-32">
@@ -106,7 +108,7 @@ export default function CaseStudiesPage() {
       <section className="py-24 px-6 bg-v-navy text-center">
         <h2 className="text-4xl font-black text-white italic mb-8">Ready to be the next success story?</h2>
         <div className="flex justify-center gap-6">
-           <Link to="/consultation" className="btn-gold px-10 py-4 rounded-xl font-black uppercase">Book Initial Consult</Link>
+           <Link to="/services/diagnostics" className="btn-gold px-10 py-4 rounded-xl font-black uppercase">Work with Vendata</Link>
         </div>
       </section>
 

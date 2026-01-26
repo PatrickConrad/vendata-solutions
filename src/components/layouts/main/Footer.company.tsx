@@ -11,9 +11,9 @@ export const FooterCompany = ({className}: FooterCompanyProps) => {
         <ul className="space-y-4 text-sm md:text-lg">
             <li><Link to="/" className="hover:text-(--v-gold) transition">Home</Link></li>
             <li><Link to="/about" className="hover:text-(--v-gold) transition">About</Link></li>
-            <li><Link to="/contact" className="hover:text-(--v-gold) transition">Contact</Link></li>
             <li><Link to="/services" className="hover:text-(--v-gold) transition">Services</Link></li>
-            <li><Link to="/our-work" className="hover:text-(--v-gold) transition">Our Work</Link></li>
+            <li><Link to="/showcase" className="hover:text-(--v-gold) transition">Showcase</Link></li>
+            <li><Link to="/toolbox" className="hover:text-(--v-gold) transition">Toolbox</Link></li>
 
         </ul>
         <br/>

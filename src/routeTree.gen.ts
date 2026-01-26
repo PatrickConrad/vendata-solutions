@@ -9,28 +9,49 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ToolboxRouteImport } from './routes/toolbox'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as ShowcaseRouteImport } from './routes/showcase'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as OurWorkRouteImport } from './routes/our-work'
-import { Route as InsightsRouteImport } from './routes/insights'
+import { Route as IntelRouteImport } from './routes/intel'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as R404RouteImport } from './routes/$404'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as InsightsIndexRouteImport } from './routes/insights.index'
+import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as IntelIndexRouteImport } from './routes/intel.index'
 import { Route as ConsultationIndexRouteImport } from './routes/consultation/index'
-import { Route as InsightsPostIdRouteImport } from './routes/insights.$postId'
+import { Route as ServicesRetainerRouteImport } from './routes/services.retainer'
+import { Route as ServicesPricingPolicyRouteImport } from './routes/services.pricing-policy'
+import { Route as ServicesOptimizationRouteImport } from './routes/services.optimization'
+import { Route as ServicesLicensingPolicyRouteImport } from './routes/services.licensing-policy'
+import { Route as ServicesErrorPolicyRouteImport } from './routes/services.error-policy'
+import { Route as ServicesDiagnosticsRouteImport } from './routes/services.diagnostics'
+import { Route as ServicesCustomizationRouteImport } from './routes/services.customization'
+import { Route as ServicesApplicationsRouteImport } from './routes/services.applications'
+import { Route as Services404RouteImport } from './routes/services.$404'
+import { Route as IntelPostIdRouteImport } from './routes/intel.$postId'
 import { Route as ConsultationBookRouteImport } from './routes/consultation/book'
 import { Route as AppDashboardRouteImport } from './routes/app.dashboard'
 import { Route as AppLayoutRouteImport } from './routes/app._layout'
 
+const ToolboxRoute = ToolboxRouteImport.update({
+  id: '/toolbox',
+  path: '/toolbox',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShowcaseRoute = ShowcaseRouteImport.update({
+  id: '/showcase',
+  path: '/showcase',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesRoute = ServicesRouteImport.update({
@@ -48,14 +69,9 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const OurWorkRoute = OurWorkRouteImport.update({
-  id: '/our-work',
-  path: '/our-work',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InsightsRoute = InsightsRouteImport.update({
-  id: '/insights',
-  path: '/insights',
+const IntelRoute = IntelRouteImport.update({
+  id: '/intel',
+  path: '/intel',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -88,20 +104,70 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const InsightsIndexRoute = InsightsIndexRouteImport.update({
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => InsightsRoute,
+  getParentRoute: () => ServicesRoute,
+} as any)
+const IntelIndexRoute = IntelIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => IntelRoute,
 } as any)
 const ConsultationIndexRoute = ConsultationIndexRouteImport.update({
   id: '/consultation/',
   path: '/consultation/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const InsightsPostIdRoute = InsightsPostIdRouteImport.update({
+const ServicesRetainerRoute = ServicesRetainerRouteImport.update({
+  id: '/retainer',
+  path: '/retainer',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesPricingPolicyRoute = ServicesPricingPolicyRouteImport.update({
+  id: '/pricing-policy',
+  path: '/pricing-policy',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesOptimizationRoute = ServicesOptimizationRouteImport.update({
+  id: '/optimization',
+  path: '/optimization',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesLicensingPolicyRoute = ServicesLicensingPolicyRouteImport.update({
+  id: '/licensing-policy',
+  path: '/licensing-policy',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesErrorPolicyRoute = ServicesErrorPolicyRouteImport.update({
+  id: '/error-policy',
+  path: '/error-policy',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesDiagnosticsRoute = ServicesDiagnosticsRouteImport.update({
+  id: '/diagnostics',
+  path: '/diagnostics',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesCustomizationRoute = ServicesCustomizationRouteImport.update({
+  id: '/customization',
+  path: '/customization',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesApplicationsRoute = ServicesApplicationsRouteImport.update({
+  id: '/applications',
+  path: '/applications',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const Services404Route = Services404RouteImport.update({
+  id: '/$404',
+  path: '/$404',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const IntelPostIdRoute = IntelPostIdRouteImport.update({
   id: '/$postId',
   path: '/$postId',
-  getParentRoute: () => InsightsRoute,
+  getParentRoute: () => IntelRoute,
 } as any)
 const ConsultationBookRoute = ConsultationBookRouteImport.update({
   id: '/consultation/book',
@@ -125,17 +191,28 @@ export interface FileRoutesByFullPath {
   '/app': typeof AppLayoutRoute
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
-  '/insights': typeof InsightsRouteWithChildren
-  '/our-work': typeof OurWorkRoute
+  '/intel': typeof IntelRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
+  '/showcase': typeof ShowcaseRoute
   '/terms': typeof TermsRoute
+  '/toolbox': typeof ToolboxRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/consultation/book': typeof ConsultationBookRoute
-  '/insights/$postId': typeof InsightsPostIdRoute
+  '/intel/$postId': typeof IntelPostIdRoute
+  '/services/$404': typeof Services404Route
+  '/services/applications': typeof ServicesApplicationsRoute
+  '/services/customization': typeof ServicesCustomizationRoute
+  '/services/diagnostics': typeof ServicesDiagnosticsRoute
+  '/services/error-policy': typeof ServicesErrorPolicyRoute
+  '/services/licensing-policy': typeof ServicesLicensingPolicyRoute
+  '/services/optimization': typeof ServicesOptimizationRoute
+  '/services/pricing-policy': typeof ServicesPricingPolicyRoute
+  '/services/retainer': typeof ServicesRetainerRoute
   '/consultation': typeof ConsultationIndexRoute
-  '/insights/': typeof InsightsIndexRoute
+  '/intel/': typeof IntelIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -144,16 +221,26 @@ export interface FileRoutesByTo {
   '/app': typeof AppLayoutRoute
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
-  '/our-work': typeof OurWorkRoute
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
-  '/services': typeof ServicesRoute
+  '/showcase': typeof ShowcaseRoute
   '/terms': typeof TermsRoute
+  '/toolbox': typeof ToolboxRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/consultation/book': typeof ConsultationBookRoute
-  '/insights/$postId': typeof InsightsPostIdRoute
+  '/intel/$postId': typeof IntelPostIdRoute
+  '/services/$404': typeof Services404Route
+  '/services/applications': typeof ServicesApplicationsRoute
+  '/services/customization': typeof ServicesCustomizationRoute
+  '/services/diagnostics': typeof ServicesDiagnosticsRoute
+  '/services/error-policy': typeof ServicesErrorPolicyRoute
+  '/services/licensing-policy': typeof ServicesLicensingPolicyRoute
+  '/services/optimization': typeof ServicesOptimizationRoute
+  '/services/pricing-policy': typeof ServicesPricingPolicyRoute
+  '/services/retainer': typeof ServicesRetainerRoute
   '/consultation': typeof ConsultationIndexRoute
-  '/insights': typeof InsightsIndexRoute
+  '/intel': typeof IntelIndexRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -163,18 +250,29 @@ export interface FileRoutesById {
   '/app': typeof AppRouteWithChildren
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
-  '/insights': typeof InsightsRouteWithChildren
-  '/our-work': typeof OurWorkRoute
+  '/intel': typeof IntelRouteWithChildren
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
+  '/showcase': typeof ShowcaseRoute
   '/terms': typeof TermsRoute
+  '/toolbox': typeof ToolboxRoute
   '/app/_layout': typeof AppLayoutRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/consultation/book': typeof ConsultationBookRoute
-  '/insights/$postId': typeof InsightsPostIdRoute
+  '/intel/$postId': typeof IntelPostIdRoute
+  '/services/$404': typeof Services404Route
+  '/services/applications': typeof ServicesApplicationsRoute
+  '/services/customization': typeof ServicesCustomizationRoute
+  '/services/diagnostics': typeof ServicesDiagnosticsRoute
+  '/services/error-policy': typeof ServicesErrorPolicyRoute
+  '/services/licensing-policy': typeof ServicesLicensingPolicyRoute
+  '/services/optimization': typeof ServicesOptimizationRoute
+  '/services/pricing-policy': typeof ServicesPricingPolicyRoute
+  '/services/retainer': typeof ServicesRetainerRoute
   '/consultation/': typeof ConsultationIndexRoute
-  '/insights/': typeof InsightsIndexRoute
+  '/intel/': typeof IntelIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -185,17 +283,28 @@ export interface FileRouteTypes {
     | '/app'
     | '/auth'
     | '/contact'
-    | '/insights'
-    | '/our-work'
+    | '/intel'
     | '/privacy'
     | '/robots.txt'
     | '/services'
+    | '/showcase'
     | '/terms'
+    | '/toolbox'
     | '/app/dashboard'
     | '/consultation/book'
-    | '/insights/$postId'
+    | '/intel/$postId'
+    | '/services/$404'
+    | '/services/applications'
+    | '/services/customization'
+    | '/services/diagnostics'
+    | '/services/error-policy'
+    | '/services/licensing-policy'
+    | '/services/optimization'
+    | '/services/pricing-policy'
+    | '/services/retainer'
     | '/consultation'
-    | '/insights/'
+    | '/intel/'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -204,16 +313,26 @@ export interface FileRouteTypes {
     | '/app'
     | '/auth'
     | '/contact'
-    | '/our-work'
     | '/privacy'
     | '/robots.txt'
-    | '/services'
+    | '/showcase'
     | '/terms'
+    | '/toolbox'
     | '/app/dashboard'
     | '/consultation/book'
-    | '/insights/$postId'
+    | '/intel/$postId'
+    | '/services/$404'
+    | '/services/applications'
+    | '/services/customization'
+    | '/services/diagnostics'
+    | '/services/error-policy'
+    | '/services/licensing-policy'
+    | '/services/optimization'
+    | '/services/pricing-policy'
+    | '/services/retainer'
     | '/consultation'
-    | '/insights'
+    | '/intel'
+    | '/services'
   id:
     | '__root__'
     | '/'
@@ -222,18 +341,29 @@ export interface FileRouteTypes {
     | '/app'
     | '/auth'
     | '/contact'
-    | '/insights'
-    | '/our-work'
+    | '/intel'
     | '/privacy'
     | '/robots.txt'
     | '/services'
+    | '/showcase'
     | '/terms'
+    | '/toolbox'
     | '/app/_layout'
     | '/app/dashboard'
     | '/consultation/book'
-    | '/insights/$postId'
+    | '/intel/$postId'
+    | '/services/$404'
+    | '/services/applications'
+    | '/services/customization'
+    | '/services/diagnostics'
+    | '/services/error-policy'
+    | '/services/licensing-policy'
+    | '/services/optimization'
+    | '/services/pricing-policy'
+    | '/services/retainer'
     | '/consultation/'
-    | '/insights/'
+    | '/intel/'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -243,23 +373,38 @@ export interface RootRouteChildren {
   AppRoute: typeof AppRouteWithChildren
   AuthRoute: typeof AuthRoute
   ContactRoute: typeof ContactRoute
-  InsightsRoute: typeof InsightsRouteWithChildren
-  OurWorkRoute: typeof OurWorkRoute
+  IntelRoute: typeof IntelRouteWithChildren
   PrivacyRoute: typeof PrivacyRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
-  ServicesRoute: typeof ServicesRoute
+  ServicesRoute: typeof ServicesRouteWithChildren
+  ShowcaseRoute: typeof ShowcaseRoute
   TermsRoute: typeof TermsRoute
+  ToolboxRoute: typeof ToolboxRoute
   ConsultationBookRoute: typeof ConsultationBookRoute
   ConsultationIndexRoute: typeof ConsultationIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/toolbox': {
+      id: '/toolbox'
+      path: '/toolbox'
+      fullPath: '/toolbox'
+      preLoaderRoute: typeof ToolboxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/showcase': {
+      id: '/showcase'
+      path: '/showcase'
+      fullPath: '/showcase'
+      preLoaderRoute: typeof ShowcaseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services': {
@@ -283,18 +428,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/our-work': {
-      id: '/our-work'
-      path: '/our-work'
-      fullPath: '/our-work'
-      preLoaderRoute: typeof OurWorkRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/insights': {
-      id: '/insights'
-      path: '/insights'
-      fullPath: '/insights'
-      preLoaderRoute: typeof InsightsRouteImport
+    '/intel': {
+      id: '/intel'
+      path: '/intel'
+      fullPath: '/intel'
+      preLoaderRoute: typeof IntelRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -339,12 +477,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/insights/': {
-      id: '/insights/'
+    '/services/': {
+      id: '/services/'
       path: '/'
-      fullPath: '/insights/'
-      preLoaderRoute: typeof InsightsIndexRouteImport
-      parentRoute: typeof InsightsRoute
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/intel/': {
+      id: '/intel/'
+      path: '/'
+      fullPath: '/intel/'
+      preLoaderRoute: typeof IntelIndexRouteImport
+      parentRoute: typeof IntelRoute
     }
     '/consultation/': {
       id: '/consultation/'
@@ -353,12 +498,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsultationIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/insights/$postId': {
-      id: '/insights/$postId'
+    '/services/retainer': {
+      id: '/services/retainer'
+      path: '/retainer'
+      fullPath: '/services/retainer'
+      preLoaderRoute: typeof ServicesRetainerRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/pricing-policy': {
+      id: '/services/pricing-policy'
+      path: '/pricing-policy'
+      fullPath: '/services/pricing-policy'
+      preLoaderRoute: typeof ServicesPricingPolicyRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/optimization': {
+      id: '/services/optimization'
+      path: '/optimization'
+      fullPath: '/services/optimization'
+      preLoaderRoute: typeof ServicesOptimizationRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/licensing-policy': {
+      id: '/services/licensing-policy'
+      path: '/licensing-policy'
+      fullPath: '/services/licensing-policy'
+      preLoaderRoute: typeof ServicesLicensingPolicyRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/error-policy': {
+      id: '/services/error-policy'
+      path: '/error-policy'
+      fullPath: '/services/error-policy'
+      preLoaderRoute: typeof ServicesErrorPolicyRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/diagnostics': {
+      id: '/services/diagnostics'
+      path: '/diagnostics'
+      fullPath: '/services/diagnostics'
+      preLoaderRoute: typeof ServicesDiagnosticsRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/customization': {
+      id: '/services/customization'
+      path: '/customization'
+      fullPath: '/services/customization'
+      preLoaderRoute: typeof ServicesCustomizationRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/applications': {
+      id: '/services/applications'
+      path: '/applications'
+      fullPath: '/services/applications'
+      preLoaderRoute: typeof ServicesApplicationsRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/$404': {
+      id: '/services/$404'
+      path: '/$404'
+      fullPath: '/services/$404'
+      preLoaderRoute: typeof Services404RouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/intel/$postId': {
+      id: '/intel/$postId'
       path: '/$postId'
-      fullPath: '/insights/$postId'
-      preLoaderRoute: typeof InsightsPostIdRouteImport
-      parentRoute: typeof InsightsRoute
+      fullPath: '/intel/$postId'
+      preLoaderRoute: typeof IntelPostIdRouteImport
+      parentRoute: typeof IntelRoute
     }
     '/consultation/book': {
       id: '/consultation/book'
@@ -396,18 +604,46 @@ const AppRouteChildren: AppRouteChildren = {
 
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 
-interface InsightsRouteChildren {
-  InsightsPostIdRoute: typeof InsightsPostIdRoute
-  InsightsIndexRoute: typeof InsightsIndexRoute
+interface IntelRouteChildren {
+  IntelPostIdRoute: typeof IntelPostIdRoute
+  IntelIndexRoute: typeof IntelIndexRoute
 }
 
-const InsightsRouteChildren: InsightsRouteChildren = {
-  InsightsPostIdRoute: InsightsPostIdRoute,
-  InsightsIndexRoute: InsightsIndexRoute,
+const IntelRouteChildren: IntelRouteChildren = {
+  IntelPostIdRoute: IntelPostIdRoute,
+  IntelIndexRoute: IntelIndexRoute,
 }
 
-const InsightsRouteWithChildren = InsightsRoute._addFileChildren(
-  InsightsRouteChildren,
+const IntelRouteWithChildren = IntelRoute._addFileChildren(IntelRouteChildren)
+
+interface ServicesRouteChildren {
+  Services404Route: typeof Services404Route
+  ServicesApplicationsRoute: typeof ServicesApplicationsRoute
+  ServicesCustomizationRoute: typeof ServicesCustomizationRoute
+  ServicesDiagnosticsRoute: typeof ServicesDiagnosticsRoute
+  ServicesErrorPolicyRoute: typeof ServicesErrorPolicyRoute
+  ServicesLicensingPolicyRoute: typeof ServicesLicensingPolicyRoute
+  ServicesOptimizationRoute: typeof ServicesOptimizationRoute
+  ServicesPricingPolicyRoute: typeof ServicesPricingPolicyRoute
+  ServicesRetainerRoute: typeof ServicesRetainerRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
+}
+
+const ServicesRouteChildren: ServicesRouteChildren = {
+  Services404Route: Services404Route,
+  ServicesApplicationsRoute: ServicesApplicationsRoute,
+  ServicesCustomizationRoute: ServicesCustomizationRoute,
+  ServicesDiagnosticsRoute: ServicesDiagnosticsRoute,
+  ServicesErrorPolicyRoute: ServicesErrorPolicyRoute,
+  ServicesLicensingPolicyRoute: ServicesLicensingPolicyRoute,
+  ServicesOptimizationRoute: ServicesOptimizationRoute,
+  ServicesPricingPolicyRoute: ServicesPricingPolicyRoute,
+  ServicesRetainerRoute: ServicesRetainerRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
+}
+
+const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
+  ServicesRouteChildren,
 )
 
 const rootRouteChildren: RootRouteChildren = {
@@ -417,12 +653,13 @@ const rootRouteChildren: RootRouteChildren = {
   AppRoute: AppRouteWithChildren,
   AuthRoute: AuthRoute,
   ContactRoute: ContactRoute,
-  InsightsRoute: InsightsRouteWithChildren,
-  OurWorkRoute: OurWorkRoute,
+  IntelRoute: IntelRouteWithChildren,
   PrivacyRoute: PrivacyRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
-  ServicesRoute: ServicesRoute,
+  ServicesRoute: ServicesRouteWithChildren,
+  ShowcaseRoute: ShowcaseRoute,
   TermsRoute: TermsRoute,
+  ToolboxRoute: ToolboxRoute,
   ConsultationBookRoute: ConsultationBookRoute,
   ConsultationIndexRoute: ConsultationIndexRoute,
 }

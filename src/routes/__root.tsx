@@ -69,18 +69,18 @@ function RootComponent() {
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
     return (
         <html>
-            <AppProvider>
                 <head>
                     <HeadContent />
                 </head>
                 <body className='text-slate-200'>
-                    <AnalyticsTracker />
-                    <Nav />
-                    <main className='pt-20'>{children}</main>
-                    <Footer/>
-                    <OrbitToggle />
+                    <AppProvider>
+                        <AnalyticsTracker />
+                        <Nav />
+                        <main className='pt-20'>{children}</main>
+                        <Footer/>
+                        <OrbitToggle />
+                    </AppProvider>
                 </body>
-            </AppProvider>
         </html>
     )
 }

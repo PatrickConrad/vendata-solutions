@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { Divider } from '../components/reusable/Divider'
-import { Convergence } from '../components/reusable/Convergence'
-import { ServiceIcon } from '../components/reusable/ServiceIcon'
-import { faArrowTrendUp, faChartLine, faCogs, faCompass, faLightbulb, faMicroscope, faPuzzlePiece, faRocket, faShieldHalved } from '@fortawesome/free-solid-svg-icons'
+import { faArrowTrendUp, faCogs, faCompass, faLightbulb, faMicroscope, faPuzzlePiece, faRocket, faShieldHalved } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Route = createFileRoute('/about')({
   head: () => ({
@@ -65,11 +63,11 @@ function RouteComponent() {
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border-b-4 border-v-navy">
-            <ServiceIcon icon={faShieldHalved} color="var(--v-navy)" />
+            <FontAwesomeIcon icon={faShieldHalved} color="var(--v-navy)" />
             <h4 className="font-bold mt-4 text-v-navy dark:text-white">Defend Your Time</h4>
           </div>
           <div className="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border-b-4 border-v-green">
-            <ServiceIcon icon={faRocket} color="var(--v-green)"  />
+            <FontAwesomeIcon icon={faRocket} color="var(--v-green)"  />
             <h4 className="font-bold mt-4 text-v-navy dark:text-white">Accelerate Growth</h4>
           </div>
         </div>
@@ -81,18 +79,18 @@ function RouteComponent() {
           <h2 className="text-4xl font-bold text-center text-(--v-navy) dark:text-(--v-gold) mb-16">The Vendata Process</h2>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { icon: faMicroscope, title: "The Deep Audit", text: "We dissect your operations to find where the friction hides and where the data stalls." },
-              { icon: faCompass, title: "Strategic Roadmap", text: "We align your technical architecture with your 3-year growth goals, not just today's fix." },
-              { icon: faCogs, title: "Seamless Bridging", text: "We build the high-impact logic that connects your tools into a single, unified organism." },
-              { icon: faArrowTrendUp, title: "Continuous Value", text: "We partner for the long haul, evolving your systems as your market territory expands." }
+              { link: '/services/diagnostics', icon: faMicroscope, title: "The Deep Audit", text: "We dissect your operations to find where the friction hides and where the data stalls." },
+              { link: '/services/optimization', icon: faCompass, title: "Process Optimization", text: "We align your technical architecture with your 3-year growth goals, not just today's fix." },
+              { link: '/services/customization', icon: faCogs, title: "Seamless Bridging", text: "We build the high-impact logic that connects your tools into a single, unified organism." },
+              { link: '/services/retainer', icon: faArrowTrendUp, title: "Continuous Value", text: "We partner for the long haul, evolving your systems as your market territory expands." }
             ].map((pillar, idx) => (
-              <div key={idx} className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border-t-4 border-slate-200 dark:border-slate-700 hover:border-v-green transition-all group">
+              <Link to={pillar.link} key={idx} className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border-t-4 border-slate-200 dark:border-slate-700 hover:border-v-green transition-all group">
                 <div className="text-v-navy dark:text-v-gold mb-6 group-hover:scale-110 transition-transform">
-                  <ServiceIcon icon={pillar.icon} />
+                  <FontAwesomeIcon icon={pillar.icon} />
                 </div>
                 <h3 className="font-bold text-xl mb-3 text-v-navy dark:text-white">{pillar.title}</h3>
                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{pillar.text}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -131,18 +129,31 @@ function RouteComponent() {
         </div>
       </section>
 
-      {/* 5. THE FINAL CALL */}
-      <section className="py-32 px-6 text-center bg-v-navy text-white">
-        <h2 className="text-4xl md:text-6xl font-black mb-4 italic tracking-tighter">
-          End the <span className="text-v-green">Vendetta.</span>
-        </h2>
-        <Link 
-          to="/consultation" 
-          className="btn-gold px-12 py-6 rounded-2xl font-black text-2xl tracking-tighter uppercase inline-block"
-        >
-          Work with Vendata
-        </Link>
-      </section>
+    {/* 5. THE FINAL CALL */}
+ <section className="py-32 px-6 text-center bg-v-navy text-white relative overflow-hidden">
+   
+
+   <div className="relative z-10 max-w-4xl mx-auto">
+     <h2 className="text-5xl md:text-7xl font-black mb-6 italic tracking-tighter uppercase leading-none">
+       Stop Fighting <span className="text-v-green">IT</span>
+     </h2>
+     
+     <p className="text-slate-400 text-lg mb-12 uppercase tracking-[0.2em] font-bold">
+       Start leading your industry.
+     </p>
+
+     <Link 
+       to="/services/diagnostics" 
+       className="btn-gold px-12 py-6 rounded-2xl font-black text-2xl tracking-tighter uppercase inline-block shadow-2xl hover:scale-105 transition-transform active:scale-95 bg-v-gold text-v-navy"
+     >
+       End the Vendetta
+     </Link>
+
+     <p className="mt-8 text-[10px] text-slate-500 uppercase tracking-widest font-bold">
+       Available for DMV Onsite or Global Remote Diagnostics
+     </p>
+   </div>
+ </section>
     </main>
   )
 }

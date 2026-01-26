@@ -6,7 +6,7 @@
 //     const baseUrl = 'https://vendata.solutions'
     
 //     // 1. Define your static pages
-//     const staticPages = ['', '/', '/about', '/consultation', '/insights']
+//     const staticPages = ['', '/', '/about', '/consultation', '/intel']
     
 //     // 2. Map your dynamic services from your existing data object
 //     const servicePages = Object.values(services).map(s => `/services/${s.slug}`)

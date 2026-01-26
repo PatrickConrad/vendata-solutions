@@ -15,7 +15,7 @@ export const PerfectSaas = {
 
 Yet, as most businesses scale, they try to do exactly that. They buy a "standard" oil change in the form of a one-size-fits-all SaaS subscription, hoping it can handle the horsepower of a custom operation. It works for a while, but eventually, the mismatch starts to tear the engine apart.
 
-Even the best SaaS platforms can fall short when workflows are complex or data is scattered. Understanding these gaps is the first step toward steamlining your tools and automating the right processes.
+Even the best SaaS platforms can fall short when workflows are complex or data is scattered. Understanding these gaps is the first step toward streamlining your tools and automating the right processes.
 
 ### The Story of the "Standard" Struggle
 
@@ -49,11 +49,11 @@ Because that data isn't integrated into your core system, you can't run analytic
 
 The reality is that the "Perfect SaaS" doesn't exist because no software developer in a Silicon Valley office knows your business as well as you do. They built for the mass market; you built for your customers.
 
-At **VenData**, we don't suggest you throw the Bentley away and start over. We suggest you stop taking it to Jiffy Lube. 
+At **Vendata**, we don't suggest you throw the Bentley away and start over. We suggest you stop taking it to Jiffy Lube. 
 
 We look for the specific gaps—the niches the software missed—and we build the high-impact logic to bridge them. We turn those manual spreadsheets into automated data pipelines. We make sure that when a task is completed in your specialized workflow, it talks to your billing, your CRM, and your team automatically.
 
 You shouldn't have to change your business to fit your software. Your software should be engineered to support your Bentley.
 
-[**End the Vendetta. Call VenData.**](https://vendata.solutions/consultation)`
+[**End the Vendetta.**](https://vendata.solutions/services/diagnostics)`
 }
