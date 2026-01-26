@@ -54,7 +54,6 @@ function CustomizationComponent() {
             <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
               Custom work requires absolute clarity. We do not "guess" on code. 
               If you aren't 100% certain of the technical requirements, we recommend starting with an 
-              <Link to="/services/diagnostics" className="text-v-gold font-bold hover:underline"> Investigative Discovery</Link> or 
               <Link to="/services/diagnostics" className="text-v-gold font-bold hover:underline"> Process Audit</Link> first.
             </p>
 
