@@ -35,6 +35,7 @@ import { Route as ServicesCustomizationRouteImport } from './routes/services.cus
 import { Route as ServicesApplicationsRouteImport } from './routes/services.applications'
 import { Route as Services404RouteImport } from './routes/services.$404'
 import { Route as IntelPostIdRouteImport } from './routes/intel.$postId'
+import { Route as InsightsPostIdRouteImport } from './routes/insights.$postId'
 import { Route as ConsultationBookRouteImport } from './routes/consultation/book'
 import { Route as AppDashboardRouteImport } from './routes/app.dashboard'
 import { Route as AppLayoutRouteImport } from './routes/app._layout'
@@ -169,6 +170,11 @@ const IntelPostIdRoute = IntelPostIdRouteImport.update({
   path: '/$postId',
   getParentRoute: () => IntelRoute,
 } as any)
+const InsightsPostIdRoute = InsightsPostIdRouteImport.update({
+  id: '/insights/$postId',
+  path: '/insights/$postId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ConsultationBookRoute = ConsultationBookRouteImport.update({
   id: '/consultation/book',
   path: '/consultation/book',
@@ -200,6 +206,7 @@ export interface FileRoutesByFullPath {
   '/toolbox': typeof ToolboxRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/consultation/book': typeof ConsultationBookRoute
+  '/insights/$postId': typeof InsightsPostIdRoute
   '/intel/$postId': typeof IntelPostIdRoute
   '/services/$404': typeof Services404Route
   '/services/applications': typeof ServicesApplicationsRoute
@@ -228,6 +235,7 @@ export interface FileRoutesByTo {
   '/toolbox': typeof ToolboxRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/consultation/book': typeof ConsultationBookRoute
+  '/insights/$postId': typeof InsightsPostIdRoute
   '/intel/$postId': typeof IntelPostIdRoute
   '/services/$404': typeof Services404Route
   '/services/applications': typeof ServicesApplicationsRoute
@@ -260,6 +268,7 @@ export interface FileRoutesById {
   '/app/_layout': typeof AppLayoutRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/consultation/book': typeof ConsultationBookRoute
+  '/insights/$postId': typeof InsightsPostIdRoute
   '/intel/$postId': typeof IntelPostIdRoute
   '/services/$404': typeof Services404Route
   '/services/applications': typeof ServicesApplicationsRoute
@@ -292,6 +301,7 @@ export interface FileRouteTypes {
     | '/toolbox'
     | '/app/dashboard'
     | '/consultation/book'
+    | '/insights/$postId'
     | '/intel/$postId'
     | '/services/$404'
     | '/services/applications'
@@ -320,6 +330,7 @@ export interface FileRouteTypes {
     | '/toolbox'
     | '/app/dashboard'
     | '/consultation/book'
+    | '/insights/$postId'
     | '/intel/$postId'
     | '/services/$404'
     | '/services/applications'
@@ -351,6 +362,7 @@ export interface FileRouteTypes {
     | '/app/_layout'
     | '/app/dashboard'
     | '/consultation/book'
+    | '/insights/$postId'
     | '/intel/$postId'
     | '/services/$404'
     | '/services/applications'
@@ -381,6 +393,7 @@ export interface RootRouteChildren {
   TermsRoute: typeof TermsRoute
   ToolboxRoute: typeof ToolboxRoute
   ConsultationBookRoute: typeof ConsultationBookRoute
+  InsightsPostIdRoute: typeof InsightsPostIdRoute
   ConsultationIndexRoute: typeof ConsultationIndexRoute
 }
 
@@ -568,6 +581,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IntelPostIdRouteImport
       parentRoute: typeof IntelRoute
     }
+    '/insights/$postId': {
+      id: '/insights/$postId'
+      path: '/insights/$postId'
+      fullPath: '/insights/$postId'
+      preLoaderRoute: typeof InsightsPostIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/consultation/book': {
       id: '/consultation/book'
       path: '/consultation/book'
@@ -661,6 +681,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsRoute: TermsRoute,
   ToolboxRoute: ToolboxRoute,
   ConsultationBookRoute: ConsultationBookRoute,
+  InsightsPostIdRoute: InsightsPostIdRoute,
   ConsultationIndexRoute: ConsultationIndexRoute,
 }
 export const routeTree = rootRouteImport
