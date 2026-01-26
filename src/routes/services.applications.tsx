@@ -21,7 +21,7 @@ function CustomizationComponent() {
             Build the <span className="text-v-green">Impossible</span>
           </h1>
           <p className="max-w-2xl mx-auto text-lg text-slate-400">
-            When you're actually stuck on an island, we'll build you the boat. 
+            When you're actually stuck on an island, we'll build you a boat. 
             Bespoke logic designed for high-stakes operations.
           </p>
         </div>
