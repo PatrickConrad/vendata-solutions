@@ -16,10 +16,7 @@
       "path": "/contact"
     },
     {
-      "path": "/insights"
-    },
-    {
-      "path": "/our-work"
+      "path": "/intel"
     },
     {
       "path": "/privacy"
@@ -28,7 +25,13 @@
       "path": "/services"
     },
     {
+      "path": "/showcase"
+    },
+    {
       "path": "/terms"
+    },
+    {
+      "path": "/toolbox"
     },
     {
       "path": "/app/dashboard"
@@ -37,20 +40,67 @@
       "path": "/consultation/book"
     },
     {
+      "path": "/services/applications"
+    },
+    {
+      "path": "/services/customization"
+    },
+    {
+      "path": "/services/diagnostics"
+    },
+    {
+      "path": "/services/error-policy"
+    },
+    {
+      "path": "/services/licensing-policy"
+    },
+    {
+      "path": "/services/optimization"
+    },
+    {
+      "path": "/services/pricing-policy"
+    },
+    {
+      "path": "/services/retainer"
+    },
+    {
       "path": "/consultation"
     },
     {
-      "path": "/insights/"
+      "path": "/intel/"
     },
     {
-      "path": "/insights/the-hidden-costs-that-never-show-up-on-your-P-and-L",
+      "path": "/services/"
+    },
+    {
+      "path": "/intel/the-hidden-costs-that-never-show-up-on-your-P-and-L",
       "fromCrawl": true
     },
     {
-      "path": "/insights/why-the-perfect-SaaS-is-a-myth",
+      "path": "/intel/why-the-perfect-SaaS-is-a-myth",
+      "fromCrawl": true
+    },
+    {
+      "path": "/consultation?service=custom",
+      "fromCrawl": true
+    },
+    {
+      "path": "/consultation?service=audit",
+      "fromCrawl": true
+    },
+    {
+      "path": "/consultation?service=investigation",
+      "fromCrawl": true
+    },
+    {
+      "path": "/consultation?service=retainer",
+      "fromCrawl": true
+    },
+    {
+      "path": "/consultation?service=optimization",
       "fromCrawl": true
     }
   ],
   "host": "https://vendata.solutions",
-  "lastBuilt": "2026-01-24T21:27:01.747Z"
+  "lastBuilt": "2026-01-26T16:43:01.030Z"
 }

@@ -115,7 +115,6 @@ function CustomizationComponent() {
         </div>
       </section>
 
-      <StripeBanner title="Built on Modern Logic:" items={getIntegrations()} />
     </div>
   )
 }

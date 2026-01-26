@@ -30,12 +30,12 @@ export const integrations = {
     ],
     accounting: [
         "Stripe",
-        "Paypal",
-        "Quickbooks",
+        "PayPal",
+        "QuickBooks",
         
     ],
     analysis: [
-        "PowerBI",
+        "Power BI",
         "Tableau",
         "Databricks",
         "Snowflake",
@@ -44,7 +44,7 @@ export const integrations = {
         "UPS",
         "Fedex",
         "USPS",
-        "Shipstation"
+        "ShipStation"
     ]
 }
 
