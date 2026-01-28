@@ -17,6 +17,7 @@ import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IntelRouteImport } from './routes/intel'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BusinessCardRouteImport } from './routes/business-card'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AboutRouteImport } from './routes/about'
@@ -78,6 +79,11 @@ const IntelRoute = IntelRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessCardRoute = BusinessCardRouteImport.update({
+  id: '/business-card',
+  path: '/business-card',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -196,6 +202,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/app': typeof AppLayoutRoute
   '/auth': typeof AuthRoute
+  '/business-card': typeof BusinessCardRoute
   '/contact': typeof ContactRoute
   '/intel': typeof IntelRouteWithChildren
   '/privacy': typeof PrivacyRoute
@@ -227,6 +234,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/app': typeof AppLayoutRoute
   '/auth': typeof AuthRoute
+  '/business-card': typeof BusinessCardRoute
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
@@ -257,6 +265,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/app': typeof AppRouteWithChildren
   '/auth': typeof AuthRoute
+  '/business-card': typeof BusinessCardRoute
   '/contact': typeof ContactRoute
   '/intel': typeof IntelRouteWithChildren
   '/privacy': typeof PrivacyRoute
@@ -291,6 +300,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/app'
     | '/auth'
+    | '/business-card'
     | '/contact'
     | '/intel'
     | '/privacy'
@@ -322,6 +332,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/app'
     | '/auth'
+    | '/business-card'
     | '/contact'
     | '/privacy'
     | '/robots.txt'
@@ -351,6 +362,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/app'
     | '/auth'
+    | '/business-card'
     | '/contact'
     | '/intel'
     | '/privacy'
@@ -384,6 +396,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AppRoute: typeof AppRouteWithChildren
   AuthRoute: typeof AuthRoute
+  BusinessCardRoute: typeof BusinessCardRoute
   ContactRoute: typeof ContactRoute
   IntelRoute: typeof IntelRouteWithChildren
   PrivacyRoute: typeof PrivacyRoute
@@ -453,6 +466,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business-card': {
+      id: '/business-card'
+      path: '/business-card'
+      fullPath: '/business-card'
+      preLoaderRoute: typeof BusinessCardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -672,6 +692,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AppRoute: AppRouteWithChildren,
   AuthRoute: AuthRoute,
+  BusinessCardRoute: BusinessCardRoute,
   ContactRoute: ContactRoute,
   IntelRoute: IntelRouteWithChildren,
   PrivacyRoute: PrivacyRoute,

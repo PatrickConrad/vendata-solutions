@@ -43,7 +43,7 @@ export default function CaseStudiesPage() {
       
       {/* HEADER */}
         <MatrixBackground height="30vh">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center z-10">
             <h1 className="text-5xl md:text-7xl font-black italic tracking-tighter  text-white mb-6 uppercase">
               Proven <span className="text-v-gold">Logic.</span>
             </h1>

@@ -18,12 +18,6 @@ export default function ToolsPage() {
   return (
     <main className="bg-white dark:bg-[#020617] text-slate-900 dark:text-slate-100 font-plus-jakarta">
       <ToolsHero phase={phase} setPhase={setPhase}/>        {/* ================= CUSTOM Banner ================= */}
-      {
-        phase !== 'exit' &&
-        <StripeBanner title="Successful Integrations:" items={getIntegrations()} speed={200}/>
-
-      }
-
       <section id="tool-list"className="relative py-24 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
@@ -39,6 +33,7 @@ export default function ToolsPage() {
 
         </div>
       </section>
+      <StripeBanner title="Successful Integrations:" items={getIntegrations()} speed={200}/>
 
       {/* ================= CTA ================= */}
       <section className="py-32 px-6 text-center bg-v-navy text-white relative overflow-hidden">

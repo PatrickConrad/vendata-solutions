@@ -129,31 +129,31 @@ function RouteComponent() {
         </div>
       </section>
 
-    {/* 5. THE FINAL CALL */}
- <section className="py-32 px-6 text-center bg-v-navy text-white relative overflow-hidden">
-   
+      {/* 5. THE FINAL CALL */}
+      <section className="py-32 px-6 text-center bg-v-navy text-white relative overflow-hidden">
+        
 
-   <div className="relative z-10 max-w-4xl mx-auto">
-     <h2 className="text-5xl md:text-7xl font-black mb-6 italic tracking-tighter uppercase leading-none">
-       Stop Fighting <span className="text-v-green">IT</span>
-     </h2>
-     
-     <p className="text-slate-400 text-lg mb-12 uppercase tracking-[0.2em] font-bold">
-       Start leading your industry.
-     </p>
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <h2 className="text-5xl md:text-7xl font-black mb-6 italic tracking-tighter uppercase leading-none">
+            Stop Fighting <span className="text-v-green">IT</span>
+          </h2>
+          
+          <p className="text-slate-400 text-lg mb-12 uppercase tracking-[0.2em] font-bold">
+            Start leading your industry.
+          </p>
 
-     <Link 
-       to="/services/diagnostics" 
-       className="btn-gold px-12 py-6 rounded-2xl font-black text-2xl tracking-tighter uppercase inline-block shadow-2xl hover:scale-105 transition-transform active:scale-95 bg-v-gold text-v-navy"
-     >
-       End the Vendetta
-     </Link>
+          <Link 
+            to="/services/diagnostics" 
+            className="btn-gold px-12 py-6 rounded-2xl font-black text-2xl tracking-tighter uppercase inline-block shadow-2xl hover:scale-105 transition-transform active:scale-95 bg-v-gold text-v-navy"
+          >
+            End the Vendetta
+          </Link>
 
-     <p className="mt-8 text-[10px] text-slate-500 uppercase tracking-widest font-bold">
-       Available for DMV Onsite or Global Remote Diagnostics
-     </p>
-   </div>
- </section>
+          <p className="mt-8 text-[10px] text-slate-500 uppercase tracking-widest font-bold">
+            Available for DMV Onsite or Global Remote Diagnostics
+          </p>
+        </div>
+      </section>
     </main>
   )
 }

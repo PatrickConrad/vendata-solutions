@@ -14,8 +14,8 @@ function RouteComponent() {
     <div className="bg-white dark:bg-slate-900 font-plus-jakarta text-v-navy dark:text-slate-200 transition-colors duration-300">
       
       {/* --- HERO SECTION --- */}
-      <MatrixBackground>
-        <div className="max-w-7xl mx-auto text-center">
+      <MatrixBackground >
+        <div className="max-w-7xl mx-auto text-center z-10 pt-10">
           <span className="text-v-gold uppercase tracking-[0.4em] font-bold text-xs mb-4 block">
             System Diagnostics & Strategy
           </span>

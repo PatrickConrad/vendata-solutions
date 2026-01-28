@@ -13,9 +13,9 @@ export const MatrixBackground = ({phase, children, height = '40vh'}:ToolsHeroPro
   return (
     <section 
       style={{
-        height: `${height}`
+        minHeight: 'fit-content',
       }}
-      className={`group relative flex items-center justify-center overflow-hidden bg-(--v-navy) dark:bg-[#020617]
+      className={`max-h-[1020px]:px-3 py-15 group relative flex items-center justify-center overflow-hidden bg-(--v-navy) dark:bg-[#020617]
         ${phase === 'exit' ? 'animate-section-exit' : ''}
       `}
     >

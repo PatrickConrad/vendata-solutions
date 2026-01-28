@@ -13,7 +13,7 @@ function CustomizationComponent() {
       
       {/* --- HERO SECTION --- */}
       <MatrixBackground>
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center z-10">
           <span className="text-v-gold uppercase tracking-[0.4em] font-bold text-xs mb-4 block">
             Custom Engineering
           </span>

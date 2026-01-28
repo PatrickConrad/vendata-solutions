@@ -47,8 +47,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-      {/* ================= CUSTOM Banner ================= */}
-      <StripeBanner title="Successful Integrations:" items={getIntegrations()} speed={200}/>
 
       {/* ================= PRIMARY ENTRY: AUDIT ================= */}
       <section className="py-28 px-6 max-w-7xl mx-auto">
@@ -300,6 +298,7 @@ export default function Services() {
               </p>
               <Link
                 to="/consultation"
+                search={{service: "custom"}}
                 className="text-v-gold hover:text-white transition-colors font-black uppercase text-sm tracking-widest border-b-2 border-v-gold pb-1 inline-block"
               >
                 Request Project Consult
