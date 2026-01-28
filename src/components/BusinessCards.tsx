@@ -1,7 +1,7 @@
 export const CardFront = () => (
   <div className="front">
     <img 
-      src="./vendata-venn-logo-full-text.svg" 
+      src="/vendata-venn-logo-full-text.svg" 
       className="logoImg"
       alt="Vendata Logo" 
     />

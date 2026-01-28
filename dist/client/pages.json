@@ -13,6 +13,9 @@
       "path": "/auth"
     },
     {
+      "path": "/business-card"
+    },
+    {
       "path": "/contact"
     },
     {
@@ -73,7 +76,19 @@
       "path": "/services/"
     },
     {
+      "path": "/intel/the-hidden-costs-that-never-show-up-on-your-P-and-L",
+      "fromCrawl": true
+    },
+    {
+      "path": "/intel/why-the-perfect-SaaS-is-a-myth",
+      "fromCrawl": true
+    },
+    {
       "path": "/consultation?service=custom",
+      "fromCrawl": true
+    },
+    {
+      "path": "/consultation?service=retainer",
       "fromCrawl": true
     },
     {
@@ -85,22 +100,10 @@
       "fromCrawl": true
     },
     {
-      "path": "/intel/the-hidden-costs-that-never-show-up-on-your-P-and-L",
-      "fromCrawl": true
-    },
-    {
-      "path": "/intel/why-the-perfect-SaaS-is-a-myth",
-      "fromCrawl": true
-    },
-    {
-      "path": "/consultation?service=retainer",
-      "fromCrawl": true
-    },
-    {
       "path": "/consultation?service=optimization",
       "fromCrawl": true
     }
   ],
   "host": "https://vendata.solutions",
-  "lastBuilt": "2026-01-27T16:22:33.104Z"
+  "lastBuilt": "2026-01-28T06:21:23.453Z"
 }
