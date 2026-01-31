@@ -11,7 +11,6 @@ import { varifyCloudflare } from "../../utils/cloudflare.server";
 export const addEmailUser = createServerFn({ method: "POST" })
   .inputValidator((data: {formData: FormData, turnstileToken: string}) => data)
   .handler(async ({ data }) => {
-    console.log({data})
     const passesTurnStile = await varifyCloudflare(data.turnstileToken)
     console.log({passesTurnStile})
     if(!passesTurnStile){
@@ -22,11 +21,11 @@ export const addEmailUser = createServerFn({ method: "POST" })
     }
   
     
-    await submitToSheet(data.formData);
+    const response = await submitToSheet(data.formData);
 
     return {
-      status: 200,
-      message: "success"
+      status: response.status,
+      message: response.status===200?"success":'failed'
     }
 
   });

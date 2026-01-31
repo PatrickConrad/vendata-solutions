@@ -36,12 +36,10 @@ export async function submitToSheet(formData: FormData) {
             assertion: generateJWT()
         })
     });
-
     const { access_token } = await authResponse.json();
 
     const sheetId = process.env.GOOGLE_SPREADSHEET_ID;
     const sheetName = process.env.GOOGLE_SHEET_NAME;
-    console.log({sheetId, sheetName})
 
     const rowData = [
         formData.email,
@@ -56,7 +54,7 @@ export async function submitToSheet(formData: FormData) {
 
 
     // 3b. APPEND: If email doesn't exist
-    return fetch(
+    const response = await fetch(
         `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!A1:append?valueInputOption=USER_ENTERED`,
         {
             method: 'POST',
@@ -67,4 +65,6 @@ export async function submitToSheet(formData: FormData) {
             body: JSON.stringify({ values: [rowData] })
         }
     );
+    
+    return response
 }
