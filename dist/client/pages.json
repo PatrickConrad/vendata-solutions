@@ -88,10 +88,6 @@
       "fromCrawl": true
     },
     {
-      "path": "/consultation?service=retainer",
-      "fromCrawl": true
-    },
-    {
       "path": "/consultation?service=audit",
       "fromCrawl": true
     },
@@ -100,10 +96,14 @@
       "fromCrawl": true
     },
     {
+      "path": "/consultation?service=retainer",
+      "fromCrawl": true
+    },
+    {
       "path": "/consultation?service=optimization",
       "fromCrawl": true
     }
   ],
   "host": "https://vendata.solutions",
-  "lastBuilt": "2026-01-28T06:21:23.453Z"
+  "lastBuilt": "2026-01-30T06:59:10.023Z"
 }
