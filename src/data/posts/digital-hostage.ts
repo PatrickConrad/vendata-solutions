@@ -1,4 +1,4 @@
-export const LittleThings = {
+export const DigitalHostage = {
     date: "February 1, 2026",
     slug: 'the-digital-hostage-who-really-controls-your-company',
     title: "The Digital Hostage: Who Really Controls Your Company?",
