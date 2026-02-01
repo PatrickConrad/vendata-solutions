@@ -11,8 +11,6 @@ export const PerfectSaas = {
 
 **Your business is a Bentley**. It is a high-performance, precision-engineered machine built for a specific purpose. And you **don’t take a Bentley to Jiffy Lube.**
 
-![Bentley picture](https://vendata.solutions/bentley.jpg "Luxury. Precision. Style.")
-
 Yet, as most businesses scale, they try to do exactly that. They buy a "standard" oil change in the form of a one-size-fits-all SaaS subscription, hoping it can handle the horsepower of a custom operation. It works for a while, but eventually, the mismatch starts to tear the engine apart.
 
 Even the best SaaS platforms can fall short when workflows are complex or data is scattered. Understanding these gaps is the first step toward streamlining your tools and automating the right processes.
