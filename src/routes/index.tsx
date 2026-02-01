@@ -5,6 +5,7 @@ import { CallToAction } from '../components/home/CallToAction'
 import { UnifiedSection } from '../components/home/UnifiedSection'
 import { StripeBanner } from '../components/reusable/RevolvingBanner'
 import { getIntegrations } from '../data/integrations'
+import { WhyVendata } from '../components/home/WhyVendata'
 
 
 type ModalType = {

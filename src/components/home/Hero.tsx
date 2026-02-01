@@ -12,7 +12,7 @@ export const Hero = () => {
                     <span className="text-v-gold underline decoration-v-green decoration-4 underline-offset-8">Start making IT work for you.</span>
                 </h1>
                 <p className="text-md md:text-xl text-slate-300 mb-10 leading-relaxed mx-auto max-w-2xl">
-                    Innovative systems built on simple, effective processes that help your business move faster, work smarter, and grow stronger.
+                    Replace 30 minutes of manual data entry with 10 seconds of automated execution. Scalable systems built for speed, not more overhead.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link to="/services/diagnostics" className="btn-gold px-10 py-4 rounded-xl font-bold text-lg">
