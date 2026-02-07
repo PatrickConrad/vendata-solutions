@@ -36,7 +36,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const hydrated = useHydrated();
 
-  // This handles the "Fucking change the theme" logic whenever the state updates
   useEffect(() => {
     if(!hydrated) return;
     const root = window.document.documentElement;
